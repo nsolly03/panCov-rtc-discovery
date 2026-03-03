@@ -364,3 +364,26 @@ priority anchor residue for the docking box.
 **Date:** $(date +%Y-%m-%d)
 **What:** Fixed receptor filename in vina_config.txt to point to .pdbqt file
 **Status:** ✅ Done
+
+## Entry 015 — Pocket detection NSP10-NSP14
+**Date:** $(date +%Y-%m-%d)  
+**What:** fpocket analysis on 7DIY, 5C8T, and AF3 model  
+**Script:** scripts/07_pocket_NSP10-NSP14_2.py  
+
+**Results:**
+- 7DIY  : 26 pockets — Pocket 3 best (spans interface, contains HIS80)
+- 5C8T  : 99 pockets — Pocket 90 best (2 complex copies inflate count)
+- AF3   : 52 pockets — Pocket 9 best (spans interface, misses HIS80)
+
+**Note:** Low druggability scores expected for PPI interfaces — shallow geometry
+
+**Selected docking box (from 7DIY Pocket 3 + conserved hotspots):**
+- Center : (-4.776, 7.298, -25.886)
+- Size   : 31.685 x 34.288 x 48.982 Angstroms
+- Anchor : HIS80(NSP10) + surrounding conserved residues
+
+**Files saved:**
+- 02-validation/NSP10-NSP14/pocket_analysis_2.json
+**Status:** ✅ Done — proceed to docking prep (Script 08_2)
+
+---
