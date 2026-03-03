@@ -39,3 +39,31 @@ git branch -m main
 
 ---
 
+
+## Entry 003 — GitHub repository connected
+**Date:** $(date +%Y-%m-%d)  
+**What:** Created GitHub repository and pushed initial commit  
+**Commands:**
+```
+git remote add origin https://github.com/nsolly03/panCov-rtc-discovery.git
+git push -u origin main
+```
+**Result:** Project live at https://github.com/nsolly03/panCov-rtc-discovery  
+**Status:** ✅ Done  
+
+---
+
+## Entry 004 — Conda environment created
+**Date:** $(date +%Y-%m-%d)  
+**What:** Created conda environment with all required packages  
+**Command:**
+```
+conda env create -f environment.yml
+```
+**Packages installed:** python=3.10, biopython, numpy, pandas, matplotlib,
+seaborn, requests, tqdm, jupyter, ipykernel  
+**Activate with:** conda activate rtc-discovery  
+**Status:** ✅ Done  
+
+---
+
