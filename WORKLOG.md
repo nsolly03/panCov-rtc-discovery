@@ -264,3 +264,33 @@ PHE8, PRO20, PRO24, THR5, THR21, THR25, TYR69, VAL4, VAL66
 **Status:** ⏳ Running Script 06 with corrected data
 
 ---
+
+## Entry 013 — Conservation analysis NSP10-NSP14 complete
+**Date:** $(date +%Y-%m-%d)  
+**What:** Conservation analysis across 5 coronaviruses  
+**Script:** scripts/06_conservation_NSP10-NSP14.py  
+
+**Coronaviruses analyzed:** SARS-CoV-2, SARS-CoV-1, MERS-CoV, HCoV-229E, HCoV-NL63  
+**Excluded:** BatCoV-RaTG13 (no UniProt entry), HCoV-OC43, HCoV-HKU1 (pp1ab unavailable)  
+
+**NSP10 conserved hotspots (9 residues, score ≥0.8):**
+THR5(1.0), PHE19(1.0), VAL21(1.0), ASN40(1.0), VAL42(0.83),
+MET44(1.0), LEU45(1.0), HIS80(1.0), LYS93(1.0)
+
+**NSP14 conserved hotspots (10 residues, score ≥0.8):**
+VAL4(0.83), THR5(0.78), LEU7(1.0), PHE8(1.0), LYS9(1.0),
+ASP10(0.83), PRO20(1.0), THR25(1.0), LEU27(0.83), THR127(1.0),
+ILE201(1.0)
+
+**Key insight:**
+HIS80(NSP10) is fully conserved (1.000) AND forms the primary
+salt bridge with ASP126(NSP14) at 3.65A. HIS80 is the highest
+priority anchor residue for the docking box.
+
+**Files saved:**
+- 02-validation/NSP10-NSP14/conservation_NSP10.csv
+- 02-validation/NSP10-NSP14/conservation_NSP14.csv
+- 02-validation/NSP10-NSP14/conservation_summary.json
+**Status:** ✅ Done — proceed to pocket detection (Script 07)
+
+---
