@@ -24,3 +24,9 @@ envs/
 # OS files
 .DS_Store
 Thumbs.db
+
+# AF3 large files — MSA folders and full data json
+01-alphafold3/**/msas/
+01-alphafold3/**/templates/
+01-alphafold3/**/*full_data*.json
+01-alphafold3/**/*.a3m
