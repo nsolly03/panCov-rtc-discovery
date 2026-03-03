@@ -685,3 +685,21 @@ Zn2 coordinators: positions 117,120,128,130 — no hotspot overlap
 **Status:** ✅ Done — proceed to Script 09_2 (publication figures)
 
 ---
+
+## Entry 028 — Publication Figures NSP10-NSP16 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/09_visualize_NSP10-NSP16_2.py
+
+**Figures saved:**
+  Fig1_NSP10-NSP16_conservation_bars_2.png
+  Fig2_NSP10-NSP16_conservation_heatmap_2.png
+  Fig3_NSP10-NSP16_contact_types_2.png
+
+**Residue naming verified:**
+  AF3 NSP16 pos 102 = ASP ✅ (salt bridge with HIS80)
+  AF3 NSP16 pos 106 = ASP ✅ (salt bridges with LYS93, LYS95)
+  PDB offset confusion resolved — AF3 local numbering is correct
+
+**Status:** ✅ Done — proceed to Script 10_2 (BSA + AlaScan + ranking)
+
+---
