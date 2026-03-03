@@ -447,3 +447,69 @@ Next: Jupyter visualization notebook, then repeat for NSP10-NSP16
 **Status:** ✅ Done
 
 ---
+
+## Entry 019 — Pipeline expanded: BSA + alanine scanning + composite ranking
+**Date:** $(date +%Y-%m-%d)
+**What:** Added 3 new analysis steps to the standard pipeline for ALL 8 complexes
+
+**New pipeline step added (Script 10_2 per complex):**
+1. Buried Surface Area (BSA) per hotspot residue
+   - Uses FreeSASA via BioPython ShrakeRupley
+   - BSA = SASA(unbound) - SASA(complex) per residue
+   - Threshold: BSA > 20 Å² = significantly buried
+
+2. Computational alanine scanning
+   - Estimates contact loss upon Ala mutation per hotspot
+   - Counts H-bonds + salt bridges + hydrophobic contacts lost
+   - Energetic hotspot threshold: contact_loss >= 2
+
+3. Composite hotspot ranking
+   - Score = interface_score × conservation × burial_factor × energy_factor
+   - Burial factor  = BSA / max_BSA (normalized 0-1)
+   - Energy factor  = contact_loss / max_loss (normalized 0-1)
+   - Final ranked list = drug target priority order
+
+**Updated full pipeline per complex (Scripts 04_2 through 10_2):**
+  Script 04_2 — AF3 validation (F1 gate ≥ 0.70)
+  Script 05_2 — Interface analysis (hotspots across all PDBs + AF3)
+  Script 06_2 — Conservation analysis (5 coronaviruses)
+  Script 07_2 — Pocket detection (fpocket)
+  Script 08_2 — Docking preparation (receptor + box)
+  Script 09_2 — Publication figures (conservation bars, heatmap, contacts)
+  Script 10_2 — BSA + alanine scanning + composite ranking + figures
+
+**Status:** ⏳ Writing Script 10_2 for NSP10-NSP14 now
+
+---
+
+## Entry 020 — BSA + Alanine Scanning + Composite Ranking NSP10-NSP14
+**Date:** $(date +%Y-%m-%d)
+**What:** BSA, computational alanine scanning, composite hotspot ranking
+**Script:** scripts/10_BSA_alascan_ranking_NSP10-NSP14_2.py
+
+**BSA results (7DIY):**
+  All 9 NSP10 hotspots significantly buried (BSA ≥ 44 Å²)
+  18/19 hotspots BSA ≥ 20 Å²
+  Exception: THR127 (NSP14) BSA = 5.36 Å² — peripheral residue
+
+**Top energetic hotspots (alanine scanning):**
+  PHE19(NSP10): 39 hydrophobic contacts lost — highest energy contribution
+  PHE8(NSP14) : 21 hydrophobic contacts lost
+  HIS80(NSP10): 3 salt bridge contacts lost — primary salt bridge confirmed
+
+**Composite ranking top 5:**
+  1. PHE19(NSP10) — 0.800 (buried, energetic, conserved)
+  2. HIS80(NSP10) — 0.363 (primary salt bridge anchor) ★
+  3. LYS93(NSP10) — 0.349 ★
+  4. PHE8(NSP14)  — 0.309
+  5. VAL21(NSP10) — 0.262
+
+**Files saved:**
+  02-validation/NSP10-NSP14/composite_ranking_NSP10-NSP14_2.csv
+  02-validation/NSP10-NSP14/bsa_alascan_NSP10-NSP14_2.json
+  results/Fig4_NSP10-NSP14_BSA_2.png
+  results/Fig5_NSP10-NSP14_AlaScan_2.png
+  results/Fig6_NSP10-NSP14_composite_ranking_2.png
+**Status:** ✅ Done
+
+---
