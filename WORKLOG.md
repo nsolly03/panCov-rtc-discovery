@@ -662,3 +662,26 @@ Zn2 coordinators: positions 117,120,128,130 — no hotspot overlap
 **Status:** ✅ Done — proceed to Script 08_2 (docking prep)
 
 ---
+
+## Entry 027 — Docking Preparation NSP10-NSP16 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/08_docking_prep_NSP10-NSP16_2.py
+
+**Receptor:** 6W4H chains A+B, 415 residues, 3203 atoms
+**ZN ions:** 2 retained (Zn1 + Zn2 finger sites) ✅
+**All primary hotspots present:** ✅
+**NSP10-5:** N-terminal truncation (expected, PDB starts at local pos 18)
+
+**Docking box:**
+  Center: (75.618, 10.689, 15.511)
+  Size: 28.363 × 32.885 × 42.778 Å
+  Volume: 39,900 Å³
+
+**Output files:**
+  03-virtual-screening/NSP10-NSP16_2/receptor_NSP10-NSP16_2.pdb
+  03-virtual-screening/NSP10-NSP16_2/vina_config_NSP10-NSP16_2.txt
+  03-virtual-screening/NSP10-NSP16_2/virtualflow_config_NSP10-NSP16_2.json
+
+**Status:** ✅ Done — proceed to Script 09_2 (publication figures)
+
+---

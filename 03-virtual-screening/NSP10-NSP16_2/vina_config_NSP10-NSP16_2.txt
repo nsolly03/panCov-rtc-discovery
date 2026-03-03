@@ -1,0 +1,18 @@
+# AutoDock Vina config — NSP10-NSP16
+# Primary salt bridges: ASP106-LYS93, ASP106-LYS95, ASP102-HIS80
+# Zn1 finger: HIS80 between CYS77 and HIS83
+# Water bridges: HIS80 and LYS93 displaceble
+
+receptor = receptor_NSP10-NSP16_2.pdb
+
+center_x = 75.618
+center_y = 10.689
+center_z = 15.511
+
+size_x   = 28.363
+size_y   = 32.885
+size_z   = 42.778
+
+exhaustiveness = 16
+num_modes      = 9
+energy_range   = 3

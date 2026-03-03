@@ -1,0 +1,47 @@
+{
+  "complex": "NSP10-NSP16",
+  "pdb": "6W4H",
+  "receptor": "receptor_NSP10-NSP16_2.pdb",
+  "center": [
+    75.618,
+    10.689,
+    15.511
+  ],
+  "size": [
+    28.363,
+    32.885,
+    42.778
+  ],
+  "primary_hotspots": {
+    "NSP10": [
+      "HIS80",
+      "LYS93",
+      "LYS95"
+    ],
+    "NSP16": [
+      "ASP106",
+      "ASP102"
+    ]
+  },
+  "zn1_site": {
+    "coordinators": [
+      "CYS74",
+      "CYS77",
+      "HIS83",
+      "CYS90"
+    ],
+    "note": "HIS80 inside Zn1 loop \u2014 ZN retained in receptor"
+  },
+  "water_bridges": {
+    "HIS80": "HOH7319 \u2014 displacement pharmacophore",
+    "LYS93": "HOH4523 \u2014 displacement pharmacophore"
+  },
+  "salt_bridges": [
+    "ASP106(NSP16)-LYS93(NSP10) all 4 structures",
+    "ASP106(NSP16)-LYS95(NSP10) all 4 structures",
+    "ASP102(NSP16)-HIS80(NSP10) 3/4 structures"
+  ],
+  "fpocket_score": 0.546,
+  "exhaustiveness": 16,
+  "num_modes": 9
+}
