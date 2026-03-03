@@ -1,0 +1,26 @@
+# Large structure files — too big for GitHub
+*.pdb
+*.cif
+*.mmcif
+*.sdf
+*.mol2
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Conda environment
+envs/
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Results that can be regenerated
+03-virtual-screening/**/docking_results/
+
+# OS files
+.DS_Store
+Thumbs.db
