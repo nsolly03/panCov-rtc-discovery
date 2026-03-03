@@ -278,28 +278,54 @@ python scripts/06_conservation_NSP10-NSP14.py
 
 ---
 
-### Script 07 — `pocket_NSP10-NSP14.py` ⏳ WRITE NEXT
+### Script 07_2 — `pocket_NSP10-NSP14_2.py` ✅
 
-Does not exist yet. Must be written. Should:
+Runs fpocket on 7DIY, 5C8T, and AF3 model. Parses all pocket scores. Identifies which pocket overlaps with conserved hotspot residues. Scores overlap using primary residues (HIS80, LYS93, ASP126, THR127) weighted ×3. Computes docking box center and dimensions from hotspot Cα coordinates with 6.0 Å padding.
 
-1. Run fpocket on `7DIY.pdb` and `NSP10_NSP14_best_model.pdb`
-2. Parse fpocket output — extract pocket coordinates, volume, druggability score
-3. Identify which pocket overlaps with conserved hotspot residues (especially HIS80, LYS93)
-4. Output docking box center (x, y, z) and dimensions
-5. Save `02-validation/NSP10-NSP14/pocket_analysis.json`
-
-**Test fpocket manually first:**
 ```bash
-cd 00-reference/pdb_structures
-fpocket -f 7DIY.pdb
-ls 7DIY_out/
+python scripts/07_pocket_NSP10-NSP14_2.py
 ```
+
+**Input:** `7DIY.pdb`, `5C8T.pdb`, `NSP10_NSP14_best_model.pdb`  
+**Output:** `02-validation/NSP10-NSP14/pocket_analysis_2.json`  
+**WORKLOG entry:** 015
+
+**Results:**
+
+| Structure | Best pocket | Druggability | Spans interface | Contains HIS80 |
+|-----------|-------------|-------------|-----------------|----------------|
+| 7DIY | Pocket 3 | 0.000 | ✅ | ✅ |
+| 5C8T | Pocket 90 | 0.001 | ✅ | ✅ |
+| AF3 | Pocket 9 | 0.000 | ✅ | ❌ (slightly offset) |
+
+> ⚠️ Low druggability scores (0.000) are **expected and normal** for PPI interfaces — fpocket is optimised for enzyme active sites. The docking box is defined from hotspot coordinates, not from druggability score.
+
+> ⚠️ 5C8T returned 99 pockets because it contains 2 copies of the complex (chains A/B + C/D). This inflates the pocket count but does not affect the analysis.
+
+**Selected docking box (7DIY, Pocket 3 + conserved hotspot Cα coords):**
+- Center: (-4.776, 7.298, -25.886)
+- Size: 31.685 × 34.288 × 48.982 Å
+- Volume: 53,215 Å³
+- Anchor residue: HIS80(NSP10)
 
 ---
 
-### Script 08 — `docking_prep_NSP10-NSP14.py` ⏳ PENDING
+### Script 08_2 — `docking_prep_NSP10-NSP14_2.py` ✅
 
-Defines docking box using conserved hotspot residues. Prepares AF3 receptor file for VirtualFlow. Output: docking configuration file.
+Prepares the receptor file for virtual screening. Strips waters and heteroatoms from 7DIY. Keeps chains A+B only. Writes AutoDock Vina config and VirtualFlow JSON config. Verifies all hotspot residues are present in the receptor.
+
+```bash
+python scripts/08_docking_prep_NSP10-NSP14_2.py
+```
+
+**Input:** `7DIY.pdb`  
+**Output:** `03-virtual-screening/NSP10-NSP14_2/receptor_NSP10-NSP14_2.pdb`  
+**Output:** `03-virtual-screening/NSP10-NSP14_2/vina_config_NSP10-NSP14_2.txt`  
+**Output:** `03-virtual-screening/NSP10-NSP14_2/virtualflow_config_NSP10-NSP14_2.json`  
+**WORKLOG entry:** 016
+
+**Receptor:** 417 residues, chains A+B, clean  
+**Hotspot verification:** 9/9 NSP10 + 10/10 NSP14 conserved residues present ✅
 
 ---
 
@@ -417,7 +443,7 @@ All visualizations go in `notebooks/<ComplexName>.ipynb`. Use py3Dmol for 3D, ma
 | Conservation heatmap (residue × coronavirus) | seaborn | ⏳ Pending |
 | 3D interface viewer — hotspots colored by conservation | py3Dmol | ⏳ Pending |
 | 3D salt bridge viewer — HIS80-ASP126 highlighted | py3Dmol | ⏳ Pending |
-| Pocket druggability plot | matplotlib | ⏳ Pending (after Script 07) |
+| Pocket druggability plot | matplotlib | ⏳ Pending (in Jupyter notebook) |
 | Summary figure across all 8 complexes | matplotlib | ⏳ Pending (final) |
 
 **Launch Jupyter:**
@@ -494,17 +520,35 @@ Add script 07: fpocket pocket detection NSP10-NSP14
 
 ---
 
-## 13. Immediate Next Steps (in order)
+## 13. NSP10-NSP14 Pipeline — Completed Milestones
 
-| Priority | Action | Notes |
-|----------|--------|-------|
-| 1 — NOW | Write and run `07_pocket_NSP10-NSP14.py` | fpocket on 7DIY + AF3. Find pocket overlapping HIS80/LYS93 |
-| 2 | Write `08_docking_prep_NSP10-NSP14.py` | Docking box centered on conserved hotspots |
-| 3 | Build `notebooks/NSP10-NSP14.ipynb` | Contact map, conservation heatmap, py3Dmol 3D with HIS80-ASP126 |
-| 4 | Repeat scripts 04–08 for NSP10-NSP16 | 6W4H primary PDB, 6WVN and 6WKQ secondary |
-| 5 | Repeat for remaining 6 complexes | Order: NSP12-NSP7, NSP12-NSP8, NSP9-NSP12, NSP13-Helicase, NSP12-NSP13, NSP7-NSP8 |
-| 6 | Virtual screening setup | After all 8 complexes have docking boxes defined |
+| Step | Script | Result | WORKLOG |
+|------|--------|--------|---------|
+| AF3 validation | 04_validate_NSP10-NSP14.py | F1=0.952 ✅ | 009 |
+| Interface analysis | 05_interface_NSP10-NSP14.py | HIS80-ASP126 salt bridge identified ✅ | 010 |
+| Conservation | 06_conservation_NSP10-NSP14.py | 9 NSP10 + 10 NSP14 residues conserved ✅ | 013 |
+| Pocket detection | 07_pocket_NSP10-NSP14_2.py | 7DIY Pocket 3 selected, box defined ✅ | 015 |
+| Docking prep | 08_docking_prep_NSP10-NSP14_2.py | Receptor 417 aa, all hotspots verified ✅ | 016 |
+| Visualization | notebooks/NSP10-NSP14_2.ipynb | ⏳ Next step |  |
 
 ---
 
-*Document generated: March 3, 2026 | Olivier Nsekuye | University of Liège GIGA-VIN Lab*
+## 14. Immediate Next Steps (in order)
+
+| Priority | Action | Notes |
+|----------|--------|-------|
+| 1 — NOW | Build `notebooks/NSP10-NSP14_2.ipynb` | Contact map, conservation heatmap, py3Dmol 3D with HIS80-ASP126, pocket visualization |
+| 2 | Repeat scripts 04_2–08_2 for NSP10-NSP16 | 6W4H primary, 6WVN + 6WKQ secondary. All new scripts get _2 suffix |
+| 3 | Repeat for NSP12-NSP7 | 7BV2 primary PDB |
+| 4 | Repeat for NSP12-NSP8 | 7BV2 primary PDB |
+| 5 | Repeat for NSP9-NSP12 | 8SQK chains A+G |
+| 6 | Repeat for NSP13-Helicase | 6XEZ chain E |
+| 7 | Repeat for NSP12-NSP13 | 6XEZ primary |
+| 8 | Repeat for NSP7-NSP8 | 7BV2 — additional fpocket gate score > 0.5 required |
+| 9 | Virtual screening setup | VirtualFlow after all 8 complexes have docking boxes |
+
+> ⚠️ **Naming convention from this point:** All new scripts, output files, and notebooks use `_2` suffix to avoid overwriting any existing files.
+
+---
+
+*Document last updated: March 3, 2026 | Olivier Nsekuye | University of Liège GIGA-VIN Lab*
