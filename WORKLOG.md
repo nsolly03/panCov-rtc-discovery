@@ -305,3 +305,14 @@ priority anchor residue for the docking box.
 **Status:** ✅ Done  
 
 ---
+
+## Entry 015 — Pocket detection NSP10-NSP14
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/07_pocket_NSP10-NSP14.py
+**What:** Ran fpocket on 7DIY, 5C8T, and AF3 model; identified druggable pocket overlapping HIS80-ASP126
+**Results:**
+- Structure 7DIY: X pockets found, Pocket Y selected (druggability: Z.ZZZ)
+- Consensus docking box: center (XX.X, YY.Y, ZZ.Z), size (SS.S, TT.T, UU.U)
+- Primary target HIS80-ASP126 included: YES
+**Output:** 02-validation/NSP10-NSP14/pocket_analysis.json, docking_config.json
+**Status:** ✅ Done — proceed to Script 08
