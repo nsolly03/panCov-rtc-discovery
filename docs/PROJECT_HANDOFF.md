@@ -331,16 +331,18 @@ python scripts/08_docking_prep_NSP10-NSP14_2.py
 
 ## 6. Full Pipeline Per Complex
 
-Repeat these steps for each of the 8 binary complexes. NSP10-NSP14 is the completed reference.
+Repeat these steps for each of the 8 binary complexes. NSP10-NSP14 is the completed reference. **All new scripts use `_2` suffix.**
 
 | Step | Script naming pattern | What it does | Gate / Key output |
 |------|-----------------------|--------------|-------------------|
-| 1 | `04_validate_<COMPLEX>.py` | AF3 vs PDB interface F1 at 5.0 Å cutoff | F1 ≥ 0.70 required |
-| 2 | `05_interface_<COMPLEX>.py` | Contacts across ALL PDB structures + AF3. Consensus hotspots. | Ranked hotspot list + salt bridges |
-| 3 | `06_conservation_<COMPLEX>.py` | 5 coronavirus sequences, MUSCLE, Shannon entropy per residue | Conserved hotspot residues |
-| 4 | `07_pocket_<COMPLEX>.py` | fpocket on PDB + AF3. Druggability score. | Docking box coords. NSP7-NSP8: score > 0.5 required |
-| 5 | `08_docking_prep_<COMPLEX>.py` | Prepare receptor, define docking box | VirtualFlow config file |
-| 6 | `notebooks/<COMPLEX>.ipynb` | Contact map, conservation heatmap, 3D py3Dmol viewer | Publication figures |
+| 1 | `04_validate_<COMPLEX>_2.py` | AF3 vs PDB interface F1 at 5.0 Å cutoff | F1 ≥ 0.70 required |
+| 2 | `05_interface_<COMPLEX>_2.py` | Contacts across ALL PDB structures + AF3. Consensus hotspots. | Ranked hotspot list + salt bridges |
+| 3 | `06_conservation_<COMPLEX>_2.py` | 5 coronavirus sequences, MUSCLE, Shannon entropy per residue | Conserved hotspot residues |
+| 4 | `07_pocket_<COMPLEX>_2.py` | fpocket on PDB + AF3. Druggability score. | Docking box coords. NSP7-NSP8: score > 0.5 required |
+| 5 | `08_docking_prep_<COMPLEX>_2.py` | Prepare receptor, define docking box | VirtualFlow config file |
+| 6 | `09_visualize_<COMPLEX>_2.py` | Fig1 conservation bars, Fig2 heatmap, Fig3 contact types | 3 publication figures |
+| 7 | `10_BSA_alascan_ranking_<COMPLEX>_2.py` | BSA per hotspot, computational alanine scanning, composite ranking | Fig4 BSA, Fig5 AlaScan, Fig6 Ranking |
+| 8 | `notebooks/<COMPLEX>_2.ipynb` | 3D py3Dmol viewer — hotspots colored by composite score | Interactive visualization |
 
 **Naming convention:**
 - Scripts: `04_validate_NSP10-NSP16.py`, `05_interface_NSP10-NSP16.py` etc.
