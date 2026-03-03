@@ -294,3 +294,14 @@ priority anchor residue for the docking box.
 **Status:** ✅ Done — proceed to pocket detection (Script 07)
 
 ---
+
+## Entry 014 — Comprehensive handoff document created
+**Date:** $(date +%Y-%m-%d)  
+**What:** Created full project handoff document for continuation  
+**Files:** docs/PROJECT_HANDOFF.md + RTC_Project_Handoff.docx  
+**Covers:** Environment, all scripts, chain map, UniProt accessions,  
+  known issues and fixes, git workflow, visualization plan, next steps  
+**Purpose:** Anyone or any AI can resume the project from this document  
+**Status:** ✅ Done  
+
+---
