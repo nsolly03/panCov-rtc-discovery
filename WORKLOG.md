@@ -428,3 +428,22 @@ Next: Jupyter visualization notebook, then repeat for NSP10-NSP16
 **Status:** ✅ Done
 
 ---
+
+## Entry 018 — Publication figures NSP10-NSP14 complete
+**Date:** $(date +%Y-%m-%d)
+**What:** Generated 3 publication-quality figures
+**Script:** scripts/09_visualize_NSP10-NSP14_2.py
+
+**Figures saved to results/:**
+- Fig1: Conservation bar charts — full 3-letter AA names, primary targets starred
+- Fig2: Conservation heatmap — 5 coronaviruses x hotspot residues, AA code key
+- Fig3: Contact types bar chart — salt bridge annotated per structure with distance
+
+**Salt bridge confirmed in all 3 structures:**
+  7DIY (SARS-CoV-2): HIS80-ASP126 at 3.65 Å ✅
+  5C8T (SARS-CoV-1): HIS80-ASP126 at 2.59 Å ✅
+  AF3 model        : HIS80-ASP126 at 2.91 Å ✅
+
+**Status:** ✅ Done
+
+---
