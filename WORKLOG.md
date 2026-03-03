@@ -703,3 +703,36 @@ Zn2 coordinators: positions 117,120,128,130 — no hotspot overlap
 **Status:** ✅ Done — proceed to Script 10_2 (BSA + AlaScan + ranking)
 
 ---
+
+## Entry 029 — BSA + AlaScan + Ranking NSP10-NSP16 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/10_BSA_alascan_ranking_NSP10-NSP16_2.py
+
+**BSA top residues:**
+  NSP10-45: 175.5 Å² (hydrophobic anchor)
+  NSP10-43: 113.9 Å²
+  NSP10-80: 103.3 Å² ★ primary salt bridge
+  NSP10-93: 102.7 Å² ★ primary salt bridge
+
+**Alanine scanning top contributors:**
+  LEU45:  loss=24 (22 hydrophobic) — dominant hydrophobic anchor
+  LYS93:  loss=8  (2 salt bridge)  — primary pharmacophore ★
+  VAL42:  loss=10 (10 hydrophobic)
+  MET44:  loss=8  (8 hydrophobic)
+  LYS95:  loss=3  (1 salt bridge)  ★
+
+**Composite top 3:**
+  1. LEU45  (1.000) — hydrophobic anchor, not directly druggable
+  2. LYS93  (0.213) — PRIMARY pharmacophore, salt bridge + Zn1
+  3. MET44  (0.181) — hydrophobic contributor
+
+**Scientific note:**
+  NSP16 residues absent from top 10 — distributed contacts
+  ASP102/ASP106 provide salt bridge anchors but lower individual BSA
+  Same LEU/hydrophobic dominance pattern as NSP10-NSP14 PHE19
+
+**Zn1 bonus applied to:** LYS93, ALA71, ARG78 (positions in Zn1 neighbourhood)
+
+**Status:** ✅ Done — proceed to Script 11_2 (3D visualization)
+
+---
