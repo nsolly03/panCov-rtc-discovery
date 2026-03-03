@@ -1,0 +1,259 @@
+{
+  "NSP10": {
+    "n_coronaviruses": 5,
+    "coronaviruses": [
+      "SARS-CoV-2",
+      "SARS-CoV-1",
+      "MERS-CoV",
+      "HCoV-229E",
+      "HCoV-NL63"
+    ],
+    "conserved_hotspots": [
+      5,
+      21,
+      19,
+      93,
+      45,
+      80,
+      44,
+      40,
+      42
+    ],
+    "hotspot_scores": [
+      {
+        "position": 3,
+        "aa_SARS2": "N",
+        "conservation": 0.6479,
+        "all_aas": "KKSNN"
+      },
+      {
+        "position": 4,
+        "aa_SARS2": "A",
+        "conservation": 0.6479,
+        "all_aas": "QQNAA"
+      },
+      {
+        "position": 5,
+        "aa_SARS2": "T",
+        "conservation": 1.0,
+        "all_aas": "TTTTT"
+      },
+      {
+        "position": 12,
+        "aa_SARS2": "T",
+        "conservation": 0.5553,
+        "all_aas": "HGSTT"
+      },
+      {
+        "position": 16,
+        "aa_SARS2": "F",
+        "conservation": 0.5553,
+        "all_aas": "HALFF"
+      },
+      {
+        "position": 18,
+        "aa_SARS2": "A",
+        "conservation": 0.6828,
+        "all_aas": "SANAA"
+      },
+      {
+        "position": 19,
+        "aa_SARS2": "F",
+        "conservation": 1.0,
+        "all_aas": "FFFFF"
+      },
+      {
+        "position": 21,
+        "aa_SARS2": "V",
+        "conservation": 1.0,
+        "all_aas": "VVVVV"
+      },
+      {
+        "position": 33,
+        "aa_SARS2": "S",
+        "conservation": 0.5553,
+        "all_aas": "QHASS"
+      },
+      {
+        "position": 40,
+        "aa_SARS2": "N",
+        "conservation": 1.0,
+        "all_aas": "NNNNN"
+      },
+      {
+        "position": 42,
+        "aa_SARS2": "V",
+        "conservation": 0.833,
+        "all_aas": "VIVVV"
+      },
+      {
+        "position": 44,
+        "aa_SARS2": "M",
+        "conservation": 1.0,
+        "all_aas": "MMMMM"
+      },
+      {
+        "position": 45,
+        "aa_SARS2": "L",
+        "conservation": 1.0,
+        "all_aas": "LLLLL"
+      },
+      {
+        "position": 80,
+        "aa_SARS2": "H",
+        "conservation": 1.0,
+        "all_aas": "HHHHH"
+      },
+      {
+        "position": 93,
+        "aa_SARS2": "K",
+        "conservation": 1.0,
+        "all_aas": "KKKKK"
+      },
+      {
+        "position": 96,
+        "aa_SARS2": "Y",
+        "conservation": 0.5553,
+        "all_aas": "WCFYY"
+      }
+    ]
+  },
+  "NSP14": {
+    "n_coronaviruses": 5,
+    "coronaviruses": [
+      "SARS-CoV-2",
+      "SARS-CoV-1",
+      "MERS-CoV",
+      "HCoV-229E",
+      "HCoV-NL63"
+    ],
+    "conserved_hotspots": [
+      7,
+      9,
+      8,
+      127,
+      201,
+      20,
+      25,
+      10,
+      4,
+      27
+    ],
+    "hotspot_scores": [
+      {
+        "position": 4,
+        "aa_SARS2": "V",
+        "conservation": 0.833,
+        "all_aas": "SVVVV"
+      },
+      {
+        "position": 5,
+        "aa_SARS2": "T",
+        "conservation": 0.7753,
+        "all_aas": "CCTTT"
+      },
+      {
+        "position": 7,
+        "aa_SARS2": "L",
+        "conservation": 1.0,
+        "all_aas": "LLLLL"
+      },
+      {
+        "position": 8,
+        "aa_SARS2": "F",
+        "conservation": 1.0,
+        "all_aas": "FFFFF"
+      },
+      {
+        "position": 9,
+        "aa_SARS2": "K",
+        "conservation": 1.0,
+        "all_aas": "KKKKK"
+      },
+      {
+        "position": 10,
+        "aa_SARS2": "D",
+        "conservation": 0.833,
+        "all_aas": "DNDDD"
+      },
+      {
+        "position": 20,
+        "aa_SARS2": "P",
+        "conservation": 1.0,
+        "all_aas": "PPPPP"
+      },
+      {
+        "position": 21,
+        "aa_SARS2": "T",
+        "conservation": 0.6828,
+        "all_aas": "STATT"
+      },
+      {
+        "position": 24,
+        "aa_SARS2": "P",
+        "conservation": 0.6828,
+        "all_aas": "THPPP"
+      },
+      {
+        "position": 25,
+        "aa_SARS2": "T",
+        "conservation": 1.0,
+        "all_aas": "TTTTT"
+      },
+      {
+        "position": 26,
+        "aa_SARS2": "H",
+        "conservation": 0.6479,
+        "all_aas": "YFYHH"
+      },
+      {
+        "position": 27,
+        "aa_SARS2": "L",
+        "conservation": 0.833,
+        "all_aas": "LLVLL"
+      },
+      {
+        "position": 41,
+        "aa_SARS2": "D",
+        "conservation": 0.6479,
+        "all_aas": "QQNDD"
+      },
+      {
+        "position": 69,
+        "aa_SARS2": "Y",
+        "conservation": 0.7753,
+        "all_aas": "SSYYY"
+      },
+      {
+        "position": 126,
+        "aa_SARS2": "D",
+        "conservation": 0.6828,
+        "all_aas": "LSDDD"
+      },
+      {
+        "position": 127,
+        "aa_SARS2": "T",
+        "conservation": 1.0,
+        "all_aas": "TTTTT"
+      },
+      {
+        "position": 128,
+        "aa_SARS2": "P",
+        "conservation": 0.6479,
+        "all_aas": "NNEPE"
+      },
+      {
+        "position": 131,
+        "aa_SARS2": "T",
+        "conservation": 0.5553,
+        "all_aas": "SDNTT"
+      },
+      {
+        "position": 201,
+        "aa_SARS2": "I",
+        "conservation": 1.0,
+        "all_aas": "IIIII"
+      }
+    ]
+  }
+}

@@ -201,3 +201,66 @@ PHE8, PRO20, PRO24, THR5, THR21, THR25, TYR69, VAL4, VAL66
 **Status:** ✅ Done — proceed to conservation analysis
 
 ---
+
+## Entry 011 — Tools and packages registry
+**Date:** $(date +%Y-%m-%d)  
+**What:** Complete record of all tools installed and used  
+
+**Conda environment:** rtc-discovery (Python 3.10)  
+**Packages:**
+- biopython    : PDB parsing, chain extraction, sequence handling
+- numpy        : numerical operations
+- pandas       : data tables and CSV output
+- matplotlib   : plots and figures
+- seaborn      : heatmaps and statistical plots
+- requests     : downloading from UniProt and NCBI
+- tqdm         : progress bars
+- jupyter      : interactive notebooks
+- ipykernel    : Jupyter kernel
+- muscle 5.3   : multiple sequence alignment (bioconda)
+
+**To be installed next:**
+- py3Dmol      : 3D structure visualization in Jupyter
+- fpocket      : pocket detection and druggability scoring
+- nglview      : alternative 3D viewer in Jupyter
+
+**Status:** ✅ Recorded  
+
+---
+
+## Entry 012 — Conservation analysis setup and debugging
+**Date:** $(date +%Y-%m-%d)  
+**What:** Attempted conservation analysis — encountered and resolved data issues  
+
+**Tools added:**
+- muscle 5.3     : multiple sequence alignment (conda bioconda)
+- py3Dmol        : 3D structure visualization in Jupyter (pip)
+- nglview        : alternative 3D viewer (pip)
+- fpocket 4.0    : pocket detection and druggability (conda bioconda)
+
+**Challenges encountered:**
+1. NCBI Entrez search returned wrong proteins (Porcine virus instead of coronavirus)
+   Fix: switched to direct RefSeq accession numbers
+2. Direct accessions returned proteins of wrong length (82 aa, 306 aa, 1356 aa)
+   Fix: wrong accessions — needed individual NSP entries not polyprotein fragments
+3. UniProt search returned pp1a (too short) for OC43, HKU1, 229E
+   Fix: found pp1ab accessions manually
+4. BatCoV-RaTG13 has no UniProt reviewed entry
+   Decision: proceed with 5 coronaviruses (SARS-CoV-2, SARS-CoV-1, MERS-CoV, 229E, NL63)
+5. NSP14 annotation differs by coronavirus:
+   - SARS-CoV-2/1 and MERS: annotated as "Non-structural protein 14"
+   - HCoV-229E and NL63: annotated as "Exoribonuclease"
+   Fix: used chain position coordinates from UniProt feature annotations
+
+**Final verified accessions and coordinates:**
+| Coronavirus  | Accession | NSP10        | NSP14        |
+|--------------|-----------|--------------|--------------|
+| SARS-CoV-2   | P0DTD1    | 4254-4392    | 5926-6452    |
+| SARS-CoV-1   | P0C6X7    | 4231-4369    | 5903-6429    |
+| MERS-CoV     | K9N7C7    | 4238-4377    | 5909-6432    |
+| HCoV-229E    | P0C6X1    | 3934-4068    | 5593-6110    |
+| HCoV-NL63    | P0C6X5    | 3909-4043    | 5568-6085    |
+
+**Status:** ⏳ Running Script 06 with corrected data
+
+---
