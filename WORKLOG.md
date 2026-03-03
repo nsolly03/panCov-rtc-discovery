@@ -387,3 +387,25 @@ priority anchor residue for the docking box.
 **Status:** ✅ Done — proceed to docking prep (Script 08_2)
 
 ---
+
+## Entry 016 — Docking preparation NSP10-NSP14 complete
+**Date:** $(date +%Y-%m-%d)
+**What:** Prepared receptor and docking box for virtual screening
+**Script:** scripts/08_docking_prep_NSP10-NSP14_2.py
+
+**Receptor:** 7DIY chains A+B, 417 residues, waters/ligands stripped
+**Docking box:**
+  Center: (-4.776, 7.298, -25.886)
+  Size:   31.685 x 34.288 x 48.982 Angstroms
+  Volume: 53,215 Angstroms³
+**Hotspot verification:** 9/9 NSP10 + 10/10 NSP14 present ✅
+
+**Files saved:**
+  03-virtual-screening/NSP10-NSP14_2/receptor_NSP10-NSP14_2.pdb
+  03-virtual-screening/NSP10-NSP14_2/vina_config_NSP10-NSP14_2.txt
+  03-virtual-screening/NSP10-NSP14_2/virtualflow_config_NSP10-NSP14_2.json
+
+**NSP10-NSP14 pipeline STATUS: ✅ COMPLETE through docking prep**
+Next: Jupyter visualization notebook, then repeat for NSP10-NSP16
+
+---

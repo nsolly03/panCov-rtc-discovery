@@ -1,0 +1,41 @@
+{
+  "target": "NSP10-NSP14",
+  "receptor": "/home/nseku/projects/rtc-pan-coronavirus/03-virtual-screening/NSP10-NSP14_2/receptor_NSP10-NSP14_2.pdb",
+  "pdb_source": "7DIY",
+  "resolution": "2.69A",
+  "hotspot": "HIS80(NSP10)-ASP126(NSP14)",
+  "box": {
+    "center_x": -4.776,
+    "center_y": 7.298,
+    "center_z": -25.886,
+    "size_x": 31.685,
+    "size_y": 34.288,
+    "size_z": 48.982
+  },
+  "hotspots": {
+    "NSP10_conserved": [
+      5,
+      19,
+      21,
+      40,
+      42,
+      44,
+      45,
+      80,
+      93
+    ],
+    "NSP14_conserved": [
+      4,
+      7,
+      8,
+      9,
+      10,
+      20,
+      25,
+      27,
+      127,
+      201
+    ]
+  },
+  "notes": "PPI interface docking box. Low fpocket druggability expected for PPI \u2014 use hotspot-guided box. HIS80 fully conserved across 5 coronaviruses (score=1.0)."
+}
