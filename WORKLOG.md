@@ -531,3 +531,24 @@ Next: Jupyter visualization notebook, then repeat for NSP10-NSP16
 **Status:** ✅ NSP10-NSP14 FULLY COMPLETE
 
 ---
+
+## Entry 022 — AF3 Validation NSP10-NSP16 PASS
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/04_validate_NSP10-NSP16_2.py
+
+**Results:**
+  6W4H (1.80Å): NSP10 F1=0.868  NSP16 F1=0.897  Overall=0.878 ✅
+  6WVN (1.95Å): NSP10 F1=0.868  NSP16 F1=0.897  Overall=0.878 ✅
+  6WKQ (2.05Å): NSP10 F1=0.885  NSP16 F1=0.915  Overall=0.898 ✅
+  Primary gate (6W4H): F1=0.878 ✅ PASS (gate ≥ 0.70)
+
+**Key fix applied:**
+  Sequence-alignment-based residue mapping (BioPython PairwiseAligner)
+  Handles genome numbering, missing terminal residues, insertions
+  This is now the STANDARD approach for all remaining complexes
+
+**AF3 confidence:** iptm=0.79, ptm=0.86, ranking=0.84, no clashes
+
+**Status:** ✅ Gate passed — proceed to Script 05_2 (interface analysis)
+
+---
