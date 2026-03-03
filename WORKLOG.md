@@ -174,3 +174,30 @@ seaborn, requests, tqdm, jupyter, ipykernel
 **Status:** ✅ Done — proceed to interface analysis  
 
 ---
+
+## Entry 010 — Interface analysis NSP10-NSP14
+**Date:** $(date +%Y-%m-%d)  
+**What:** Analyzed interface contacts across 3 structures  
+**Script:** scripts/05_interface_NSP10-NSP14.py  
+
+**Structures analyzed:**
+- 7DIY  : SARS-CoV-2 crystal 2.69A — 174 contacts
+- 5C8T  : SARS-CoV-1 crystal 3.20A — 166 contacts
+- AF3   : AlphaFold3 iptm=0.89    — 172 contacts
+
+**Key salt bridges (present in ALL structures):**
+- HIS80(NSP10) -- ASP126(NSP14) : 3.65A / 2.59A / 2.91A
+- LYS93(NSP10) -- GLU128(NSP14) : detected in SARS-CoV-1 only
+
+**Consensus NSP10 hotspots (17 residues):**
+ALA4, ALA18, ASN3, ASN40, GLU6, HIS80, LEU45, LYS93,
+MET44, PHE16, PHE19, SER33, THR5, THR12, TYR96, VAL21, VAL42
+
+**Consensus NSP14 hotspots (17 residues):**
+ASP10, ASP126, ASP41, HIS26, ILE201, LEU7, LEU27, LYS9,
+PHE8, PRO20, PRO24, THR5, THR21, THR25, TYR69, VAL4, VAL66
+
+**Primary drug target:** HIS80-ASP126 salt bridge
+**Status:** ✅ Done — proceed to conservation analysis
+
+---
