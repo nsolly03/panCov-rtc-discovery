@@ -596,3 +596,35 @@ Next: Jupyter visualization notebook, then repeat for NSP10-NSP16
 **Status:** ✅ Done — proceed to Script 07_2 (pocket detection)
 
 ---
+
+## Entry 025 — Zinc coordination analysis NSP10-NSP16
+**Date:** $(date +%Y-%m-%d)
+**What:** Checked zinc finger residues vs interface hotspots
+
+**6W4H has 2 Zn atoms in NSP10 Chain B:**
+
+Zn1 coordinators (AF3 local positions):
+  HIS83  (AF3 local) — hotspot HIS80 is 3 positions away
+  CYS74  (AF3 local) — flanked by hotspots ALA71 and TYR76
+  CYS77  (AF3 local) — between hotspots TYR76 and ARG78
+  CYS90  (AF3 local) — hotspot LYS93 is 3 positions away
+
+Zn2 coordinators: positions 117,120,128,130 — no hotspot overlap
+
+**Key finding:**
+  HIS80 (primary salt bridge anchor) sits INSIDE the Zn1 finger loop
+  between CYS77 and HIS83. The entire Zn1 site is surrounded by
+  our top-ranked hotspots (ALA71, TYR76, ARG78, HIS80, LYS93, LYS95).
+
+**Drug design implication:**
+  Compounds targeting HIS80-ASP106 salt bridge bind within the Zn1
+  zinc finger loop — pre-organized, rigid, perfectly conserved site.
+  Potential dual mechanism: PPI disruption + Zn coordination perturbation.
+  Strongly supports pan-coronavirus drug targeting hypothesis.
+
+**Action:** Add to manuscript methods + results section. Add Zn
+  coordination visualization to Script 11_2 notebook (View 8).
+
+**Status:** ✅ Recorded — continue to Script 07_2 (pocket detection)
+
+---
