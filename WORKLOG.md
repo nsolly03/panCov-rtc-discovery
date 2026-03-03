@@ -354,3 +354,8 @@ priority anchor residue for the docking box.
   - NSP10_NSP14_receptor.pdb (fixed)
   - NSP10_NSP14_receptor.pdbqt (ready for screening)
 **Status:** ✅ Done — receptor fully prepared
+
+## Entry 018 — Vina config fix
+**Date:** $(date +%Y-%m-%d)
+**What:** Fixed receptor filename in vina_config.txt (was .pdb, should be .pdbqt)
+**Status:** ✅ Done

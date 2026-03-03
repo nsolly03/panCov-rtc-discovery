@@ -1,6 +1,6 @@
 # AutoDock Vina Configuration
 # Target: NSP10-NSP14
-receptor = NSP10_NSP14_receptor.pdb
+receptor = NSP10_NSP14_receptor.pdbqt
 
 # Search space
 center_x = -3.825
