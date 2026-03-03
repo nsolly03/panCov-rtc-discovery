@@ -1,0 +1,20 @@
+complex	pdb	chain_A	protein_A	chain_B	protein_B	priority	note
+NSP10-NSP16	6W4H	B	NSP10	A	NSP16	Critical	Primary 1.80A confirmed
+NSP10-NSP16	6WVN	B	NSP10	A	NSP16	Critical	With SAM cofactor confirmed
+NSP10-NSP16	6WKQ	B	NSP10	A	NSP16	Critical	Use chains B+A primary copy
+NSP12-NSP7	7BV2	A	NSP12	C	NSP7	Critical	Extract from trimer
+NSP12-NSP7	6NUR	A	NSP12	C	NSP7	Critical	Extract from trimer
+NSP12-NSP7	7C2K	A	NSP12	C	NSP7	Critical	Extract from trimer
+NSP12-NSP8	7BV2	A	NSP12	B	NSP8	Critical	Extract from trimer
+NSP12-NSP8	6NUR	A	NSP12	B	NSP8	Critical	Extract from trimer
+NSP12-NSP8	7C2K	A	NSP12	B	NSP8	Critical	Extract from trimer
+NSP7-NSP8	7BV2	C	NSP7	B	NSP8	Low-Medium	Small interface ~800A2
+NSP7-NSP8	6NUR	C	NSP7	B	NSP8	Low-Medium	Small interface ~800A2
+NSP9-NSP12	8SQK	A	NSP12	G	NSP9	Critical	Only confirmed structure
+NSP10-NSP14	7DIY	A	NSP10	B	NSP14	High	Primary 2.69A confirmed
+NSP10-NSP14	5C8T	A	NSP10	B	NSP14	High	Use chains A+B primary copy
+NSP13-Helicase	6XEZ	E	NSP13	-	-	High	Extract chain E from complex
+NSP13-Helicase	7NIO	A	NSP13	-	-	High	NSP13 dimer use chain A
+NSP12-NSP13	6XEZ	A	NSP12	E	NSP13	Medium	Extract chains A+E
+NSP12-NSP13	7CXM	A	NSP12	E	NSP13	Medium	Extract chains A+E
+NSP12-NSP13	7RDY	A	NSP12	E	NSP13	Medium	Extract chains A+E

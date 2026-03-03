@@ -67,3 +67,29 @@ seaborn, requests, tqdm, jupyter, ipykernel
 
 ---
 
+
+## Entry 005 — PDB structures downloaded and verified
+**Date:** $(date +%Y-%m-%d)  
+**What:** Downloaded 13 PDB structures for 8 binary RTC targets  
+**Script:** scripts/01_download_structures.py  
+**Structures confirmed:**
+- NSP10-NSP16 : 6W4H, 6WVN, 6WKQ
+- NSP12-NSP7  : 7BV2, 6NUR, 7C2K (extract chains A+C)
+- NSP12-NSP8  : 7BV2, 6NUR, 7C2K (extract chains A+B)
+- NSP7-NSP8   : 7BV2, 6NUR (extract chains C+B)
+- NSP9-NSP12  : 8SQK (chains A=NSP12, G=NSP9)
+- NSP10-NSP14 : 7DIY, 5C8T (chains A=NSP10, B=NSP14)
+- NSP13-Helicase : 6XEZ (chain E), 7NIO (chain A)
+- NSP12-NSP13 : 6XEZ, 7CXM, 7RDY (chains A=NSP12, E=NSP13)
+
+**Corrections made:**
+- 7DFG removed — contained RdRp complex not NSP10-NSP16
+- 9FW2 removed — contained NSP11+NSP14 not NSP9-NSP12
+- 7LYJ removed — RNA only no proteins
+- 6WKQ added as correct third NSP10-NSP16 structure
+- Chain map fully verified by inspecting COMPND records
+
+**Chain map saved to:** 00-reference/known_interfaces/chain_map.tsv  
+**Status:** ✅ Done  
+
+---
