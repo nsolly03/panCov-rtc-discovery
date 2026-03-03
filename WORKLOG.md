@@ -116,3 +116,61 @@ seaborn, requests, tqdm, jupyter, ipykernel
 **Status:** ✅ Done  
 
 ---
+
+## Entry 007 — NSP sequences downloaded from UniProt
+**Date:** $(date +%Y-%m-%d)  
+**What:** Downloaded all 8 NSP sequences from UniProt P0DTD1 polyprotein  
+**Script:** scripts/03_download_sequences.py  
+**Sequences extracted:**
+- NSP7  : 83 aa  (pos 3860-3942)
+- NSP8  : 198 aa (pos 3943-4140)
+- NSP9  : 113 aa (pos 4141-4253)
+- NSP10 : 139 aa (pos 4254-4392)
+- NSP12 : 932 aa (pos 4393-5324)
+- NSP13 : 601 aa (pos 5325-5925)
+- NSP14 : 527 aa (pos 5926-6452)
+- NSP16 : 298 aa (pos 6799-7096)
+**Files saved to:** 00-reference/sequences/  
+**Status:** ✅ Done  
+
+---
+
+## Entry 008 — AF3 jobs to submit
+**What:** 8 binary pair jobs ready for AlphaFold3 server  
+**Server:** https://alphafoldserver.com  
+**Jobs:**
+1. NSP10-NSP16    — NSP10.fasta + NSP16.fasta
+2. NSP12-NSP7     — NSP12.fasta + NSP7.fasta
+3. NSP12-NSP8     — NSP12.fasta + NSP8.fasta
+4. NSP7-NSP8      — NSP7.fasta  + NSP8.fasta
+5. NSP9-NSP12     — NSP9.fasta  + NSP12.fasta
+6. NSP10-NSP14    — NSP10.fasta + NSP14.fasta
+7. NSP13-Helicase — NSP13.fasta (monomer)
+8. NSP12-NSP13    — NSP12.fasta + NSP13.fasta
+**Save AF3 results to:** 01-alphafold3/<complex>/  
+**Status:** ⏳ Pending — submit jobs on alphafoldserver.com  
+
+---
+
+## Entry 009 — AF3 validation NSP10-NSP14
+**Date:** $(date +%Y-%m-%d)  
+**What:** Validated AF3 predicted interface against PDB 7DIY crystal structure  
+**Script:** scripts/04_validate_NSP10-NSP14.py  
+**AF3 confidence scores:**
+- iptm           : 0.89 (excellent)
+- ptm            : 0.88 (excellent)
+- ranking_score  : 0.91 (excellent)
+- has_clash      : 0.0  (no clashes)
+
+**Validation results (cutoff 5.0 Angstroms):**
+- NSP10 : Precision=1.000  Recall=0.909  F1=0.952
+- NSP14 : Precision=0.984  Recall=0.924  F1=0.953
+- Overall F1 : 0.952
+
+**Gate status:** ✅ PASS (threshold 0.70)  
+**Missed residues NSP10:** 57, 87, 301, 304, 307 (peripheral/flexible)  
+**Missed residues NSP14:** 133, 202, 407, 408, 417 (peripheral/flexible)  
+**Result saved to:** 02-validation/NSP10-NSP14/validation_result.json  
+**Status:** ✅ Done — proceed to interface analysis  
+
+---
