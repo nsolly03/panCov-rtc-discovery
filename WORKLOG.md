@@ -359,3 +359,8 @@ priority anchor residue for the docking box.
 **Date:** $(date +%Y-%m-%d)
 **What:** Fixed receptor filename in vina_config.txt (was .pdb, should be .pdbqt)
 **Status:** ✅ Done
+
+## Entry 018 — Vina config fix
+**Date:** $(date +%Y-%m-%d)
+**What:** Fixed receptor filename in vina_config.txt to point to .pdbqt file
+**Status:** ✅ Done
