@@ -628,3 +628,37 @@ Zn2 coordinators: positions 117,120,128,130 — no hotspot overlap
 **Status:** ✅ Recorded — continue to Script 07_2 (pocket detection)
 
 ---
+
+## Entry 026 — Pocket Detection NSP10-NSP16 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/07_pocket_NSP10-NSP16_2.py
+
+**fpocket results (6W4H):**
+  30 pockets found
+  Pocket 1: druggability score=0.546, volume=691.7 Å³
+  HIGHEST DRUGGABILITY SCORE IN PROJECT SO FAR
+
+**Zinc coordination (2 sites confirmed):**
+  Zn1: CYS74, CYS77, HIS83, CYS90 — flanked by hotspots
+  Zn2: CYS117, CYS120, CYS128, CYS130 — no hotspot overlap
+  No disulfides (reduced cysteines = Zn coordination active)
+
+**Water-mediated bridges (14 total, 11 at hotspots):**
+  HOH7319: HIS80(2.82Å) ↔ GLY78(NSP16) — PRIMARY TARGET
+  HOH4523: LYS93(2.69Å) ↔ SER106(NSP16) — PRIMARY TARGET
+  HOH7257: ASN40+ARG78 ↔ LYS77(NSP16)
+  HOH7385: ARG78(2.9Å) ↔ LYS77(NSP16)
+
+**Drug design implications:**
+  HIS80 and LYS93 both water-bridged = displacement pharmacophore
+  Waters pre-organize binding site = entropic gain for drug binding
+  Pocket 1 druggability 0.546 = genuinely druggable interface
+
+**Docking box (centered on primary hotspots):**
+  Center: (75.618, 10.689, 15.511)
+  Size: 28.363 × 32.885 × 42.778 Å
+  Volume: 39,900 Å³
+
+**Status:** ✅ Done — proceed to Script 08_2 (docking prep)
+
+---
