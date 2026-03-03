@@ -93,3 +93,26 @@ seaborn, requests, tqdm, jupyter, ipykernel
 **Status:** ✅ Done  
 
 ---
+
+## Entry 006 — Binary chains extracted from multi-chain PDBs
+**Date:** $(date +%Y-%m-%d)  
+**What:** Extracted binary interface chains from trimer and complex PDBs  
+**Script:** scripts/02_extract_chains.py  
+**Files created (14 total):**
+- 7BV2_NSP12-NSP7.pdb  (chains A+C, 7193 atoms)
+- 6NUR_NSP12-NSP7.pdb  (chains A+C, 6917 atoms)
+- 7C2K_NSP12-NSP7.pdb  (chains A+C, 8018 atoms)
+- 7BV2_NSP12-NSP8.pdb  (chains A+B, 7583 atoms)
+- 6NUR_NSP12-NSP8.pdb  (chains A+B, 7266 atoms)
+- 7C2K_NSP12-NSP8.pdb  (chains A+B, 8369 atoms)
+- 7BV2_NSP7-NSP8.pdb   (chains C+B, 1352 atoms)
+- 6NUR_NSP7-NSP8.pdb   (chains C+B, 1429 atoms)
+- 8SQK_NSP9-NSP12.pdb  (chains A+G, 16361 atoms)
+- 6XEZ_NSP12-NSP13.pdb (chains A+E, 12077 atoms)
+- 7CXM_NSP12-NSP13.pdb (chains A+E, 12076 atoms)
+- 7RDY_NSP12-NSP13.pdb (chains A+E, 12040 atoms)
+- 6XEZ_NSP13.pdb        (chain E,   4618 atoms)
+- 7NIO_NSP13.pdb        (chain A,   4541 atoms)
+**Status:** ✅ Done  
+
+---
