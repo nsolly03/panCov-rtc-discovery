@@ -513,3 +513,21 @@ Next: Jupyter visualization notebook, then repeat for NSP10-NSP16
 **Status:** ✅ Done
 
 ---
+
+## Entry 021 — 3D visualization notebook NSP10-NSP14 complete
+**Date:** $(date +%Y-%m-%d)
+**What:** 7-view interactive 3D notebook with all 3 structures
+**File:** notebooks/NSP10-NSP14_3D_2.ipynb
+
+**Views:**
+1. Full complex — all conserved hotspots (7DIY)
+2. HIS80-ASP126 salt bridge zoomed (7DIY)
+3. Hotspots colored by composite score (7DIY)
+4. Hotspots colored by BSA burial depth (7DIY)
+5. Docking box on full structure (7DIY)
+6. Structural overlay — 7DIY + 5C8T + AF3
+7. Full hotspot ranking table
+
+**Status:** ✅ NSP10-NSP14 FULLY COMPLETE
+
+---
