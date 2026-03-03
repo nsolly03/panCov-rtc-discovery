@@ -552,3 +552,23 @@ Next: Jupyter visualization notebook, then repeat for NSP10-NSP16
 **Status:** ✅ Gate passed — proceed to Script 05_2 (interface analysis)
 
 ---
+
+## Entry 023 — Interface Analysis NSP10-NSP16 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/05_interface_NSP10-NSP16_2.py
+
+**Salt bridges confirmed:**
+  ASP106(NSP16)–LYS93(NSP10): ALL 4 structures ✅ PRIMARY ANCHOR
+  ASP106(NSP16)–LYS95(NSP10): ALL 4 structures ✅ SECONDARY ANCHOR
+  ASP102(NSP16)–HIS80(NSP10): 6WVN + 6WKQ + AF3 ✅
+  GLU6(NSP16)–LYS76(NSP10):   AF3 only (predicted)
+
+**Consensus hotspots:**
+  NSP10: LEU45, VAL42, MET44, LYS93, TYR96, LYS43, ASN40, ALA71, GLY94, ARG78
+  NSP16: ASP106, ILE40, GLN87, MET247, ALA83, LEU244, VAL104, VAL44, MET41, LYS76
+
+**Contact totals:** 6W4H=490, 6WVN=517, 6WKQ=537, AF3=655
+
+**Status:** ✅ Done — proceed to Script 06_2 (conservation)
+
+---
