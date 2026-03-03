@@ -329,3 +329,15 @@ priority anchor residue for the docking box.
 **Output:** 02-validation/NSP10-NSP14/pocket_analysis.json, docking_config.json
 **Note:** Low druggability scores expected for PPI interface; conservation argument remains primary
 **Status:** ✅ Done — proceed to Script 08
+
+## Entry 016 — Docking preparation NSP10-NSP14
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/08_docking_prep_NSP10-NSP14.py
+**What:** Prepared receptor and generated docking configurations for virtual screening
+**Results:**
+- Receptor: 5231 atoms, 666 residues (NSP10: 139 aa + NSP14: 527 aa)
+- Docking box: center (-3.825, 12.651, -9.697), size (37.845, 31.284, 36.213)
+- Configs generated: Vina, VirtualFlow
+- Status: Ready for virtual screening
+**Output:** 03-virtual-screening/NSP10-NSP14/
+**Status:** ✅ Done — NSP10-NSP14 pipeline complete through docking prep
