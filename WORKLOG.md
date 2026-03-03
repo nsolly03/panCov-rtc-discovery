@@ -572,3 +572,27 @@ Next: Jupyter visualization notebook, then repeat for NSP10-NSP16
 **Status:** ✅ Done — proceed to Script 06_2 (conservation)
 
 ---
+
+## Entry 024 — Conservation Analysis NSP10-NSP16 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/06_conservation_NSP10-NSP16_2.py
+
+**Results:**
+  NSP10: 12/14 hotspots conserved ≥ 0.8
+    Variable: VAL42 (0.689), TYR96 (0.172)
+    All primary targets: cons=1.000 ✅
+
+  NSP16: 11/11 hotspots conserved = 1.000 ✅ PERFECT
+
+**Primary salt bridge residues — all cons=1.000:**
+  LYS93(NSP10), LYS95(NSP10), HIS80(NSP10)
+  ASP106(NSP16), ASP102(NSP16)
+
+**Scientific note:**
+  NSP10-NSP16 is more conserved than NSP10-NSP14
+  NSP16 interface is perfectly conserved across all 5 coronaviruses
+  Strongest case for pan-coronavirus drug targeting in the project so far
+
+**Status:** ✅ Done — proceed to Script 07_2 (pocket detection)
+
+---
