@@ -341,3 +341,16 @@ priority anchor residue for the docking box.
 - Status: Ready for virtual screening
 **Output:** 03-virtual-screening/NSP10-NSP14/
 **Status:** ✅ Done — NSP10-NSP14 pipeline complete through docking prep
+
+## Entry 017 — Receptor PDBQT preparation
+**Date:** $(date +%Y-%m-%d)
+**What:** Fixed PDB element symbols and converted to PDBQT with OpenBabel
+**Results:**
+- Fixed missing element symbols in columns 77-78 (AF3 PDB format issue)
+- Converted to PDBQT with protonation at pH 7.4
+- Final receptor: 5231 atoms, ready for docking
+- Warnings: Only aromatic bond perception (normal for proteins)
+**Files:** 
+  - NSP10_NSP14_receptor.pdb (fixed)
+  - NSP10_NSP14_receptor.pdbqt (ready for screening)
+**Status:** ✅ Done — receptor fully prepared
