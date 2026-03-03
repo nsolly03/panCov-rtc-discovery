@@ -1,0 +1,33 @@
+{
+  "target": {
+    "name": "NSP10-NSP14",
+    "receptor_file": "NSP10_NSP14_receptor.pdb",
+    "receptor_pdbqt": "NSP10_NSP14_receptor.pdbqt"
+  },
+  "docking_box": {
+    "center_x": -3.825,
+    "center_y": 12.651,
+    "center_z": -9.697,
+    "size_x": 37.845,
+    "size_y": 31.284,
+    "size_z": 36.213,
+    "source": "fpocket_consensus_7DIY"
+  },
+  "anchor_residues": {
+    "NSP10": 80,
+    "NSP14": 126
+  },
+  "docking_parameters": {
+    "exhaustiveness": 32,
+    "num_modes": 9,
+    "energy_range": 3.0
+  },
+  "library": {
+    "filter": {
+      "mw_min": 200,
+      "mw_max": 500,
+      "logp_min": -2.0,
+      "logp_max": 5.0
+    }
+  }
+}

@@ -23,6 +23,7 @@ How to run:
 import json
 import subprocess
 import re
+import shutil
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 import numpy as np
@@ -36,53 +37,60 @@ OUTPUT_DIR = VALIDATION_DIR
 
 # Conserved hotspot residues from Script 06 (Entry 013)
 CONSERVED_HOTSPOTS = {
-    "NSP10": [5, 19, 21, 40, 42, 44, 45, 80, 93],  # HIS80 is primary target
-    "NSP14": [4, 7, 8, 9, 10, 20, 25, 27, 127, 201]  # ASP126 is primary target partner
+    "NSP10": [5, 19, 21, 40, 42, 44, 45, 80, 93],
+    "NSP14": [4, 7, 8, 9, 10, 20, 25, 27, 127, 201]
 }
 
-# Primary salt bridge residues (highest priority for docking box)
+# Primary salt bridge residues
 PRIMARY_TARGET = {
-    "NSP10": 80,   # HIS80
-    "NSP14": 126   # ASP126
+    "NSP10": 80,
+    "NSP14": 126
 }
 
 
-def run_fpocket(pdb_path: Path, output_suffix: str = "") -> Path:
+def run_fpocket(pdb_path: Path, structure_name: str) -> Path:
     """
     Run fpocket on a PDB file.
+    Returns path to output directory.
     """
     pdb_name = pdb_path.stem
-    output_name = f"{pdb_name}{output_suffix}"
-    output_dir = pdb_path.parent / f"{output_name}_out"
+    standard_output = pdb_path.parent / f"{pdb_name}_out"
+    custom_output = pdb_path.parent / f"{structure_name}_out"
     
     print(f"\n[FPocket] Running fpocket on {pdb_path.name}")
-    print(f"[FPocket] Output will be in: {output_dir}")
     
-    # Check if fpocket output already exists
-    if output_dir.exists():
-        print(f"[FPocket] Output directory exists, skipping fpocket run")
-        return output_dir
+    # If custom output exists, use it
+    if custom_output.exists():
+        print(f"[FPocket] Using existing output: {custom_output}")
+        return custom_output
+    
+    # If standard output exists, rename it to custom name
+    if standard_output.exists():
+        print(f"[FPocket] Renaming existing output to: {custom_output}")
+        standard_output.rename(custom_output)
+        return custom_output
     
     # Run fpocket
     cmd = ["fpocket", "-f", str(pdb_path)]
     
     try:
-        result = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-            cwd=pdb_path.parent
-        )
+        result = subprocess.run(cmd, capture_output=True, text=True, cwd=pdb_path.parent)
         
         if result.returncode != 0:
             print(f"[ERROR] fpocket failed: {result.stderr}")
             return None
-            
-        print(f"[FPocket] ✓ Completed successfully")
-        return output_dir
+        
+        # fpocket creates {pdb_name}_out - rename to {structure_name}_out
+        if standard_output.exists():
+            standard_output.rename(custom_output)
+            print(f"[FPocket] ✓ Completed: {custom_output}")
+            return custom_output
+        else:
+            print(f"[ERROR] Expected output not created: {standard_output}")
+            return None
         
     except FileNotFoundError:
-        print(f"[ERROR] fpocket not found. Is it installed? (conda install -c bioconda fpocket)")
+        print(f"[ERROR] fpocket not found. Run: conda install -c bioconda fpocket")
         return None
     except Exception as e:
         print(f"[ERROR] fpocket execution failed: {e}")
@@ -90,9 +98,7 @@ def run_fpocket(pdb_path: Path, output_suffix: str = "") -> Path:
 
 
 def parse_pocket_residues(pocket_pdb: Path) -> List[Dict]:
-    """
-    Parse residues from a pocket PDB file.
-    """
+    """Parse residues from a pocket PDB file."""
     residues = []
     seen = set()
     
@@ -134,23 +140,35 @@ def calculate_pocket_center(residues: List[Dict]) -> Tuple[float, float, float]:
     return (float(np.mean(x_coords)), float(np.mean(y_coords)), float(np.mean(z_coords)))
 
 
-def parse_fpocket_pockets(output_dir: Path) -> List[Dict]:
+def parse_fpocket_pockets(output_dir: Path, structure_name: str) -> List[Dict]:
     """
     Parse fpocket output to extract pocket information.
     """
     pockets = []
     
-    # Parse _info.txt file for pocket metadata
-    info_file = output_dir / f"{output_dir.stem.replace('_out', '')}_info.txt"
+    # Look for {structure_name}_info.txt in output directory
+    info_file = output_dir / f"{structure_name}_info.txt"
+    
+    print(f"[Parse] Looking for: {info_file}")
     
     if not info_file.exists():
-        print(f"[WARNING] Info file not found: {info_file}")
-        return pockets
+        # Try to find any _info.txt file
+        info_files = list(output_dir.glob("*_info.txt"))
+        if info_files:
+            info_file = info_files[0]
+            print(f"[Parse] Found alternative: {info_file}")
+        else:
+            print(f"[ERROR] No info file found in {output_dir}")
+            # List directory contents for debugging
+            print(f"[DEBUG] Directory contents:")
+            for item in output_dir.iterdir():
+                print(f"  - {item.name}")
+            return pockets
     
     with open(info_file, 'r') as f:
         content = f.read()
     
-    # Parse pocket entries - fpocket format
+    # Parse pocket entries
     lines = content.splitlines()
     current_pocket = None
     
@@ -195,26 +213,32 @@ def parse_fpocket_pockets(output_dir: Path) -> List[Dict]:
                 except ValueError:
                     pass
     
-    # Parse pocket PDB files for residue information
+    print(f"[Parse] Parsed {len(pockets)} pockets from info file")
+    
+    # Parse pocket PDB files
+    pockets_dir = output_dir / "pockets"
+    
+    if not pockets_dir.exists():
+        print(f"[WARNING] Pockets subdirectory not found: {pockets_dir}")
+        return pockets
+    
     for pocket in pockets:
-        pocket_pdb = output_dir / f"pocket{pocket['pocket_number']}_atm.pdb"
+        pocket_pdb = pockets_dir / f"pocket{pocket['pocket_number']}_atm.pdb"
         
         if pocket_pdb.exists():
             residues = parse_pocket_residues(pocket_pdb)
             pocket['residues'] = residues
-            
-            # Calculate pocket center from residues
             if residues:
                 pocket['center'] = calculate_pocket_center(residues)
+        else:
+            print(f"[WARNING] Missing pocket file: {pocket_pdb}")
     
     return pockets
 
 
 def check_hotspot_overlap(pocket: Dict, hotspots: Dict[str, List[int]], 
                           chain_map: Dict[str, str]) -> Dict:
-    """
-    Check if pocket overlaps with hotspot residues.
-    """
+    """Check if pocket overlaps with hotspot residues."""
     overlap = {
         'has_overlap': False,
         'overlapping_residues': [],
@@ -235,8 +259,6 @@ def check_hotspot_overlap(pocket: Dict, hotspots: Dict[str, List[int]],
             overlap['has_overlap'] = True
             overlap['nsp10_hits'].append(res_num)
             overlap['overlapping_residues'].append(f"NSP10:{res_num}")
-            
-            # Check if this is the primary target (HIS80)
             if res_num == PRIMARY_TARGET['NSP10']:
                 overlap['primary_target_included'] = True
     
@@ -247,8 +269,6 @@ def check_hotspot_overlap(pocket: Dict, hotspots: Dict[str, List[int]],
             overlap['has_overlap'] = True
             overlap['nsp14_hits'].append(res_num)
             overlap['overlapping_residues'].append(f"NSP14:{res_num}")
-            
-            # Check if this is the primary target partner (ASP126)
             if res_num == PRIMARY_TARGET['NSP14']:
                 overlap['primary_target_included'] = True
     
@@ -256,9 +276,7 @@ def check_hotspot_overlap(pocket: Dict, hotspots: Dict[str, List[int]],
 
 
 def calculate_docking_box(pocket: Dict, padding: float = 10.0) -> Dict:
-    """
-    Calculate docking box parameters from pocket residues.
-    """
+    """Calculate docking box parameters from pocket residues."""
     if not pocket['residues']:
         return None
     
@@ -266,17 +284,14 @@ def calculate_docking_box(pocket: Dict, padding: float = 10.0) -> Dict:
     y_coords = [r['y'] for r in pocket['residues']]
     z_coords = [r['z'] for r in pocket['residues']]
     
-    # Calculate bounding box
     x_min, x_max = min(x_coords), max(x_coords)
     y_min, y_max = min(y_coords), max(y_coords)
     z_min, z_max = min(z_coords), max(z_coords)
     
-    # Center
     center_x = (x_min + x_max) / 2
     center_y = (y_min + y_max) / 2
     center_z = (z_min + z_max) / 2
     
-    # Dimensions with padding
     size_x = (x_max - x_min) + 2 * padding
     size_y = (y_max - y_min) + 2 * padding
     size_z = (z_max - z_min) + 2 * padding
@@ -294,12 +309,7 @@ def calculate_docking_box(pocket: Dict, padding: float = 10.0) -> Dict:
 
 def select_best_pocket(pockets: List[Dict], hotspots: Dict[str, List[int]], 
                        chain_map: Dict[str, str]) -> Optional[Dict]:
-    """
-    Select the best pocket for docking based on:
-    1. Overlap with primary target (HIS80-ASP126)
-    2. Druggability score
-    3. Overlap with other conserved hotspots
-    """
+    """Select the best pocket for docking."""
     if not pockets:
         return None
     
@@ -308,21 +318,12 @@ def select_best_pocket(pockets: List[Dict], hotspots: Dict[str, List[int]],
     for pocket in pockets:
         overlap = check_hotspot_overlap(pocket, hotspots, chain_map)
         
-        # Scoring criteria
         score = 0.0
-        
-        # Primary: includes HIS80 or ASP126 (must have for drug target)
         if overlap['primary_target_included']:
             score += 1000
-        
-        # Secondary: includes other conserved hotspots
         score += len(overlap['nsp10_hits']) * 10
         score += len(overlap['nsp14_hits']) * 10
-        
-        # Tertiary: fpocket druggability score
         score += pocket.get('druggability_score', 0) * 5
-        
-        # Quaternary: general fpocket score
         score += pocket.get('score', 0)
         
         scored_pockets.append({
@@ -332,15 +333,13 @@ def select_best_pocket(pockets: List[Dict], hotspots: Dict[str, List[int]],
             'has_primary_target': overlap['primary_target_included']
         })
     
-    # Sort by score (descending)
     scored_pockets.sort(key=lambda x: x['score'], reverse=True)
     
-    # Return best pocket
     if scored_pockets:
         best = scored_pockets[0]
         print(f"\n[SELECT] Pocket {best['pocket']['pocket_number']} selected (score: {best['score']:.1f})")
-        print(f"[SELECT] Primary target included: {best['has_primary_target']}")
-        print(f"[SELECT] Overlapping hotspots: {best['overlap']['overlapping_residues']}")
+        print(f"[SELECT] Primary target: {best['has_primary_target']}")
+        print(f"[SELECT] Hotspots: {best['overlap']['overlapping_residues']}")
         return best
     
     return None
@@ -348,16 +347,13 @@ def select_best_pocket(pockets: List[Dict], hotspots: Dict[str, List[int]],
 
 def analyze_structure(pdb_path: Path, structure_name: str, 
                       chain_map: Dict[str, str]) -> Dict:
-    """
-    Complete pocket analysis pipeline for one structure.
-    """
+    """Complete pocket analysis pipeline for one structure."""
     print(f"\n{'='*60}")
     print(f"ANALYZING: {structure_name}")
     print(f"FILE: {pdb_path}")
     print(f"{'='*60}")
     
-    # Run fpocket
-    output_dir = run_fpocket(pdb_path, f"_{structure_name}")
+    output_dir = run_fpocket(pdb_path, structure_name)
     
     if not output_dir or not output_dir.exists():
         return {
@@ -366,9 +362,7 @@ def analyze_structure(pdb_path: Path, structure_name: str,
             'error': 'fpocket execution failed'
         }
     
-    # Parse pockets
-    print(f"[Parse] Reading pocket information from {output_dir}")
-    pockets = parse_fpocket_pockets(output_dir)
+    pockets = parse_fpocket_pockets(output_dir, structure_name)
     
     if not pockets:
         return {
@@ -377,16 +371,12 @@ def analyze_structure(pdb_path: Path, structure_name: str,
             'error': 'No pockets detected'
         }
     
-    print(f"[Parse] Found {len(pockets)} pockets")
-    
-    # Print pocket summary
     print(f"\n[Pockets Summary]")
     for p in pockets:
         print(f"  Pocket {p['pocket_number']}: Score={p.get('score', 0):.3f}, "
               f"Druggability={p.get('druggability_score', 0):.3f}, "
               f"Volume={p.get('volume', 0):.1f} Å³")
     
-    # Select best pocket
     best = select_best_pocket(pockets, CONSERVED_HOTSPOTS, chain_map)
     
     if not best:
@@ -397,11 +387,9 @@ def analyze_structure(pdb_path: Path, structure_name: str,
             'error': 'No pocket overlaps with hotspots'
         }
     
-    # Calculate docking box
     docking_box = calculate_docking_box(best['pocket'], padding=10.0)
     
-    # Compile results
-    result = {
+    return {
         'structure': structure_name,
         'pdb_file': str(pdb_path),
         'status': 'SUCCESS',
@@ -422,8 +410,6 @@ def analyze_structure(pdb_path: Path, structure_name: str,
         },
         'docking_box': docking_box
     }
-    
-    return result
 
 
 def main():
@@ -434,13 +420,10 @@ def main():
     print("Target: NSP10-NSP14")
     print("="*70)
     
-    # Ensure output directory exists
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     
-    # Define structures to analyze
     structures = []
     
-    # 7DIY crystal structure (SARS-CoV-2)
     pdb_7diy = REFERENCE_DIR / "7DIY.pdb"
     if pdb_7diy.exists():
         structures.append({
@@ -448,10 +431,7 @@ def main():
             'name': '7DIY',
             'chain_map': {'NSP10': 'A', 'NSP14': 'B'}
         })
-    else:
-        print(f"[WARNING] 7DIY.pdb not found at {pdb_7diy}")
     
-    # 5C8T crystal structure (SARS-CoV-1)
     pdb_5c8t = REFERENCE_DIR / "5C8T.pdb"
     if pdb_5c8t.exists():
         structures.append({
@@ -459,10 +439,7 @@ def main():
             'name': '5C8T',
             'chain_map': {'NSP10': 'A', 'NSP14': 'B'}
         })
-    else:
-        print(f"[WARNING] 5C8T.pdb not found at {pdb_5c8t}")
     
-    # AF3 model
     af3_pdb = AF3_DIR / "NSP10_NSP14_best_model.pdb"
     if af3_pdb.exists():
         structures.append({
@@ -470,23 +447,19 @@ def main():
             'name': 'AF3',
             'chain_map': {'NSP10': 'A', 'NSP14': 'B'}
         })
-    else:
-        print(f"[WARNING] AF3 model not found at {af3_pdb}")
     
     if not structures:
-        print("[ERROR] No structures found to analyze. Exiting.")
+        print("[ERROR] No structures found. Exiting.")
         return 1
     
     print(f"\n[Setup] Will analyze {len(structures)} structure(s)")
     
-    # Analyze each structure
     all_results = []
     
     for struct in structures:
         result = analyze_structure(struct['path'], struct['name'], struct['chain_map'])
         all_results.append(result)
     
-    # Summary
     print(f"\n{'='*70}")
     print("SUMMARY")
     print(f"{'='*70}")
@@ -494,22 +467,22 @@ def main():
     successful = [r for r in all_results if r['status'] == 'SUCCESS']
     failed = [r for r in all_results if r['status'] != 'SUCCESS']
     
-    print(f"\nTotal structures analyzed: {len(all_results)}")
-    print(f"Successful: {len(successful)}")
-    print(f"Failed: {len(failed)}")
+    print(f"\nTotal: {len(all_results)}, Successful: {len(successful)}, Failed: {len(failed)}")
     
-    # Print docking boxes for successful analyses
+    if failed:
+        print(f"\nFailed:")
+        for r in failed:
+            print(f"  - {r['structure']}: {r.get('error', 'Unknown')}")
+    
     if successful:
-        print(f"\n[Docking Box Recommendations]")
+        print(f"\n[Docking Boxes]")
         for r in successful:
             box = r['docking_box']
             print(f"\n{r['structure']}:")
             print(f"  Center: ({box['center_x']}, {box['center_y']}, {box['center_z']})")
             print(f"  Size:   ({box['size_x']}, {box['size_y']}, {box['size_z']})")
-            print(f"  Primary target included: {r['hotspot_overlap']['primary_target_included']}")
-            print(f"  Druggability score: {r['selected_pocket']['druggability_score']:.3f}")
+            print(f"  Druggability: {r['selected_pocket']['druggability_score']:.3f}")
     
-    # Select consensus docking box (prioritize 7DIY, then AF3)
     consensus = None
     for r in successful:
         if r['structure'] == '7DIY':
@@ -519,15 +492,13 @@ def main():
         consensus = successful[0]
     
     if consensus:
-        print(f"\n[Consensus Docking Box] Based on {consensus['structure']}")
+        print(f"\n[Consensus] Based on {consensus['structure']}")
         box = consensus['docking_box']
         print(f"  Center: ({box['center_x']}, {box['center_y']}, {box['center_z']})")
         print(f"  Size:   ({box['size_x']}, {box['size_y']}, {box['size_z']})")
     
-    # Save results
     output_file = OUTPUT_DIR / "pocket_analysis.json"
     
-    # Get date
     try:
         date_str = subprocess.check_output(['date', '+%Y-%m-%d']).decode().strip()
     except:
@@ -545,9 +516,8 @@ def main():
     with open(output_file, 'w') as f:
         json.dump(final_output, f, indent=2)
     
-    print(f"\n[Output] Results saved to: {output_file}")
+    print(f"\n[Output] Saved: {output_file}")
     
-    # Also save simplified docking config for next script
     if consensus:
         docking_config = {
             'complex': 'NSP10-NSP14',
@@ -558,20 +528,17 @@ def main():
             'size_x': consensus['docking_box']['size_x'],
             'size_y': consensus['docking_box']['size_y'],
             'size_z': consensus['docking_box']['size_z'],
-            'anchor_residues': {
-                'NSP10': 80,
-                'NSP14': 126
-            }
+            'anchor_residues': {'NSP10': 80, 'NSP14': 126}
         }
         
         docking_file = OUTPUT_DIR / "docking_config.json"
         with open(docking_file, 'w') as f:
             json.dump(docking_config, f, indent=2)
-        print(f"[Output] Docking config saved to: {docking_file}")
+        print(f"[Output] Saved: {docking_file}")
     
     print(f"\n{'='*70}")
-    print("Script 07 completed successfully")
-    print("Next step: Script 08 - Docking preparation")
+    print("Script 07 completed")
+    print("Next: Script 08 - Docking preparation")
     print(f"{'='*70}\n")
     
     return 0

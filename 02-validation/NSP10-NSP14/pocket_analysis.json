@@ -27,22 +27,135 @@
       201
     ]
   },
-  "consensus_docking_box": null,
+  "consensus_docking_box": {
+    "center_x": -3.825,
+    "center_y": 12.651,
+    "center_z": -9.697,
+    "size_x": 37.845,
+    "size_y": 31.284,
+    "size_z": 36.213,
+    "padding": 10.0
+  },
   "structure_results": [
     {
       "structure": "7DIY",
-      "status": "FAILED",
-      "error": "fpocket execution failed"
+      "pdb_file": "/home/nseku/projects/rtc-pan-coronavirus/00-reference/pdb_structures/7DIY.pdb",
+      "status": "SUCCESS",
+      "total_pockets": 26,
+      "selected_pocket": {
+        "pocket_number": 3,
+        "fpocket_score": 0.161,
+        "druggability_score": 0.0,
+        "volume": 4.476,
+        "num_residues": 21,
+        "center": [
+          -3.580904761904761,
+          12.559333333333333,
+          -11.50695238095238
+        ]
+      },
+      "hotspot_overlap": {
+        "primary_target_included": true,
+        "nsp10_hits": [
+          21,
+          80
+        ],
+        "nsp14_hits": [],
+        "all_overlapping": [
+          "NSP10:21",
+          "NSP10:80"
+        ]
+      },
+      "docking_box": {
+        "center_x": -3.825,
+        "center_y": 12.651,
+        "center_z": -9.697,
+        "size_x": 37.845,
+        "size_y": 31.284,
+        "size_z": 36.213,
+        "padding": 10.0
+      }
     },
     {
       "structure": "5C8T",
-      "status": "FAILED",
-      "error": "fpocket execution failed"
+      "pdb_file": "/home/nseku/projects/rtc-pan-coronavirus/00-reference/pdb_structures/5C8T.pdb",
+      "status": "SUCCESS",
+      "total_pockets": 99,
+      "selected_pocket": {
+        "pocket_number": 90,
+        "fpocket_score": -0.127,
+        "druggability_score": 0.001,
+        "volume": 4.294,
+        "num_residues": 17,
+        "center": [
+          -39.69141176470588,
+          -77.82741176470589,
+          8.716529411764705
+        ]
+      },
+      "hotspot_overlap": {
+        "primary_target_included": true,
+        "nsp10_hits": [
+          21,
+          80
+        ],
+        "nsp14_hits": [],
+        "all_overlapping": [
+          "NSP10:21",
+          "NSP10:80"
+        ]
+      },
+      "docking_box": {
+        "center_x": -39.073,
+        "center_y": -78.486,
+        "center_z": 7.631,
+        "size_x": 30.856,
+        "size_y": 35.472,
+        "size_z": 32.335,
+        "padding": 10.0
+      }
     },
     {
       "structure": "AF3",
-      "status": "FAILED",
-      "error": "fpocket execution failed"
+      "pdb_file": "/home/nseku/projects/rtc-pan-coronavirus/01-alphafold3/NSP10-NSP14/NSP10_NSP14_best_model.pdb",
+      "status": "SUCCESS",
+      "total_pockets": 52,
+      "selected_pocket": {
+        "pocket_number": 9,
+        "fpocket_score": 0.068,
+        "druggability_score": 0.0,
+        "volume": 3.385,
+        "num_residues": 13,
+        "center": [
+          -29.186538461538458,
+          24.567153846153847,
+          2.1733846153846157
+        ]
+      },
+      "hotspot_overlap": {
+        "primary_target_included": false,
+        "nsp10_hits": [
+          5
+        ],
+        "nsp14_hits": [
+          10,
+          27
+        ],
+        "all_overlapping": [
+          "NSP10:5",
+          "NSP14:10",
+          "NSP14:27"
+        ]
+      },
+      "docking_box": {
+        "center_x": -29.91,
+        "center_y": 23.66,
+        "center_z": 2.463,
+        "size_x": 33.225,
+        "size_y": 31.018,
+        "size_z": 27.154,
+        "padding": 10.0
+      }
     }
   ]
 }

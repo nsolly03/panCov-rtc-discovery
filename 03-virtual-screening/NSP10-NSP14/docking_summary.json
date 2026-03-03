@@ -1,0 +1,45 @@
+{
+  "campaign": {
+    "target": "NSP10-NSP14",
+    "date": "2026-03-03",
+    "status": "ready_for_screening"
+  },
+  "receptor": {
+    "source": "AlphaFold3",
+    "file": "NSP10_NSP14_receptor.pdb",
+    "validation": {
+      "iptm": 0.89,
+      "ptm": 0.88,
+      "f1_score": 0.952
+    }
+  },
+  "binding_site": {
+    "definition": "fpocket_consensus_7DIY",
+    "anchor_residues": {
+      "NSP10": 80,
+      "NSP14": 126
+    },
+    "conservation": {
+      "NSP10_HIS80": 1.0,
+      "note": "Fully conserved across 5 coronaviruses"
+    }
+  },
+  "docking_box": {
+    "center": {
+      "x": -3.825,
+      "y": 12.651,
+      "z": -9.697
+    },
+    "size": {
+      "x": 37.845,
+      "y": 31.284,
+      "z": 36.213
+    }
+  },
+  "next_steps": [
+    "Prepare receptor PDBQT with MGLTools/OpenBabel",
+    "Prepare ligand library",
+    "Run virtual screening",
+    "Analyze top hits"
+  ]
+}

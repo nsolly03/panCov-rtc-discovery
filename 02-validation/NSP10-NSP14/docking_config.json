@@ -1,0 +1,14 @@
+{
+  "complex": "NSP10-NSP14",
+  "receptor_file": "/home/nseku/projects/rtc-pan-coronavirus/01-alphafold3/NSP10-NSP14/NSP10_NSP14_best_model.pdb",
+  "center_x": -3.825,
+  "center_y": 12.651,
+  "center_z": -9.697,
+  "size_x": 37.845,
+  "size_y": 31.284,
+  "size_z": 36.213,
+  "anchor_residues": {
+    "NSP10": 80,
+    "NSP14": 126
+  }
+}

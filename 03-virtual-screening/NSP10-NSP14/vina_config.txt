@@ -1,0 +1,16 @@
+# AutoDock Vina Configuration
+# Target: NSP10-NSP14
+receptor = NSP10_NSP14_receptor.pdb
+
+# Search space
+center_x = -3.825
+center_y = 12.651
+center_z = -9.697
+size_x = 37.845
+size_y = 31.284
+size_z = 36.213
+
+# Search parameters
+exhaustiveness = 32
+num_modes = 9
+energy_range = 3

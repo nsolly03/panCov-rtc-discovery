@@ -316,3 +316,16 @@ priority anchor residue for the docking box.
 - Primary target HIS80-ASP126 included: YES
 **Output:** 02-validation/NSP10-NSP14/pocket_analysis.json, docking_config.json
 **Status:** ✅ Done — proceed to Script 08
+
+## Entry 015 — Pocket detection NSP10-NSP14
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/07_pocket_NSP10-NSP14.py
+**What:** Ran fpocket on 7DIY, 5C8T, and AF3 model; identified druggable pockets overlapping HIS80
+**Results:**
+- 7DIY: 26 pockets, Pocket 3 selected (includes HIS80, druggability: 0.000)
+- 5C8T: 99 pockets, Pocket 90 selected (includes HIS80, druggability: 0.001)
+- AF3: 52 pockets, Pocket 9 selected (no HIS80, druggability: 0.000)
+- Consensus docking box: center (-3.825, 12.651, -9.697), size (37.845, 31.284, 36.213)
+**Output:** 02-validation/NSP10-NSP14/pocket_analysis.json, docking_config.json
+**Note:** Low druggability scores expected for PPI interface; conservation argument remains primary
+**Status:** ✅ Done — proceed to Script 08
