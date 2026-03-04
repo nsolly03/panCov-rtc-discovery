@@ -1085,3 +1085,28 @@ Steps 04–10 complete. Proceeding to Step 11 (3D visualization).
 Next complex: NSP12-NSP8
 
 ---
+
+## Entry 042 — AF3 Validation NSP12-NSP8 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/04_validate_NSP12-NSP8_4.py
+
+**AF3 quality:**
+  iptm=0.85, ptm=0.88, ranking=0.86
+  has_clash=0.0, fraction_disordered=0.02
+  num_recycles=10 (fully converged)
+  chain_pair_pae_min=1.22 Å (excellent)
+
+**Validation results:**
+  7BV2: NSP12 F1=0.924  NSP8 F1=0.945  Overall F1=0.934 ✅ PASS
+  6NUR: NSP12 F1=0.922  NSP8 F1=0.926  Overall F1=0.924 ✅ PASS
+  7C2K: NSP12 F1=0.970  NSP8 F1=0.954  Overall F1=0.963 ✅ PASS
+
+**Primary gate (7BV2): F1=0.934 ✅ PASS (gate ≥0.70)**
+
+**Chain assignments:**
+  PDB: Chain A=NSP12, Chain B=NSP8 (consistent all 3 structures)
+  AF3: Chain A=NSP12 (932 res), Chain B=NSP8 (198 res) — same orientation
+
+**Status:** ✅ Done — proceed to Script 05_4 (interface analysis)
+
+---
