@@ -1,0 +1,13 @@
+receptor = /home/nseku/projects/rtc-pan-coronavirus/03-virtual-screening/NSP12-NSP8_4/receptor_NSP12-NSP8_4.pdb
+
+center_x = 99.399
+center_y = 116.276
+center_z = 120.533
+
+size_x = 63.106
+size_y = 43.704
+size_z = 35.76
+
+exhaustiveness = 16
+num_modes = 9
+energy_range = 3

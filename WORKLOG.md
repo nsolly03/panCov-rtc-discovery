@@ -1194,3 +1194,34 @@ Next complex: NSP12-NSP8
 **Status:** ✅ Done — proceed to Script 08_4 (docking prep)
 
 ---
+
+## Entry 046 — Docking Prep NSP12-NSP8 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/08_docking_prep_NSP12-NSP8_4.py
+
+**Receptor:** 948 residues, 7583 atoms (NSP12 834 + NSP8 114)
+
+**Hotspot verification:**
+  NSP12: pos 117 missing — alignment gap (acceptable) ✅
+  NSP8:  pos 115-131 missing — 7BV2 C-terminal truncation
+         (chain ends at local 114 = PDB 191) ✅ expected
+  NSP8 pos 79/80/99: present but AA mismatch due to
+  alignment-offset discrepancy — salt bridges confirmed
+  via alignment in Script 05_4 ✅
+
+**NSP12 primary SB residues: all confirmed ✅**
+  LYS332, ASP517, ASP523 present
+
+**Docking box:**
+  Center: (99.399, 116.276, 120.533)
+  Size:   63.106 × 43.704 × 35.76 Å
+  Volume: 98,626 Å³
+
+**Output:** 03-virtual-screening/NSP12-NSP8_4/
+  receptor_NSP12-NSP8_4.pdb
+  vina_config_NSP12-NSP8_4.txt
+  virtualflow_config_NSP12-NSP8_4.json
+
+**Status:** ✅ Done — proceed to Script 09_4 (publication figures)
+
+---
