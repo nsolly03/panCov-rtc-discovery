@@ -864,3 +864,32 @@ Key scientific highlights:
 **Status:** ✅ Done — proceed to Script 06_3 (conservation)
 
 ---
+
+## Entry 035 — Conservation Analysis NSP12-NSP7 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/06_conservation_NSP12-NSP7_3.py
+
+**NSP12: 9/15 hotspots conserved ≥ 0.8**
+  Perfect (1.000): ARG33, PRO412, GLY413, PHE415, TYR420,
+                   GLU431★, PHE440, PHE442, PHE843
+  Variable (<0.8): VAL14, GLY23, ASP40, ILE37, ALA443, THR409
+
+**NSP7: 6/13 hotspots conserved ≥ 0.8**
+  ⚠️  IMPORTANT: Positions 1,2,4,5 show gaps (-) for MERS/HCoV
+  HCoV-229E and HCoV-NL63 NSP7 are N-terminally truncated (78 aa vs 84)
+  LYS2 salt bridge anchor cons=1.000 is MISLEADING —
+  only SARS-CoV-2/1 have residue at position 2
+  This salt bridge may NOT be pan-coronavirus conserved
+
+**Primary salt bridge assessment:**
+  GLU431(NSP12): cons=1.000 ✅ genuinely conserved
+  LYS2(NSP7):   cons=1.000 ⚠️  SARS only — not pan-coronavirus
+
+**Drug design implication:**
+  NSP12-NSP7 hydrophobic core (PHE412,GLY413,PHE415,TYR420,
+  PHE440,PHE442,PHE843) — pan-coronavirus conserved
+  Salt bridge LYS2-GLU431 — SARS-CoV-1/2 specific only
+
+**Status:** ✅ Done — proceed to Script 07_3 (pocket detection)
+
+---

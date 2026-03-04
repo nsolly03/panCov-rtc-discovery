@@ -1,0 +1,17 @@
+position,aa_SARS2,conservation,is_hotspot,primary_sb,SARS-CoV-2,SARS-CoV-1,MERS-CoV,HCoV-229E,HCoV-NL63
+14,V,0.5,True,False,V,V,S,S,-
+23,G,0.25,True,False,G,G,S,N,-
+33,R,1.0,True,False,R,R,R,R,-
+37,I,0.594,True,False,I,I,I,V,-
+40,D,0.0,True,False,D,E,A,K,-
+41,K,0.594,True,False,K,K,K,D,-
+409,T,0.689,True,False,T,T,T,T,V
+412,P,1.0,True,False,P,P,P,P,P
+413,G,1.0,True,False,G,G,G,G,G
+415,F,1.0,True,False,F,F,F,F,F
+420,Y,1.0,True,False,Y,Y,Y,Y,Y
+431,E,1.0,False,True,E,E,E,E,E
+440,F,1.0,True,False,F,F,F,F,F
+442,F,1.0,True,False,F,F,F,F,F
+443,A,0.689,True,False,A,A,A,T,A
+843,F,1.0,True,False,F,F,F,F,F
