@@ -1,0 +1,49 @@
+{
+  "target": "NSP12-NSP7",
+  "receptor": "/home/nseku/projects/rtc-pan-coronavirus/03-virtual-screening/NSP12-NSP7_3/receptor_NSP12-NSP7_3.pdb",
+  "center": [
+    100.015,
+    89.131,
+    106.015
+  ],
+  "size": [
+    32.235,
+    58.39,
+    54.642
+  ],
+  "exhaustiveness": 16,
+  "druggability": 0.874,
+  "primary_sb": "GLU431(NSP12)-LYS2(NSP7)",
+  "hotspots_NSP12": [
+    440,
+    412,
+    442,
+    443,
+    420,
+    843,
+    409,
+    40,
+    33,
+    41,
+    37,
+    413,
+    415,
+    14,
+    23
+  ],
+  "hotspots_NSP7": [
+    40,
+    14,
+    33,
+    41,
+    37,
+    11,
+    23,
+    5,
+    15,
+    29,
+    12,
+    4,
+    1
+  ]
+}

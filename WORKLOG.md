@@ -916,3 +916,28 @@ Key scientific highlights:
 **Status:** ✅ Done — proceed to Script 08_3 (docking prep)
 
 ---
+
+## Entry 037 — Docking Prep NSP12-NSP7 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/08_docking_prep_NSP12-NSP7_3.py
+
+**Receptor:** 897 residues, 7193 atoms (NSP12 834 + NSP7 63)
+**Hotspot verification:**
+  NSP12: positions 14,23 missing — 7BV2 starts at res 31,
+         N-terminal loop unresolved (expected) ✅
+  NSP7:  all hotspots present ✅
+  GLU431(NSP12): GLU ✅ confirmed
+  LYS1(NSP7):    LYS ✅ confirmed (local pos 1 = PDB res 2)
+
+**Docking box:**
+  Center: (100.015, 89.131, 106.015)
+  Size:   32.235 × 58.39 × 54.642 Å
+
+**Output:** 03-virtual-screening/NSP12-NSP7_3/
+  receptor_NSP12-NSP7_3.pdb
+  vina_config_NSP12-NSP7_3.txt
+  virtualflow_config_NSP12-NSP7_3.json
+
+**Status:** ✅ Done — proceed to Script 09_3 (publication figures)
+
+---
