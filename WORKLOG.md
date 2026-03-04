@@ -1417,3 +1417,29 @@ Next complex: NSP9-NSP12 (8SQK — high novelty target)
 **Status:** ✅ Done — proceed to Script 07_5 (pocket detection)
 
 ---
+
+## Entry 053 — Pocket Detection NSP9-NSP12 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/07_pocket_NSP9-NSP12_5.py
+
+**fpocket results:**
+  8SQK: 76 pockets | best druggability=0.895 vol=799 Å³ ★
+  AF3:  68 pockets | best druggability=0.581 vol=316 Å³
+
+**8SQK druggability=0.895 — highest single-structure score in project**
+  AF3 lower (0.581) — conformation-dependent, expected for novel interface
+
+**Water bridges at hotspot residues: 2**
+  HOH1113: NSP12-ASP36/ASP208 ↔ NSP9-ASN1
+  HOH1197: NSP12-ASN209/THR206 ↔ NSP9-ASN2
+  Note: NSP9 N-terminal residues (1,2) involved —
+        water-mediated contacts at interface entry
+
+**Docking box:**
+  Center: (141.683, 166.04, 177.854)
+  Size:   57.198 × 38.908 × 64.882 Å
+  Volume: 144,392 Å³
+
+**Status:** ✅ Done — proceed to Script 08_5 (docking prep)
+
+---
