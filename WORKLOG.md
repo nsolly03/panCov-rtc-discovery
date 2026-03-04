@@ -1137,3 +1137,36 @@ Next complex: NSP12-NSP8
 **Status:** ✅ Done — proceed to Script 06_4 (conservation)
 
 ---
+
+## Entry 044 — Conservation Analysis NSP12-NSP8 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/06_conservation_NSP12-NSP8_4.py
+
+**NSP12: 4/15 hotspots conserved ≥ 0.8**
+  Perfect (1.000): TYR87, ALA95, HIS99, LYS332★
+  Variable (<0.8): ASP517★(0.582), ASP523★(0.582)
+  Note: ASP517/523 → GLU in MERS/HCoV — conservative D→E,
+        functionally conserved (both negative charge)
+
+**NSP8: 9/15 hotspots conserved ≥ 0.8**
+  Perfect (1.000): MET87, LEU91, LEU98, ASP99★,
+                   PRO116, LEU117, PRO121, LEU128, VAL131
+  Variable (<0.8): ARG80★(0.582), LYS79★(0.582)
+  Note: ARG80→LYS/LYS79→ARG in MERS/HCoV — conservative R↔K,
+        functionally conserved (both positive charge)
+
+**Primary salt bridge conservation assessment:**
+  LYS332(NSP12) cons=1.000 ✅ pan-coronavirus
+  ASP99(NSP8)   cons=1.000 ✅ pan-coronavirus
+  → LYS332–ASP99 PRIMARY pan-coronavirus pharmacophore
+
+  ASP523(NSP12) cons=0.582 ⚠️ D→E conservative substitution
+  ARG80(NSP8)   cons=0.582 ⚠️ R↔K conservative substitution
+  → ASP523–ARG80 functionally conserved (charge preserved)
+
+  ASP517(NSP12) cons=0.582 ⚠️ D→E conservative substitution
+  LYS79(NSP8)   cons=0.582 ⚠️ R↔K conservative substitution
+
+**Status:** ✅ Done — proceed to Script 07_4 (pocket detection)
+
+---
