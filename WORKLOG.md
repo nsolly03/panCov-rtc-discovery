@@ -1584,3 +1584,26 @@ Mode B — AF3 interface (iptm=0.87, PAE=0.90 A):
 **Status:** ✅ Done — proceed to Script 08_6 (docking prep)
 
 ---
+
+## Entry 061 — Docking Prep NSP7-NSP8 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/08_docking_prep_NSP7-NSP8_6.py
+
+**Mode A receptor (7BV2 crystal):**
+  177 residues, 1352 atoms — all 7 hotspots ✅
+  Vina: vina_config_NSP7-NSP8_ModeA_6.txt
+
+**Mode B receptor (AF3 — PRIMARY):**
+  281 residues, 2171 atoms — all 46 hotspots ✅
+  Vina: vina_config_NSP7-NSP8_ModeB_AF3_6.txt
+
+**Output:** 03-virtual-screening/NSP7-NSP8_6/
+  receptor_NSP7-NSP8_ModeA_6.pdb
+  receptor_NSP7-NSP8_ModeB_AF3_6.pdb
+  vina_config_NSP7-NSP8_ModeA_6.txt
+  vina_config_NSP7-NSP8_ModeB_AF3_6.txt
+  virtualflow_config_NSP7-NSP8_6.json
+
+**Status:** ✅ Done — proceed to Script 09_6 (publication figures)
+
+---
