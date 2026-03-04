@@ -1110,3 +1110,30 @@ Next complex: NSP12-NSP8
 **Status:** ✅ Done — proceed to Script 05_4 (interface analysis)
 
 ---
+
+## Entry 043 — Interface Analysis NSP12-NSP8 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/05_interface_NSP12-NSP8_4.py
+
+**Contact summary:**
+  7BV2: SB=2 HB=11 HY=60 total=77
+  6NUR: SB=3 HB=14 HY=71 total=94
+  7C2K: SB=3 HB=12 HY=66 total=87
+  AF3:  SB=4 HB=16 HY=69 total=97
+
+**Salt bridges confirmed:**
+  ASP523(NSP12)—ARG80(NSP8):  3.58 Å [ALL 4 structures] ★ PRIMARY
+  LYS332(NSP12)—ASP99(NSP8):  3.72 Å [7BV2+7C2K+AF3]   ★ PRIMARY
+  ASP517(NSP12)—LYS79(NSP8):  4.66 Å [6NUR+7C2K+AF3]   secondary
+
+**Interface character:** Mixed — hydrophobic-dominated (HY=60-71)
+  but with strong salt bridge network (2-4 per structure)
+  Much richer interface than NSP12-NSP7
+
+**Consensus hotspots (≥ 2 structures):**
+  NSP12 (23): 387,129,389,271,330,131,380,523,91,87,332,95,117,517,99
+  NSP8  (21): 117,129,80,115,131,112,91,87,116,95,98,83,128,90,121
+
+**Status:** ✅ Done — proceed to Script 06_4 (conservation)
+
+---
