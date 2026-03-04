@@ -1352,3 +1352,30 @@ Next complex: NSP9-NSP12 (8SQK — high novelty target)
 **Status:** ✅ Done — proceed to Script 05_5 (interface analysis)
 
 ---
+
+## Entry 051 — Interface Analysis NSP9-NSP12 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/05_interface_NSP9-NSP12_5.py
+
+**Contact summary:**
+  8SQK: SB=0 HB=7  HY=7  total=14
+  AF3:  SB=2 HB=13 HY=9  total=28
+
+**Interface character:**
+  Crystal (8SQK): H-bond + hydrophobic dominated
+  No crystallographic salt bridges — compact interface
+  AF3 predicts 2 SB both via LYS36(NSP9):
+    ASP740(NSP12)–LYS36(NSP9): 4.92 Å [AF3 only]
+    GLU744(NSP12)–LYS36(NSP9): 3.73 Å [AF3 only]
+
+**Note:** NSP12 positions 733/740/744 are in the
+  NiRAN domain (N-terminal) — distinct from RdRp active site
+  This is a genuinely novel interface region
+
+**Consensus hotspots (both 8SQK + AF3):**
+  NSP12 (13): 38,1,3,4,96,733,202,103,221,233,291,2,223
+  NSP9  (8):  38,1,3,4,96,103,2,97
+
+**Status:** ✅ Done — proceed to Script 06_5 (conservation)
+
+---
