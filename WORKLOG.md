@@ -984,3 +984,40 @@ Key scientific highlights:
 **Status:** ✅ Done — proceed to Script 10_3 (BSA+AlaScan+Ranking)
 
 ---
+
+## Entry 039 — BSA + AlaScan + Ranking NSP12-NSP7 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/10_BSA_alascan_ranking_NSP12-NSP7_3.py
+
+**BSA top residues:**
+  NSP7-7:    78.2 Å²  NSP12-412: 73.5 Å²
+  NSP12-440: 62.8 Å²  NSP7-10:   61.3 Å²
+
+**Alanine scanning top contributors:**
+  NSP12-440: loss=15 (hydrophobic anchor) ★ PRIMARY
+  NSP12-431: loss=12 (salt bridge GLU)
+  NSP7-1:    loss=12 (salt bridge LYS)
+  NSP12-412: loss=9  (hydrophobic)
+  NSP12-442: loss=9  (hydrophobic)
+
+**Composite top 3:**
+  1. NSP12-440 (1.000) — PHE, hydrophobic core anchor
+  2. NSP12-412 (0.895) — PRO, hydrophobic core
+  3. NSP12-442 (0.774) — PHE, hydrophobic core
+
+**Primary pharmacophore: PHE440(NSP12)**
+  Highest contact loss (15 hydrophobic), BSA=62.8 Å²
+  Conservation=1.000 across all 5 coronaviruses
+
+**Salt bridge pair: GLU431(NSP12)-LYS1(NSP7)**
+  Rank 4+5, both cons=1.000 (SARS-CoV-1/2 only)
+  Secondary pharmacophore for SARS-specific targeting
+
+**Figures saved:**
+  Fig4_NSP12-NSP7_BSA_3.png
+  Fig5_NSP12-NSP7_AlaScan_3.png
+  Fig6_NSP12-NSP7_composite_ranking_3.png
+
+**Status:** ✅ Done — proceed to Script 11_3 (3D visualization)
+
+---
