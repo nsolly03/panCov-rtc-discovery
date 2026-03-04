@@ -28,7 +28,7 @@ from pathlib import Path
 PROJECT = Path.home() / "projects" / "rtc-pan-coronavirus"
 RES_DIR = PROJECT / "02-validation" / "NSP10-NSP16"
 SEQ_DIR = PROJECT / "00-reference" / "sequences" / "conservation"
-OUT_DIR = PROJECT / "results"
+OUT_DIR = PROJECT / "02-validation" / "NSP10-NSP16"
 OUT_DIR.mkdir(exist_ok=True)
 
 plt.rcParams.update({
