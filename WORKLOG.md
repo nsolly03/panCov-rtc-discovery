@@ -1379,3 +1379,41 @@ Next complex: NSP9-NSP12 (8SQK — high novelty target)
 **Status:** ✅ Done — proceed to Script 06_5 (conservation)
 
 ---
+
+## Entry 052 — Conservation Analysis NSP9-NSP12 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/06_conservation_NSP9-NSP12_5.py
+
+**NSP12: 6/13 hotspots conserved ≥ 0.8**
+  Perfect (1.000): SER1★, ALA2★, ASP3★ [SARS only — N-term gap]
+                   VAL202, ASP221, ARG733 [genuine pan-coronavirus]
+  Variable (<0.8): ASP740★(0.172), GLU744★(0.345) — SB anchors
+
+**NSP9: 6/8 hotspots conserved ≥ 0.8**
+  Perfect (1.000): ASN1★, ASN2★, GLU3★, LEU4★ [SARS only — N-term gap]
+                   LEU97, LEU103 [genuine pan-coronavirus]
+  Variable (<0.8): LYS36★(0.250) — SB anchor
+
+**CRITICAL FINDINGS:**
+  1. N-terminal gaps: NSP12 pos 1-4 and NSP9 pos 1-4 show "-"
+     for SARS-CoV-1/MERS/HCoV — alignment artifact, NOT conserved
+     (same issue as NSP7 truncation in NSP12-NSP7 complex)
+
+  2. AF3 salt bridges NOT pan-coronavirus conserved:
+     ASP740(NSP12) cons=0.172 — D→K in MERS (charge reversal)
+     GLU744(NSP12) cons=0.345 — E→K in MERS (charge reversal)
+     LYS36(NSP9)   cons=0.250 — K→Q→G→gap in most coronaviruses
+     These SBs are SARS-CoV-1/2 specific only
+
+  3. Genuinely conserved pan-coronavirus hotspots:
+     NSP12: ARG733(1.000), VAL202(1.000), ASP221(1.000)
+     NSP9:  LEU97(1.000), LEU103(1.000)
+
+**Drug design implication:**
+  Pan-coronavirus: target ARG733/VAL202/ASP221(NSP12)
+                   + LEU97/LEU103(NSP9) hydrophobic patch
+  SARS-selective:  ASP740/GLU744 — LYS36 SB cluster
+
+**Status:** ✅ Done — proceed to Script 07_5 (pocket detection)
+
+---
