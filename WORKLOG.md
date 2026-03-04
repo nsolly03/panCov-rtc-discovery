@@ -1321,3 +1321,34 @@ Steps 04–11 complete. NSP12-NSP8 FULLY DONE.
 Next complex: NSP9-NSP12 (8SQK — high novelty target)
 
 ---
+
+## Entry 050 — AF3 Validation NSP9-NSP12 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/04_validate_NSP9-NSP12_5.py
+
+**AF3 quality:**
+  iptm=0.77, ptm=0.90, ranking=0.79
+  has_clash=0.0, fraction_disordered=0.0
+  num_recycles=10, PAE=3.52 Å (higher — novel interface)
+
+**Validation results:**
+  8SQK: NSP12 F1=0.814  NSP9 F1=0.829  Overall F1=0.837 ✅ PASS
+
+**Primary gate (8SQK): F1=0.837 ✅ PASS (gate ≥0.70)**
+
+**Interface size:**
+  PDB: NSP12=30 res, NSP9=21 res (compact interface)
+  AF3: NSP12=29 res, NSP9=20 res (consistent)
+
+**Chain assignments:**
+  PDB 8SQK: Chain A=NSP12, Chain G=NSP9 (unusual)
+  AF3:      Chain A=NSP12, Chain B=NSP9
+
+**Notes:**
+  Single PDB only (no 9FW2 available)
+  PAE=3.52 Å higher than NSP12-NSP7(2.02) and NSP12-NSP8(1.22)
+  Novel target — limited structural data in literature
+
+**Status:** ✅ Done — proceed to Script 05_5 (interface analysis)
+
+---

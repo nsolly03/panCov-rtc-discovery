@@ -1,0 +1,20 @@
+{
+  "complex": "NSP9-NSP12",
+  "primary_pdb": "8SQK",
+  "cutoff_angstrom": 5.0,
+  "f1_gate": 0.7,
+  "primary_f1": 0.837,
+  "primary_pass": true,
+  "note": "single PDB, chain G=NSP9, PAE=3.52A novel interface",
+  "results": [
+    {
+      "pdb_id": "8SQK",
+      "f1_nsp12": 0.814,
+      "f1_nsp9": 0.829,
+      "f1_overall": 0.837,
+      "pass": true,
+      "n_af3": 47,
+      "n_pdb": 51
+    }
+  ]
+}
