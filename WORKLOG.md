@@ -1262,3 +1262,62 @@ Next complex: NSP12-NSP8
 **Status:** ✅ Done — proceed to Script 11_4 (3D visualization)
 
 ---
+
+## Entry 048 — 3D Visualization NSP12-NSP8 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/11_3D_visualization_NSP12-NSP8_4.py
+**Notebook:** notebooks/NSP12-NSP8_3D_4.ipynb
+
+**8 interactive views (nglview):**
+  1. Full complex — all conserved hotspots
+  2. Salt bridges zoomed — ASP523-ARG80 + LYS332-ASP99 + ASP517-LYS79
+  3. Hotspots colored by composite score
+  4. Hotspots colored by BSA burial depth
+  5. Docking box visualization
+  6. Structural overlay — 7BV2+6NUR+7C2K+AF3
+  7. Full ranking table (styled)
+  8. LYS332 primary pharmacophore ★
+
+## Entry 049 — NSP12-NSP8 Scientific Conclusion
+**Date:** $(date +%Y-%m-%d)
+
+### Complex overview
+NSP12-NSP8 (RdRp fingers/palm subdomain interface) is the most
+complex interface analyzed to date — rich salt bridge network
+with large hydrophobic anchors.
+
+### Model quality
+- AF3 validation F1=0.934 — excellent
+- iptm=0.85, PAE=1.22 Å, no clashes, 10 recycles
+- 3 crystal structures confirm same interface geometry
+
+### Salt bridge network — multi-anchor interface
+- ASP523(NSP12)–ARG80(NSP8):  3.58 Å — ALL 4 structures ★
+- LYS332(NSP12)–ASP99(NSP8):  3.72 Å — 3 structs, cons=1.000 ★
+- ASP517(NSP12)–LYS79(NSP8):  4.66 Å — 3 structs
+- Conservative D→E / R↔K substitutions in MERS/HCoV
+  preserve charge — functionally pan-coronavirus
+
+### Primary pharmacophore: LYS332(NSP12)
+- Alanine scanning loss=30 (highest in project)
+- Conservation=1.000 pan-coronavirus
+- BSA=95.4 Å²
+- Confirmed 7BV2+7C2K+AF3
+
+### Hydrophobic anchors
+- LEU387(NSP12): BSA=155.0 Å² — largest buried residue
+- LEU389(NSP12): BSA=118.5 Å², loss=25
+
+### Drug design strategy
+1. Pan-coronavirus: target LYS332–ASP99 salt bridge
+   (both cons=1.000) — charged group essential
+2. Multi-anchor: compound engaging ASP523–ARG80
+   simultaneously amplifies potency (all 4 structures)
+3. Hydrophobic extension into LEU387/389 pocket
+   adds affinity and selectivity
+
+### Pipeline status
+Steps 04–11 complete. NSP12-NSP8 FULLY DONE.
+Next complex: NSP9-NSP12 (8SQK — high novelty target)
+
+---
