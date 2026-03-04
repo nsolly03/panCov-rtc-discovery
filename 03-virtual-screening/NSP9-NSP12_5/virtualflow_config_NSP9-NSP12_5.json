@@ -1,0 +1,53 @@
+{
+  "target": "NSP9-NSP12",
+  "receptor": "/home/nseku/projects/rtc-pan-coronavirus/03-virtual-screening/NSP9-NSP12_5/receptor_NSP9-NSP12_5.pdb",
+  "center": [
+    141.683,
+    166.04,
+    177.854
+  ],
+  "size": [
+    57.198,
+    38.908,
+    64.882
+  ],
+  "exhaustiveness": 16,
+  "druggability": 0.895,
+  "note": "novel NiRAN domain interface, single PDB",
+  "primary_sb_af3": [
+    "ASP740-LYS36",
+    "GLU744-LYS36"
+  ],
+  "pan_cov_hotspots": [
+    "ARG733",
+    "VAL202",
+    "ASP221",
+    "LEU97",
+    "LEU103"
+  ],
+  "hotspots_NSP12": [
+    38,
+    1,
+    3,
+    4,
+    96,
+    733,
+    202,
+    103,
+    221,
+    233,
+    291,
+    2,
+    223
+  ],
+  "hotspots_NSP9": [
+    38,
+    1,
+    3,
+    4,
+    96,
+    103,
+    2,
+    97
+  ]
+}

@@ -1443,3 +1443,28 @@ Next complex: NSP9-NSP12 (8SQK — high novelty target)
 **Status:** ✅ Done — proceed to Script 08_5 (docking prep)
 
 ---
+
+## Entry 054 — Docking Prep NSP9-NSP12 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/08_docking_prep_NSP9-NSP12_5.py
+
+**Receptor:** 1042 residues, 16340 atoms
+  (NSP12 929 + NSP9 113) — largest receptor so far
+
+**Hotspot verification: all present ✅**
+  NSP12: ARG733, ASP740, GLU744 confirmed
+  NSP9:  LYS36, ASN96, LEU97, LEU103 confirmed
+
+**Docking box:**
+  Center: (141.683, 166.04, 177.854)
+  Size:   57.198 × 38.908 × 64.882 Å
+  Volume: 144,392 Å³
+
+**Output:** 03-virtual-screening/NSP9-NSP12_5/
+  receptor_NSP9-NSP12_5.pdb
+  vina_config_NSP9-NSP12_5.txt
+  virtualflow_config_NSP9-NSP12_5.json
+
+**Status:** ✅ Done — proceed to Script 09_5 (publication figures)
+
+---
