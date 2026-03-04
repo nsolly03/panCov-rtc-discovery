@@ -838,3 +838,29 @@ Key scientific highlights:
 **Status:** ✅ Done — proceed to Script 06_3 (conservation)
 
 ---
+
+## Entry 034 — Interface Analysis NSP12-NSP7 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/05_interface_NSP12-NSP7_3.py
+
+**Contact summary:**
+  7BV2: SB=1 HB=6 HY=8  total=52
+  6NUR: SB=0 HB=4 HY=10 total=49
+  7C2K: SB=0 HB=6 HY=11 total=59
+  AF3:  SB=1 HB=6 HY=10 total=61
+
+**Salt bridges detected:**
+  LYS2(NSP7)  — GLU431(NSP12): 4.24 Å [7BV2 crystal ✅]
+  LYS411(NSP12) — GLU23(NSP7): 4.26 Å [AF3 predicted]
+  Note: likely same pair with different local numbering
+
+**Consensus hotspots (≥ 2 structures):**
+  NSP12 (18): 440,412,442,443,420,843,409,40,33,41,37,413,415,14,23
+  NSP7  (13): 40,14,33,41,37,11,23,5,15,29,12,4,1
+
+**Interface character:** Primarily hydrophobic + H-bond network
+  One conserved salt bridge at LYS2(NSP7)–GLU431(NSP12)
+
+**Status:** ✅ Done — proceed to Script 06_3 (conservation)
+
+---

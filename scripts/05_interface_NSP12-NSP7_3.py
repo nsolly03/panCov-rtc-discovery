@@ -50,6 +50,12 @@ HBOND_ATOMS = {"N","O","NZ","NH1","NH2","NE",
                "OG","OG1","OE1","OE2","ND1",
                "ND2","NE2","OH","OD1","OD2"}
 
+CHARGED_POS_ATOMS = {
+    "LYS": ["NZ"], "ARG": ["NH1","NH2","NE"], "HIS": ["ND1","NE2"]}
+CHARGED_NEG_ATOMS = {
+    "ASP": ["OD1","OD2"], "GLU": ["OE1","OE2"]}
+SB_CUTOFF = 5.0
+
 STRUCTURES = {
     "7BV2": (PDB_DIR/"7BV2_NSP12-NSP7.pdb",
              PDB_CHAIN_NSP12, PDB_CHAIN_NSP7),
@@ -168,23 +174,48 @@ def analyze_interface(struct_id, pdb_file,
                     except Exception:
                         continue
 
-                    # Salt bridge
-                    if d <= 4.0:
-                        if ((rname12 in CHARGED_POS and
-                             rname7  in CHARGED_NEG) or
-                            (rname12 in CHARGED_NEG and
-                             rname7  in CHARGED_POS)):
-                            pair = (f"{rname12}"
-                                    f"{pdb_to_local(rn12, chain_nsp12, struct_id)}",
-                                    f"{rname7}"
-                                    f"{pdb_to_local(rn7, chain_nsp7, struct_id)}",
-                                    round(d, 2))
-                            if pair not in salt_bridges:
-                                salt_bridges.append(pair)
-                            contact_score[rn12] = \
-                                contact_score.get(rn12,0)+3
-                            contact_score[rn7]  = \
-                                contact_score.get(rn7, 0)+3
+                    # Salt bridge — specific charged atoms, 5.0 Å
+                    if ((rname12 in CHARGED_POS_ATOMS and
+                         rname7  in CHARGED_NEG_ATOMS) or
+                        (rname12 in CHARGED_NEG_ATOMS and
+                         rname7  in CHARGED_POS_ATOMS)):
+                        pos_ats = (CHARGED_POS_ATOMS.get(rname12,[]) or
+                                   CHARGED_POS_ATOMS.get(rname7, []))
+                        neg_ats = (CHARGED_NEG_ATOMS.get(rname12,[]) or
+                                   CHARGED_NEG_ATOMS.get(rname7, []))
+                        r_pos = (r12 if rname12 in CHARGED_POS_ATOMS
+                                 else r7)
+                        r_neg = (r12 if rname12 in CHARGED_NEG_ATOMS
+                                 else r7)
+                        rn_pos = (rn12 if rname12 in CHARGED_POS_ATOMS
+                                  else rn7)
+                        rn_neg = (rn12 if rname12 in CHARGED_NEG_ATOMS
+                                  else rn7)
+                        ch_pos = (chain_nsp12
+                                  if rname12 in CHARGED_POS_ATOMS
+                                  else chain_nsp7)
+                        ch_neg = (chain_nsp12
+                                  if rname12 in CHARGED_NEG_ATOMS
+                                  else chain_nsp7)
+                        for an_p in pos_ats:
+                            for an_n in neg_ats:
+                                try:
+                                    dsb = r_pos[an_p] - r_neg[an_n]
+                                    if dsb <= 5.0:
+                                        lp = pdb_to_local(
+                                            rn_pos, ch_pos, struct_id)
+                                        ln = pdb_to_local(
+                                            rn_neg, ch_neg, struct_id)
+                                        pair = (
+                                            f"{r_pos.resname.strip()}{lp}",
+                                            f"{r_neg.resname.strip()}{ln}",
+                                            float(round(dsb,2)))
+                                        if pair not in salt_bridges:
+                                            salt_bridges.append(pair)
+                                        contact_score[rn12] =                                             contact_score.get(rn12,0)+3
+                                        contact_score[rn7]  =                                             contact_score.get(rn7, 0)+3
+                                except Exception:
+                                    pass
 
                     # H-bond
                     if (d <= 3.5 and
@@ -327,6 +358,15 @@ def main():
 
     # Save
     out = RES_DIR / "interface_analysis_3.json"
+    import numpy as np
+    class NumpyEncoder(json.JSONEncoder):
+        def default(self, obj):
+            if isinstance(obj, (np.floating, np.float32, np.float64)):
+                return float(obj)
+            if isinstance(obj, np.integer):
+                return int(obj)
+            return super().default(obj)
+
     with open(out, "w") as f:
         json.dump({
             "complex":          "NSP12-NSP7",
