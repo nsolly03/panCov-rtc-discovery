@@ -1065,3 +1065,23 @@ target identified in the project to date.
 Steps 04–10 complete. Proceeding to Step 11 (3D visualization).
 
 ---
+
+## Entry 041 — 3D Visualization NSP12-NSP7 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/11_3D_visualization_NSP12-NSP7_3.py
+**Notebook:** notebooks/NSP12-NSP7_3D_3.ipynb
+
+**8 interactive views (nglview):**
+  1. Full complex — all conserved hotspots
+  2. Salt bridge zoomed — GLU431–LYS1 (4.24 Å)
+  3. Hotspots colored by composite score
+  4. Hotspots colored by BSA burial depth
+  5. Docking box visualization
+  6. Structural overlay — 7BV2+6NUR+7C2K+AF3
+  7. Full ranking table (styled)
+  8. Hydrophobic core ★ — PHE440 primary pharmacophore
+
+**Status:** ✅ NSP12-NSP7 PIPELINE FULLY COMPLETE (Steps 04-11)
+Next complex: NSP12-NSP8
+
+---
