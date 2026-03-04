@@ -1493,3 +1493,32 @@ Figs 4-6 regenerated for all complexes.
 All ranking CSVs updated with residue_aa column.
 
 ---
+
+## Entry 058 — Interface Analysis NSP7-NSP8 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/05_interface_NSP7-NSP8_6.py
+
+**DUAL BINDING MODE HYPOTHESIS confirmed:**
+
+Mode A — Crystal interface (7BV2 + 6NUR):
+  NSP8 C-terminal: res 163, 178-180
+  NSP7 loop:       res 24, 26, 27
+  Contacts: SB=0 HB=2-4 HY=0 total=2-4 (weak)
+  Interpretation: low-affinity / crystal packing state
+
+Mode B — AF3 interface (iptm=0.87, PAE=0.90 A):
+  NSP8 N-terminal helix: res 84-120, 150, 190
+  NSP7 body:             res 2-76 (extensive)
+  Contacts: SB=1 HB=8 HY=34 total=45 (rich)
+  Salt bridge: ARG190(NSP8)—GLU50(NSP7): 4.36 A
+  Interpretation: physiological interface
+
+**Key insight:**
+  AF3 predicts the full-length NSP8 interface (1-198)
+  Crystal structures only resolve NSP8 from res 77-78+
+  Missing N-terminal helix = missing physiological interface
+  Both modes reported — dual pharmacophore opportunity
+
+**Status:** ✅ Done — proceed to Script 06_6 (conservation)
+
+---

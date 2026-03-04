@@ -1,0 +1,49 @@
+{
+  "complex": "NSP7-NSP8",
+  "primary_pdb": "7BV2",
+  "cutoff_angstrom": 5.0,
+  "f1_gate": 0.7,
+  "fpocket_gate": 0.5,
+  "primary_f1": 0.0,
+  "primary_pass": false,
+  "af3_quality": {
+    "iptm": 0.87,
+    "ptm": 0.74,
+    "ranking": 0.91,
+    "pae_min": [
+      [
+        0.76,
+        0.9
+      ],
+      [
+        0.92,
+        0.76
+      ]
+    ]
+  },
+  "note": "AF3 chains swapped: A=NSP8, B=NSP7",
+  "results": [
+    {
+      "pdb_id": "7BV2",
+      "f1_nsp8": 0.0,
+      "f1_nsp7": 0.0,
+      "f1_overall": 0.0,
+      "pass": false,
+      "n_pdb_nsp8": 7,
+      "n_pdb_nsp7": 4,
+      "n_af3_nsp8": 35,
+      "n_af3_nsp7": 40
+    },
+    {
+      "pdb_id": "6NUR",
+      "f1_nsp8": 0.0,
+      "f1_nsp7": 0.0,
+      "f1_overall": 0.0,
+      "pass": false,
+      "n_pdb_nsp8": 7,
+      "n_pdb_nsp7": 4,
+      "n_af3_nsp8": 35,
+      "n_af3_nsp7": 40
+    }
+  ]
+}

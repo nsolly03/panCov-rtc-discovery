@@ -1,0 +1,176 @@
+{
+  "complex": "NSP7-NSP8",
+  "dual_mode": true,
+  "mode_A_crystal": {
+    "description": "C-terminal NSP8 \u2014 NSP7 loop",
+    "pdbs": [
+      "7BV2",
+      "6NUR"
+    ],
+    "hotspots_NSP8": [
+      163,
+      179,
+      178,
+      180
+    ],
+    "hotspots_NSP7": [
+      26,
+      27,
+      24
+    ]
+  },
+  "mode_B_af3": {
+    "description": "N-terminal NSP8 helix \u2014 NSP7 body",
+    "source": "AF3 (iptm=0.87)",
+    "hotspots_NSP8": [
+      92,
+      120,
+      91,
+      96,
+      98,
+      103,
+      106,
+      119,
+      190,
+      84,
+      89,
+      95,
+      107,
+      110,
+      111,
+      87,
+      90,
+      94,
+      102,
+      116
+    ],
+    "hotspots_NSP7": [
+      53,
+      56,
+      60,
+      12,
+      75,
+      50,
+      19,
+      16,
+      74,
+      59,
+      68,
+      52,
+      76,
+      2,
+      49,
+      69,
+      54,
+      57,
+      13,
+      66
+    ]
+  },
+  "salt_bridges_all": {
+    "ARG190\u2014GLU50": [
+      [
+        "AF3",
+        "af3",
+        4.360000133514404
+      ]
+    ]
+  },
+  "per_structure": {
+    "7BV2": {
+      "mode": "crystal",
+      "salt_bridges": [],
+      "n_hbonds": 2,
+      "n_hydrophobic": 0,
+      "total_score": 2,
+      "iface_NSP8": [
+        163,
+        179
+      ],
+      "iface_NSP7": [
+        26,
+        27
+      ]
+    },
+    "6NUR": {
+      "mode": "crystal",
+      "salt_bridges": [],
+      "n_hbonds": 4,
+      "n_hydrophobic": 0,
+      "total_score": 4,
+      "iface_NSP8": [
+        163,
+        178,
+        180
+      ],
+      "iface_NSP7": [
+        24,
+        26,
+        27
+      ]
+    },
+    "AF3": {
+      "mode": "af3",
+      "salt_bridges": [
+        [
+          "ARG190",
+          "GLU50",
+          4.360000133514404
+        ]
+      ],
+      "n_hbonds": 8,
+      "n_hydrophobic": 34,
+      "total_score": 45,
+      "iface_NSP8": [
+        84,
+        87,
+        89,
+        90,
+        91,
+        92,
+        94,
+        95,
+        96,
+        98,
+        102,
+        103,
+        106,
+        107,
+        110,
+        111,
+        116,
+        119,
+        120,
+        150,
+        190
+      ],
+      "iface_NSP7": [
+        2,
+        6,
+        12,
+        13,
+        16,
+        19,
+        28,
+        35,
+        49,
+        50,
+        52,
+        53,
+        54,
+        56,
+        57,
+        58,
+        59,
+        60,
+        66,
+        68,
+        69,
+        71,
+        74,
+        75,
+        76
+      ]
+    }
+  }
+}
