@@ -770,3 +770,24 @@ Key scientific highlights:
 **Status:** ✅ COMPLETE — next: NSP12-NSP7 (Script 04_3)
 
 ---
+
+## Entry 031 — NSP12-NSP7 pipeline start
+**Date:** $(date +%Y-%m-%d)
+**Complex:** NSP12-NSP7 (RdRp core — thumb subdomain interface)
+**PDB:** 7BV2 (NSP12/NSP7/NSP8 trimer, SARS-CoV-2)
+
+**AF3 confidence:**
+  iptm=0.81, ptm=0.91, ranking=0.84 ✅ Strong
+
+**Chain assignments:**
+  PDB 7BV2: Chain A=NSP12 (834 res, genome 31-929)
+            Chain B=NSP7  (114 res, genome 78-191)
+            Chain C=NSP8  (63 res)
+            Chain P+T=RNA
+  AF3:      Chain A=NSP7  (83 res, local 1-83)
+            Chain B=NSP12 (932 res, local 1-932)
+  NOTE: AF3 chains SWAPPED vs PDB — must handle in validation
+
+**Status:** 🔄 Starting Script 04_3
+
+---
