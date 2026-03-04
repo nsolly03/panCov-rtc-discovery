@@ -1225,3 +1225,40 @@ Next complex: NSP12-NSP8
 **Status:** ✅ Done — proceed to Script 09_4 (publication figures)
 
 ---
+
+## Entry 047 — BSA + AlaScan + Ranking NSP12-NSP8 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/10_BSA_alascan_ranking_NSP12-NSP8_4.py
+
+**BSA top residues:**
+  NSP12-387: 155.0 Å²  NSP8-40:  138.9 Å²
+  NSP8-52:   130.9 Å²  NSP8-41:  126.4 Å²
+  NSP12-389: 118.5 Å²  NSP12-271: 115.4 Å²
+
+**Alanine scanning top contributors:**
+  NSP12-332: loss=30 (SB=10) ★ PRIMARY — LYS332
+  NSP12-389: loss=25 (HY=21) — hydrophobic anchor
+  NSP12-387: loss=20 (HY=16) — hydrophobic anchor
+  NSP12-523: loss=12 (SB=4)  — ASP523 SB anchor
+
+**Composite top 3:**
+  1. NSP12-332 (1.000) — LYS, primary SB, cons=1.000
+  2. NSP12-387 (0.809) — LEU, hydrophobic BSA=155 Å²
+  3. NSP12-389 (0.781) — LEU, hydrophobic loss=25
+
+**Primary pharmacophore: LYS332(NSP12)**
+  Salt bridge loss=30, BSA=95.4 Å², cons=1.000
+  Confirmed in 7BV2+7C2K+AF3
+
+**Secondary pharmacophores:**
+  NSP12-387/389 — large hydrophobic anchors
+  ASP523(NSP12) — SB with ARG80(NSP8), all 4 structures
+
+**Figures saved:**
+  Fig4_NSP12-NSP8_BSA_4.png
+  Fig5_NSP12-NSP8_AlaScan_4.png
+  Fig6_NSP12-NSP8_composite_ranking_4.png
+
+**Status:** ✅ Done — proceed to Script 11_4 (3D visualization)
+
+---
