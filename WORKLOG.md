@@ -893,3 +893,26 @@ Key scientific highlights:
 **Status:** ✅ Done — proceed to Script 07_3 (pocket detection)
 
 ---
+
+## Entry 036 — Pocket Detection NSP12-NSP7 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/07_pocket_NSP12-NSP7_3.py
+
+**fpocket results (all 4 structures):**
+  7BV2: 70 pockets | best druggability=0.874 vol=407 Å³
+  6NUR: 64 pockets | best druggability=0.961 vol=1040 Å³
+  7C2K: 77 pockets | best druggability=0.870 vol=400 Å³
+  AF3:  75 pockets | best druggability=0.928 vol=494 Å³
+
+**HIGHEST DRUGGABILITY IN PROJECT — consensus ≥ 0.870 across all structures**
+
+**Water bridges:** 0 (expected — 7BV2 at 2.90 Å resolution)
+**Disulfides:** None
+
+**Docking box (primary hotspots centered):**
+  Center: (100.015, 89.131, 106.015)
+  Padding reduced to 5.0 Å for tighter box
+
+**Status:** ✅ Done — proceed to Script 08_3 (docking prep)
+
+---
