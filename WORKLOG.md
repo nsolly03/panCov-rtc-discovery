@@ -736,3 +736,37 @@ Zn2 coordinators: positions 117,120,128,130 — no hotspot overlap
 **Status:** ✅ Done — proceed to Script 11_2 (3D visualization)
 
 ---
+
+## Entry 030 — 3D Visualization NSP10-NSP16 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/11_3D_visualization_NSP10-NSP16_2.py
+**Notebook:** notebooks/NSP10-NSP16_3D_2.ipynb
+
+**8 views implemented (nglview — JupyterLab/notebook native):**
+  View 1: Full complex — all conserved hotspots
+  View 2: Salt bridges zoomed (3 confirmed pairs)
+  View 3: Hotspots colored by composite score
+  View 4: Hotspots colored by BSA burial depth
+  View 5: Docking box visualization
+  View 6: Structural overlay (6W4H + 6WVN + 6WKQ + AF3)
+  View 7: Full ranking table (highlighted by category)
+  View 8: Zn1 zinc finger context ★ NEW
+
+**Technical note:**
+  py3Dmol incompatible with JupyterLab in WSL2 — switched to nglview
+  nglview requires setuptools==69.5.1 (pkg_resources fix)
+  Notebook launched via: jupyter notebook --port=8889 --no-browser
+
+**NSP10-NSP16 PIPELINE COMPLETE — all 8 steps done**
+
+Key scientific highlights:
+  - 3 confirmed salt bridges (strongest interface in project)
+  - NSP16 interface 11/11 perfectly conserved
+  - HIS80 inside Zn1 zinc finger loop — dual mechanism
+  - fpocket druggability 0.546 — highest in project
+  - LYS93 primary pharmacophore (salt bridge + Zn1 + water bridge)
+  - Water bridges at HIS80 and LYS93 — displacement pharmacophores
+
+**Status:** ✅ COMPLETE — next: NSP12-NSP7 (Script 04_3)
+
+---
