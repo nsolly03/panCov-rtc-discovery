@@ -1021,3 +1021,47 @@ Key scientific highlights:
 **Status:** ✅ Done — proceed to Script 11_3 (3D visualization)
 
 ---
+
+## Entry 040 — NSP12-NSP7 Scientific Conclusion
+**Date:** $(date +%Y-%m-%d)
+
+### Complex overview
+NSP12-NSP7 (RdRp thumb subdomain interface) is the strongest drug
+target identified in the project to date.
+
+### Model quality
+- AF3 validation F1=0.951 — best in project
+- No clashes, PAE=2.02 Å, 10 recycles (fully converged)
+- 3 independent crystal structures (7BV2, 6NUR, 7C2K) confirm
+  identical interface geometry
+
+### Hydrophobic core — pan-coronavirus pharmacophore
+- PHE440, PHE442, PHE415, TYR420, PRO412, GLY413, PHE843
+  form an aromatic cluster at the thumb subdomain contact surface
+- All conserved at 1.000 across all 5 coronaviruses
+  (SARS-CoV-2, SARS-CoV-1, MERS-CoV, HCoV-229E, HCoV-NL63)
+- PHE440 ranks #1 composite score (contact loss=15, BSA=62.8 Å²)
+- A compound targeting this aromatic pocket would be active
+  pan-coronavirus
+
+### GLU431–LYS1 salt bridge — SARS-selective secondary pharmacophore
+- Crystallographically confirmed in 7BV2 at 4.24 Å
+- AF3 predicted at 4.26 Å
+- Both residues cons=1.000 — but SARS-CoV-1/2 only
+- Absent in MERS/HCoV due to NSP7 N-terminal truncation (78 aa vs 84)
+- Useful for SARS-specific compounds or dual-mechanism molecules
+
+### Druggability — highest in project
+- fpocket score 0.961 (6NUR), consensus ≥0.870 all 4 structures
+- Deep, well-defined hydrophobic pocket — favorable for small molecules
+
+### Drug design strategy
+1. Pan-coronavirus: target aromatic hydrophobic cluster (PHE440 anchor)
+2. SARS-selective: add charged group to engage GLU431–LYS1
+3. Dual pharmacophore: aromatic core + terminal amine/carboxylate
+   engages both mechanisms simultaneously
+
+### Pipeline status
+Steps 04–10 complete. Proceeding to Step 11 (3D visualization).
+
+---
