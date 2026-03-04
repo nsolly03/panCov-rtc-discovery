@@ -1468,3 +1468,28 @@ Next complex: NSP9-NSP12 (8SQK — high novelty target)
 **Status:** ✅ Done — proceed to Script 09_5 (publication figures)
 
 ---
+
+## Entry 056 — NSP9-NSP12 pipeline fully complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/11_3D_visualization_NSP9-NSP12_5.py
+**Notebook:** notebooks/NSP9-NSP12_3D_5.ipynb
+
+**8 interactive views (nglview):**
+  1. Full complex — all hotspots
+  2. ARG733 primary pharmacophore ★ (NiRAN domain)
+  3. AF3-predicted SBs — ASP740/GLU744–LYS36 (SARS-only)
+  4. Hotspots by composite score
+  5. Hotspots by BSA burial
+  6. Docking box (druggability=0.895)
+  7. Structural overlay 8SQK + AF3
+  8. Full ranking table
+
+## Entry 057 — AA label patch applied to all complexes
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/patch_aa_labels_all_complexes.py
+
+All 5 complexes updated with correct AA identity labels.
+Figs 4-6 regenerated for all complexes.
+All ranking CSVs updated with residue_aa column.
+
+---
