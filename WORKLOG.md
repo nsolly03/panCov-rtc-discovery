@@ -966,3 +966,21 @@ Key scientific highlights:
 **Status:** ✅ Done — proceed to Script 09_3 (publication figures)
 
 ---
+
+## Entry 038 — Publication Figures NSP12-NSP7 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/09_visualize_NSP12-NSP7_3.py
+
+**Figures saved to 02-validation/NSP12-NSP7/:**
+  Fig1_NSP12-NSP7_conservation_bars_3.png
+  Fig2_NSP12-NSP7_conservation_heatmap_3.png
+  Fig3_NSP12-NSP7_contact_types_3.png
+
+**Style:** Matched NSP10-NSP16 publication style
+  Horizontal bars, heatmap with AA identity,
+  contact type grouped bars + salt bridge inventory
+  All 4 structures shown (7BV2, 6NUR, 7C2K, AF3)
+
+**Status:** ✅ Done — proceed to Script 10_3 (BSA+AlaScan+Ranking)
+
+---
