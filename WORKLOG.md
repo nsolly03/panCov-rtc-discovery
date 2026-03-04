@@ -1170,3 +1170,27 @@ Next complex: NSP12-NSP8
 **Status:** ✅ Done — proceed to Script 07_4 (pocket detection)
 
 ---
+
+## Entry 045 — Pocket Detection NSP12-NSP8 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/07_pocket_NSP12-NSP8_4.py
+
+**fpocket results (all 4 structures):**
+  7BV2: 66 pockets | best druggability=0.874 vol=410 Å³
+  6NUR: 64 pockets | best druggability=0.662 vol=433 Å³
+  7C2K: 79 pockets | best druggability=0.870 vol=404 Å³
+  AF3:  84 pockets | best druggability=0.661 vol=688 Å³
+
+**Consensus druggability: 0.874 (7BV2/7C2K consistent)**
+  6NUR and AF3 lower — likely conformation-dependent
+
+**Water bridges:** 0 (7BV2 at 2.90 Å — expected)
+
+**Docking box (primary SB residues, padding=4.0 Å):**
+  Center: (99.399, 116.276, 120.533)
+  Size:   63.106 × 43.704 × 35.76 Å
+  Volume: 98,626 Å³
+
+**Status:** ✅ Done — proceed to Script 08_4 (docking prep)
+
+---
