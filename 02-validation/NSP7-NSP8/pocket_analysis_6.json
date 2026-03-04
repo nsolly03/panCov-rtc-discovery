@@ -1,0 +1,60 @@
+{
+  "complex": "NSP7-NSP8",
+  "fpocket_gate": 0.5,
+  "fpocket_pass": true,
+  "best_druggability": 0.531,
+  "fpocket_scores": {
+    "7BV2": 0.276,
+    "6NUR": 0.204,
+    "AF3": 0.531
+  },
+  "docking_box_A": {
+    "center_x": 113.484,
+    "center_y": 96.393,
+    "center_z": 130.482,
+    "size_x": 30.732,
+    "size_y": 21.532,
+    "size_z": 17.359
+  },
+  "docking_box_B": {
+    "center_x": -11.802,
+    "center_y": -11.021,
+    "center_z": -12.04,
+    "size_x": 43.739,
+    "size_y": 31.734,
+    "size_z": 33.138
+  },
+  "mode_A_hotspots": {
+    "NSP8": [
+      163,
+      178,
+      179,
+      180
+    ],
+    "NSP7": [
+      24,
+      26,
+      27
+    ]
+  },
+  "mode_B_hotspots": {
+    "NSP8": [
+      87,
+      91,
+      92,
+      94,
+      98,
+      110,
+      111,
+      116,
+      120,
+      150,
+      190
+    ],
+    "NSP7": [
+      49,
+      50,
+      56
+    ]
+  }
+}

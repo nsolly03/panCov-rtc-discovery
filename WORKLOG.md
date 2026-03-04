@@ -1522,3 +1522,65 @@ Mode B — AF3 interface (iptm=0.87, PAE=0.90 A):
 **Status:** ✅ Done — proceed to Script 06_6 (conservation)
 
 ---
+
+## Entry 059 — Conservation Analysis NSP7-NSP8 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/06_conservation_NSP7-NSP8_6.py
+
+**NSP8 Mode A (crystal): 2/4 hotspots ≥ 0.8**
+  ASP163(1.000), LEU180(1.000) — conserved but weak interface
+
+**NSP8 Mode B (AF3): 11/21 hotspots ≥ 0.8**
+  Perfect (1.000): MET87, LEU91, PHE92, MET94, LEU98,
+                   ALA110, ARG111, PRO116, ILE120,
+                   ALA150, ARG190★
+  Pan-coronavirus hydrophobic core: PHE92/LEU91/LEU98/
+    MET87/MET94/ALA110/PRO116 — all cons=1.000
+
+**NSP7 Mode A: 0/3 hotspots ≥ 0.8 — poorly conserved**
+
+**NSP7 Mode B: 3/25 hotspots ≥ 0.8**
+  Note: pos 2,6 gaps in 229E/NL63 = alignment artifact
+  GLU50★(SB) cons=0.410 — NOT pan-coronavirus
+
+**AF3 SB: ARG190(NSP8)–GLU50(NSP7)**
+  ARG190: cons=1.000 ✅ pan-coronavirus anchor
+  GLU50:  cons=0.410 ⚠️ F→Q/I in HCoV — charge loss
+
+**Drug design implication:**
+  Primary target: Mode B hydrophobic core (NSP8)
+    PHE92/LEU91/LEU98 — pan-coronavirus anchor
+  Secondary: ARG190(NSP8) — SB anchor, fully conserved
+  NSP7 side: low conservation limits pan-cov targeting
+
+**Status:** ✅ Done — proceed to Script 07_6 (pocket detection)
+
+---
+
+## Entry 060 — Pocket Detection NSP7-NSP8 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/07_pocket_NSP7-NSP8_6.py
+
+**fpocket results:**
+  7BV2: 8 pockets  | best=0.276 ❌ (Mode A — too shallow)
+  6NUR: 9 pockets  | best=0.204 ❌ (Mode A — too shallow)
+  AF3:  22 pockets | best=0.531 ✅ (Mode B — druggable)
+
+**fpocket gate: max=0.531 ✅ PASS (AF3)**
+  Crystal interfaces fail gate — confirms Mode A is
+  low-affinity/undruggable. Mode B (AF3) is the
+  relevant pharmacological target.
+
+**Docking boxes:**
+  Mode A: Center (113.5, 96.4, 130.5)
+          Size 30.7 x 21.5 x 17.4 A | Vol=11,487 A3 (small)
+  Mode B: Center (-11.8, -11.0, -12.0)
+          Size 43.7 x 31.7 x 33.1 A | Vol=45,996 A3 (druggable)
+
+**Conclusion:**
+  Mode B (AF3 N-terminal helix interface) = primary target
+  Mode A (crystal C-terminal) = undruggable, low-affinity
+
+**Status:** ✅ Done — proceed to Script 08_6 (docking prep)
+
+---
