@@ -1633,3 +1633,30 @@ Mode B — AF3 interface (iptm=0.87, PAE=0.90 A):
 **Status:** ✅ Done — proceed to Script 11_6 (3D visualization)
 
 ---
+
+## Entry 063 — NSP7-NSP8 pipeline fully complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/11_3D_visualization_NSP7-NSP8_6.py
+**Notebook:** notebooks/NSP7-NSP8_3D_6.ipynb
+
+**8 interactive views:**
+  1. Full complex Mode B (AF3)
+  2. PHE92 primary pharmacophore ★
+  3. Dual mode comparison (Mode A vs B)
+  4. Hotspots by composite score
+  5. Hotspots by BSA burial
+  6. Mode B docking box
+  7. Structural overlay 7BV2 + 6NUR + AF3
+  8. Full dual mode ranking table
+
+**NSP7-NSP8 scientific summary:**
+  Novel dual binding mode discovery
+  Mode A (crystal): undruggable, low-affinity (2-4 contacts)
+  Mode B (AF3):     physiological, druggable (45 contacts)
+  Primary pharmacophore: NSP8-PHE92 (aromatic hydrophobic core)
+  Pan-cov hydrophobic core: PHE92/LEU91/LEU98/MET87/MET94/ALA110
+  SB anchor: ARG190(NSP8, cons=1.000) — GLU50(NSP7, cons=0.410)
+
+**Status:** ✅ FULLY COMPLETE (Scripts 04-11)
+
+---
