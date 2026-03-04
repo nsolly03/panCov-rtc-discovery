@@ -809,3 +809,32 @@ Key scientific highlights:
 **Status:** ✅ Done — proceed to Script 05_3 (interface analysis)
 
 ---
+
+## Entry 034 — Interface Analysis NSP12-NSP7 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/05_interface_NSP12-NSP7_3.py
+
+**Contact summary:**
+  7BV2: SB=0 HB=6  HY=8  total=49
+  6NUR: SB=0 HB=4  HY=10 total=49
+  7C2K: SB=0 HB=6  HY=11 total=59
+  AF3:  SB=0 HB=6  HY=10 total=58
+
+**No salt bridges confirmed** — hydrophobic/H-bond interface
+  Scientifically consistent with literature (thumb subdomain contact)
+
+**Consensus hotspots (≥ 2 structures):**
+  NSP12 (18): 440,412,442,443,420,843,409,40,33,41,37,413,415,14,23
+  NSP7  (13): 40,14,33,41,37,11,23,5,15,29,12,4,1
+
+**Key difference from NSP10-NSP16:**
+  No charged anchors — drug design must target hydrophobic pocket
+  and H-bond network instead of salt bridge disruption
+
+**Technical fix:** Sequence-alignment mapping applied per structure
+  (each PDB has different NSP12 numbering: 7BV2 starts 31,
+  6NUR starts 117, 7C2K starts 1)
+
+**Status:** ✅ Done — proceed to Script 06_3 (conservation)
+
+---
