@@ -1607,3 +1607,29 @@ Mode B — AF3 interface (iptm=0.87, PAE=0.90 A):
 **Status:** ✅ Done — proceed to Script 09_6 (publication figures)
 
 ---
+
+## Entry 062 — BSA+AlaScan+Ranking NSP7-NSP8 complete
+**Date:** $(date +%Y-%m-%d)
+**Script:** scripts/10_BSA_alascan_ranking_NSP7-NSP8_6.py
+
+**Composite top 5 (Mode B AF3, x1.20 bonus):**
+  1. NSP8-PHE92   (1.000) BSA=102 cons=1.000 hydrophobic core ★
+  2. NSP8-ARG96   (0.953) BSA=140 cons=0.689 (R→K MERS, conservative)
+  3. NSP8-LEU98   (0.932) BSA=108 cons=1.000 hydrophobic core
+  4. NSP8-LEU91   (0.862) BSA=86  cons=1.000 hydrophobic core
+  5. NSP8-ILE120  (0.819) BSA=44  cons=1.000
+
+**ARG190★ (SB anchor) rank=10:**
+  BSA=15.3 A2 (low burial) but cons=1.000 + only SB
+  Compound design: aromatic/hydrophobic core (PHE92/LEU98/LEU91)
+                   + positively charged group to engage ARG190–GLU50
+
+**Mode A crystal residues:** absent from top 15 — confirms
+  Mode A interface undruggable
+
+**Primary pharmacophore: NSP8-PHE92 [Mode B]**
+  Hydrophobic aromatic core anchor, pan-coronavirus
+
+**Status:** ✅ Done — proceed to Script 11_6 (3D visualization)
+
+---
