@@ -791,3 +791,21 @@ Key scientific highlights:
 **Status:** 🔄 Starting Script 04_3
 
 ---
+
+## Entry 033 — AF3 Quality Check NSP12-NSP7
+**Date:** $(date +%Y-%m-%d)
+
+**AF3 confidence.json full metrics:**
+  iptm: 0.81        ptm: 0.91       ranking: 0.84
+  has_clash: 0.0    ✅ no clashes
+  fraction_disordered: 0.01  ✅ fully ordered
+  num_recycles: 10  ✅ fully converged
+  chain_pair_iptm: [[0.68, 0.81], [0.81, 0.92]]
+  chain_pair_pae_min: [[0.76, 2.02], [2.36, 0.76]]
+  inter-chain PAE min: 2.02 Å ✅ excellent
+
+**Best AF3 model quality in project so far**
+
+**Status:** ✅ Done — proceed to Script 05_3 (interface analysis)
+
+---
