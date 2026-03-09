@@ -2574,3 +2574,40 @@ Confirm box coordinates, scoring, and pose quality before HPC submission.
   NSP12-NSP8   (druggability 0.874) — LYS332-ASP99 SB network
 
 ### Status: IN PROGRESS ⏳
+
+## Entry 088 Update — Script 14: Test Docking COMPLETE
+**Date:** 2026-03-09
+
+### Results (100 ligands x 3 Tier 1 targets = 300 docking runs)
+  All 300 dockings successful — 0 failures ✅
+
+| Target      | Best (kcal/mol) | Mean (kcal/mol) | n    |
+|-------------|:--------------:|:---------------:|------|
+| NSP12-NSP7  | -7.39          | -5.75           | 100  |
+| NSP9-NSP12  | -7.64          | -6.14           | 100  |
+| NSP12-NSP8  | -6.42          | -5.32           | 100  |
+
+### Top hits per target
+  NSP12-NSP7  #1: ZINC100477326  -7.39 kcal/mol
+  NSP9-NSP12  #1: ZINC100095425  -7.64 kcal/mol
+  NSP12-NSP8  #1: ZINC101136391  -6.42 kcal/mol
+
+### Notable dual-target hit
+  ZINC100003284: top 10 in both NSP12-NSP7 (#6, -6.65) and NSP9-NSP12 (#2, -7.51)
+  — flagged for priority follow-up after full screen
+
+### Validation conclusions
+  Box coordinates confirmed correct for all 3 targets
+  Score range (-4.3 to -7.6) realistic for PPI interface screen
+  Hit threshold for full HPC screen: <= -7.0 kcal/mol
+  Exhaustiveness=4 sufficient for test; will use 16 on NIC5 for production
+
+### Output
+  04-hits/test_NSP12-NSP7/     (100 docked poses)
+  04-hits/test_NSP9-NSP12/     (100 docked poses)
+  04-hits/test_NSP12-NSP8/     (100 docked poses)
+  04-hits/test_docking_summary.json
+
+### Status: COMPLETE ✅
+### Next: Script 15 — *** CONNECT TO NIC5 *** SLURM job array full ZINC20 screen
+
