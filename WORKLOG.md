@@ -1660,3 +1660,73 @@ Mode B — AF3 interface (iptm=0.87, PAE=0.90 A):
 **Status:** ✅ FULLY COMPLETE (Scripts 04-11)
 
 ---
+
+## Entry 064 — AF3 Validation NSP13-Helicase complete
+**Date:** 2026-03-09
+**Script:** scripts/04_validate_NSP13-Helicase_7.py
+
+**AF3 type:** Monomer (single chain A) — no iptm available
+**Validation approach:** ptm + RMSD vs 7NIO chain A + pLDDT at interface
+
+**AF3 confidence:**
+  ptm=0.910, has_clash=0.0, fraction_disordered=0.020
+  ranking_score=0.920
+
+**Structural validation:**
+  RMSD vs 7NIO chain A: 1.369 A (589 CA pairs) ✅
+  Mean pLDDT at interface: 92.4 (min=89.8) ✅
+
+**Interface residues identified:**
+  7NIO A vs E: 17 residues (primary dimer, 2.80 A)
+  6XEZ E vs F:  5 residues (secondary, RdRp complex context, 3.50 A)
+
+**Gates:**
+  ptm > 0.50          : PASS (0.910)
+  has_clash = 0       : PASS
+  fraction_disordered : PASS (0.020)
+  RMSD < 3.0 A        : PASS (1.369 A)
+  mean pLDDT >= 70    : PASS (92.4)
+  OVERALL             : ✅ PASS
+
+**Output:** 02-validation/NSP13-Helicase/validation_result_7.json
+**Status:** ✅ Done — proceeded to Script 05_7
+
+---
+
+## Entry 065 — Interface Analysis NSP13-Helicase complete
+**Date:** 2026-03-09
+**Script:** scripts/05_interface_NSP13-Helicase_7.py
+
+**Structures analyzed:**
+  7NIO A vs E : SB=2  HB=6  HY=4  total=434 (primary)
+  6XEZ E vs F : SB=0  HB=3  HY=2  total=99  (secondary)
+  AF3         : monomer — pLDDT mapping only
+
+**Salt bridges (7NIO only):**
+  LYS414 -- ASP580 : 4.49 A ★ PRIMARY
+  LYS414 -- ASP583 : 4.47 A ★ PRIMARY
+  Note: LYS414 forms dual simultaneous salt bridges — unique in project
+
+**Top 5 hotspots by contact count (7NIO):**
+  ILE480  : 60 contacts
+  HIS482  : 60 contacts
+  ASP580  : 49 contacts (SB anchor)
+  LYS414  : 43 contacts (dual SB anchor)
+  LYS477  : 32 contacts
+
+**Consensus hotspots:** 0 shared between 7NIO and 6XEZ
+  Note: Expected — different structural contexts capture different
+  interface faces (pure dimer vs RdRp complex)
+  7NIO primary interface used for all downstream analysis
+
+**All pLDDT at hotspots >= 89.8 — exceptionally well modelled**
+
+**17 hotspot residues (7NIO chain A):**
+  ASN116, THR413, LYS414, GLY415, LYS477, GLY478, VAL479,
+  ILE480, THR481, HIS482, GLU551, THR552, ALA553,
+  ARG579, ASP580, ASP583, LYS584
+
+**Output:** 02-validation/NSP13-Helicase/interface_analysis_7.json
+**Status:** ✅ Done — proceeded to Script 06_7
+
+---

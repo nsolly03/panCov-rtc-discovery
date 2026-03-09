@@ -1,0 +1,238 @@
+{
+  "complex": "NSP13-Helicase",
+  "script": "05_interface_NSP13-Helicase_7.py",
+  "structures": [
+    "7NIO (A vs E)",
+    "6XEZ (E vs F)",
+    "AF3 monomer (pLDDT only)"
+  ],
+  "interface_7NIO": {
+    "label": "7NIO_A-vs-E",
+    "n_salt_bridges": 2,
+    "n_h_bonds": 6,
+    "n_hydrophobic": 4,
+    "n_total": 434,
+    "salt_bridges": [
+      {
+        "res1": "LYS414",
+        "res2": "ASP580",
+        "dist": 4.49,
+        "structure": "7NIO"
+      },
+      {
+        "res1": "LYS414",
+        "res2": "ASP583",
+        "dist": 4.47,
+        "structure": "7NIO"
+      }
+    ],
+    "interface_residues": [
+      116,
+      413,
+      414,
+      415,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      551,
+      552,
+      553,
+      579,
+      580,
+      583,
+      584
+    ],
+    "hotspots": [
+      {
+        "res_num": 480,
+        "res_name": "ILE",
+        "contacts": 60
+      },
+      {
+        "res_num": 482,
+        "res_name": "HIS",
+        "contacts": 60
+      },
+      {
+        "res_num": 580,
+        "res_name": "ASP",
+        "contacts": 49
+      },
+      {
+        "res_num": 414,
+        "res_name": "LYS",
+        "contacts": 43
+      },
+      {
+        "res_num": 477,
+        "res_name": "LYS",
+        "contacts": 32
+      },
+      {
+        "res_num": 479,
+        "res_name": "VAL",
+        "contacts": 28
+      },
+      {
+        "res_num": 551,
+        "res_name": "GLU",
+        "contacts": 24
+      },
+      {
+        "res_num": 478,
+        "res_name": "GLY",
+        "contacts": 21
+      },
+      {
+        "res_num": 583,
+        "res_name": "ASP",
+        "contacts": 21
+      },
+      {
+        "res_num": 579,
+        "res_name": "ARG",
+        "contacts": 20
+      },
+      {
+        "res_num": 481,
+        "res_name": "THR",
+        "contacts": 19
+      },
+      {
+        "res_num": 552,
+        "res_name": "THR",
+        "contacts": 19
+      },
+      {
+        "res_num": 584,
+        "res_name": "LYS",
+        "contacts": 18
+      },
+      {
+        "res_num": 413,
+        "res_name": "THR",
+        "contacts": 13
+      },
+      {
+        "res_num": 116,
+        "res_name": "ASN",
+        "contacts": 3
+      },
+      {
+        "res_num": 415,
+        "res_name": "GLY",
+        "contacts": 3
+      },
+      {
+        "res_num": 553,
+        "res_name": "ALA",
+        "contacts": 1
+      }
+    ]
+  },
+  "interface_6XEZ": {
+    "label": "6XEZ_E-vs-F",
+    "n_salt_bridges": 0,
+    "n_h_bonds": 3,
+    "n_hydrophobic": 2,
+    "n_total": 99,
+    "salt_bridges": [],
+    "interface_residues": [
+      160,
+      216,
+      217,
+      218,
+      219
+    ],
+    "hotspots": [
+      {
+        "res_num": 218,
+        "res_name": "LYS",
+        "contacts": 43
+      },
+      {
+        "res_num": 216,
+        "res_name": "THR",
+        "contacts": 39
+      },
+      {
+        "res_num": 160,
+        "res_name": "ASP",
+        "contacts": 8
+      },
+      {
+        "res_num": 217,
+        "res_name": "TYR",
+        "contacts": 8
+      },
+      {
+        "res_num": 219,
+        "res_name": "LEU",
+        "contacts": 1
+      }
+    ]
+  },
+  "consensus_hotspots": [],
+  "only_7NIO": [
+    116,
+    413,
+    414,
+    415,
+    477,
+    478,
+    479,
+    480,
+    481,
+    482,
+    551,
+    552,
+    553,
+    579,
+    580,
+    583,
+    584
+  ],
+  "only_6XEZ": [
+    160,
+    216,
+    217,
+    218,
+    219
+  ],
+  "all_hotspots_7NIO_numbering": [
+    116,
+    413,
+    414,
+    415,
+    477,
+    478,
+    479,
+    480,
+    481,
+    482,
+    551,
+    552,
+    553,
+    579,
+    580,
+    583,
+    584
+  ],
+  "salt_bridges_all": [
+    {
+      "res1": "LYS414",
+      "res2": "ASP580",
+      "dist": 4.49,
+      "structure": "7NIO"
+    },
+    {
+      "res1": "LYS414",
+      "res2": "ASP583",
+      "dist": 4.47,
+      "structure": "7NIO"
+    }
+  ]
+}

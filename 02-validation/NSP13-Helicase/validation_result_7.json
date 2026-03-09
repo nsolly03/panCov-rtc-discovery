@@ -1,0 +1,81 @@
+{
+  "complex": "NSP13-Helicase",
+  "script": "04_validate_NSP13-Helicase_7.py",
+  "af3_type": "monomer_single_chain",
+  "structures": {
+    "primary_dimer": "7NIO (chains A+E, 2.80 A)",
+    "secondary_dimer": "6XEZ (chains E+F, 3.50 A)",
+    "af3": "NSP13_Helicase_best_model.pdb (chain A)"
+  },
+  "af3_confidence": {
+    "ptm": 0.91,
+    "has_clash": 0.0,
+    "fraction_disordered": 0.02,
+    "ranking_score": 0.92
+  },
+  "structural_validation": {
+    "rmsd_af3_vs_7NIO_chainA_angstrom": 1.3688759279410598,
+    "aligned_ca_pairs": 589,
+    "mean_plddt_at_interface": 92.44,
+    "interface_residues_7NIO_A": [
+      116,
+      413,
+      414,
+      415,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      551,
+      552,
+      553,
+      579,
+      580,
+      583,
+      584
+    ],
+    "interface_residues_7NIO_E": [
+      413,
+      414,
+      415,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      551,
+      552,
+      553,
+      579,
+      580,
+      583,
+      584
+    ],
+    "interface_residues_6XEZ_E": [
+      160,
+      216,
+      217,
+      218,
+      219
+    ],
+    "interface_residues_6XEZ_F": [
+      244,
+      245,
+      246,
+      247,
+      248,
+      250
+    ]
+  },
+  "gates": {
+    "ptm_pass": true,
+    "clash_pass": true,
+    "disorder_pass": true,
+    "rmsd_pass": true,
+    "plddt_pass": true,
+    "overall_pass": true
+  }
+}
