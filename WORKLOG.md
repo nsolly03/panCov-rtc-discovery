@@ -2042,3 +2042,42 @@ AF3 submitted as monomer (ptm=0.910, RMSD=1.369 A vs 7NIO).
 **Status:** ✅ Done — proceed to Script 05_8 (interface analysis)
 
 ---
+
+## Entry 074 — Interface Analysis NSP12-NSP13 complete
+**Date:** 2026-03-09
+**Script:** scripts/05_interface_NSP12-NSP13_8.py
+
+**AF3 excluded — iptm=0.20, PAE=24.95 A**
+**3 crystal structures analyzed:**
+
+  6XEZ: SB=0  HB=1  HY=42  total=64
+  7CXM: SB=1  HB=1  HY=55  total=95
+  7RDY: SB=1  HB=2  HY=53  total=108
+
+**Salt bridge:**
+  ASP901(NSP12) -- LYS94(NSP13): 4.12 A [7CXM] / 3.95 A [7RDY]
+  Absent in 6XEZ (3.50 A — resolution artifact)
+  PRIMARY pharmacophore anchor
+
+**NSP12 consensus hotspots (all 3 structures):**
+  ASP901, MET902, TYR903, SER904
+  + LEU900 (2/3 structures)
+
+**NSP13 consensus hotspots:**
+  All 3: LEU92, TYR93, LYS94, THR96
+  2/3:   PHE90, GLY91, ASN95
+
+**Interface character:** hydrophobic-dominated (HY=42-55)
+  MET902(NSP12) is primary anchor — 38-51 contacts, all structures
+  ASP901-LYS94 SB provides charged anchor (2/3 structures)
+
+**Scientific note:**
+  Smallest interface in project (5 NSP12 + 7 NSP13 residues)
+  NSP12 C-terminal tail → NSP13 N-terminal region
+  Consistent with transient regulatory/tethering interaction
+  High hydrophobic contact density for interface size
+
+**Output:** 02-validation/NSP12-NSP13/interface_analysis_8.json
+**Status:** ✅ Done — proceed to Script 06_8 (conservation)
+
+---

@@ -1,0 +1,264 @@
+{
+  "complex": "NSP12-NSP13",
+  "script": "05_interface_NSP12-NSP13_8.py",
+  "af3_note": "Excluded \u2014 iptm=0.20, PAE=24.95 A",
+  "structures_analyzed": [
+    "6XEZ",
+    "7CXM",
+    "7RDY"
+  ],
+  "interface_results": {
+    "6XEZ": {
+      "label": "6XEZ NSP12(A) vs NSP13(E) [3.50 A]",
+      "n_salt_bridges": 0,
+      "n_h_bonds": 1,
+      "n_hydrophobic": 42,
+      "n_total": 64,
+      "salt_bridges": [],
+      "interface_residues": [
+        901,
+        902,
+        903,
+        904
+      ],
+      "hotspots": [
+        {
+          "res_num": 902,
+          "res_name": "MET",
+          "contacts": 38
+        },
+        {
+          "res_num": 901,
+          "res_name": "ASP",
+          "contacts": 20
+        },
+        {
+          "res_num": 903,
+          "res_name": "TYR",
+          "contacts": 5
+        },
+        {
+          "res_num": 904,
+          "res_name": "SER",
+          "contacts": 1
+        }
+      ]
+    },
+    "7CXM": {
+      "label": "7CXM NSP12(A) vs NSP13(E) [3.20 A]",
+      "n_salt_bridges": 1,
+      "n_h_bonds": 1,
+      "n_hydrophobic": 55,
+      "n_total": 95,
+      "salt_bridges": [
+        {
+          "res1": "ASP901",
+          "res2": "LYS94",
+          "dist": 4.12,
+          "structure": "7CXM"
+        }
+      ],
+      "interface_residues": [
+        900,
+        901,
+        902,
+        903,
+        904
+      ],
+      "hotspots": [
+        {
+          "res_num": 902,
+          "res_name": "MET",
+          "contacts": 51
+        },
+        {
+          "res_num": 901,
+          "res_name": "ASP",
+          "contacts": 22
+        },
+        {
+          "res_num": 904,
+          "res_name": "SER",
+          "contacts": 15
+        },
+        {
+          "res_num": 903,
+          "res_name": "TYR",
+          "contacts": 6
+        },
+        {
+          "res_num": 900,
+          "res_name": "LEU",
+          "contacts": 1
+        }
+      ]
+    },
+    "7RDY": {
+      "label": "7RDY NSP12(A) vs NSP13(E) [3.10 A]",
+      "n_salt_bridges": 1,
+      "n_h_bonds": 2,
+      "n_hydrophobic": 53,
+      "n_total": 108,
+      "salt_bridges": [
+        {
+          "res1": "ASP901",
+          "res2": "LYS94",
+          "dist": 3.95,
+          "structure": "7RDY"
+        }
+      ],
+      "interface_residues": [
+        900,
+        901,
+        902,
+        903,
+        904
+      ],
+      "hotspots": [
+        {
+          "res_num": 902,
+          "res_name": "MET",
+          "contacts": 48
+        },
+        {
+          "res_num": 901,
+          "res_name": "ASP",
+          "contacts": 29
+        },
+        {
+          "res_num": 904,
+          "res_name": "SER",
+          "contacts": 16
+        },
+        {
+          "res_num": 903,
+          "res_name": "TYR",
+          "contacts": 11
+        },
+        {
+          "res_num": 900,
+          "res_name": "LEU",
+          "contacts": 4
+        }
+      ]
+    }
+  },
+  "salt_bridges_all": [
+    {
+      "res1": "ASP901",
+      "res2": "LYS94",
+      "dist": 4.12,
+      "structure": "7CXM"
+    },
+    {
+      "res1": "ASP901",
+      "res2": "LYS94",
+      "dist": 3.95,
+      "structure": "7RDY"
+    }
+  ],
+  "nsp12_hotspots_all": [
+    {
+      "res_num": 901,
+      "n_structures": 3
+    },
+    {
+      "res_num": 902,
+      "n_structures": 3
+    },
+    {
+      "res_num": 903,
+      "n_structures": 3
+    },
+    {
+      "res_num": 904,
+      "n_structures": 3
+    },
+    {
+      "res_num": 900,
+      "n_structures": 2
+    }
+  ],
+  "nsp13_hotspots_all": [
+    {
+      "res_num": 96,
+      "n_structures": 3
+    },
+    {
+      "res_num": 92,
+      "n_structures": 3
+    },
+    {
+      "res_num": 93,
+      "n_structures": 3
+    },
+    {
+      "res_num": 94,
+      "n_structures": 3
+    },
+    {
+      "res_num": 90,
+      "n_structures": 2
+    },
+    {
+      "res_num": 91,
+      "n_structures": 2
+    },
+    {
+      "res_num": 95,
+      "n_structures": 2
+    }
+  ],
+  "consensus_nsp12": [
+    {
+      "res_num": 901,
+      "n_structures": 3
+    },
+    {
+      "res_num": 902,
+      "n_structures": 3
+    },
+    {
+      "res_num": 903,
+      "n_structures": 3
+    },
+    {
+      "res_num": 904,
+      "n_structures": 3
+    },
+    {
+      "res_num": 900,
+      "n_structures": 2
+    }
+  ],
+  "consensus_nsp13": [
+    {
+      "res_num": 96,
+      "n_structures": 3
+    },
+    {
+      "res_num": 92,
+      "n_structures": 3
+    },
+    {
+      "res_num": 93,
+      "n_structures": 3
+    },
+    {
+      "res_num": 94,
+      "n_structures": 3
+    },
+    {
+      "res_num": 90,
+      "n_structures": 2
+    },
+    {
+      "res_num": 91,
+      "n_structures": 2
+    },
+    {
+      "res_num": 95,
+      "n_structures": 2
+    }
+  ]
+}
