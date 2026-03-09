@@ -1,286 +1,433 @@
 #!/usr/bin/env python3
 """
-Script 09_visualize_NSP12-NSP13_8.py
+Script 09_visualize_NSP12-NSP13_8.py  (IMPROVED)
 
-Publication figures for NSP12-NSP13 interface analysis.
+Publication figures for NSP12-NSV13 interface analysis.
+Style aligned with NSP10-NSP14 Script 09_2 (project standard).
 
-Fig1: Conservation bar chart — NSP12 + NSP13 hotspots
-Fig2: Conservation heatmap — residues x species
-Fig3: Contact type distribution — 3 crystal structures
+Fig1 — Conservation bar charts (NSP12 + NSP13, horizontal)
+Fig2 — Conservation heatmap with AA code legend
+Fig3 — Contact type distribution across 3 crystal structures
 
-Output: results/
-  Fig1_NSP12-NSP13_conservation_bars_8.png
-  Fig2_NSP12-NSP13_conservation_heatmap_8.png
-  Fig3_NSP12-NSP13_contact_types_8.png
+conda activate rtc-discovery
+cd ~/projects/rtc-pan-coronavirus
+python scripts/09_visualize_NSP12-NSP13_8.py
 """
 
-import os, json
+import json
 import numpy as np
 import pandas as pd
-import matplotlib
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from matplotlib.colors import LinearSegmentedColormap
+from Bio import AlignIO
+from pathlib import Path
 
-# ── Paths ──────────────────────────────────────────────────────────────────
-BASE        = os.path.expanduser("~/projects/rtc-pan-coronavirus")
-VAL_DIR     = f"{BASE}/02-validation/NSP12-NSP13"
-RESULTS_DIR = f"{BASE}/results"
-os.makedirs(RESULTS_DIR, exist_ok=True)
+PROJECT = Path.home() / "projects" / "rtc-pan-coronavirus"
+VAL_DIR = PROJECT / "02-validation" / "NSP12-NSP13"
+SEQ_DIR = PROJECT / "00-reference" / "sequences" / "conservation"
+RES_DIR = PROJECT / "results"
+RES_DIR.mkdir(exist_ok=True)
+
+# ── Global style (project standard) ───────────────────────────────────────
+plt.rcParams.update({
+    "font.family":       "DejaVu Sans",
+    "font.size":         11,
+    "axes.titlesize":    13,
+    "axes.titleweight":  "bold",
+    "axes.labelsize":    11,
+    "axes.spines.top":   False,
+    "axes.spines.right": False,
+    "axes.linewidth":    0.8,
+    "xtick.direction":   "out",
+    "ytick.direction":   "out",
+    "xtick.major.size":  4,
+    "ytick.major.size":  4,
+    "legend.frameon":    False,
+    "legend.fontsize":   9,
+    "figure.dpi":        150,
+    "savefig.dpi":       300,
+    "savefig.bbox":      "tight",
+})
+
+BLUE   = "#2C5F8A"
+GREEN  = "#2E8B57"
+RED    = "#C0392B"
+ORANGE = "#E67E22"
+PURPLE = "#7D3C98"
+GREY   = "#95A5A6"
+LGREY  = "#ECF0F1"
+PINK   = "#C9507A"
+
+AA3 = {
+    "A":"ALA","R":"ARG","N":"ASN","D":"ASP","C":"CYS",
+    "Q":"GLN","E":"GLU","G":"GLY","H":"HIS","I":"ILE",
+    "L":"LEU","K":"LYS","M":"MET","F":"PHE","P":"PRO",
+    "S":"SER","T":"THR","W":"TRP","Y":"TYR","V":"VAL",
+}
+
+CORONAVIRUSES = ["SARS-CoV-2","SARS-CoV-1","MERS-CoV","HCoV-229E","HCoV-NL63"]
+
+# Hotspot positions (6XEZ/7RDY PDB numbering)
+NSP12_HOTSPOTS = [900, 901, 902, 903, 904]
+NSP13_HOTSPOTS = [90, 91, 92, 93, 94, 95, 96]
+
+PRIMARY_NSP12  = {901, 902}   # ASP901(SB) + MET902(hydrophobic)
+PRIMARY_NSP13  = {93, 94}     # TYR93(#1) + LYS94(SB pan-cov)
+SB_NSP12       = {901}
+SB_NSP13       = {94}
+
+# Contact counts from Script 05_8
+CONTACT_COUNTS = {
+    "6XEZ\n(3.50 Å)" : {"Salt Bridge": 0, "H-Bond": 1, "Hydrophobic": 42, "VdW": 21},
+    "7CXM\n(3.20 Å)" : {"Salt Bridge": 1, "H-Bond": 1, "Hydrophobic": 55, "VdW": 38},
+    "7RDY\n(3.10 Å)" : {"Salt Bridge": 1, "H-Bond": 2, "Hydrophobic": 53, "VdW": 52},
+}
+
+SB_ANNOTATIONS = {
+    "6XEZ\n(3.50 Å)" : ("ASP901–LYS94", "absent",  False),
+    "7CXM\n(3.20 Å)" : ("ASP901–LYS94", "4.12 Å",  True),
+    "7RDY\n(3.10 Å)" : ("ASP901–LYS94", "3.95 Å",  True),
+}
+
 
 # ── Load data ──────────────────────────────────────────────────────────────
-with open(f"{VAL_DIR}/conservation_summary_8.json") as f:
-    cons_data = json.load(f)
-with open(f"{VAL_DIR}/interface_analysis_8.json") as f:
-    iface_data = json.load(f)
+def load_data():
+    cons12 = pd.read_csv(VAL_DIR / "conservation_NSP12.csv")
+    cons13 = pd.read_csv(VAL_DIR / "conservation_NSP13.csv")
+    with open(VAL_DIR / "interface_analysis_8.json") as f:
+        iface = json.load(f)
+    return cons12, cons13, iface
 
-nsp12_cons = cons_data["nsp12_conservation"]
-nsp13_cons = cons_data["nsp13_conservation"]
-coronaviruses = cons_data["coronaviruses"]
 
-# ── Color scheme (project-standard) ───────────────────────────────────────
-COL_SB      = "#d62728"   # red    — salt bridge / primary
-COL_HY      = "#ff7f0e"   # orange — hydrophobic primary
-COL_CONS    = "#2ca02c"   # green  — conserved
-COL_VAR     = "#9467bd"   # purple — variable
-COL_NSP12   = "#1f77b4"   # blue
-COL_NSP13   = "#e377c2"   # pink
+# ── Figure 1 — Conservation bar charts ────────────────────────────────────
+def fig_conservation_bars(cons12, cons13):
+    fig, axes = plt.subplots(1, 2, figsize=(16, 6),
+                             constrained_layout=True)
+    fig.suptitle(
+        "NSP12–NSP13 Interface: Hotspot Conservation Across 5 Coronaviruses",
+        fontsize=14, fontweight="bold", y=1.02)
 
-PRIMARY_NSP12 = {901, 902}
-PRIMARY_NSP13 = {94}
-SB_NSP12      = {901}
-SB_NSP13      = {94}
+    datasets = [
+        (axes[0], cons12, "NSP12", NSP12_HOTSPOTS, PRIMARY_NSP12, SB_NSP12,
+         "C-terminal tail (residues 900–904)"),
+        (axes[1], cons13, "NSP13", NSP13_HOTSPOTS, PRIMARY_NSP13, SB_NSP13,
+         "N-terminal region (residues 90–96)"),
+    ]
 
-# ══════════════════════════════════════════════════════════════════════════
-# FIG 1 — Conservation bars (dual panel: NSP12 top, NSP13 bottom)
-# ══════════════════════════════════════════════════════════════════════════
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8),
-                                gridspec_kw={"hspace": 0.55})
-fig.patch.set_facecolor("white")
+    for ax, df, nsp, hotspots, primary_set, sb_set, subtitle in datasets:
+        # Filter to hotspot positions only
+        hdf = df[df["pdb_res_num"].isin(hotspots)].copy()
+        hdf = hdf.sort_values("conservation", ascending=True)
 
-def bar_color(res_num, primary_set, sb_set):
-    if res_num in sb_set:     return COL_SB
-    if res_num in primary_set: return COL_HY
-    return COL_NSP12
+        colors = []
+        for _, row in hdf.iterrows():
+            rn = row["pdb_res_num"]
+            if rn in sb_set:
+                colors.append(RED)
+            elif rn in primary_set:
+                colors.append(ORANGE)
+            elif row["conservation"] >= 0.8:
+                colors.append(BLUE)
+            else:
+                colors.append(GREY)
 
-# NSP12
-labels12 = [f"{d['res_name_3']}{d['pdb_res_num']}" for d in nsp12_cons]
-scores12  = [d["conservation"] for d in nsp12_cons]
-colors12  = [bar_color(d["pdb_res_num"], PRIMARY_NSP12, SB_NSP12)
-             for d in nsp12_cons]
+        y    = np.arange(len(hdf))
+        ax.barh(y, hdf["conservation"], color=colors,
+                edgecolor="white", linewidth=0.6, height=0.72)
+        ax.axvline(0.8, color="black", linestyle="--",
+                   linewidth=1.0, alpha=0.6, label="Threshold (0.8)")
 
-bars = ax1.bar(labels12, scores12, color=colors12, edgecolor="black",
-               linewidth=0.8, zorder=3)
-ax1.axhline(0.8, color="gray", linestyle="--", linewidth=1.2,
-            alpha=0.7, label="Conservation threshold (0.8)", zorder=2)
-ax1.set_ylim(0, 1.15)
-ax1.set_ylabel("Conservation score", fontsize=11)
-ax1.set_title("NSP12 C-terminal tail — Interface hotspot conservation",
-              fontsize=12, fontweight="bold", pad=8)
-ax1.set_facecolor("#f8f8f8")
-ax1.grid(axis="y", alpha=0.4, zorder=1)
-for bar, score in zip(bars, scores12):
-    ax1.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.02,
-             f"{score:.3f}", ha="center", va="bottom", fontsize=9,
-             fontweight="bold")
+        for i, (_, row) in enumerate(hdf.iterrows()):
+            ax.text(row["conservation"] + 0.01, i,
+                    f"{row['conservation']:.3f}",
+                    va="center", fontsize=8.5)
 
-# NSP13
-labels13 = [f"{d['res_name_3']}{d['pdb_res_num']}" for d in nsp13_cons]
-scores13  = [d["conservation"] for d in nsp13_cons]
-colors13  = [COL_SB if d["pdb_res_num"] in SB_NSP13
-             else COL_CONS if d["conservation"] >= 0.8
-             else COL_VAR
-             for d in nsp13_cons]
+        ylabels = []
+        for _, row in hdf.iterrows():
+            rn      = row["pdb_res_num"]
+            resname = row["res_name_3"]
+            lbl     = f"{resname}{rn}"
+            if rn in sb_set:
+                lbl = f"★  {lbl}  (SB)"
+            elif rn in primary_set:
+                lbl = f"★  {lbl}"
+            ylabels.append(lbl)
+        ax.set_yticks(y)
+        ax.set_yticklabels(ylabels, fontsize=9.5)
 
-bars2 = ax2.bar(labels13, scores13, color=colors13, edgecolor="black",
-                linewidth=0.8, zorder=3)
-ax2.axhline(0.8, color="gray", linestyle="--", linewidth=1.2,
-            alpha=0.7, zorder=2)
-ax2.set_ylim(0, 1.15)
-ax2.set_ylabel("Conservation score", fontsize=11)
-ax2.set_title("NSP13 N-terminal region — Interface hotspot conservation",
-              fontsize=12, fontweight="bold", pad=8)
-ax2.set_facecolor("#f8f8f8")
-ax2.grid(axis="y", alpha=0.4, zorder=1)
-for bar, score in zip(bars2, scores13):
-    ax2.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.02,
-             f"{score:.3f}", ha="center", va="bottom", fontsize=9,
-             fontweight="bold")
+        ax.set_xlim(0, 1.18)
+        ax.set_xlabel("Conservation Score  (1.0 = identical in all 5 species)")
+        n_cons = len(hdf[hdf["conservation"] >= 0.8])
+        ax.set_title(
+            f"{nsp}  —  {subtitle}\n({n_cons}/{len(hdf)} residues conserved ≥ 0.8)",
+            pad=8)
+        ax.xaxis.set_minor_locator(plt.MultipleLocator(0.1))
+        ax.grid(axis="x", alpha=0.2, linewidth=0.6)
 
-# Legend
-legend_patches = [
-    mpatches.Patch(color=COL_SB,   label="Salt bridge anchor (primary)"),
-    mpatches.Patch(color=COL_HY,   label="Hydrophobic anchor (primary)"),
-    mpatches.Patch(color=COL_CONS, label="Conserved (>=0.8)"),
-    mpatches.Patch(color=COL_VAR,  label="Variable (<0.8)"),
-]
-fig.legend(handles=legend_patches, loc="lower center", ncol=4,
-           fontsize=9, framealpha=0.9,
-           bbox_to_anchor=(0.5, -0.02))
+        patches = [
+            mpatches.Patch(color=RED,    label="Salt bridge anchor ★"),
+            mpatches.Patch(color=ORANGE, label="Primary pharmacophore ★"),
+            mpatches.Patch(color=BLUE,   label="Conserved ≥ 0.8"),
+            mpatches.Patch(color=GREY,   label="Variable < 0.8"),
+        ]
+        ax.legend(handles=patches, loc="lower right", fontsize=8.5)
 
-fig.suptitle("NSP12–NSP13 Interface: Conservation Across 5 Coronaviruses\n"
-             "SB: ASP901–LYS94  |  Hydrophobic: MET902  |  "
-             "SARS-CoV-1/2 selective (MET902) + pan-cov SB (LYS94)",
-             fontsize=11, y=1.02, style="italic")
+    fig.text(
+        0.5, -0.03,
+        "★  ASP901 / MET902 (NSP12) primary pharmacophores  |  "
+        "TYR93 (#1 ranked, AlaLoss=29) / LYS94 (SB, pan-cov, cons=1.000) (NSP13)\n"
+        "MET902: SARS-CoV-1/2 selective (M→S in MERS/229E/NL63)  |  "
+        "LYS94: K conserved in all 5 species",
+        ha="center", fontsize=8.5, style="italic", color="#555555")
 
-out1 = f"{RESULTS_DIR}/Fig1_NSP12-NSP13_conservation_bars_8.png"
-fig.savefig(out1, dpi=300, bbox_inches="tight", facecolor="white")
-plt.close()
-print(f"Saved: {out1}")
+    out = RES_DIR / "Fig1_NSP12-NSP13_conservation_bars_8.png"
+    fig.savefig(out)
+    print(f"  Saved: {out.name}")
+    plt.close(fig)
 
-# ══════════════════════════════════════════════════════════════════════════
-# FIG 2 — Conservation heatmap
-# ══════════════════════════════════════════════════════════════════════════
-all_cons = nsp12_cons + nsp13_cons
-res_labels = [f"{'NSP12:' if i<len(nsp12_cons) else 'NSP13:'}"
-              f"{d['res_name_3']}{d['pdb_res_num']}"
-              for i, d in enumerate(all_cons)]
 
-# Build matrix: residues x species
-species_keys = [f"aa_{cov.replace('-','_').replace('/','_')}"
-                for cov in coronaviruses]
-species_display = [cov.replace("HCoV-","") for cov in coronaviruses]
+# ── Figure 2 — Conservation heatmap ───────────────────────────────────────
+def fig_heatmap(cons12, cons13):
+    cmap = LinearSegmentedColormap.from_list(
+        "cons", ["#FDFEFE","#AED6F1","#2980B9","#1A5276"], N=256)
 
-matrix = []
-for d in all_cons:
-    row = []
-    for sk in species_keys:
-        aa = d.get(sk, "-")
-        row.append(aa)
-    matrix.append(row)
+    fig = plt.figure(figsize=(20, 6), constrained_layout=True)
+    gs  = fig.add_gridspec(1, 3, width_ratios=[8, 10, 1.6])
+    ax12  = fig.add_subplot(gs[0])
+    ax13  = fig.add_subplot(gs[1])
+    ax_leg = fig.add_subplot(gs[2])
 
-# Color by conservation: same as SARS-CoV-2 = green, different = red, gap = gray
-sars2_key = f"aa_{coronaviruses[0].replace('-','_').replace('/','_')}"
-ref_aas   = [d.get(sars2_key, "-") for d in all_cons]
+    fig.suptitle(
+        "Amino Acid Identity Across 5 Coronaviruses\n"
+        "NSP12–NSP13 Interface Hotspot Residues",
+        fontsize=13, fontweight="bold")
 
-color_matrix = []
-for i, row in enumerate(matrix):
-    ref = ref_aas[i]
-    crow = []
-    for aa in row:
-        if aa == "-":
-            crow.append(0.5)
-        elif aa == ref:
-            crow.append(1.0)
-        else:
-            crow.append(0.0)
-    color_matrix.append(crow)
+    im_last = None
 
-cmap = LinearSegmentedColormap.from_list(
-    "cons_map", ["#d62728", "#f5f5f5", "#2ca02c"], N=256
-)
+    for ax, nsp, df, hotspots, primary_set, sb_set in [
+        (ax12,  "NSP12", cons12, NSP12_HOTSPOTS, PRIMARY_NSP12, SB_NSP12),
+        (ax13,  "NSP13", cons13, NSP13_HOTSPOTS, PRIMARY_NSP13, SB_NSP13),
+    ]:
+        # Build species key mapping
+        species_keys = {}
+        for cov in CORONAVIRUSES:
+            key = f"aa_{cov.replace('-','_').replace('/','_').replace(' ','_')}"
+            species_keys[cov] = key
 
-fig, ax = plt.subplots(figsize=(max(8, len(coronaviruses)*1.5),
-                                 max(6, len(all_cons)*0.45)))
-fig.patch.set_facecolor("white")
+        score_map = dict(zip(df["pdb_res_num"], df["conservation"]))
 
-im = ax.imshow(color_matrix, cmap=cmap, vmin=0, vmax=1,
-               aspect="auto", interpolation="nearest")
+        # Build matrix
+        matrix = []
+        scores = []
+        for cov in CORONAVIRUSES:
+            key = species_keys[cov]
+            row_aa  = []
+            row_sc  = []
+            for p in hotspots:
+                sub = df[df["pdb_res_num"] == p]
+                if sub.empty or key not in sub.columns:
+                    row_aa.append("-")
+                    row_sc.append(0.0)
+                else:
+                    aa = sub[key].values[0]
+                    row_aa.append(aa if pd.notna(aa) else "-")
+                    row_sc.append(score_map.get(p, 0.0))
+            matrix.append(row_aa)
+            scores.append(row_sc)
 
-# Annotate with amino acid letters
-for i in range(len(all_cons)):
-    for j in range(len(coronaviruses)):
-        aa = matrix[i][j]
-        cv = color_matrix[i][j]
-        text_color = "white" if cv < 0.2 or cv > 0.8 else "black"
-        ax.text(j, i, aa, ha="center", va="center",
-                fontsize=10, fontweight="bold", color=text_color)
+        scores_arr = np.array(scores)
+        im = ax.imshow(scores_arr, cmap=cmap, vmin=0, vmax=1, aspect="auto")
+        im_last = im
 
-ax.set_xticks(range(len(coronaviruses)))
-ax.set_xticklabels(species_display, rotation=30, ha="right", fontsize=10)
-ax.set_yticks(range(len(res_labels)))
-ax.set_yticklabels(res_labels, fontsize=9)
+        # Annotate cells with AA letters
+        for i in range(len(CORONAVIRUSES)):
+            for j in range(len(hotspots)):
+                aa = matrix[i][j]
+                tc = "white" if scores_arr[i, j] > 0.65 else "black"
+                ax.text(j, i, aa, ha="center", va="center",
+                        fontsize=12, fontweight="bold", color=tc)
 
-# Divider between NSP12 and NSP13
-ax.axhline(len(nsp12_cons) - 0.5, color="black", linewidth=2.5)
-ax.text(len(coronaviruses) - 0.4, len(nsp12_cons)/2 - 0.5,
-        "NSP12", va="center", fontsize=9, fontweight="bold",
-        color=COL_NSP12, rotation=90)
-ax.text(len(coronaviruses) - 0.4,
-        len(nsp12_cons) + len(nsp13_cons)/2 - 0.5,
-        "NSP13", va="center", fontsize=9, fontweight="bold",
-        color=COL_NSP13, rotation=90)
+        # Red borders on primary residues
+        for j, p in enumerate(hotspots):
+            if p in sb_set:
+                color = RED
+            elif p in primary_set:
+                color = ORANGE
+            else:
+                continue
+            ax.add_patch(plt.Rectangle(
+                (j-0.5, -0.5), 1, len(CORONAVIRUSES),
+                fill=False, edgecolor=color, linewidth=2.5, zorder=3))
+            marker = "★" if p in sb_set else "◆"
+            ax.text(j, -0.9, marker, ha="center", va="center",
+                    fontsize=11, color=color)
 
-# Mark primary residues
-primary_rows = [i for i, d in enumerate(all_cons)
-                if (i < len(nsp12_cons) and d["pdb_res_num"] in PRIMARY_NSP12) or
-                   (i >= len(nsp12_cons) and d["pdb_res_num"] in PRIMARY_NSP13)]
-for pr in primary_rows:
-    ax.get_yticklabels()[pr].set_color(COL_SB)
-    ax.get_yticklabels()[pr].set_fontweight("bold")
+        # X-axis labels: 3-letter AA + position (from SARS-CoV-2 row)
+        sars2_key = species_keys["SARS-CoV-2"]
+        col_labels = []
+        for p in hotspots:
+            sub = df[df["pdb_res_num"] == p]
+            if not sub.empty and sars2_key in sub.columns:
+                aa1   = sub[sars2_key].values[0]
+                three = AA3.get(str(aa1), str(aa1)) if pd.notna(aa1) else "?"
+                col_labels.append(f"{three}{p}")
+            else:
+                rname = sub["res_name_3"].values[0] if not sub.empty else "?"
+                col_labels.append(f"{rname}{p}")
 
-plt.colorbar(im, ax=ax, label="Conservation (green=identical, red=different)",
-             shrink=0.6, pad=0.12)
-ax.set_title("NSP12–NSP13 Interface Residue Conservation Across Coronaviruses\n"
-             "★ Primary pharmacophore residues in red labels",
-             fontsize=11, fontweight="bold", pad=10)
+        ax.set_xticks(range(len(hotspots)))
+        ax.set_xticklabels(col_labels, rotation=45, ha="right", fontsize=9)
+        ax.set_yticks(range(len(CORONAVIRUSES)))
+        ax.set_yticklabels(CORONAVIRUSES if ax == ax12 else [],
+                           fontsize=10)
+        ax.set_title(nsp, pad=20)
+        ax.tick_params(length=0)
 
-out2 = f"{RESULTS_DIR}/Fig2_NSP12-NSP13_conservation_heatmap_8.png"
-fig.savefig(out2, dpi=300, bbox_inches="tight", facecolor="white")
-plt.close()
-print(f"Saved: {out2}")
+        for x in np.arange(-0.5, len(hotspots), 1):
+            ax.axvline(x, color="white", linewidth=1.0)
+        for y_ in np.arange(-0.5, len(CORONAVIRUSES), 1):
+            ax.axhline(y_, color="white", linewidth=1.0)
 
-# ══════════════════════════════════════════════════════════════════════════
-# FIG 3 — Contact type distribution across 3 crystal structures
-# ══════════════════════════════════════════════════════════════════════════
-struct_labels = ["6XEZ\n(3.50 Å)", "7CXM\n(3.20 Å)", "7RDY\n(3.10 Å)"]
-pdb_ids       = ["6XEZ", "7CXM", "7RDY"]
+    # Colorbar
+    cbar = fig.colorbar(im_last, ax=[ax12, ax13], shrink=0.75,
+                        pad=0.015, label="Conservation Score")
+    cbar.ax.tick_params(labelsize=9)
 
-sb_counts = []
-hb_counts = []
-hy_counts = []
-vdw_counts = []
+    # AA code legend panel
+    ax_leg.axis("off")
+    entries = [
+        ("A","ALA — Alanine"),    ("D","ASP — Aspartate"),
+        ("E","GLU — Glutamate"),  ("F","PHE — Phenylalanine"),
+        ("G","GLY — Glycine"),    ("K","LYS — Lysine"),
+        ("L","LEU — Leucine"),    ("M","MET — Methionine"),
+        ("N","ASN — Asparagine"), ("P","PRO — Proline"),
+        ("S","SER — Serine"),     ("T","THR — Threonine"),
+        ("V","VAL — Valine"),     ("Y","TYR — Tyrosine"),
+    ]
+    ax_leg.text(0.05, 0.99, "AA Code Key",
+                transform=ax_leg.transAxes,
+                fontsize=9, fontweight="bold", va="top")
+    for i, (code, name) in enumerate(entries):
+        ax_leg.text(0.05, 0.93 - i*0.063,
+                    f"{code}  =  {name}",
+                    transform=ax_leg.transAxes,
+                    fontsize=7.5, va="top", color="#2C3E50",
+                    fontfamily="monospace")
 
-for pdb_id in pdb_ids:
-    r = iface_data["interface_results"][pdb_id]
-    sb_counts.append(r["n_salt_bridges"])
-    hb_counts.append(r["n_h_bonds"])
-    hy_counts.append(r["n_hydrophobic"])
-    vdw_counts.append(r["n_total"] - r["n_salt_bridges"]
-                      - r["n_h_bonds"] - r["n_hydrophobic"])
+    fig.text(
+        0.45, -0.04,
+        "★  Salt bridge anchors  |  ◆  Primary pharmacophores  |  "
+        "Red border = SB residue  |  Orange border = primary",
+        ha="center", fontsize=8.5, style="italic", color="#555555")
 
-x     = np.arange(len(struct_labels))
-width = 0.20
+    out = RES_DIR / "Fig2_NSP12-NSP13_conservation_heatmap_8.png"
+    fig.savefig(out)
+    print(f"  Saved: {out.name}")
+    plt.close(fig)
 
-fig, ax = plt.subplots(figsize=(9, 6))
-fig.patch.set_facecolor("white")
-ax.set_facecolor("#f8f8f8")
 
-b1 = ax.bar(x - 1.5*width, sb_counts,  width, label="Salt bridge", color=COL_SB,   edgecolor="black", lw=0.7)
-b2 = ax.bar(x - 0.5*width, hb_counts,  width, label="H-bond",      color="#1f77b4", edgecolor="black", lw=0.7)
-b3 = ax.bar(x + 0.5*width, hy_counts,  width, label="Hydrophobic",  color=COL_HY,   edgecolor="black", lw=0.7)
-b4 = ax.bar(x + 1.5*width, vdw_counts, width, label="VdW",          color="#bcbd22", edgecolor="black", lw=0.7)
+# ── Figure 3 — Contact type distribution ──────────────────────────────────
+def fig_contacts():
+    structs = list(CONTACT_COUNTS.keys())
+    ctypes  = ["Salt Bridge", "H-Bond", "Hydrophobic", "VdW"]
+    colors  = [RED, BLUE, ORANGE, LGREY]
 
-for bars in [b1, b2, b3, b4]:
-    for bar in bars:
-        h = bar.get_height()
-        if h > 0:
-            ax.text(bar.get_x() + bar.get_width()/2, h + 0.5,
-                    str(int(h)), ha="center", va="bottom", fontsize=8)
+    fig, ax = plt.subplots(figsize=(11, 6), constrained_layout=True)
+    fig.suptitle(
+        "NSP12–NSP13 Interface: Contact Types Across Three Crystal Structures",
+        fontsize=13, fontweight="bold")
 
-ax.set_xticks(x)
-ax.set_xticklabels(struct_labels, fontsize=11)
-ax.set_ylabel("Contact count", fontsize=11)
-ax.set_title("NSP12–NSP13 Interface Contact Types Across Crystal Structures\n"
-             "Hydrophobic-dominated interface | MET902 primary anchor",
-             fontsize=11, fontweight="bold")
-ax.legend(fontsize=10, framealpha=0.9)
-ax.grid(axis="y", alpha=0.4)
+    x       = np.arange(len(structs))
+    width   = 0.19
+    offsets = np.array([-0.285, -0.095, 0.095, 0.285])
 
-# Annotation: MET902 dominance
-ax.annotate("MET902: 38–51\ncontacts/structure",
-            xy=(x[0] + 0.5*width, hy_counts[0]),
-            xytext=(x[1], max(hy_counts) * 0.75),
-            fontsize=9, color=COL_HY, fontweight="bold",
-            arrowprops=dict(arrowstyle="->", color=COL_HY, lw=1.5))
+    for ct, col, off in zip(ctypes, colors, offsets):
+        vals = [CONTACT_COUNTS[s][ct] for s in structs]
+        bars = ax.bar(x + off, vals, width, label=ct,
+                      color=col, edgecolor="white", linewidth=0.6, zorder=3)
+        for bar, v in zip(bars, vals):
+            if v > 0:
+                ax.text(bar.get_x() + bar.get_width()/2,
+                        bar.get_height() + 0.8,
+                        str(v), ha="center", va="bottom",
+                        fontsize=9, fontweight="bold")
 
-out3 = f"{RESULTS_DIR}/Fig3_NSP12-NSP13_contact_types_8.png"
-fig.savefig(out3, dpi=300, bbox_inches="tight", facecolor="white")
-plt.close()
-print(f"Saved: {out3}")
+    # Salt bridge annotation boxes
+    for i, s in enumerate(structs):
+        name, dist, present = SB_ANNOTATIONS[s]
+        sb_y  = CONTACT_COUNTS[s]["Salt Bridge"]
+        mark  = "✔" if present else "✘"
+        mc    = GREEN if present else GREY
+        label = f"{mark} {name}\n{dist}"
+        ax.text(x[i] + offsets[0],
+                sb_y + 2.5,
+                label,
+                ha="center", va="bottom",
+                fontsize=8, color=mc, fontweight="bold",
+                bbox=dict(boxstyle="round,pad=0.25",
+                          facecolor="white", edgecolor=mc,
+                          linewidth=1.2, alpha=0.9))
 
-print("\nAll figures saved:")
-print(f"  {out1}")
-print(f"  {out2}")
-print(f"  {out3}")
+    # MET902 dominance annotation
+    ax.annotate(
+        "MET902:\n38–51 contacts\n(hydrophobic)",
+        xy=(x[1] + offsets[2], CONTACT_COUNTS["7CXM\n(3.20 Å)"]["Hydrophobic"]),
+        xytext=(x[2] - 0.1, 65),
+        fontsize=8.5, color=ORANGE, fontweight="bold",
+        arrowprops=dict(arrowstyle="->", color=ORANGE, lw=1.5))
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(structs, fontsize=10)
+    ax.set_ylabel("Number of contacts")
+    ax.set_ylim(0, 80)
+    ax.yaxis.set_minor_locator(plt.MultipleLocator(5))
+    ax.grid(axis="y", alpha=0.25, linewidth=0.7, zorder=0)
+    ax.legend(title="Contact type", loc="upper left",
+              fontsize=9, title_fontsize=9)
+
+    # Total contacts
+    totals = {"6XEZ\n(3.50 Å)": 64,
+              "7CXM\n(3.20 Å)": 95,
+              "7RDY\n(3.10 Å)": 108}
+    for i, s in enumerate(structs):
+        ax.text(x[i], 76, f"Total: {totals[s]}",
+                ha="center", fontsize=9,
+                color="#2C3E50", fontweight="bold")
+
+    fig.text(
+        0.5, -0.03,
+        "Hydrophobic-dominated interface  |  "
+        "MET902(NSP12) primary anchor  |  "
+        "ASP901–LYS94 SB absent in 6XEZ (3.50 Å resolution artifact)",
+        ha="center", fontsize=8.5, style="italic", color="#555555")
+
+    out = RES_DIR / "Fig3_NSP12-NSP13_contact_types_8.png"
+    fig.savefig(out)
+    print(f"  Saved: {out.name}")
+    plt.close(fig)
+
+
+# ── Main ───────────────────────────────────────────────────────────────────
+def main():
+    print("\n" + "="*55)
+    print("  Script 09_8 (IMPROVED): Figures — NSP12-NSP13")
+    print("="*55 + "\n")
+
+    cons12, cons13, iface = load_data()
+
+    print("  Generating Figure 1 — Conservation bar charts ...")
+    fig_conservation_bars(cons12, cons13)
+
+    print("  Generating Figure 2 — Conservation heatmap ...")
+    fig_heatmap(cons12, cons13)
+
+    print("  Generating Figure 3 — Contact types ...")
+    fig_contacts()
+
+    print(f"\n  All 3 figures saved to: results/")
+    print("="*55 + "\n")
+
+
+if __name__ == "__main__":
+    main()

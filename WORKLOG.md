@@ -2268,3 +2268,145 @@ AF3 submitted as monomer (ptm=0.910, RMSD=1.369 A vs 7NIO).
 **Status:** ✅ Done — proceed to Script 11_8 (3D visualization — FINAL SCRIPT)
 
 ---
+
+## Entry 080 — 3D Visualization NSP12-NSP13 complete
+**Date:** 2026-03-09
+**Script:** scripts/11_3D_visualization_NSP12-NSP13_8.py
+**Notebook:** notebooks/NSP12-NSP13_3D_8.ipynb
+
+**8 interactive views (nglview):**
+  1. Full heterodimer — all 12 hotspots (7RDY chains A+E)
+  2. TYR93–MET902 primary pharmacophore ★ (aromatic-hydrophobic core)
+  3. ASP901–LYS94 salt bridge ★ (3.95 A, pan-cov charged anchor)
+  4. Hotspots colored by composite score (red/orange/green/blue tiers)
+  5. Hotspots colored by BSA burial depth
+  6. Docking box cylinder wireframe (39,389 A3)
+  7. Structural overlay — 7RDY + 6XEZ + 7CXM (3 crystal contexts)
+  8. Full composite ranking table (matplotlib, highlighted primary rows)
+
+**Technical fixes applied:**
+  - f-string {{}} escaping replaced with str(rn) concatenation
+  - textwrap.dedent for clean cell indentation
+  - kernelspec metadata added — opens with correct kernel automatically
+  - matplotlib.use("Agg") in Cell 1 for all cells
+
+**Status:** ✅ Done
+
+## Entry 081 — NSP12-NSP13 Scientific Conclusion
+**Date:** 2026-03-09
+
+### Complex overview
+NSP12-NSP13 heterodimer interface — RTC polymerase-helicase junction.
+Three crystal structures (6XEZ 3.50A, 7CXM 3.20A, 7RDY 3.10A).
+AF3 iptm=0.20 FAIL — transient/context-dependent interface requiring
+full RTC assembly. Smallest interface in project (5+7=12 residues).
+
+### Model quality
+NSP12: chain_ptm=0.89, RMSD=1.182 A vs 6XEZ ✅
+NSP13: chain_ptm=0.74, RMSD=3.515 A (flexible, expected)
+AF3 inter-chain PAE=24.95 A — chains predicted independently
+
+### Interface character
+Hydrophobic-dominated (HY=42-55 per structure)
+NSP12 C-terminal tail (900-904) → NSP13 N-terminal region (90-96)
+Tail-to-tail contact — consistent with transient regulatory tethering
+
+### Primary pharmacophore: TYR93–MET902 (rank #1+#2)
+TYR93(NSP13): composite=0.9486, AlaLoss=29, BSA=64.1 A2, cons=1.000
+MET902(NSP12): composite=0.7785, AlaLoss=19, BSA=73.6 A2, cons=0.582
+Aromatic-hydrophobic stacking pair — dominant structural glue
+TYR93 = highest AlaLoss across entire NSP12-NSP13 interface
+
+### Salt bridge: ASP901–LYS94
+ASP901(NSP12)–LYS94(NSP13): 3.95 A [7RDY] / 4.12 A [7CXM]
+Absent in 6XEZ (3.50 A — resolution artifact, not biological)
+LYS94 cons=1.000 — K in all 5 coronaviruses — pan-cov SB partner
+ASP901 cons=0.582 — D(SARS1/2+MERS) / E(229E/NL63) — D/E both negative
+→ SB charge complementarity preserved pan-coronavirus
+
+### Conservation — dual selectivity window
+MET902: M(SARS1/2) → S(MERS/229E/NL63) — major hydrophobic→polar loss
+  → MET902-targeting compounds SARS-CoV-1/2 selective
+LYS94: K in all 5 species (cons=1.000) — pan-cov SB anchor
+TYR93: Y in all 5 species (cons=1.000) — pan-cov aromatic anchor
+
+### Drug design — two strategies
+Strategy A (pan-cov):
+  Charged compound engaging LYS94(NSP13)–ASP901/GLU(NSP12) SB
+  Both coronaviruses retain negative charge at 901 (D or E)
+
+Strategy B (SARS-CoV-1/2 selective):
+  Hydrophobic compound engaging MET902 groove
+  M→S substitution in MERS/229E/NL63 eliminates binding pocket
+
+### Druggability
+fpocket 0.000 — PPI interface, no pre-formed pocket (expected)
+Same pattern as NSP10-NSP14 and NSP13-Helicase
+Induced-fit / interface disruption strategy required
+Docking box 39,389 A3 — adequate for small molecule screening
+
+### Pipeline status
+Steps 04-11 ALL COMPLETE ✅
+ALL 8 COMPLEXES COMPLETE ✅
+
+## Entry 082 — PROJECT COMPLETION SUMMARY
+**Date:** 2026-03-09
+
+### Pan-Coronavirus RTC Inhibitor Discovery Pipeline
+### ALL 8 PPI INTERFACES COMPLETE
+
+| # | Complex | Suffix | Primary Pharmacophore | Druggability | Selectivity |
+|---|---------|--------|----------------------|--------------|-------------|
+| 1 | NSP10-NSP14     | _2 | HIS80–ASP126 SB              | 0.000 | pan-cov       |
+| 2 | NSP10-NSP16     | _3 | LYS93–ASP106 SB + Zn1 finger | 0.546 | pan-cov       |
+| 3 | NSP12-NSP7      | _3 | PHE440 aromatic core         | 0.961 | pan-cov       |
+| 4 | NSP12-NSP8      | _4 | LYS332–ASP99 SB network      | 0.874 | pan-cov       |
+| 5 | NSP9-NSP12      | _5 | ARG733 NiRAN domain          | 0.895 | pan-cov       |
+| 6 | NSP7-NSP8       | _6 | PHE92 hydrophobic core       | 0.531 | pan-cov       |
+| 7 | NSP13-Helicase  | _7 | ILE480 + LYS414 dual SB      | 0.001 | SARS-selective|
+| 8 | NSP12-NSP13     | _8 | TYR93–MET902 + ASP901–LYS94  | 0.000 | dual          |
+
+### Druggability tiers
+  HIGH   (>0.80): NSP12-NSP7(0.961), NSP12-NSP8(0.874), NSP9-NSP12(0.895)
+  MEDIUM (0.40-0.80): NSP10-NSP16(0.546), NSP7-NSP8(0.531)
+  LOW    (<0.10): NSP10-NSP14(0.000), NSP13-Helicase(0.001), NSP12-NSP13(0.000)
+  → PPI interfaces (low) require induced-fit / fragment-based screening
+
+### Selectivity profile
+  Pan-coronavirus (6/8): NSP10-NSP14, NSP10-NSP16, NSP12-NSP7,
+                         NSP12-NSP8, NSP9-NSP12, NSP7-NSP8
+  SARS-selective  (1/8): NSP13-Helicase (ASP580 D→A/T in MERS/HCoV)
+  Dual            (1/8): NSP12-NSP13 (MET902 SARS-sel + LYS94 pan-cov)
+
+### Priority targets for virtual screening
+  Tier 1 (high druggability + pan-cov):
+    NSP12-NSP7  (0.961) — PHE440 aromatic groove
+    NSP9-NSP12  (0.895) — ARG733 NiRAN domain
+    NSP12-NSP8  (0.874) — LYS332–ASP99 SB network
+
+  Tier 2 (medium druggability):
+    NSP10-NSP16 (0.546) — dual mechanism PPI + Zn finger
+    NSP7-NSP8   (0.531) — PHE92 hydrophobic core
+
+  Tier 3 (PPI disruption — fragment/induced-fit):
+    NSP13-Helicase (0.001) — SARS-selective, ILE480 anchor
+    NSP10-NSP14    (0.000) — pan-cov, HIS80–ASP126 SB
+    NSP12-NSP13    (0.000) — dual selectivity, TYR93–MET902
+
+### Pipeline outputs per complex (Scripts 04-11)
+  04: AF3 validation JSON
+  05: Interface analysis JSON (contacts, SBs, hotspots)
+  06: Conservation CSV + summary JSON (5 coronaviruses)
+  07: Pocket analysis JSON + docking box coordinates
+  08: Receptor PDB + Vina config + VirtualFlow config
+  09: Fig1 conservation bars + Fig2 heatmap + Fig3 contacts
+  10: Fig4 BSA + Fig5 AlaScan + Fig6 composite ranking CSV+JSON
+  11: nglview 3D notebook (8 views)
+
+### Next phase
+  Virtual screening: AutoDock Vina / VirtualFlow
+  Priority order: NSP12-NSP7 → NSP9-NSP12 → NSP12-NSP8
+  All receptor PDBs + Vina configs ready in 03-virtual-screening/
+  GitHub: https://github.com/nsolly03/panCov-rtc-discovery
+
+---
