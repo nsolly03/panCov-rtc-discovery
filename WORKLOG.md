@@ -2489,3 +2489,48 @@ Presentation delivered: panCov_RTC_Twizere_2026.pptx (Prof. Twizere, 2026-03-09)
   Script 18: Final ranking + figures                  (local WSL2)
 
 **Status:** Installation in progress ⏳
+
+## Entry 086 — Script 12: ZINC20 Download + ADMET Filtering
+**Date:** 2026-03-09
+
+### Objective
+Download ZINC20 Drug-Like subset and apply ADMET filters for virtual screening.
+
+### Method
+- Download via sub-tranche format (e.g. BAAA.smi) with Mozilla User-Agent header
+- Filters applied: Lipinski RO5 (MW 150-500, LogP<=5, HBD<=5, HBA<=10),
+  RotBond<=10, TPSA<=140, PAINS A/B/C
+- Tools: RDKit Descriptors + FilterCatalog
+
+### Issues resolved
+- HTTP 403: fixed by adding User-Agent header to urllib requests
+- URL format: ZINC20 uses sub-tranche files (XXYY.smi) not tranche files (XX.smi)
+- LogP lower bound: removed -1 cutoff (Lipinski has no lower LogP limit)
+
+### Test run results (2 tranches x 3 sub-tranches)
+  Total input:   12,189
+  Total passed:   9,962  (81.73%)
+  TPSA removed:   1,262
+  HBD removed:      884
+  RotBond removed:   54
+  PAINS removed:     18
+  HBA removed:        9
+
+### Output
+  data/zinc20/zinc20_filtered.smi
+  data/zinc20/admet_filter_summary.json
+
+### Status: COMPLETE ✅
+
+## Entry 087 — Script 13: PDBQT Conversion (SMILES -> AutoDock Vina)
+**Date:** 2026-03-09
+
+### Objective
+Convert filtered ZINC20 SMILES to 3D PDBQT format for AutoDock Vina docking.
+
+### Method
+  1. RDKit ETKDGv3 3D conformer generation
+  2. MMFF94 geometry optimization
+  3. Meeko 0.7.1 + PDBQTWriterLegacy for Vina-compatible PDBQT output
+
+### Status: IN PROGRESS ⏳
