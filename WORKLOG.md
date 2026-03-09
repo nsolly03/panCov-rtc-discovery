@@ -1828,3 +1828,32 @@ Mode B — AF3 interface (iptm=0.87, PAE=0.90 A):
 **Status:** ✅ Done — proceed to Script 09_7 (publication figures)
 
 ---
+
+## Entry 069 — Publication Figures NSP13-Helicase complete
+**Date:** 2026-03-09
+**Script:** scripts/09_visualize_NSP13-Helicase_7.py
+
+**Figures saved to results/:**
+  Fig1_NSP13-Helicase_conservation_bars_7.png
+  Fig2_NSP13-Helicase_conservation_heatmap_7.png
+  Fig3_NSP13-Helicase_contact_types_7.png
+
+**Fig1:** Conservation bars — full AA names, primary targets starred,
+  SARS-CoV-1/2 identity note + ASP580 charge loss annotated
+
+**Fig2:** Heatmap — 5 coronaviruses x 17 hotspot residues,
+  red borders on SB anchors (LYS414, ASP580, ASP583),
+  SARS-CoV-1/2 rows identical at all positions
+
+**Fig3:** Contact types grouped bars (7NIO + 6XEZ) + SB inventory box
+  Dual SB uniqueness (LYS414→ASP580 AND ASP583) clearly annotated
+
+**Key scientific message confirmed in figures:**
+  SARS-CoV-1/2 selective interface
+  LYS414 dual SB — unique in project
+  ASP580: D->A (MERS), D->T (229E/NL63) — complete charge loss
+  4 backbone residues pan-coronavirus conserved but not druggable
+
+**Status:** ✅ Done — proceed to Script 10_7 (BSA + AlaScan + Ranking)
+
+---
