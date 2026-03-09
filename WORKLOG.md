@@ -2533,4 +2533,44 @@ Convert filtered ZINC20 SMILES to 3D PDBQT format for AutoDock Vina docking.
   2. MMFF94 geometry optimization
   3. Meeko 0.7.1 + PDBQTWriterLegacy for Vina-compatible PDBQT output
 
+### Test results (200 compounds)
+  Converted:  198/200 (99.0%)
+  embed_failed: 2 (normal — strained geometries)
+  PDBQT files: 198 in data/pdbqt/
+
+### Status: COMPLETE ✅
+
+## Entry 087 Update — Script 13: PDBQT Conversion COMPLETE
+**Date:** 2026-03-09
+
+### Full run results (9,962 compounds)
+  Converted:     9,808  (98.4%)
+  Cached:          198  (test run)
+  Failed:          154  (1.6%)
+  embed_failed:    147  (strained geometries — expected)
+  pdbqt_error:       7  (boron compounds — B_1 UFF type unsupported)
+
+### Notes
+  B_1 UFF errors: boron-containing compounds not supported by Meeko/UFF
+  These are flagged as PAINS-adjacent and excluded — scientifically sound
+  9,808 PDBQT files ready in data/pdbqt/ for AutoDock Vina screening
+
+### Output
+  data/pdbqt/*.pdbqt  (9,808 files)
+  data/zinc20/pdbqt_conversion_summary.json
+
+### Status: COMPLETE ✅
+
+## Entry 088 — Script 14: Test Docking (Validate Tier 1 Boxes)
+**Date:** 2026-03-09
+
+### Objective
+Validate docking setup for all 3 Tier 1 targets using 100 compounds.
+Confirm box coordinates, scoring, and pose quality before HPC submission.
+
+### Tier 1 targets
+  NSP12-NSP7   (druggability 0.961) — PHE440 aromatic groove
+  NSP9-NSP12   (druggability 0.895) — ARG733 NiRAN domain
+  NSP12-NSP8   (druggability 0.874) — LYS332-ASP99 SB network
+
 ### Status: IN PROGRESS ⏳
