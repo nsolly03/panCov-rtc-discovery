@@ -2410,3 +2410,82 @@ ALL 8 COMPLEXES COMPLETE ✅
   GitHub: https://github.com/nsolly03/panCov-rtc-discovery
 
 ---
+
+## Entry 083 — Project Phase 1 Complete: All 8 PPI Interfaces Analyzed
+**Date:** 2026-03-09
+
+### Complex summary table
+| # | Complex | Pharmacophore | Druggability | Selectivity |
+|---|---------|--------------|:------------:|-------------|
+| 1 | NSP10-NSP14 | HIS80-ASP126 SB | 0.000 | pan-cov |
+| 2 | NSP10-NSP16 | LYS93-ASP106 SB + Zn1 | 0.546 | pan-cov |
+| 3 | NSP12-NSP7 | PHE440 aromatic core | 0.961 ★ | pan-cov |
+| 4 | NSP12-NSP8 | LYS332-ASP99 SB network | 0.874 ★ | pan-cov |
+| 5 | NSP9-NSP12 | ARG733 NiRAN domain | 0.895 ★ | pan-cov |
+| 6 | NSP7-NSP8 | PHE92 hydrophobic core | 0.531 | pan-cov |
+| 7 | NSP13-Helicase | ILE480 + LYS414 dual SB | 0.001 | SARS-selective |
+| 8 | NSP12-NSP13 | TYR93-MET902 + ASP901-LYS94 | 0.000 | dual |
+
+Tier 1 targets (druggability >0.80): NSP12-NSP7, NSP9-NSP12, NSP12-NSP8
+64 standardized pipeline outputs (Scripts 04-11) across all 8 complexes
+GitHub commit: 7c1bc28 — PROJECT COMPLETE
+Presentation delivered: panCov_RTC_Twizere_2026.pptx (Prof. Twizere, 2026-03-09)
+
+**Status:** Phase 1 COMPLETE ✅
+
+## Entry 084 — HPC Setup: NIC5 (CECI, University of Liege)
+**Date:** 2026-03-09
+
+### CECI account
+  Username: onsekuye | Gateway: ceci-relog.segi.ulg.ac.be | Cluster: nic5.uliege.be
+
+### SSH setup steps (WSL2)
+  1. Copy key:    cp /mnt/c/Users/nseku/Downloads/id_rsa.ceci ~/.ssh/id_rsa.ceci
+  2. Permissions: chmod 600 ~/.ssh/id_rsa.ceci
+  3. Public key:  ssh-keygen -yf ~/.ssh/id_rsa.ceci > ~/.ssh/id_rsa.ceci.pub
+  4. ~/.ssh/config:
+       Host gwceci
+           HostName ceci-relog.segi.ulg.ac.be
+           User onsekuye
+           IdentityFile ~/.ssh/id_rsa.ceci
+           ForwardAgent yes
+       Host nic5
+           HostName nic5.uliege.be
+           User onsekuye
+           IdentityFile ~/.ssh/id_rsa.ceci
+           ProxyJump gwceci
+           ForwardAgent yes
+  5. Agent:       eval $(ssh-agent) && ssh-add ~/.ssh/id_rsa.ceci
+  6. Connect:     ssh nic5 (type 'yes' for fingerprint prompt)
+
+### File transfer
+  To NIC5:   scp -r 03-virtual-screening/ nic5:~/rtc-screening/
+  From NIC5: scp -r nic5:~/rtc-screening/results/ 04-hits/
+
+### Status
+  Key offered but gateway propagation pending (can take hours per CECI docs).
+  Retry: ssh nic5 | Support: support.ceci-hpc.be if persists after 24h
+
+### SLURM plan (Script 15)
+  Job array: 500 tasks x 10,000 ligands = 5M ZINC20 | CPUs: 4/task
+  Walltime: 4h/task | Partition: batch | 3 Tier 1 targets = 1,500 total jobs
+
+**Status:** SSH config complete ✅ | Gateway access pending propagation ⏳
+
+## Entry 085 — Phase 2 Init: Virtual Screening Dependencies
+**Date:** 2026-03-09
+
+### Install
+  conda install -c conda-forge rdkit openbabel -y
+  pip install meeko vina
+
+### Pipeline plan
+  Script 12: ZINC20 download + ADMET filtering        (local WSL2)
+  Script 13: Meeko PDBQT conversion                   (local WSL2)
+  Script 14: Test docking — validate Tier 1 boxes     (local WSL2)
+  Script 15: *** NIC5 *** ZINC20 5M SLURM array       (HPC)
+  Script 16: Hit analysis + pharmacophore extraction  (local WSL2)
+  Script 17: *** NIC5 *** Enamine focused SLURM array (HPC)
+  Script 18: Final ranking + figures                  (local WSL2)
+
+**Status:** Installation in progress ⏳
