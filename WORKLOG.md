@@ -2199,3 +2199,27 @@ AF3 submitted as monomer (ptm=0.910, RMSD=1.369 A vs 7NIO).
 **Status:** ✅ Done — proceed to Script 09_8 (publication figures)
 
 ---
+
+## Entry 078 — Publication Figures NSP12-NSP13 complete
+**Date:** 2026-03-09
+**Script:** scripts/09_visualize_NSP12-NSP13_8.py
+
+**Figures generated:**
+  Fig1: results/Fig1_NSP12-NSP13_conservation_bars_8.png
+    Dual panel: NSP12 C-terminal tail + NSP13 N-terminal conservation bars
+    SB anchor (ASP901) in red | hydrophobic anchor (MET902) in orange
+    LYS94 pan-cov conserved (1.000) in red ★
+
+  Fig2: results/Fig2_NSP12-NSP13_conservation_heatmap_8.png
+    12 residues x 5 coronaviruses heatmap
+    Green=identical to SARS-CoV-2 | Red=different
+    NSP12/NSP13 divider line | Primary residues highlighted
+
+  Fig3: results/Fig3_NSP12-NSP13_contact_types_8.png
+    Contact type distribution: 6XEZ, 7CXM, 7RDY
+    Hydrophobic dominant (42-55 per structure)
+    MET902 38-51 contacts annotated
+
+**Status:** ✅ Done — proceed to Script 10_8 (BSA + AlaScan + ranking)
+
+---
