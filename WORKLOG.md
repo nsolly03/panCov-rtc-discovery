@@ -1899,3 +1899,72 @@ Mode B — AF3 interface (iptm=0.87, PAE=0.90 A):
 **Status:** ✅ Done — proceed to Script 11_7 (3D visualization)
 
 ---
+
+## Entry 071 — 3D Visualization NSP13-Helicase complete
+**Date:** 2026-03-09
+**Script:** scripts/11_3D_visualization_NSP13-Helicase_7.py
+**Notebook:** notebooks/NSP13-Helicase_3D_7.ipynb
+
+**8 interactive views (nglview):**
+  1. Full homodimer — all 17 hotspots
+  2. Dual salt bridge zoomed — LYS414→ASP580 + ASP583 ★
+  3. ILE480 primary hydrophobic pharmacophore ★
+  4. Hotspots colored by composite score
+  5. Hotspots colored by BSA burial depth
+  6. Docking box (cylinder wireframe — add_box not available in this nglview)
+  7. Structural overlay — 7NIO + 6XEZ (two crystal contexts)
+  8. Full composite ranking table
+
+**Technical fix:** nglview shape.add_box() not available —
+  replaced with 12 cylinder edges to draw wireframe docking box
+  Same fix applicable to all previous complex notebooks
+
+## Entry 072 — NSP13-Helicase Scientific Conclusion
+**Date:** 2026-03-09
+
+### Complex overview
+NSP13 homodimer interface (RTC helicase subunit) — SARS-CoV-1/2 selective target.
+Single PDB for primary interface (7NIO, 2.80 A) + 6XEZ as secondary context.
+AF3 submitted as monomer (ptm=0.910, RMSD=1.369 A vs 7NIO).
+
+### Model quality
+  ptm=0.910, RMSD=1.369 A, mean pLDDT=92.4 at interface
+  All 17 hotspot positions pLDDT >= 89.8 — excellent
+
+### Dual salt bridge — unique in project
+  LYS414(A)→ASP580(E): 4.49 A (crystal), 3.55 A (receptor)
+  LYS414(A)→ASP583(E): 4.47 A (crystal), 3.23 A (receptor)
+  Single donor bridging two acceptors simultaneously —
+  highest energetic coupling of any SB pair in the project
+
+### Conservation — SARS-CoV-1/2 selective
+  Only 4/17 conserved >=0.8: GLY415, GLY478, THR552, ALA553 (backbone)
+  ASP580: D->A (MERS), D->T (229E/NL63) — complete charge loss
+  SARS-CoV-1 and SARS-CoV-2 IDENTICAL at all 17 positions
+  Same selectivity pattern as NSP12-NSP7 LYS2 and NSP9-NSP12 SBs
+
+### Primary pharmacophore: ILE480 (rank #1)
+  score=0.4823, BSA=59.2 A2, 50 hydrophobic contacts lost
+  Dominant structural glue of the interface
+  Hydrophobic cluster: ILE480 + VAL479 + HIS482
+
+### Secondary pharmacophore: LYS414 (rank #2)
+  score=0.3371, BSA=64.6 A2, 23 SB contacts lost
+  Dual SB donor — highest SB contact loss of any residue
+  in project after LYS332(NSP12-NSP8, loss=30)
+
+### Drug design strategy
+  1. Hydrophobic core engaging ILE480/VAL479/HIS482 cluster
+  2. Charged group engaging LYS414-ASP580/ASP583 dual SB
+  3. SARS-CoV-1/2 selective compound — not pan-coronavirus
+  4. Dual pharmacophore = high selectivity window vs MERS/HCoV
+
+### Druggability
+  fpocket 0.001-0.018 — low as expected for PPI interface
+  Docking box 39,826 A3 — adequate volume for small molecules
+
+### Pipeline status
+  Steps 04-11 ALL COMPLETE ✅
+  Next: NSP12-NSP13 (final complex, suffix _8)
+
+---
