@@ -2165,3 +2165,37 @@ AF3 submitted as monomer (ptm=0.910, RMSD=1.369 A vs 7NIO).
 **Status:** ✅ Done — proceed to Script 08_8 (docking prep)
 
 ---
+
+## Entry 077 — Docking Prep NSP12-NSP13 complete
+**Date:** 2026-03-09
+**Script:** scripts/08_docking_prep_NSP12-NSP13_8.py
+
+**Receptor: 7RDY chains A+E (best resolution 3.10 A)**
+  NSP12(A): 927 residues
+  NSP13(E): 590 residues
+  Total atoms: 12,040
+  Waters/ligands/HETATM stripped ✅
+
+**Hotspot verification: 12/12 ✅**
+  NSP12: LEU900, ASP901, MET902, TYR903, SER904
+  NSP13: PHE90, GLY91, LEU92, TYR93, LYS94, ASN95, THR96
+
+**Salt bridge verified in receptor:**
+  ASP901(NSP12)--LYS94(NSP13): 3.95 A ✅ (matches crystal)
+
+**Docking box:**
+  Center : (148.232, 152.667, 158.950)
+  Size   : 33.185 x 31.428 x 37.767 A
+  Volume : 39,389 A3
+
+**Drug strategies encoded:**
+  A (pan-cov)      : LYS94(cons=1.000)--ASP901(D/E) SB
+  B (SARS-selective): MET902 hydrophobic groove (M->S in MERS/229E/NL63)
+
+**Outputs:**
+  03-virtual-screening/NSP12-NSP13_8/receptor_NSP12-NSP13_8.pdb
+  03-virtual-screening/NSP12-NSP13_8/vina_config_NSP12-NSP13_8.txt
+  03-virtual-screening/NSP12-NSP13_8/virtualflow_config_NSP12-NSP13_8.json
+**Status:** ✅ Done — proceed to Script 09_8 (publication figures)
+
+---

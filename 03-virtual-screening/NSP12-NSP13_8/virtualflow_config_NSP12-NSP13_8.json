@@ -1,0 +1,106 @@
+{
+  "target": "NSP12-NSP13",
+  "complex": "_8",
+  "receptor": "receptor_NSP12-NSP13_8.pdb",
+  "pdb_source": "7RDY",
+  "chains": {
+    "NSP12": "A",
+    "NSP13": "E"
+  },
+  "resolution": "3.10 A",
+  "af3_note": "iptm=0.20 FAIL \u2014 crystal structures only",
+  "docking_box": {
+    "center_x": 148.232,
+    "center_y": 152.667,
+    "center_z": 158.95,
+    "size_x": 33.185,
+    "size_y": 31.428,
+    "size_z": 37.767
+  },
+  "pharmacophore": {
+    "primary": [
+      "MET902(NSP12)-hydrophobic",
+      "ASP901(NSP12)-SB"
+    ],
+    "secondary": [
+      "LYS94(NSP13)-SB-pan-cov",
+      "TYR903(NSP12)",
+      "TYR93(NSP13)"
+    ],
+    "salt_bridge": "ASP901(NSP12)--LYS94(NSP13): 3.95 A"
+  },
+  "conservation": {
+    "MET902_NSP12": 0.582,
+    "ASP901_NSP12": 0.582,
+    "LYS94_NSP13": 1.0,
+    "selectivity": "MET902: SARS-CoV-1/2 selective (M->S in MERS/229E/NL63)",
+    "pan_cov": "LYS94: K in all 5 species \u2014 SB preserved pan-coronavirus"
+  },
+  "hotspots": {
+    "NSP12": [
+      {
+        "res": "LEU900",
+        "cons": 1.0
+      },
+      {
+        "res": "ASP901",
+        "cons": 0.582,
+        "primary": true,
+        "SB": true
+      },
+      {
+        "res": "MET902",
+        "cons": 0.582,
+        "primary": true,
+        "hydrophobic": true
+      },
+      {
+        "res": "TYR903",
+        "cons": 0.582
+      },
+      {
+        "res": "SER904",
+        "cons": 1.0
+      }
+    ],
+    "NSP13": [
+      {
+        "res": "PHE90",
+        "cons": 1.0
+      },
+      {
+        "res": "GLY91",
+        "cons": 1.0
+      },
+      {
+        "res": "LEU92",
+        "cons": 1.0
+      },
+      {
+        "res": "TYR93",
+        "cons": 1.0
+      },
+      {
+        "res": "LYS94",
+        "cons": 1.0,
+        "primary": true,
+        "SB": true
+      },
+      {
+        "res": "ASN95",
+        "cons": 0.689
+      },
+      {
+        "res": "THR96",
+        "cons": 0.344
+      }
+    ]
+  },
+  "vina_config": "vina_config_NSP12-NSP13_8.txt",
+  "druggability": 0.0,
+  "interface_type": "PPI-transient",
+  "drug_strategy": [
+    "Strategy A (pan-cov): charged compound engaging LYS94-ASP901/E SB",
+    "Strategy B (SARS-selective): hydrophobic compound engaging MET902 groove"
+  ]
+}

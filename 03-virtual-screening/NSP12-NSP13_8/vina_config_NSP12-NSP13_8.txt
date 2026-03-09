@@ -1,0 +1,20 @@
+# AutoDock Vina config — NSP12-NSP13 interface (_8)
+# Receptor: 7RDY chains A+E (resolution 3.10 A)
+# Interface: NSP12 C-terminal tail (900-904) / NSP13 N-terminal (90-96)
+# Salt bridge: ASP901(NSP12)--LYS94(NSP13) 3.95 A
+# Conservation: MET902 SARS-selective | LYS94 pan-coronavirus (1.000)
+# AF3 note: iptm=0.20 FAIL — 3 crystal structures used as sole evidence
+
+receptor = receptor_NSP12-NSP13_8.pdb
+
+center_x = 148.232
+center_y = 152.667
+center_z = 158.95
+
+size_x = 33.185
+size_y = 31.428
+size_z = 37.767
+
+exhaustiveness = 16
+num_modes       = 9
+energy_range    = 3
