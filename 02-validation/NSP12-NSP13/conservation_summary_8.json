@@ -1,0 +1,164 @@
+{
+  "complex": "NSP12-NSP13",
+  "script": "06_conservation_NSP12-NSP13_8.py",
+  "coronaviruses": [
+    "SARS-CoV-2",
+    "SARS-CoV-1",
+    "MERS-CoV",
+    "HCoV-229E",
+    "HCoV-NL63"
+  ],
+  "nsp12_conservation": [
+    {
+      "pdb_res_num": 900,
+      "res_name_3": "LEU",
+      "res_name_1": "L",
+      "conservation": 1.0,
+      "is_primary": false,
+      "aa_HCoV_NL63": "L",
+      "aa_HCoV_229E": "L",
+      "aa_MERS_CoV": "L",
+      "aa_SARS_CoV_2": "L",
+      "aa_SARS_CoV_1": "L"
+    },
+    {
+      "pdb_res_num": 901,
+      "res_name_3": "ASP",
+      "res_name_1": "D",
+      "conservation": 0.5818,
+      "is_primary": true,
+      "aa_HCoV_NL63": "E",
+      "aa_HCoV_229E": "E",
+      "aa_MERS_CoV": "D",
+      "aa_SARS_CoV_2": "D",
+      "aa_SARS_CoV_1": "D"
+    },
+    {
+      "pdb_res_num": 902,
+      "res_name_3": "MET",
+      "res_name_1": "M",
+      "conservation": 0.5818,
+      "is_primary": true,
+      "aa_HCoV_NL63": "S",
+      "aa_HCoV_229E": "S",
+      "aa_MERS_CoV": "S",
+      "aa_SARS_CoV_2": "M",
+      "aa_SARS_CoV_1": "M"
+    },
+    {
+      "pdb_res_num": 903,
+      "res_name_3": "TYR",
+      "res_name_1": "Y",
+      "conservation": 0.5818,
+      "is_primary": false,
+      "aa_HCoV_NL63": "F",
+      "aa_HCoV_229E": "F",
+      "aa_MERS_CoV": "Y",
+      "aa_SARS_CoV_2": "Y",
+      "aa_SARS_CoV_1": "Y"
+    },
+    {
+      "pdb_res_num": 904,
+      "res_name_3": "SER",
+      "res_name_1": "S",
+      "conservation": 1.0,
+      "is_primary": false,
+      "aa_HCoV_NL63": "S",
+      "aa_HCoV_229E": "S",
+      "aa_MERS_CoV": "S",
+      "aa_SARS_CoV_2": "S",
+      "aa_SARS_CoV_1": "S"
+    }
+  ],
+  "nsp13_conservation": [
+    {
+      "pdb_res_num": 90,
+      "res_name_3": "PHE",
+      "res_name_1": "F",
+      "conservation": 1.0,
+      "is_primary": false,
+      "aa_SARS_CoV_2": "F",
+      "aa_SARS_CoV_1": "F",
+      "aa_MERS_CoV": "F",
+      "aa_HCoV_229E": "F",
+      "aa_HCoV_NL63": "F"
+    },
+    {
+      "pdb_res_num": 91,
+      "res_name_3": "GLY",
+      "res_name_1": "G",
+      "conservation": 1.0,
+      "is_primary": false,
+      "aa_SARS_CoV_2": "G",
+      "aa_SARS_CoV_1": "G",
+      "aa_MERS_CoV": "G",
+      "aa_HCoV_229E": "G",
+      "aa_HCoV_NL63": "G"
+    },
+    {
+      "pdb_res_num": 92,
+      "res_name_3": "LEU",
+      "res_name_1": "L",
+      "conservation": 1.0,
+      "is_primary": false,
+      "aa_SARS_CoV_2": "L",
+      "aa_SARS_CoV_1": "L",
+      "aa_MERS_CoV": "L",
+      "aa_HCoV_229E": "L",
+      "aa_HCoV_NL63": "L"
+    },
+    {
+      "pdb_res_num": 93,
+      "res_name_3": "TYR",
+      "res_name_1": "Y",
+      "conservation": 1.0,
+      "is_primary": false,
+      "aa_SARS_CoV_2": "Y",
+      "aa_SARS_CoV_1": "Y",
+      "aa_MERS_CoV": "Y",
+      "aa_HCoV_229E": "Y",
+      "aa_HCoV_NL63": "Y"
+    },
+    {
+      "pdb_res_num": 94,
+      "res_name_3": "LYS",
+      "res_name_1": "K",
+      "conservation": 1.0,
+      "is_primary": true,
+      "aa_SARS_CoV_2": "K",
+      "aa_SARS_CoV_1": "K",
+      "aa_MERS_CoV": "K",
+      "aa_HCoV_229E": "K",
+      "aa_HCoV_NL63": "K"
+    },
+    {
+      "pdb_res_num": 95,
+      "res_name_3": "ASN",
+      "res_name_1": "N",
+      "conservation": 0.6891,
+      "is_primary": false,
+      "aa_SARS_CoV_2": "N",
+      "aa_SARS_CoV_1": "N",
+      "aa_MERS_CoV": "N",
+      "aa_HCoV_229E": "S",
+      "aa_HCoV_NL63": "N"
+    },
+    {
+      "pdb_res_num": 96,
+      "res_name_3": "THR",
+      "res_name_1": "T",
+      "conservation": 0.3445,
+      "is_primary": false,
+      "aa_SARS_CoV_2": "T",
+      "aa_SARS_CoV_1": "T",
+      "aa_MERS_CoV": "M",
+      "aa_HCoV_229E": "S",
+      "aa_HCoV_NL63": "S"
+    }
+  ],
+  "salt_bridge_anchors": {
+    "ASP901_NSP12": 0.5818,
+    "LYS94_NSP13": 1.0,
+    "MET902_NSP12": 0.5818
+  }
+}

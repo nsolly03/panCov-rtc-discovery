@@ -1,0 +1,6 @@
+pdb_res_num,res_name_3,res_name_1,conservation,is_primary,aa_HCoV_NL63,aa_HCoV_229E,aa_MERS_CoV,aa_SARS_CoV_2,aa_SARS_CoV_1
+900,LEU,L,1.0,False,L,L,L,L,L
+901,ASP,D,0.5818,True,E,E,D,D,D
+902,MET,M,0.5818,True,S,S,S,M,M
+903,TYR,Y,0.5818,False,F,F,Y,Y,Y
+904,SER,S,1.0,False,S,S,S,S,S

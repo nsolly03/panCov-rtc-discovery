@@ -2081,3 +2081,55 @@ AF3 submitted as monomer (ptm=0.910, RMSD=1.369 A vs 7NIO).
 **Status:** ✅ Done — proceed to Script 06_8 (conservation)
 
 ---
+
+## Entry 075 — Conservation Analysis NSP12-NSP13 complete
+**Date:** 2026-03-09
+**Script:** scripts/06_conservation_NSP12-NSP13_8.py
+
+**NSP12 conservation (C-terminal tail, 5 residues):**
+  LEU900: 1.000 — pan-coronavirus conserved (backbone)
+  ASP901: 0.582 ★ PRIMARY — D(SARS1/2+MERS) → E(229E/NL63) conservative
+  MET902: 0.582 ★ PRIMARY — M(SARS1/2) → S(MERS/229E/NL63) major change
+  TYR903: 0.582 — Y(SARS1/2+MERS) → F(229E/NL63) conservative aromatic
+  SER904: 1.000 — pan-coronavirus conserved (backbone)
+  Conserved >=0.8: 2/5
+
+**NSP13 conservation (N-terminal region, 7 residues):**
+  PHE90:  1.000 — pan-coronavirus conserved
+  GLY91:  1.000 — pan-coronavirus conserved
+  LEU92:  1.000 — pan-coronavirus conserved
+  TYR93:  1.000 — pan-coronavirus conserved
+  LYS94:  1.000 ★ PRIMARY — K in ALL 5 species — pan-coronavirus SB partner
+  ASN95:  0.689 — N→S in 229E
+  THR96:  0.344 — variable (T→M in MERS, T→S in 229E/NL63)
+  Conserved >=0.8: 5/7
+
+**Key scientific finding — DUAL SELECTIVITY WINDOW:**
+  SB anchor: ASP901(D/E)–LYS94(K=1.000)
+    D→E substitution is conservative (both negative charged)
+    LYS94 pan-coronavirus conserved
+    → SB interaction likely preserved PAN-CORONAVIRUS
+    → ASP901-targeting compounds may have pan-cov activity
+
+  Hydrophobic anchor: MET902
+    M in SARS-CoV-1/2 only
+    M→S in MERS/229E/NL63 (hydrophobic→polar — major loss)
+    → MET902-targeting compounds are SARS-CoV-1/2 SELECTIVE
+
+  TWO drug design strategies:
+    Strategy A (pan-cov): charged compound engaging LYS94–ASP901/E SB
+    Strategy B (SARS-selective): hydrophobic compound engaging MET902 pocket
+
+**UniProt coordinates confirmed:**
+  NSP12: SARS-CoV-2 P0DTD1 4393-5324 | SARS-CoV-1 P0C6X7 4370-5301
+         MERS K9N7C7 4378-5310 | 229E P0C6X1 4069-4995 | NL63 P0C6X5 4044-4970
+  NSP13: SARS-CoV-2 P0DTD1 5325-5925 | SARS-CoV-1 P0C6X7 5302-5902
+         MERS K9N7C7 5311-5908 | 229E P0C6X1 4996-5592 | NL63 P0C6X5 4971-5567
+
+**Outputs:**
+  02-validation/NSP12-NSP13/conservation_NSP12.csv
+  02-validation/NSP12-NSP13/conservation_NSP13.csv
+  02-validation/NSP12-NSP13/conservation_summary_8.json
+**Status:** ✅ Done — proceed to Script 07_8 (pocket detection)
+
+---

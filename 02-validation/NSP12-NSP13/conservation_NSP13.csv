@@ -1,0 +1,8 @@
+pdb_res_num,res_name_3,res_name_1,conservation,is_primary,aa_SARS_CoV_2,aa_SARS_CoV_1,aa_MERS_CoV,aa_HCoV_229E,aa_HCoV_NL63
+90,PHE,F,1.0,False,F,F,F,F,F
+91,GLY,G,1.0,False,G,G,G,G,G
+92,LEU,L,1.0,False,L,L,L,L,L
+93,TYR,Y,1.0,False,Y,Y,Y,Y,Y
+94,LYS,K,1.0,True,K,K,K,K,K
+95,ASN,N,0.6891,False,N,N,N,S,N
+96,THR,T,0.3445,False,T,T,M,S,S
