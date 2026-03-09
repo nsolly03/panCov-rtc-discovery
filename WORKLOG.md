@@ -1772,3 +1772,30 @@ Mode B — AF3 interface (iptm=0.87, PAE=0.90 A):
 **Status:** ✅ Done — proceed to Script 07_7 (pocket detection)
 
 ---
+
+## Entry 067 — Pocket Detection NSP13-Helicase complete
+**Date:** 2026-03-09
+**Script:** scripts/07_pocket_NSP13-Helicase_7.py
+
+**fpocket results:**
+  7NIO A+E : 70 pockets | best druggability=0.001 | overlap=10/17 hotspots
+  6XEZ E+F : 95 pockets | best druggability=0.001 | overlap=3/17 hotspots
+  AF3 mono : 29 pockets | best druggability=0.071 | overlap=1/17 (expected)
+
+**Note:** Low druggability expected for PPI interface — same as NSP10-NSP14
+  LYS414 not captured by fpocket — sits at edge of shallow dimer surface
+  (typical for lysine SB donors across flat interfaces)
+  Docking box defined from hotspot Cα coordinates regardless
+
+**All 8 primary hotspots confirmed in docking box:**
+  LYS414, LYS477, ILE480, HIS482, ARG579, ASP580, ASP583, LYS584 ✅
+
+**Docking box (7NIO chain A hotspot Cα, 6.0 A padding):**
+  Center : (-30.151, 14.648, -9.240)
+  Size   : 37.237 x 31.585 x 33.862 A
+  Volume : 39,826 A3
+
+**Output:** 02-validation/NSP13-Helicase/pocket_analysis_7.json
+**Status:** ✅ Done — proceed to Script 08_7 (docking prep)
+
+---
