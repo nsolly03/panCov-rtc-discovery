@@ -1,0 +1,108 @@
+{
+  "complex": "NSP12-NSP13",
+  "script": "04_validate_NSP12-NSP13_8.py",
+  "af3_note": "iptm=0.20 FAIL \u2014 interface not predicted, transient/context-dependent",
+  "structures": {
+    "primary": "6XEZ (A=NSP12, E=NSP13, 3.50 A)",
+    "secondary": "7CXM (A=NSP12, E=NSP13, 3.20 A)",
+    "tertiary": "7RDY (A=NSP12, E=NSP13, 3.10 A)",
+    "af3": "A=NSP12, B=NSP13 (fold only)"
+  },
+  "af3_confidence": {
+    "iptm": 0.2,
+    "ptm": 0.63,
+    "inter_chain_pae_min": 24.95,
+    "inter_chain_iptm": 0.2,
+    "chain_ptm_nsp12": 0.89,
+    "chain_ptm_nsp13": 0.74,
+    "has_clash": 0.0,
+    "ranking_score": 0.29
+  },
+  "fold_rmsd": {
+    "nsp12_af3_vs_6XEZ_A": 1.182337012143498,
+    "nsp13_af3_vs_6XEZ_E": 3.515168714619689
+  },
+  "interface_residues_crystal": {
+    "6XEZ": {
+      "nsp12": [
+        901,
+        902,
+        903,
+        904
+      ],
+      "nsp13": [
+        92,
+        93,
+        94,
+        96
+      ]
+    },
+    "7CXM": {
+      "nsp12": [
+        900,
+        901,
+        902,
+        903,
+        904
+      ],
+      "nsp13": [
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96
+      ]
+    },
+    "7RDY": {
+      "nsp12": [
+        900,
+        901,
+        902,
+        903,
+        904
+      ],
+      "nsp13": [
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96
+      ]
+    }
+  },
+  "consensus_nsp12_hotspots": [
+    {
+      "res_num": 901,
+      "res_name": "ASP",
+      "n_structures": 3
+    },
+    {
+      "res_num": 902,
+      "res_name": "MET",
+      "n_structures": 3
+    },
+    {
+      "res_num": 903,
+      "res_name": "TYR",
+      "n_structures": 3
+    },
+    {
+      "res_num": 904,
+      "res_name": "SER",
+      "n_structures": 3
+    }
+  ],
+  "gates": {
+    "iptm_pass": false,
+    "ptm_pass": true,
+    "clash_pass": true,
+    "rmsd_nsp12_pass": true,
+    "rmsd_nsp13_pass": false,
+    "proceed": true,
+    "basis": "3 crystal structures \u2014 AF3 interface gate FAIL documented"
+  }
+}

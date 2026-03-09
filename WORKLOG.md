@@ -1968,3 +1968,40 @@ AF3 submitted as monomer (ptm=0.910, RMSD=1.369 A vs 7NIO).
   Next: NSP12-NSP13 (final complex, suffix _8)
 
 ---
+
+## Entry 073 — AF3 Validation NSP12-NSP13 complete
+**Date:** 2026-03-09
+**Script:** scripts/04_validate_NSP12-NSP13_8.py
+
+**AF3 result: INTERFACE GATE FAIL — documented and proceeding**
+  iptm=0.20 (gate >0.60) *** FAIL ***
+  inter-chain PAE=24.95 A (compare: NSP12-NSP8=1.22, NSP12-NSP7=2.02)
+  ranking_score=0.29 — lowest in project
+  Scientific interpretation: NSP12-NSP13 is transient/context-dependent
+  Requires full RTC assembly context — AF3 two-chain prediction insufficient
+
+**Individual chain fold quality:**
+  NSP12 chain_ptm=0.89, RMSD=1.182 A vs 6XEZ ✅
+  NSP13 chain_ptm=0.74, RMSD=3.515 A vs 6XEZ (flexible, expected)
+
+**Crystal structure interface (3 structures):**
+  6XEZ: NSP12=[901,902,903,904]     NSP13=[92,93,94,96]
+  7CXM: NSP12=[900,901,902,903,904] NSP13=[90,91,92,93,94,95,96]
+  7RDY: NSP12=[900,901,902,903,904] NSP13=[90,91,92,93,94,95,96]
+
+**NSP12 consensus hotspots (all 3 structures):**
+  ASP901, MET902, TYR903, SER904 — C-terminal tail of NSP12
+
+**Key scientific observation:**
+  SMALLEST interface in project (4-5 NSP12 + 4-7 NSP13 residues)
+  NSP12 C-terminal tail engages NSP13 N-terminal region
+  Tail-to-tail contact — consistent with transient regulatory interaction
+  3 crystal structures in full RTC context confirm same binding mode
+
+**Decision:** Proceed with 3 crystal structures as sole interface evidence
+  AF3 excluded from interface analysis entirely
+
+**Output:** 02-validation/NSP12-NSP13/validation_result_8.json
+**Status:** ✅ Done — proceed to Script 05_8 (interface analysis)
+
+---
