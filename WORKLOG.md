@@ -1730,3 +1730,45 @@ Mode B — AF3 interface (iptm=0.87, PAE=0.90 A):
 **Status:** ✅ Done — proceeded to Script 06_7
 
 ---
+
+## Entry 066 — Conservation Analysis NSP13-Helicase complete
+**Date:** 2026-03-09
+**Script:** scripts/06_conservation_NSP13-Helicase_7.py
+
+**Coronaviruses:** SARS-CoV-2, SARS-CoV-1, MERS-CoV, HCoV-229E, HCoV-NL63
+**Sequence lengths:** SARS-CoV-2/1=601aa, MERS=598aa, 229E=597aa, NL63=597aa
+
+**Conservation results:**
+  Total hotspots    : 17
+  Conserved (>=0.8) : 4
+  Variable  (<0.8)  : 13
+
+**Conserved hotspots (score >= 0.8):**
+  GLY415 (1.000) — backbone, not druggable
+  GLY478 (1.000) — backbone, not druggable
+  THR552 (1.000) — structural
+  ALA553 (1.000) — structural
+
+**Salt bridge anchor conservation:**
+  LYS414 : 0.689 — K in SARS-CoV-1/2/NL63, R in MERS (conservative)
+  ASP580 : 0.344 — D in SARS-CoV-1/2, A in MERS, T in 229E/NL63 (charge loss)
+  ASP583 : 0.689 — D in SARS-CoV-1/2/229E/NL63, E in MERS (conservative)
+
+**CRITICAL SCIENTIFIC FINDING:**
+  NSP13 homodimer interface is NOT pan-coronavirus conserved.
+  SARS-CoV-1 and SARS-CoV-2 are IDENTICAL at all 17 hotspot positions.
+  ASP580 loses charge entirely in MERS (D->A) and 229E/NL63 (D->T).
+  This is a SARS-CoV-1/2 SELECTIVE target, not pan-coronavirus.
+  Same pattern as NSP12-NSP7 LYS2 and NSP9-NSP12 SARS-only SBs.
+
+**Drug design implication:**
+  SARS-selective compounds: target LYS414-ASP580/ASP583 dual SB
+  Pan-coronavirus: backbone contacts only (GLY415/GLY478) — limited
+  Best strategy: SARS-CoV-1/2 dual SB disruption as primary goal
+
+**Output:**
+  02-validation/NSP13-Helicase/conservation_NSP13.csv
+  02-validation/NSP13-Helicase/conservation_summary_7.json
+**Status:** ✅ Done — proceed to Script 07_7 (pocket detection)
+
+---
