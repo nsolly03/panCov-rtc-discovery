@@ -1,0 +1,190 @@
+{
+  "complex": "NSP12-NSP13",
+  "script": "10_BSA_alascan_ranking_NSP12-NSP13_8.py",
+  "bsa_nsp12_avg": {
+    "900": 5.36,
+    "901": 60.25,
+    "902": 73.59,
+    "903": 26.83,
+    "904": 51.38
+  },
+  "bsa_nsp13_avg": {
+    "90": 22.54,
+    "91": 1.78,
+    "92": 44.68,
+    "93": 64.13,
+    "94": 19.4,
+    "95": 34.68,
+    "96": 19.04
+  },
+  "alascan_nsp12": {
+    "900": 1,
+    "901": 12,
+    "902": 19,
+    "903": 4,
+    "904": 14
+  },
+  "alascan_nsp13": {
+    "90": 1,
+    "91": 0,
+    "92": 14,
+    "93": 29,
+    "94": 6,
+    "95": 22,
+    "96": 8
+  },
+  "composite_ranking": [
+    {
+      "nsp": "NSP13",
+      "res_num": 93,
+      "res_name": "TYR",
+      "bsa": 64.13,
+      "ala_loss": 29,
+      "conservation": 1.0,
+      "is_primary": false,
+      "composite": 0.9486,
+      "rank": 1
+    },
+    {
+      "nsp": "NSP12",
+      "res_num": 902,
+      "res_name": "MET",
+      "bsa": 73.59,
+      "ala_loss": 19,
+      "conservation": 0.582,
+      "is_primary": true,
+      "composite": 0.7785,
+      "rank": 2
+    },
+    {
+      "nsp": "NSP12",
+      "res_num": 904,
+      "res_name": "SER",
+      "bsa": 51.38,
+      "ala_loss": 14,
+      "conservation": 1.0,
+      "is_primary": false,
+      "composite": 0.6724,
+      "rank": 3
+    },
+    {
+      "nsp": "NSP13",
+      "res_num": 92,
+      "res_name": "LEU",
+      "bsa": 44.68,
+      "ala_loss": 14,
+      "conservation": 1.0,
+      "is_primary": false,
+      "composite": 0.636,
+      "rank": 4
+    },
+    {
+      "nsp": "NSP13",
+      "res_num": 95,
+      "res_name": "ASN",
+      "bsa": 34.68,
+      "ala_loss": 22,
+      "conservation": 0.689,
+      "is_primary": false,
+      "composite": 0.6298,
+      "rank": 5
+    },
+    {
+      "nsp": "NSP12",
+      "res_num": 901,
+      "res_name": "ASP",
+      "bsa": 60.25,
+      "ala_loss": 12,
+      "conservation": 0.582,
+      "is_primary": true,
+      "composite": 0.6094,
+      "rank": 6
+    },
+    {
+      "nsp": "NSP13",
+      "res_num": 94,
+      "res_name": "LYS",
+      "bsa": 19.4,
+      "ala_loss": 6,
+      "conservation": 1.0,
+      "is_primary": true,
+      "composite": 0.3882,
+      "rank": 7
+    },
+    {
+      "nsp": "NSP13",
+      "res_num": 90,
+      "res_name": "PHE",
+      "bsa": 22.54,
+      "ala_loss": 1,
+      "conservation": 1.0,
+      "is_primary": false,
+      "composite": 0.3363,
+      "rank": 8
+    },
+    {
+      "nsp": "NSP12",
+      "res_num": 903,
+      "res_name": "TYR",
+      "bsa": 26.83,
+      "ala_loss": 4,
+      "conservation": 0.582,
+      "is_primary": false,
+      "composite": 0.3174,
+      "rank": 9
+    },
+    {
+      "nsp": "NSP13",
+      "res_num": 96,
+      "res_name": "THR",
+      "bsa": 19.04,
+      "ala_loss": 8,
+      "conservation": 0.344,
+      "is_primary": false,
+      "composite": 0.2826,
+      "rank": 10
+    },
+    {
+      "nsp": "NSP12",
+      "res_num": 900,
+      "res_name": "LEU",
+      "bsa": 5.36,
+      "ala_loss": 1,
+      "conservation": 1.0,
+      "is_primary": false,
+      "composite": 0.2429,
+      "rank": 11
+    },
+    {
+      "nsp": "NSP13",
+      "res_num": 91,
+      "res_name": "GLY",
+      "bsa": 1.78,
+      "ala_loss": 0,
+      "conservation": 1.0,
+      "is_primary": false,
+      "composite": 0.2097,
+      "rank": 12
+    }
+  ],
+  "top3": [
+    {
+      "nsp": "NSP13",
+      "res_name": "TYR",
+      "res_num": 93,
+      "composite": 0.9486
+    },
+    {
+      "nsp": "NSP12",
+      "res_name": "MET",
+      "res_num": 902,
+      "composite": 0.7785
+    },
+    {
+      "nsp": "NSP12",
+      "res_name": "SER",
+      "res_num": 904,
+      "composite": 0.6724
+    }
+  ]
+}

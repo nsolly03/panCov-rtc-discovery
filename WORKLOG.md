@@ -2223,3 +2223,48 @@ AF3 submitted as monomer (ptm=0.910, RMSD=1.369 A vs 7NIO).
 **Status:** ✅ Done — proceed to Script 10_8 (BSA + AlaScan + ranking)
 
 ---
+
+## Entry 079 — BSA + AlaScan + Ranking NSP12-NSP13 complete
+**Date:** 2026-03-09
+**Script:** scripts/10_BSA_alascan_ranking_NSP12-NSP13_8.py
+
+**BSA top (avg 3 structures):**
+  MET902(NSP12): 73.6 A2 ★  TYR93(NSP13):  64.1 A2
+  ASP901(NSP12): 60.2 A2 ★  SER904(NSP12): 51.4 A2
+  LEU92(NSP13):  44.7 A2    ASN95(NSP13):  34.7 A2
+
+**AlaScan top (7RDY):**
+  TYR93(NSP13):  loss=29  ASN95(NSP13): loss=22
+  MET902(NSP12): loss=19  SER904(NSP12): loss=14
+  LEU92(NSP13):  loss=14  ASP901(NSP12): loss=12 ★
+
+**Composite ranking (top 5):**
+  #1 TYR93(NSP13)   0.9486  BSA=64.1  AlaLoss=29  cons=1.000
+  #2 MET902(NSP12)  0.7785  BSA=73.6  AlaLoss=19  cons=0.582 ★
+  #3 SER904(NSP12)  0.6724  BSA=51.4  AlaLoss=14  cons=1.000
+  #4 LEU92(NSP13)   0.6360  BSA=44.7  AlaLoss=14  cons=1.000
+  #5 ASN95(NSP13)   0.6298  BSA=34.7  AlaLoss=22  cons=0.689
+  #6 ASP901(NSP12)  0.6094  BSA=60.2  AlaLoss=12  cons=0.582 ★ SB
+  #7 LYS94(NSP13)   0.3882  BSA=19.4  AlaLoss=6   cons=1.000 ★ SB
+
+**Key scientific finding:**
+  TYR93(NSP13) = dominant contact residue (#1, AlaLoss=29)
+  Aromatic ring engages MET902(NSP12) hydrophobic core
+  TYR93-MET902 pair = primary two-point pharmacophore
+  ASP901-LYS94 SB = secondary charged anchor (LYS94 low BSA=19.4
+    but geometrically essential; functional importance > ranking score)
+
+**Drug design — two pharmacophore strategy:**
+  Core     : TYR93(NSP13)--MET902(NSP12) aromatic/hydrophobic (pan-cov)
+  Charged  : ASP901(NSP12)--LYS94(NSP13) SB (pan-cov via D/E conservation)
+  Selectivity: MET902(cons=0.582) M->S in MERS/229E/NL63 — SARS window
+
+**Outputs:**
+  02-validation/NSP12-NSP13/composite_ranking_NSP12-NSP13_8.csv
+  02-validation/NSP12-NSP13/bsa_alascan_NSP12-NSP13_8.json
+  results/Fig4_NSP12-NSP13_BSA_8.png
+  results/Fig5_NSP12-NSP13_AlaScan_8.png
+  results/Fig6_NSP12-NSP13_composite_ranking_8.png
+**Status:** ✅ Done — proceed to Script 11_8 (3D visualization — FINAL SCRIPT)
+
+---
