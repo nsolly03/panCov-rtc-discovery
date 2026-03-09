@@ -1,0 +1,13 @@
+{
+  "total_input": 200,
+  "ok": 198,
+  "cached": 0,
+  "failed": 2,
+  "fail_reasons": {
+    "embed_failed": 2
+  },
+  "started": "2026-03-09T18:32:52.529319",
+  "completed": "2026-03-09T18:32:59.199098",
+  "output_dir": "/home/nseku/projects/rtc-pan-coronavirus/data/pdbqt",
+  "total_pdbqt_files": 198
+}
