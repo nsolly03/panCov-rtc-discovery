@@ -1857,3 +1857,45 @@ Mode B — AF3 interface (iptm=0.87, PAE=0.90 A):
 **Status:** ✅ Done — proceed to Script 10_7 (BSA + AlaScan + Ranking)
 
 ---
+
+## Entry 070 — BSA + AlaScan + Ranking NSP13-Helicase complete
+**Date:** 2026-03-09
+**Script:** scripts/10_BSA_alascan_ranking_NSP13-Helicase_7.py
+
+**BSA top residues (7NIO):**
+  HIS482 : 90.7 A2 (largest buried — structural anchor)
+  LYS414 : 64.6 A2 ★ primary SB donor
+  ILE480 : 59.2 A2 ★ hydrophobic anchor
+  GLU551 : 54.8 A2
+  ASP580 : 47.5 A2 ★ primary SB acceptor
+
+**Alanine scanning top contributors:**
+  ILE480 : loss=50 (50 hydrophobic) — dominant hydrophobic anchor
+  LYS414 : loss=23 (23 salt bridge) ★ PRIMARY dual SB donor
+  ASP580 : loss=22 (19 SB + 3 HB)  ★ PRIMARY SB acceptor
+  ASP583 : loss=9  (7 SB + 2 HB)   ★ secondary SB acceptor
+  VAL479 : loss=11 (11 hydrophobic)
+
+**Composite top 5:**
+  1. ILE480  (0.4823) — hydrophobic core anchor, BSA=59.2, loss=50
+  2. LYS414  (0.3371) — dual SB donor ★, BSA=64.6, loss=23
+  3. ASP580  (0.1419) — SB acceptor ★, BSA=47.5, loss=22
+  4. HIS482  (0.1024) — burial anchor, BSA=90.7, loss=3
+  5. ASP583  (0.0576) — SB acceptor ★, BSA=42.5, loss=9
+
+**Drug design strategy:**
+  Dual pharmacophore:
+    1. Hydrophobic core engaging ILE480 (+ VAL479/HIS482 neighbourhood)
+    2. Charged group engaging LYS414-ASP580/ASP583 dual SB cluster
+  SARS-CoV-1/2 selective — ASP580 charge loss in MERS/HCoV limits pan-cov activity
+
+**Files saved:**
+  02-validation/NSP13-Helicase/composite_ranking_NSP13-Helicase_7.csv
+  02-validation/NSP13-Helicase/bsa_alascan_NSP13-Helicase_7.json
+  results/Fig4_NSP13-Helicase_BSA_7.png
+  results/Fig5_NSP13-Helicase_AlaScan_7.png
+  results/Fig6_NSP13-Helicase_composite_ranking_7.png
+
+**Status:** ✅ Done — proceed to Script 11_7 (3D visualization)
+
+---
