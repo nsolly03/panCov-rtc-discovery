@@ -1799,3 +1799,32 @@ Mode B — AF3 interface (iptm=0.87, PAE=0.90 A):
 **Status:** ✅ Done — proceed to Script 08_7 (docking prep)
 
 ---
+
+## Entry 068 — Docking Preparation NSP13-Helicase complete
+**Date:** 2026-03-09
+**Script:** scripts/08_docking_prep_NSP13-Helicase_7.py
+
+**Receptor:** 7NIO chains A+E, waters/ligands stripped
+  Total residues : 1175 (chain A=590 + chain E=585)
+  Total atoms    : 9034
+
+**Hotspot verification:** 17/17 present ✅ — 8/8 primary ✅
+
+**Salt bridge geometry (receptor):**
+  LYS414(A)-ASP580(E): 3.55 A ✅
+  LYS414(A)-ASP583(E): 3.23 A ✅
+  Note: tighter than crystal (4.49/4.47 A) — altloc A selected
+
+**Docking box:**
+  Center : (-30.151, 14.648, -9.240)
+  Size   : 37.237 x 31.585 x 33.862 A
+  Volume : 39,826 A3
+
+**Output:** 03-virtual-screening/NSP13-Helicase_7/
+  receptor_NSP13-Helicase_7.pdb
+  vina_config_NSP13-Helicase_7.txt
+  virtualflow_config_NSP13-Helicase_7.json
+
+**Status:** ✅ Done — proceed to Script 09_7 (publication figures)
+
+---

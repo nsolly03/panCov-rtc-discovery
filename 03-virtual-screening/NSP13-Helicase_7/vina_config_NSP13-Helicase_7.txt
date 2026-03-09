@@ -1,0 +1,19 @@
+# AutoDock Vina config — NSP13-Helicase_7
+# Target: NSP13 homodimer interface (LYS414-ASP580/ASP583 dual salt bridge)
+# Conservation: SARS-CoV-1/2 selective (ASP580 D->A in MERS, D->T in HCoV)
+# Primary pharmacophore: LYS414 (dual SB donor), ILE480/HIS482 (top contacts)
+# Receptor: 7NIO chains A+E, waters/ligands stripped
+
+receptor = receptor_NSP13-Helicase_7.pdbqt
+
+center_x = -30.151
+center_y = 14.648
+center_z = -9.24
+
+size_x = 37.237
+size_y = 31.585
+size_z = 33.862
+
+exhaustiveness = 16
+num_modes      = 9
+energy_range   = 3

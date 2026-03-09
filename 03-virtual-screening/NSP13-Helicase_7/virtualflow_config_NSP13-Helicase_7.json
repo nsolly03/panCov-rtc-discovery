@@ -1,0 +1,83 @@
+{
+  "target": "NSP13-Helicase_7",
+  "complex": "NSP13 homodimer (SARS-CoV-1/2 selective)",
+  "receptor": "receptor_NSP13-Helicase_7.pdbqt",
+  "interface": "LYS414-ASP580/ASP583 dual salt bridge + ILE480/HIS482 hydrophobic core",
+  "conservation": "SARS-CoV-1/2 selective \u2014 ASP580 D->A(MERS) D->T(229E/NL63)",
+  "primary_pharmacophore": "LYS414 (dual SB donor, cons=0.689)",
+  "docking_box": {
+    "center_x": -30.151,
+    "center_y": 14.648,
+    "center_z": -9.24,
+    "size_x": 37.237,
+    "size_y": 31.585,
+    "size_z": 33.862
+  },
+  "hotspot_residues": {
+    "all": [
+      116,
+      413,
+      414,
+      415,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      551,
+      552,
+      553,
+      579,
+      580,
+      583,
+      584
+    ],
+    "primary": [
+      414,
+      477,
+      480,
+      482,
+      579,
+      580,
+      583,
+      584
+    ]
+  },
+  "salt_bridges": [
+    {
+      "pair": "LYS414(A)-ASP580(E)",
+      "dist_7NIO": 4.49,
+      "present_in": "7NIO"
+    },
+    {
+      "pair": "LYS414(A)-ASP583(E)",
+      "dist_7NIO": 4.47,
+      "present_in": "7NIO"
+    }
+  ],
+  "top_contacts": [
+    {
+      "residue": "ILE480",
+      "contacts": 60,
+      "conservation": 0.582
+    },
+    {
+      "residue": "HIS482",
+      "contacts": 60,
+      "conservation": 0.582
+    },
+    {
+      "residue": "ASP580",
+      "contacts": 49,
+      "conservation": 0.344
+    },
+    {
+      "residue": "LYS414",
+      "contacts": 43,
+      "conservation": 0.689
+    }
+  ],
+  "vina_exhaustiveness": 16,
+  "vina_num_modes": 9
+}
