@@ -2755,3 +2755,41 @@ using AutoDock Vina via SLURM job array on NIC5.
 ### Status: COMPLETE ✅
 ### Next: Script 17 — retrieve SMILES, draw structures, 3D visualization
 
+
+## Entry 092 — Script 16b: Triple-Target Hits Structure Visualization
+**Date:** 2026-03-10
+
+### Objective
+Publication-quality 2D structure grid of all 11 triple-target hits.
+
+### Design
+  - Light/white background, deep navy header
+  - Scaffold-tinted card backgrounds (A=warm yellow, B=light green, C=light blue)
+  - Score color coding: green <= -8.0, orange <= -7.5, navy <= -7.0
+  - Gold lead badge for ZINC351017 (#1 ranked by sum score)
+  - Scaffold family tags + footer legend
+
+### Output
+  figures/script16/triple_target_hits_structures.png
+
+### Status: COMPLETE ✅
+### Next: Script 17 — 3D pose visualization of top hits in binding pockets
+
+## Entry 092 — Script 16b: Triple-Target Hits Structure Visualization
+**Date:** 2026-03-10
+
+### Objective
+Publication-quality 2D structure grid of all 11 triple-target hits.
+
+### Design
+  - Light/white background, deep navy header
+  - Scaffold-tinted card backgrounds (A=warm yellow, B=light green, C=light blue)
+  - Score color coding: green <= -8.0, orange <= -7.5, navy <= -7.0
+  - Gold lead badge for ZINC351017 (#1 ranked by sum score)
+  - Scaffold family tags + footer legend
+
+### Output
+  figures/script16/triple_target_hits_structures.png
+
+### Status: COMPLETE ✅
+### Next: Script 17 — 3D pose visualization of top hits in binding pockets
