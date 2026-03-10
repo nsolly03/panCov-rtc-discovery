@@ -2708,3 +2708,50 @@ using AutoDock Vina via SLURM job array on NIC5.
   - Pharmacophore extraction for Script 17
 
 ### Status: IN PROGRESS ⏳
+
+## Entry 091 Update — Script 16: Hit Analysis COMPLETE
+**Date:** 2026-03-10
+
+### Hit counts
+| Target      | Total hits (<=-7.0) | Strong hits (<=-8.0) | Best score   | Best compound |
+|-------------|:-------------------:|:--------------------:|:------------:|---------------|
+| NSP12-NSP7  | 200                 | 6                    | -8.384       | ZINC104095681 |
+| NSP9-NSP12  | 1,509               | 61                   | -9.526       | ZINC5430538   |
+| NSP12-NSP8  | 16                  | 0                    | -7.790       | ZINC5024943   |
+
+### Multi-target hits
+  Dual NSP12-NSP7 + NSP9-NSP12:   128
+  Dual NSP12-NSP7 + NSP12-NSP8:    12
+  Dual NSP9-NSP12 + NSP12-NSP8:    14
+  **Triple-target hits:            11** ← manuscript lead compounds
+
+### 11 Triple-target hits (ranked by sum score)
+| Rank | ZINC ID    | NSP12-NSP7 | NSP9-NSP12 | NSP12-NSP8 | Sum     |
+|------|------------|:----------:|:----------:|:----------:|:-------:|
+| 1    | 351017     | -8.153     | -8.132     | -7.759     | -24.044 |
+| 2    | 13633807   | -8.081     | -8.173     | -7.218     | -23.472 |
+| 3    | 13633805   | -8.087     | -8.198     | -7.168     | -23.453 |
+| 4    | 351016     | -7.471     | -8.407     | -7.439     | -23.317 |
+| 5    | 5024943    | -8.225     | -7.261     | -7.790     | -23.276 |
+| 6    | 351018     | -7.517     | -8.040     | -7.553     | -23.110 |
+| 7    | 3169307    | -7.346     | -7.858     | -7.115     | -22.319 |
+| 8    | 5024944    | -7.633     | -7.479     | -7.185     | -22.297 |
+| 9    | 351019     | -7.168     | -7.491     | -7.542     | -22.201 |
+| 10   | 13662104   | -7.545     | -7.492     | -7.091     | -22.128 |
+| 11   | 5024945    | -7.185     | -7.275     | -7.262     | -21.722 |
+
+### Scaffold families identified
+  Series 1: ZINC351016, 351017, 351018, 351019 (4 compounds — SAR series)
+  Series 2: ZINC5024943, 5024944, 5024945 (3 compounds — SAR series)
+  Series 3: ZINC13633805, 13633807 (2 compounds)
+
+### Outputs
+  04-hits/triple_target_hits.tsv
+  04-hits/top_hits_table.tsv
+  04-hits/hit_analysis_summary.json
+  figures/script16/score_distributions.png
+  figures/script16/dual_target_scatter.png
+
+### Status: COMPLETE ✅
+### Next: Script 17 — retrieve SMILES, draw structures, 3D visualization
+
