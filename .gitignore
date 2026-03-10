@@ -30,3 +30,7 @@ Thumbs.db
 01-alphafold3/**/templates/
 01-alphafold3/**/*full_data*.json
 01-alphafold3/**/*.a3m
+data/zinc20/*.smi
+data/pdbqt/
+data/zinc20/admet_filter_summary.json
+04-hits/test_*/
