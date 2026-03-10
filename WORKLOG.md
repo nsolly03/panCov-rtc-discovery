@@ -2611,3 +2611,63 @@ Confirm box coordinates, scoring, and pose quality before HPC submission.
 ### Status: COMPLETE ✅
 ### Next: Script 15 — *** CONNECT TO NIC5 *** SLURM job array full ZINC20 screen
 
+
+## Entry 089 — NIC5 HPC Environment Setup
+**Date:** 2026-03-10
+
+### Objective
+Set up screening environment on NIC5 (ULiège/CÉCI HPC) for full ZINC20 virtual screen.
+
+### Environment
+  Cluster: NIC5 (nic5.uliege.be) — 4,672 cores, 70 nodes AMD EPYC Rome
+  Partition: batch (2-day walltime) | bio (62-day walltime)
+  Scratch: /scratch/ulg/gigambd/onsekuye (163TB free)
+  Conda env: screening (Python 3.10)
+  Packages: vina 1.2.7 (Python API), rdkit 2025.03.6
+
+### SSH config (WSL2 -> NIC5)
+  Gateway: ceci-relog.segi.ulg.ac.be (ProxyJump)
+  Key: ~/.ssh/id_rsa.ceci (RSA 3072-bit)
+  Activation: source activate screening (NOT conda activate)
+
+### Files transferred to NIC5 scratch
+  Receptors: receptor_NSP12-NSP7/NSP9-NSP12/NSP12-NSP8 .pdbqt
+  Configs:   config_NSP12-NSP7/NSP9-NSP12/NSP12-NSP8 .txt
+  Ligands:   9,808 PDBQT files in $GLOBALSCRATCH/rtc-screening/pdbqt/
+
+### Directory structure on NIC5
+  $GLOBALSCRATCH/rtc-screening/
+    pdbqt/        9,808 ligand PDBQT files
+    receptors/    3 receptor PDBQTs + 3 vina configs
+    results/      NSP12-NSP7/ NSP9-NSP12/ NSP12-NSP8/
+    logs/         SLURM output/error files
+    scripts/      screen_target.sh (SLURM job array)
+
+### Status: COMPLETE ✅
+
+## Entry 090 — Script 15: SLURM Job Array Submission (Full ZINC20 Screen)
+**Date:** 2026-03-10
+
+### Objective
+Submit full virtual screen of 9,808 PDBQT ligands against 3 Tier 1 targets
+using AutoDock Vina via SLURM job array on NIC5.
+
+### SLURM parameters
+  Array:      0-97 (98 tasks x 100 ligands = 9,800 ligands per target)
+  CPUs/task:  4
+  Mem/CPU:    2000 MB
+  Walltime:   4 hours
+  Partition:  batch
+  Exhaustiveness: 16 (production quality)
+
+### Targets
+  NSP12-NSP7  (druggability 0.961)
+  NSP9-NSP12  (druggability 0.895)
+  NSP12-NSP8  (druggability 0.874)
+
+### Total jobs: 3 targets x 98 array tasks = 294 SLURM jobs
+### Expected runtime: 2-4 hours (parallel across NIC5 nodes)
+
+### Script: $GLOBALSCRATCH/rtc-screening/scripts/screen_target.sh
+
+### Status: SUBMITTING ⏳
