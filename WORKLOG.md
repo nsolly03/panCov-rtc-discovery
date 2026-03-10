@@ -2793,3 +2793,22 @@ Publication-quality 2D structure grid of all 11 triple-target hits.
 
 ### Status: COMPLETE ✅
 ### Next: Script 17 — 3D pose visualization of top hits in binding pockets
+
+## Entry 093 — Script 17: 3D Pose Visualization
+**Date:** 2026-03-10
+
+### Objective
+Visualize docked poses of 11 triple-target hits in binding pockets.
+Generate manuscript-ready 3D figures showing key interactions.
+
+### Poses downloaded from NIC5
+  04-hits/poses/NSP12-NSP7/   11 files
+  04-hits/poses/NSP9-NSP12/   11 files
+  04-hits/poses/NSP12-NSP8/   11 files
+  Total: 33 docked poses
+
+### Bash scripts saved
+  scripts/bash/00_connect_nic5.sh
+  scripts/bash/17a_download_poses_nic5.sh
+
+### Status: IN PROGRESS ⏳
