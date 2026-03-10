@@ -2671,3 +2671,40 @@ using AutoDock Vina via SLURM job array on NIC5.
 ### Script: $GLOBALSCRATCH/rtc-screening/scripts/screen_target.sh
 
 ### Status: SUBMITTING ⏳
+
+## Entry 090 Update — Script 15: SLURM Screen COMPLETE
+**Date:** 2026-03-10
+
+### Results
+  All 294 SLURM jobs completed successfully
+  9,800 compounds scored per target (9,808 - 8 embed_failed)
+
+| Target      | Best Hit      | Best Score   |
+|-------------|---------------|:------------:|
+| NSP12-NSP7  | ZINC104095681 | -8.384 kcal/mol |
+| NSP9-NSP12  | ZINC5430538   | -9.526 kcal/mol |
+| NSP12-NSP8  | ZINC5024943   | -7.790 kcal/mol |
+
+### Notable dual-target hits (preliminary)
+  ZINC5024943:  NSP12-NSP7 #2 (-8.225) + NSP12-NSP8 #1 (-7.790)
+  ZINC351017:   NSP12-NSP7 #4 (-8.153) + NSP12-NSP8 #2 (-7.759)
+
+### Output
+  04-hits/scores/all_scores_NSP12-NSP7.tsv  (9,800 compounds)
+  04-hits/scores/all_scores_NSP9-NSP12.tsv  (9,800 compounds)
+  04-hits/scores/all_scores_NSP12-NSP8.tsv  (9,800 compounds)
+
+### Status: COMPLETE ✅
+### Next: Script 16 — Hit analysis + 3D visualization
+
+## Entry 091 — Script 16: Hit Analysis + 3D Visualization
+**Date:** 2026-03-10
+
+### Objective
+  - Identify hits (score <= -7.0 kcal/mol) per target
+  - Find dual/triple-target hits (pan-coronavirus candidates)
+  - Generate score distribution plots
+  - 3D visualization of top hits in binding pocket (nglview)
+  - Pharmacophore extraction for Script 17
+
+### Status: IN PROGRESS ⏳
