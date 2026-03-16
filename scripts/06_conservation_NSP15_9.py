@@ -56,7 +56,11 @@ with open(f"{OUT_DIR}/interface_analysis_9.json") as f:
 # Combine A and B — homodimer so positions are from same sequence
 consensus_A = set(iface["consensus_A"])
 consensus_B = set(iface["consensus_B"])
-all_hotspots = sorted(consensus_A | consensus_B)
+# Convert PDB positions to UniProt positions (offset = PDB - 1)
+OFFSET = 1
+all_hotspots_pdb = sorted(consensus_A | consensus_B)
+all_hotspots = sorted([p - OFFSET for p in all_hotspots_pdb])
+print(f"PDB hotspot positions converted: offset=-{OFFSET}")
 print(f"Interface hotspots loaded: {len(all_hotspots)} positions")
 
 # ── Align all sequences to SARS-CoV-2 reference ───────────────
@@ -143,7 +147,7 @@ print(f"\nConserved hotspots (score >= 0.8): {n_conserved}/{len(hotspot_results)
 
 # Primary SB residues specifically
 print("\nPrimary salt bridge residue conservation:")
-for pos, name in [(40,"ASP40"),(91,"ARG91"),(62,"ARG62"),(267,"GLU267")]:
+for pos, name in [(39,"ASP40_PDB40"),(90,"ARG91_PDB91"),(61,"ARG62_PDB62"),(266,"GLU267_PDB267")]:
     if pos in conservation:
         c = conservation[pos]
         per = "  ".join(f"{o[:4]}:{a}" for o,a in c["per_org"].items())

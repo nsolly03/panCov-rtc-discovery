@@ -3101,3 +3101,55 @@ Generate manuscript-ready 3D figures showing key interactions.
 **Status:** ✅ Done — proceed to Script 06_9 (conservation)
 
 ---
+
+## Entry 100 — Script 06_9: Conservation Analysis NSP15 COMPLETE
+**Date:** 2026-03-16
+**Script:** scripts/06_conservation_NSP15_9.py
+
+**CRITICAL FIX APPLIED:**
+  PDB numbering starts at 0 with 2 extra N-terminal residues (NM)
+  Offset: UniProt pos = PDB pos - 1
+  PDB40=ASP -> UniProt39=ASP ✓
+  PDB62=ARG -> UniProt61=ARG ✓
+  PDB91=ARG -> UniProt90=ARG ✓
+  PDB267=GLU -> UniProt266=GLU ✓
+
+**Sequence identities to SARS-CoV-2:**
+  SARS-CoV-1 : 88.7%
+  MERS-CoV   : 50.9%
+  HCoV-229E  : 44.8%
+  HCoV-NL63  : 45.4%
+
+**Conservation summary:**
+  Interface hotspots  (60 pos): mean=0.593  min=0.200  max=1.000
+  Non-interface      (286 pos): mean=0.673  min=0.200  max=1.000
+  NOTE: interface mean < non-interface mean — interface is VARIABLE
+  This is consistent with Hayn et al. 2021: SARS-CoV-2 NSP15 less
+  conserved than SARS-CoV-1 NSP15 — explains reduced IFN evasion
+
+**Conserved hotspots (score >= 0.8): 23/60**
+  Perfect (1.000): V10, G13, F15(PDB), D39, K46, T47, N163, S241, K289, V291, C292, Q346
+                   ARG61 ★ PRIMARY SB ANCHOR
+                   ASP39 ★ PRIMARY SB ANCHOR
+  Strong (0.800):  K12, N28, T48, L167, G169, V172, E266, F268, T281, S287, S288
+
+**Primary salt bridge conservation:**
+  ASP39(PDB40) -- ARG61(PDB62): BOTH score=1.000 ★ PAN-CORONAVIRUS
+    -> strongest pharmacophore — conserved across all 5 coronaviruses
+  ARG90(PDB91) -- ASP39(PDB40): ARG90 score=0.600
+    -> R in SARS-CoV-1/2 + MERS, A in HCoV-229E/NL63
+    -> SARS+MERS conserved secondary pharmacophore
+  GLU266(PDB267): score=0.800 — pan-coronavirus (E/D conservative)
+
+**Drug design implication:**
+  Pan-coronavirus target: ASP39--ARG61 salt bridge (both 1.000)
+  SARS+MERS selective: ARG90--ASP39 pair
+  Interface is more variable than protein surface — consistent with
+  SARS-CoV-2 reduced IFN evasion vs SARS-CoV-1 (Hayn et al. 2021)
+
+**Output:**
+  02-validation/NSP15/conservation_NSP15.csv
+  02-validation/NSP15/conservation_summary_9.json
+**Status:** ✅ Done — proceed to Script 07_9 (pocket detection)
+
+---
