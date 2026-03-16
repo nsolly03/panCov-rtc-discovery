@@ -2941,3 +2941,49 @@ Generate manuscript-ready 3D figures showing key interactions.
 **Status:** ✅ Done — waiting AF3 result, then run Script 04_9
 
 ---
+
+## Entry 095 — NSP15 structures downloaded, chains extracted, sequences verified
+**Date:** 2026-03-16
+**Scripts:** scripts/download_NSP15_structures.py, scripts/extract_NSP15_chains.py
+
+**Chain composition (Step 4 inspection):**
+  6VWW: A(348aa, 192het)  B(348aa, 168het) — apo, full length, PRIMARY
+  6W01: A(347aa, 273het)  B(347aa, 273het) — apo, 1 res missing each chain
+  6WLC: A(348aa, 252het)  B(348aa, 255het) — UMP bound (active site)
+  6WXC: A(348aa, 352het)  B(347aa, 367het) — tipiracil bound (inhibitor)
+  2H85: A(347aa, 88het)                    — SARS-CoV-1 monomer reference
+
+**Chains extracted to 00-reference/known_interfaces/NSP15/:**
+  6VWW_NSP15-dimer.pdb           chains A+B
+  6W01_NSP15-dimer.pdb           chains A+B
+  6WLC_NSP15-dimer-UMP.pdb       chains A+B
+  6WXC_NSP15-dimer-tipiracil.pdb chains A+B
+  2H85_NSP15-monomer-SARS1.pdb   chain A only
+
+**UniProt NSP15 coordinates verified:**
+  SARS-CoV-2  P0DTD1  6453-6798  346 aa  PRIMARY
+  SARS-CoV-1  P0C6X7  6430-6775  346 aa
+  MERS-CoV    K9N7C7  6433-6775  343 aa
+  HCoV-229E   P0C6X1  6111-6458  348 aa
+  HCoV-NL63   P0C6X5  6086-6429  344 aa
+
+**FASTA saved:** 00-reference/sequences/NSP15.fasta
+  Length: 346 aa
+  First 10: SLENVAFNVV
+  Last  10: HVETFYPKLQ
+
+**CRITICAL NOTE — numbering discrepancy:**
+  UniProt: 346 aa  |  6VWW crystal: 348 aa per chain
+  2-residue offset — same issue as NSP7/NSP12-NSP13
+  Script 04_9 MUST use sequence-alignment-based residue mapping
+  Do NOT use positional indexing for interface residue identification
+
+**AF3 status:** ⏳ Submit homodimer at alphafoldserver.com
+  Input: 00-reference/sequences/NSP15.fasta (paste sequence TWICE)
+  Job name: NSP15-homodimer
+  Save all result files to: 01-alphafold3/NSP15/
+  Required: model.cif, confidence.json, summary_confidences.json
+
+**Status:** ✅ Done — submit AF3 now, run Script 04_9 after result available
+
+---
