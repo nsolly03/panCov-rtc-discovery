@@ -15,7 +15,7 @@ from Bio import pairwise2
 from Bio.PDB.Polypeptide import protein_letters_3to1
 
 AF3_DIR  = "01-alphafold3/NSP15"
-PDB_APO  = "00-reference/known_interfaces/NSP15/6VWW_NSP15-dimer.pdb"
+PDB_APO  = "00-reference/known_interfaces/NSP15/6VWW_NSP15-true-dimer.pdb"
 OUT_DIR  = "02-validation/NSP15"
 OUT_JSON = f"{OUT_DIR}/validation_result_9.json"
 os.makedirs(OUT_DIR, exist_ok=True)
