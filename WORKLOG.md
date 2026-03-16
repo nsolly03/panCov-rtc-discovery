@@ -3270,3 +3270,23 @@ Generate manuscript-ready 3D figures showing key interactions.
 **Status:** ✅ Done — proceed to Script 11_9 (3D visualization)
 
 ---
+
+## Entry 107 — NSP15 notebook fix: os.chdir + absolute paths
+**Date:** 2026-03-16
+**What:** Fixed nglview ValueError in NSP15_3D_9.ipynb
+
+**Problem:**
+  nglview could not resolve relative paths (00-reference/...)
+  when notebook was not launched from project root directory
+
+**Fix applied:**
+  1. Added os.chdir(project_root) as Cell 0 in notebook
+  2. Replaced all relative paths with absolute paths in notebook cells
+
+**Permanent rule for all future notebooks (Script 11 template):**
+  Always insert os.chdir cell as first cell in every 3D notebook
+  All structure file paths must be absolute, not relative
+
+**Status:** ✅ NSP15_3D_9.ipynb working correctly
+
+---
