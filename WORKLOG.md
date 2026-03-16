@@ -2987,3 +2987,76 @@ Generate manuscript-ready 3D figures showing key interactions.
 **Status:** ✅ Done — submit AF3 now, run Script 04_9 after result available
 
 ---
+
+## Entry 097 — 9HH5 investigation complete: no new heterodimer interface
+**Date:** 2026-03-16
+**Script:** scripts/check_9HH5_detail.py
+
+**9HH5 result:**
+  Title: Crystal Structure of nsp15 Endoribonuclease from SARS-CoV-2
+         in Complex with Sepantronium (YM-155)
+  Resolution: 2.08 A X-ray
+  Deposited:  2024-11-21
+  Content: NSP15 hexamer + YM-155 (Sepantronium bromide) small molecule
+  Verdict: NOT a new protein-protein interface
+           Second entity = small molecule inhibitor, not another NSP
+
+**FINAL VERDICT — NSP15 PDB landscape:**
+  No NSP15 heterodimer with another RTC protein exists in PDB
+  NSP15 homodimer (dimer interface) = correct and only target
+  Pipeline proceeds as planned with suffix _9
+
+**Additional structures added to Script 16_9 validation plan:**
+  9HH5  2.08A  X-ray  NSP15 + YM-155 (Sepantronium)    ← BEST ground truth
+  6WXC  1.80A  X-ray  NSP15 + tipiracil                 ← ground truth
+  6WLC  1.70A  X-ray  NSP15 + UMP (active site)         ← ground truth
+  7TJ2  3.20A  EM     NSP15 + 31-mer RNA substrate
+  9BIH  3.24A  EM     NSP15 + 35/34-mer RNA substrate
+  9M48  2.60A  EM     NSP15 + 31-mer RNA substrate
+
+  Script 16_9 MUST rediscover all 3 small molecule binding sites
+  as top-ranked pockets — 3-way ground truth validation
+
+**Status:** ✅ Complete — NSP15 homodimer confirmed, proceed to AF3 submission
+
+---
+
+## Entry 096 — NSP15 PDB landscape scan: 11 structures reviewed
+**Date:** 2026-03-16
+**Script:** scripts/check_NSP15_pdb_entries_v2.py
+
+**11 SARS-CoV-2 NSP15 structures in PDB:**
+
+  NSP15 homodimer/hexamer only (no new interface):
+    8D34  2.91A  X-ray  — NSP15 apo hexamer
+    8U2X  2.25A  X-ray  — NSP15 apo hexamer
+    9MRU  3.00A  X-ray  — NSP15 hexamer
+    9MRW  3.00A  X-ray  — NSP15 hexamer
+    9MRY  3.00A  X-ray  — NSP15 hexamer
+
+  NOT a direct NSP15 protein interface:
+    7DW6  1.70A  X-ray  — NSP5 (3CLpro) + nsp15/16 PEPTIDE substrate
+                          Peptide = cleavage site substrate, NSP15 protein absent
+
+  NSP15 + RNA (active site structures — useful for Script 16_9 validation):
+    7TJ2  3.20A  EM     — NSP15 hexamer + 31-mer RNA
+    9BIH  3.24A  EM     — NSP15 hexamer + 35/34-mer RNA
+    9M48  2.60A  EM     — NSP15 hexamer + 31-mer RNA
+    9M49  2.78A  EM     — NSP15 hexamer + 31-mer RNA
+    NOTE: these are ground truth active site structures
+          add to Script 16_9 as additional validation layer
+
+  REQUIRES INVESTIGATION:
+    9HH5  2.08A  X-ray  — Replicase polyprotein 1ab + NSP15
+                          Ambiguous: could be NSP15 + another NSP heterodimer
+                          OR polyprotein fragment annotation artifact
+                          Running detailed check now (check_9HH5_detail.py)
+
+**Decision so far:**
+  No confirmed new NSP-NSP heterodimer interface found yet
+  9HH5 is the only candidate requiring further inspection
+  NSP15 homodimer remains correct primary target
+
+**Status:** ✅ Scan complete — awaiting 9HH5 detail output
+
+---
