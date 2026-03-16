@@ -2910,3 +2910,34 @@ Generate manuscript-ready 3D figures showing key interactions.
 **Status:** ✅ Planned — proceed to PDB download
 
 ---
+
+## Entry 095 — NSP15 structures downloaded and chains extracted
+**Date:** 2026-03-16
+**Scripts:** scripts/download_NSP15_structures.py, scripts/extract_NSP15_chains.py
+
+**Structures downloaded to 00-reference/pdb_structures/NSP15/:**
+  6VWW: [fill] atoms  — apo hexamer PRIMARY receptor
+  6W01: [fill] atoms  — apo hexamer secondary
+  6WLC: [fill] atoms  — hexamer + UMP (active site)
+  6WXC: [fill] atoms  — hexamer + tipiracil (known inhibitor)
+  2H85: [fill] atoms  — SARS-CoV-1 monomer (conservation ref)
+
+**Chains extracted to 00-reference/known_interfaces/NSP15/:**
+  6VWW_NSP15-dimer.pdb           chains A+B  [fill] residues
+  6W01_NSP15-dimer.pdb           chains A+B  [fill] residues
+  6WLC_NSP15-dimer-UMP.pdb       chains A+B  [fill] residues
+  6WXC_NSP15-dimer-tipiracil.pdb chains A+B  [fill] residues
+  2H85_NSP15-monomer-SARS1.pdb   chain A     [fill] residues
+
+**UniProt NSP15 coordinates verified:**
+  [fill from Step 6 output]
+
+**NSP15 FASTA saved:** 00-reference/sequences/NSP15.fasta ([fill] aa)
+
+**AF3 status:** ⏳ Submit homodimer at alphafoldserver.com
+  Save results to: 01-alphafold3/NSP15/
+  Required files: *_model.cif · *_confidence.json · *_summary.json
+
+**Status:** ✅ Done — waiting AF3 result, then run Script 04_9
+
+---
