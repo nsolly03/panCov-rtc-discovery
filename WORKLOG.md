@@ -2857,3 +2857,56 @@ Generate manuscript-ready 3D figures showing key interactions.
 **Status:** ✅ Planned — proceed to PDB download
 
 ---
+
+## Entry 094 — NSP15 added to pipeline: scientific rationale and plan
+**Date:** 2026-03-16
+**What:** Added NSP15 NendoU dimer interface as complex 9 (suffix _9)
+
+**Scientific rationale:**
+  NSP15 identified as missed interface during systematic pipeline review
+  Function: NendoU endoribonuclease — cleaves ssRNA at uridylate residues
+  Assembly: monomer (inactive) -> dimer within trimer -> hexamer (ACTIVE)
+  Interface choice: monomer-monomer (dimer, 6VWW-type)
+  Key evidence Hayn et al. 2021 (Cell Reports 35, 109126):
+    SARS-CoV-2 NSP15 is 32x less potent than SARS-CoV-1 at IFN-b suppression
+    7.8x less potent than RaTG13-CoV NSP15
+    -> NSP15 is a KNOWN VULNERABILITY in SARS-CoV-2 specifically
+    -> Disrupting dimer/hexamer assembly abolishes residual NendoU activity
+    -> May fully restore host IFN response
+  Raj et al. 2021 (Biochem Biophys Rep 25, 100847):
+    NSP15 targeted with DB01977/DB07132/DB07535 in fragment docking
+    -> Validates our pipeline approach for this target
+
+**Structures:**
+  6VWW: SARS-CoV-2 apo         1.90 A hexamer chains A+B PRIMARY
+  6W01: SARS-CoV-2 apo         2.20 A hexamer chains A+B
+  6WLC: SARS-CoV-2 + UMP       1.70 A hexamer chains A+B
+  6WXC: SARS-CoV-2 + tipiracil 1.80 A hexamer chains A+B
+  2H85: SARS-CoV-1 apo         2.00 A monomer (conservation ref)
+
+**UniProt:** P0DTD1 positions 6453-6798 (NSP15, 348 aa)
+**AF3:** homodimer submission (NSP15.fasta x2 copies)
+**Suffix:** _9
+
+**Pipeline role:** REFERENCE TEMPLATE
+  First complex with full Scripts 04_9 through 17_9
+  New Tier 0-5 scripts written here backfilled to complexes 1-8 after
+
+**Controls:**
+  Positive: dimer interface residues (hexamerization-abolishing mutations
+    per Deng and Baker 2018, Virology 517:157-163)
+  Negative: His235, His250, Lys290 (catalytic triad, active site,
+    ZERO dimer interface contacts)
+  Ground truth: tipiracil binding site (6WXC) must be rediscovered
+    by fpocket in Script 16_9
+
+**Directories created:**
+  00-reference/pdb_structures/NSP15/
+  00-reference/known_interfaces/NSP15/
+  01-alphafold3/NSP15/
+  02-validation/NSP15/
+  03-virtual-screening/NSP15_9/
+
+**Status:** ✅ Planned — proceed to PDB download
+
+---
