@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+<script src="/media/plg_n3tcookieconsent/js/n3tconsentmanager.min.js?13332c"></script>
+<script>					  initN3tConsentManager({
+	      cookie_name: "n3t_cc",
+	      	      cookies: [{"name":"__cflb","is_regex":false,"category":"functional","required":true},{"name":"CookieConsent","is_regex":false,"category":"functional","required":true},{"name":"hex (32)","is_regex":false,"category":"functional","required":true},{"name":"incap_ses_#","is_regex":false,"category":"functional","required":true},{"name":"nlbi_#","is_regex":false,"category":"functional","required":true},{"name":"visid_incap_#","is_regex":false,"category":"functional","required":true},{"name":"bcookie","is_regex":false,"category":"functional","required":true},{"name":"li_gc","is_regex":false,"category":"functional","required":true},{"name":"bscookie","is_regex":false,"category":"functional","required":true},{"name":"^_hjSessionUser_","is_regex":true,"category":"functional","required":true},{"name":"n3t_cc","is_regex":false,"category":"functional","required":true},{"name":"^incap_ses_","is_regex":true,"category":"functional","required":true},{"name":"^_hjSession_","is_regex":true,"category":"functional","required":true},{"name":"lidc","is_regex":false,"category":"preferences","required":false},{"name":"_hjSession_#","is_regex":false,"category":"analytics","required":false},{"name":"_hjSessionUser_#","is_regex":false,"category":"analytics","required":false},{"name":"_tldtest_#","is_regex":false,"category":"analytics","required":false},{"name":"amp_#","is_regex":false,"category":"analytics","required":false},{"name":"amp_cookie_test#","is_regex":false,"category":"analytics","required":false},{"name":"amplitude_#","is_regex":false,"category":"analytics","required":false},{"name":"hjActiveViewportIds","is_regex":false,"category":"analytics","required":false},{"name":"hjViewportId","is_regex":false,"category":"analytics","required":false},{"name":"^_ga_","is_regex":true,"category":"analytics","required":false},{"name":"___utmvc","is_regex":false,"category":"marketing","required":false},{"name":"_ga","is_regex":false,"category":"marketing","required":false},{"name":"_ga_#","is_regex":false,"category":"marketing","required":false},{"name":"_gat","is_regex":false,"category":"marketing","required":false},{"name":"_gid","is_regex":false,"category":"marketing","required":false},{"name":"NID","is_regex":false,"category":"marketing","required":false},{"name":"collect","is_regex":false,"category":"marketing","required":false},{"name":"_ir","is_regex":false,"category":"marketing","required":false},{"name":"#-#","is_regex":false,"category":"marketing","required":false},{"name":"iU5q-!O9@$","is_regex":false,"category":"marketing","required":false},{"name":"LAST_RESULT_ENTRY_KEY","is_regex":false,"category":"marketing","required":false},{"name":"LogsDatabaseV2:V#||LogsRequestsStore","is_regex":false,"category":"marketing","required":false},{"name":"remote_sid","is_regex":false,"category":"marketing","required":false},{"name":"TESTCOOKIESENABLED","is_regex":false,"category":"marketing","required":false},{"name":"VISITOR_INFO1_LIVE","is_regex":false,"category":"marketing","required":false},{"name":"YSC","is_regex":false,"category":"marketing","required":false},{"name":"YtIdbMeta#databases","is_regex":false,"category":"marketing","required":false},{"name":"yt-remote-cast-available","is_regex":false,"category":"marketing","required":false},{"name":"yt-remote-cast-installed","is_regex":false,"category":"marketing","required":false},{"name":"yt-remote-connected-devices","is_regex":false,"category":"marketing","required":false},{"name":"yt-remote-device-id","is_regex":false,"category":"marketing","required":false},{"name":"yt-remote-fast-check-period","is_regex":false,"category":"marketing","required":false},{"name":"yt-remote-session-app","is_regex":false,"category":"marketing","required":false},{"name":"yt-remote-session-name","is_regex":false,"category":"marketing","required":false},{"name":"_gcl_au","is_regex":false,"category":"marketing","required":false},{"name":"popupShown","is_regex":false,"category":"unknown","required":false},{"name":"_rollupGa","is_regex":false,"category":"unknown","required":false},{"name":"_rollupGa_ga_4ZR516VVRP","is_regex":false,"category":"unknown","required":false},{"name":"amp_1823b4","is_regex":false,"category":"unknown","required":false},{"name":"amp_213194","is_regex":false,"category":"unknown","required":false}],
+    options: {"cookie_expiration":395,"use_rfc_cookie":true,"revision":5,"current_lang":"default","autoclear_cookies":true,"hide_from_bots":true,"gui_options":{"consent_modal":{"layout":"cloud","position":"bottom right","transition":"slide","swap_buttons":true},"settings_modal":{"layout":"bar","position":"right","transition":"slide"}},"languages":{"default":{"consent_modal":{"title":"We use cookies","description":"This website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only upon approval. <br\/><br\/>Read more about our <a aria-label='Privacy policy' class='cc-link' href='\/privacy-policy'>Privacy policy<\/a>{{revision_message}}","revision_message":"<br\/><br\/>Sorry to bother you again, but our terms have changed.","primary_btn":{"text":"Accept all","role":"accept_all"},"secondary_btn":{"text":"Settings","role":"settings"}},"settings_modal":{"title":"Cookie preferences","save_settings_btn":"Save settings","accept_all_btn":"Accept all","close_btn_label":"Close","reject_all_btn":"Reject all","cookie_table_headers":[{"name":"Name"},{"description":"Description"},{"provider":"Provider"},{"expiration":"Expiration"}],"blocks":[{"title":"Cookie usage","description":"We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in\/out whenever you want."},{"title":"Strictly necessary cookies","description":"These cookies are essential for the proper functioning of this website. Without these cookies, this website would not work properly.","toggle":{"value":"functional","enabled":true,"readonly":true},"cookie_table":[{"name":"__cflb","description":"&nbsp;","is_regex":false,"provider":"api2.hcaptcha.com","expiration":"1 day"},{"name":"CookieConsent","description":"Stores the user's cookie consent state for the current domain","is_regex":false,"provider":"enamine.net","expiration":"1 year"},{"name":"hex (32)","description":"Used to manage server calls to the website's backend systems.  ","is_regex":false,"provider":"enamine.net","expiration":"session"},{"name":"incap_ses_#","description":"Preserves users states across page requests.","is_regex":false,"provider":"enamine.net","expiration":"session"},{"name":"nlbi_#","description":"Used to ensure website security and fraud detection.","is_regex":false,"provider":"enamine.net","expiration":"session"},{"name":"visid_incap_#","description":"Preserves users states across page requests.","is_regex":false,"provider":"enamine.net","expiration":"1 year"},{"name":"bcookie","description":"Used in order to detect spam and improve the website's security. ","is_regex":false,"provider":"linkedin.com","expiration":"1 year"},{"name":"li_gc","description":"Stores the user's cookie consent state for the current domain","is_regex":false,"provider":"linkedin.com","expiration":"180 days"},{"name":"bscookie","description":"This cookie is used to identify the visitor through an application. This allows the visitor to login to a website through their LinkedIn application for example.","is_regex":false,"provider":"www.linkedin.com","expiration":"1 year"},{"name":"^_hjSessionUser_","description":"Hotjar cookie that is set when a user first lands on a page with the Hotjar script. It is used to persist the Hotjar User ID, unique to that site on the browser. This ensures that behavior in subsequent visits to the same site will be attributed to the same user ID.","is_regex":true,"provider":"Hotjar","expiration":"365 days"},{"name":"n3t_cc","description":"This cookie holds user cookies consent info.","is_regex":false,"provider":"Enamine","expiration":"395 days"},{"name":"^incap_ses_","description":"This cookie is set to allow a visitor to receive site content from one out of multiple servers as the visitor browses the site. This allows the visitor's session to be maintained.","is_regex":true,"provider":"Imperva","expiration":"session"},{"name":"^_hjSession_","description":"A cookie that holds the current session data. This ensues that subsequent requests within the session window will be attributed to the same Hotjar session.","is_regex":true,"provider":"Hotjar","expiration":"30 minutes"}]},{"title":"Preferences cookies","description":"These cookies helps us to improve your online experience, and it stores some of your preferences.","toggle":{"value":"preferences","enabled":false,"readonly":false},"cookie_table":[{"name":"lidc","description":"Registers which server-cluster is serving the visitor. This is used in context with load balancing, in order to optimize user experience.  ","is_regex":false,"provider":"linkedin.com","expiration":"1 day"}]},{"title":"Analytical cookies","description":"These cookies collect information about how you use the website, which pages you visited and which links you clicked on. All of the data is anonymized and cannot be used to identify you.","toggle":{"value":"analytics","enabled":false,"readonly":false},"cookie_table":[{"name":"_hjSession_#","description":"Collects statistics on the visitor's visits to the website, such as the number of visits, average time spent on the website and what pages have been read.","is_regex":false,"provider":"enamine.net","expiration":"1 day"},{"name":"_hjSessionUser_#","description":"Collects statistics on the visitor's visits to the website, such as the number of visits, average time spent on the website and what pages have been read.","is_regex":false,"provider":"enamine.net","expiration":"1 year"},{"name":"_tldtest_#","description":"Registers statistical data on users' behaviour on the website. Used for internal analytics by the website operator. ","is_regex":false,"provider":"enamine.net","expiration":"session"},{"name":"amp_#","description":"Registers statistical data on users' behaviour on the website. Used for internal analytics by the website operator. ","is_regex":false,"provider":"enamine.net","expiration":"1 year"},{"name":"amp_cookie_test#","description":"Registers statistical data on users' behaviour on the website. Used for internal analytics by the website operator. ","is_regex":false,"provider":"enamine.net","expiration":"session"},{"name":"amplitude_#","description":"Registers statistical data on users' behaviour on the website. Used for internal analytics by the website operator. ","is_regex":false,"provider":"enamine.net","expiration":"1 year"},{"name":"hjActiveViewportIds","description":"This cookie contains an ID string on the current session. This contains non-personal information on what subpages the visitor enters \u2013 this information is used to optimize the visitor's experience.","is_regex":false,"provider":"hotjar.com","expiration":"Persistent"},{"name":"hjViewportId","description":"Saves the user's screen size in order to adjust the size of images on the website.","is_regex":false,"provider":"hotjar.com","expiration":"session"},{"name":"^_ga_","description":"ID used to identify users","is_regex":true,"provider":"Google Analytics","expiration":"2 years"}]},{"title":"Marketing cookies","description":"These cookies are used to make advertising messages more relevant to you. They prevent the same ad from continuously reappearing, ensure that ads are properly displayed for advertisers, and in some cases select advertisements that are based on your interests.","toggle":{"value":"marketing","enabled":false,"readonly":false},"cookie_table":[{"name":"___utmvc","description":"Collects information on user behaviour on multiple websites. This information is used in order to optimize the relevance of advertisement on the website.","is_regex":false,"provider":"enamine.net","expiration":"1 day"},{"name":"_ga","description":"Used to send data to Google Analytics about the visitor's device and behavior. Tracks the visitor across devices and marketing channels.","is_regex":false,"provider":"enamine.net","expiration":"PLG_SYSTEM_N3TCOOKIECONSENT_SCAN_COOKIE_EXPIRATION_YEARS"},{"name":"_ga_#","description":"Used to send data to Google Analytics about the visitor's device and behavior. Tracks the visitor across devices and marketing channels.","is_regex":false,"provider":"enamine.net","expiration":"PLG_SYSTEM_N3TCOOKIECONSENT_SCAN_COOKIE_EXPIRATION_YEARS"},{"name":"_gat","description":"Used to send data to Google Analytics about the visitor's device and behavior. Tracks the visitor across devices and marketing channels.","is_regex":false,"provider":"enamine.net","expiration":"1 day"},{"name":"_gid","description":"Used to send data to Google Analytics about the visitor's device and behavior. Tracks the visitor across devices and marketing channels.","is_regex":false,"provider":"enamine.net","expiration":"1 day"},{"name":"NID","description":"&nbsp;","is_regex":false,"provider":"google.com","expiration":"6 months"},{"name":"collect","description":"Used to send data to Google Analytics about the visitor's device and behavior. Tracks the visitor across devices and marketing channels.","is_regex":false,"provider":"google-analytics.com","expiration":"session"},{"name":"_ir","description":"Collects information on user behaviour on multiple websites. This information is used in order to optimize the relevance of advertisement on the website.","is_regex":false,"provider":"pinterest.com","expiration":"session"},{"name":"#-#","description":"Used to track user\u2019s interaction with embedded content.","is_regex":false,"provider":"youtube.com","expiration":"session"},{"name":"iU5q-!O9@$","description":"Registers a unique ID to keep statistics of what videos from YouTube the user has seen.","is_regex":false,"provider":"youtube.com","expiration":"session"},{"name":"LAST_RESULT_ENTRY_KEY","description":"Used to track user\u2019s interaction with embedded content.","is_regex":false,"provider":"youtube.com","expiration":"session"},{"name":"LogsDatabaseV2:V#||LogsRequestsStore","description":"Used to track user\u2019s interaction with embedded content.","is_regex":false,"provider":"youtube.com","expiration":"Persistent"},{"name":"remote_sid","description":"Necessary for the implementation and functionality of YouTube video-content on the website.  ","is_regex":false,"provider":"youtube.com","expiration":"session"},{"name":"TESTCOOKIESENABLED","description":"Used to track user\u2019s interaction with embedded content.","is_regex":false,"provider":"youtube.com","expiration":"1 day"},{"name":"VISITOR_INFO1_LIVE","description":"&nbsp;","is_regex":false,"provider":"youtube.com","expiration":"180 days"},{"name":"YSC","description":"&nbsp;","is_regex":false,"provider":"youtube.com","expiration":"session"},{"name":"YtIdbMeta#databases","description":"Used to track user\u2019s interaction with embedded content.","is_regex":false,"provider":"youtube.com","expiration":"Persistent"},{"name":"yt-remote-cast-available","description":"Stores the user's video player preferences using embedded YouTube video","is_regex":false,"provider":"youtube.com","expiration":"session"},{"name":"yt-remote-cast-installed","description":"Stores the user's video player preferences using embedded YouTube video","is_regex":false,"provider":"youtube.com","expiration":"session"},{"name":"yt-remote-connected-devices","description":"Stores the user's video player preferences using embedded YouTube video","is_regex":false,"provider":"youtube.com","expiration":"Persistent"},{"name":"yt-remote-device-id","description":"Stores the user's video player preferences using embedded YouTube video","is_regex":false,"provider":"youtube.com","expiration":"Persistent"},{"name":"yt-remote-fast-check-period","description":"Stores the user's video player preferences using embedded YouTube video","is_regex":false,"provider":"youtube.com","expiration":"session"},{"name":"yt-remote-session-app","description":"Stores the user's video player preferences using embedded YouTube video","is_regex":false,"provider":"youtube.com","expiration":"session"},{"name":"yt-remote-session-name","description":"Stores the user's video player preferences using embedded YouTube video","is_regex":false,"provider":"youtube.com","expiration":"session"},{"name":"_gcl_au","description":"Used by Google AdSense for experimenting with advertisement efficiency across websites using their services.","is_regex":false,"provider":"Google","expiration":"3 months"}]},{"title":"Uncategorized cookies","description":"We are still analyzing these cookies and working on their categorization.","toggle":{"value":"unknown","enabled":false,"readonly":false},"cookie_table":[{"name":"popupShown","description":"&nbsp;","is_regex":false,"provider":"enamine.net","expiration":"Persistent"}]},{"title":"","description":"Detailed information about how we handle cookies could be found in our <a aria-label='Privacy policy' class='cc-link' href='\/privacy-policy'>Privacy policy<\/a>."},{"title":"","description":"<div class=\"n3tcc-consent-info\">Consent granted on: <strong>{{consent_date}}<\/strong><br\/>Consent ID: <strong>{{consent_guid}}<\/strong><\/div>"}]}}}},
+    unknown_cookies: "settings",
+	  	      log_user_preferences_url: "\/component\/ajax\/?group=system&format=json&plugin=N3tCookieConsentLogConsent",
+	    });
+</script>
+
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login - Enamine</title>
+	<link href="/media/templates/site/enamine/images/favicon.svg" rel="icon" type="image/svg+xml">
+	<link href="/media/templates/site/enamine/images/favicon.ico" rel="alternate icon" type="image/vnd.microsoft.icon">
+	<link href="/media/templates/site/enamine/images/favicon-pinned.svg" rel="mask-icon" color="#000">
+
+    <link href="https://enamine.net/login-page" rel="canonical" />
+
+    <link href="/media/system/css/joomla-fontawesome.min.css?13332c" rel="lazy-stylesheet" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=" /><noscript><link href="/media/system/css/joomla-fontawesome.min.css?13332c" rel="stylesheet" /></noscript>
+	<link href="/media/templates/site/enamine/css/fonts.min.css?13332c" rel="stylesheet" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=" />
+	<link href="/media/templates/site/enamine/css/template.min.css?13332c" rel="stylesheet" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=" />
+	<link href="/media/templates/site/enamine/css/custom.css?13332c" rel="stylesheet" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=" />
+	<link href="/media/templates/site/cassiopeia/css/vendor/joomla-custom-elements/joomla-alert.min.css?0.2.0" rel="stylesheet" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=" />
+	<link href="/media/com_convertforms/css/convertforms.css?13332c" rel="stylesheet" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=" />
+	<link href="/media/plg_n3tcookieconsent/css/n3tconsentmanager.min.css?13332c" rel="stylesheet" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=" />
+	<style nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=">#cf_2 .cf-control-group[data-key="4"] {
+                --heading-font-size: 24px;
+--heading-font-family:  ;
+--heading-line-height: 28px;
+--heading-letter-spacing: 0px;
+--heading-text-align: left;
+
+            }
+        </style>
+	<style nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=">#cf_2 .cf-control-group[data-key="2"] {
+                --button-border-radius: 3px;
+--button-padding: 13px 20px;
+--button-color: #ffffff;
+--button-font-size: 16px;
+--button-background-color: #0076be;
+
+            }
+        </style>
+	<style nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=">.convertforms {
+                --color-primary: #4285F4;
+--color-success: #0F9D58;
+--color-danger: #d73e31;
+--color-warning: #F4B400;
+--color-default: #444;
+--color-grey: #ccc;
+
+            }
+        </style>
+	<style nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=">#cf_2 {
+                --font: Arial;
+--max-width: 500px;
+--background-color: rgba(255, 255, 255, 1);
+--border-radius: 0px;
+--control-gap: 10px;
+--label-color: #333333;
+--label-size: 16px;
+--label-weight: 400;
+--input-color: #757575;
+--input-placeholder-color: #75757570;
+--input-text-align: left;
+--input-background-color: #ffffff;
+--input-border-color: #cccccc;
+--input-border-radius: 3px;
+--input-size: 16px;
+--input-padding: 12px 12px;
+
+            }
+        </style>
+	<style nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=">.cf-field-hp {
+				display: none;
+				position: absolute;
+				left: -9000px;
+			}</style>
+	<style nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=">#cf_6 .cf-control-group[data-key="10"] {
+                --heading-font-size: 24px;
+--heading-font-family: Arial;
+--heading-line-height: 27px;
+--heading-letter-spacing: 0px;
+--heading-text-align: left;
+
+            }
+        </style>
+	<style nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=">#cf_6 .cf-control-group[data-key="2"] {
+                --button-border-radius: 5px;
+--button-padding: 13px 26px;
+--button-color: #ffffff;
+--button-font-size: 16px;
+--button-background-color: #0076be;
+
+            }
+        </style>
+	<style nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=">#cf_6 {
+                --font: Arial;
+--max-width: 500px;
+--background-color: rgba(255, 255, 255, 1);
+--border-radius: 0px;
+--control-gap: 10px;
+--label-color: #585858;
+--label-size: 16px;
+--label-weight: 400;
+--input-color: #585858;
+--input-placeholder-color: #58585870;
+--input-text-align: left;
+--input-background-color: #ffffff;
+--input-border-color: #cccccc;
+--input-border-radius: 3px;
+--input-size: 16px;
+--input-padding: 12px 12px;
+
+            }
+        </style>
+	<style nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=">:root {
+    --cc-btn-primary-bg: rgba(0, 118, 190, 1);
+    --cc-btn-primary-hover-bg: rgba(0, 118, 190, 0.5);
+    --cc-btn-secondary-bg: rgba(254, 205, 39, 1);
+    --cc-btn-secondary-hover-bg: rgba(254, 205, 39, 0.5);
+  }
+</style>
+
+    <script src="/media/vendor/metismenujs/js/metismenujs.min.js?1.4.0" defer nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M="></script>
+	<script type="application/json" class="joomla-script-options new" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=">{"joomla.jtext":{"JFIELD_PASSWORD_INDICATE_INCOMPLETE":"Password doesn't meet site's requirements.","JFIELD_PASSWORD_INDICATE_COMPLETE":"Password accepted","JSHOWPASSWORD":"Show Password","JHIDEPASSWORD":"Hide Password","COM_CONVERTFORMS_INVALID_RESPONSE":"Invalid Response","COM_CONVERTFORMS_INVALID_TASK":"Invalid Task","ERROR":"Error","MESSAGE":"Message","NOTICE":"Notice","WARNING":"Warning","JCLOSE":"Close","JOK":"OK","JOPEN":"Open","JLIB_FORM_CONTAINS_INVALID_FIELDS":"The form cannot be submitted as it's missing required data. <br> Please correct the marked fields and try again.","JLIB_FORM_FIELD_REQUIRED_VALUE":"Please fill in this field","JLIB_FORM_FIELD_REQUIRED_CHECK":"One of the options must be selected","JLIB_FORM_FIELD_INVALID_VALUE":"This value is not valid"},"com_convertforms":{"baseURL":"/component/convertforms","debug":false,"forward_context":{"request":{"view":"login","task":null,"option":"com_users","layout":null,"id":null}},"conditional_logic":{"6":{"wbs6v7h38":{"label":"Japan, Korea region","rules":{"2ar3od7cn":{"jg7eerryg":{"field":"4","comparator":"regex","arg":"JP|KR"}}},"actions":{"gz6d5t188":{"field":"5","trigger":"change_value","arg":"JAPAN"}},"else":[]},"js4i0mumt":{"label":"Europe region","rules":{"yx09wkh7u":{"7tthlfwq9":{"field":"4","comparator":"regex","arg":"AD|AL|AT|AX|BA|BE|BG|BY|CH|CY|CZ|DE|DK|EE|ES|FI|FO|FR|GB|GE|GG|GI|GR|HR|HU|IE|IM|IS|IT|JE|LI|LT|LU|LV|MC|MD|ME|MK|MT|NL|NO|PL|PT|RO|RS|SE|SI|SJ|SK|SM|UA|VA"}}},"actions":{"76ocb8aiu":{"field":"5","trigger":"change_value","arg":"EUROPE"}}},"nmfddr676":{"label":"China region","rules":{"s5vyg2jjq":{"5sv2r8sdz":{"field":"4","comparator":"equals","arg":"CN"}}},"actions":{"ahwr4vr2y":{"field":"5","trigger":"change_value","arg":"CHINA"}}},"vefgq80nx":{"label":"America region","rules":{"4nv7474f2":{"prmy7lzgo":{"field":"4","comparator":"regex","arg":"AG|AI|AN|AR|AS|AW|BB|BL|BM|BO|BQ|BR|BS|BZ|CA|CL|CO|CR|CU|CW|DM|DO|EC|GD|GL|GP|GS|GY|HT|JM|KN|KY|LC|MF|MQ|MS|MX|NI|PA|PE|PM|PR|PY|SR|SV|SX|TC|TF|TT|UM|US|UY|VC|VE|VG|VI"}}},"actions":{"kupt59cve":{"field":"5","trigger":"change_value","arg":"AMERICA"}}},"zomgy1jyg":{"label":"Other regions","rules":{"hc81uypiu":{"zqxwnjaln":{"field":"4","comparator":"regex","arg":"AE|AF|AM|AO|AQ|AU|AZ|BD|BF|BH|BI|BJ|BN|BT|BV|BW|CC|CD|CF|CG|CI|CK|CM|CV|CX|DJ|DZ|EG|EH|ER|ET|FJ|FK|FM|GA|GF|GH|GM|GN|GQ|GT|GU|GW|HK|HM|HN|ID|IL|IN|IO|IQ|IR|JO|KE|KG|KH|KI|KM|KW|KZ|LA|LB|LK|LR|LS|LY|MA|MG|MH|ML|MM|MN|MO|MP|MR|MU|MV|MW|MY|MZ|NA|NC|NE|NF|NG|NP|NR|NU|NZ|OM|PF|PG|PH|PK|PN|PS|PW|QA|RE|RU|RW|SA|SB|SC|SD|SG|SH|SL|SN|SO|SS|ST|SY|SZ|TD|TG|TH|TJ|TK|TL|TM|TN|TO|TR|TV|TW|TZ|UG|UZ|VN|VU|WF|WS|XD|XE|XS|XX|YE|YT|ZA|ZM|ZW"}}},"actions":{"rt0gnqq0x":{"field":"5","trigger":"change_value","arg":"OTHER"}}}}}},"system.paths":{"root":"","rootFull":"https://enamine.net/","base":"","baseFull":"https://enamine.net/"},"csrf.token":"55e9593eab7eee4d4e52703bf46ce095","system.keepalive":{"interval":840000,"uri":"/component/ajax/?format=json"}}</script>
+	<script src="/media/system/js/core.min.js?e20992" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M="></script>
+	<script src="/media/system/js/keepalive.min.js?08e025" type="module" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M="></script>
+	<script src="/media/system/js/fields/validate.min.js?5098f0" defer nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M="></script>
+	<script src="/media/system/js/fields/passwordview.min.js?d2a409" defer nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M="></script>
+	<script src="/media/templates/site/enamine/js/template.js?13332c" type="module" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M="></script>
+	<script src="/media/templates/site/enamine/js/jquery-3.7.1.min.js?13332c" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M="></script>
+	<script src="/media/templates/site/enamine/js/slick.js?13332c" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M="></script>
+	<script src="/media/vendor/bootstrap/js/collapse.min.js?5.3.2" type="module" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M="></script>
+	<script src="/media/templates/site/enamine/js/mod_menu/menu-metismenu.min.js?13332c" defer nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M="></script>
+	<script src="/media/mod_menu/js/menu.min.js?13332c" type="module" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M="></script>
+	<script src="/media/system/js/messages.min.js?7a5169" type="module" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M="></script>
+	<script src="/media/com_convertforms/js/site.js?13332c" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M="></script>
+	<script src="/media/plg_convertformstools_conditionallogic/js/fields.js?13332c" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M="></script>
+	<script src="/media/plg_n3tcookieconsent/js/cookieconsent.min.js?13332c" defer nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M="></script>
+	<script type="application/ld+json" nonce="N2RhOTVlYjE0MzRmODNiY2M0YzM5YjRiMzQ3OGU5MDlhN2ZmMzgzMWNkMTVmMmRjYjUzZjg4NGZiNjc0MzMzODVjODYxNThlNjAwNTRlY2Q3NmEzZTIyZTRkMTVmZmMwNTNhYTQwZDRhZWZkY2FiMTQwZmNiMWU4ZDdlOTVjN2M=">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://enamine.net/#/schema/BreadcrumbList/17","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://enamine.net/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"https://enamine.net/login-page","name":"Login"}}]}</script>
+
+
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MBTX8KC7');</script>
+<!-- End Google Tag Manager -->
+  <!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/47688126.js"></script>
+<!-- End of HubSpot Embed Code -->
+</head>
+
+<body class="site com_users wrapper-static view-login no-layout no-task itemid-984">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MBTX8KC7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <header class="header container-header full-width position-sticky sticky-top">
+
+        
+        
+                <div class="grid-child container-nav align-items-center">
+                        <div class="navbar-brand">
+                <a class="brand-logo" href="/">
+                    <img loading="eager" decoding="async" src="https://enamine.net/images/logo_35.svg" alt="Enamine">                </a>
+                                            </div>
+                        
+<nav class="navbar navbar-expand-lg" aria-label="New product menu">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbar688" aria-controls="navbar688" aria-expanded="false" aria-label="Toggle Navigation">
+        <div class="first-line burger-line"></div>
+        <div class="second-line burger-line"></div>
+        <div class="third-line burger-line"></div>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar688">
+        <style>
+.metismenu-item:hover {
+    color: #000000;
+    background-color: #fecd27;
+}
+.metismenu-item img {
+    margin-right: 12px;
+    width: auto;
+    height: 36px
+}
+.container-header nav {
+    margin-top: 0;
+}
+.metismenu.mod-menu .mm-collapse:not(.mm-show) {
+    /* display: block; */
+}
+</style>
+<ul class="mod-menu mod-menu_dropdown-metismenu metismenu mod-list ">
+<li class="metismenu-item item-235 level-1 deeper parent"><a href="/building-blocks" ><img src="/images/menu/building-blocks.svg" alt="Building Blocks" width="48" height="36" loading="lazy"><span class="image-title">Building Blocks</span></a><button class="mm-collapsed mm-toggler mm-toggler-link" aria-haspopup="true" aria-expanded="false" aria-label="Building Blocks"></button><ul class="mm-collapse"><li class="metismenu-item item-1327 level-2"><a href="/building-blocks/building-blocks-catalog" >Building Blocks Catalog</a></li><li class="metismenu-item item-389 level-2"><a href="/building-blocks/made-building-blocks" >MADE Building Blocks</a></li><li class="metismenu-item item-1466 level-2"><a href="/building-blocks/fast-made-building-blocks" >Fast MADE Building Blocks</a></li><li class="metismenu-item item-395 level-2 parent"><a href="/building-blocks/functional-classes" >Functional Classes</a></li><li class="metismenu-item item-367 level-2 parent"><a href="/building-blocks/medchem" >MedChem Highlights</a></li><li class="metismenu-item item-1100 level-2"><a href="/building-blocks/scaffolds" >DEL-compatible Scaffolds</a></li><li class="metismenu-item item-1363 level-2"><a href="/building-blocks/building-block-sets-for-library-synthesis" >Building Block Sets for Library Synthesis</a></li><li class="metismenu-item item-1406 level-2"><a href="/building-blocks/linkers-for-linkerology" >Linkers for Linkerology</a></li><li class="metismenu-item item-1796 level-2"><a href="/building-blocks/catalysts-and-ligands" class="new-lib-text">Catalysts and Ligands</a></li><li class="metismenu-item item-1422 level-2"><a href="/building-blocks/reagents-for-synthesis" >Reagents for Synthesis</a></li><li class="metismenu-item item-1798 level-2 parent"><a href="/building-blocks/bioorthogonal-reagents" class="new-lib-text">Bioorthogonal Reagents</a></li><li class="metismenu-item item-1555 level-2 parent"><a href="/building-blocks/enamine-basicity-tuning-kits" >Enamine Basicity-Tuning Kits</a></li><li class="metismenu-item item-1839 level-2"><a href="/building-blocks/linkers-for-mofs-and-cofs" class="new-lib-text">Linkers for MOFs and COFs</a></li><li class="metismenu-item item-1855 level-2"><a href="/building-blocks/late-stage-functionalization-kit" class="new-lib-text">Late-Stage Functionalization Kit</a></li></ul></li><li class="metismenu-item item-1032 level-1 deeper parent"><a href="/compound-libraries" ><img src="/images/menu/compound-libraries.svg" alt="Compound Libraries" width="31" height="32" loading="lazy"><span class="image-title">Compound Libraries</span></a><button class="mm-collapsed mm-toggler mm-toggler-link" aria-haspopup="true" aria-expanded="false" aria-label="Compound Libraries"></button><ul class="mm-collapse"><li class="metismenu-item item-1721 level-2 parent"><a href="/compound-libraries/ai-enabled-libraries" >AI-enabled Libraries</a></li><li class="metismenu-item item-1775 level-2 parent"><a href="/compound-libraries/molecular-glues" class="new-lib-text">Molecular Glues</a></li><li class="metismenu-item item-1034 level-2 parent"><a href="/compound-libraries/diversity-libraries" class="new-lib-text">Diversity Libraries</a></li><li class="metismenu-item item-1035 level-2 parent"><a href="/compound-libraries/targeted-libraries" >Targeted Libraries</a></li><li class="metismenu-item item-1007 level-2 parent"><a href="/compound-libraries/bioactive-libraries" >Bioactive Libraries</a></li><li class="metismenu-item item-238 level-2 parent"><a href="/compound-libraries/fragment-libraries" >Fragment Libraries</a></li><li class="metismenu-item item-1274 level-2 parent"><a href="/compound-libraries/covalent-libraries" >Covalent Libraries</a></li><li class="metismenu-item item-1342 level-2"><a href="/compound-libraries/libraries-catalog" title="Libraries Catalog">Catalog</a></li></ul></li><li class="metismenu-item item-1037 level-1 deeper parent"><a href="/compound-collections" ><img src="/images/menu/compound-collections.svg" alt="Collections" width="36" height="35" loading="lazy"><span class="image-title">Collections</span></a><button class="mm-collapsed mm-toggler mm-toggler-link" aria-haspopup="true" aria-expanded="false" aria-label="Collections"></button><ul class="mm-collapse"><li class="metismenu-item item-1049 level-2 parent"><a href="/compound-collections/screening-collection" >Screening Collections</a></li><li class="metismenu-item item-1057 level-2 parent"><a href="/compound-collections/real-compounds" >REAL Compounds</a></li><li class="metismenu-item item-1081 level-2 parent"><a href="/compound-collections/fragment-collection" >Fragments</a></li><li class="metismenu-item item-1178 level-2 parent"><a href="/compound-collections/covalent-compounds" >Covalent Compounds</a></li><li class="metismenu-item item-1408 level-2"><a href="/compound-collections/photoaffinity-compounds" >Photoaffinity Compounds</a></li><li class="metismenu-item item-1097 level-2"><a href="/compound-collections/bioactive-compounds" >Bioactive Collection</a></li><li class="metismenu-item item-1141 level-2"><a href="/compound-collections/impurity-reference-standards" >Impurity Reference Standards</a></li><li class="metismenu-item item-1221 level-2 parent"><a href="/compound-collections/protein-degradation-toolbox" >Protein Degradation Toolbox</a></li><li class="metismenu-item item-1003 level-2"><a href="/compound-collections/macrocycles" >Macrocycles</a></li><li class="metismenu-item item-1554 level-2"><a href="/compound-collections/legacy-screening-collection" >Legacy Screening Collection</a></li><li class="metismenu-item item-1858 level-2"><a href="/compound-collections/pfizer-reference-compounds" class="new-lib-text"> Pfizer Reference Compounds</a></li></ul></li><li class="metismenu-item item-277 level-1 deeper parent"><a href="/services" ><img src="/images/menu/services.svg" alt="Services" width="36" height="33" loading="lazy"><span class="image-title">Services</span></a><button class="mm-collapsed mm-toggler mm-toggler-link" aria-haspopup="true" aria-expanded="false" aria-label="Services"></button><ul class="mm-collapse"><li class="metismenu-item item-1794 level-2"><a href="/services/integrated-drug-discovery" >Integrated Drug Discovery</a></li><li class="metismenu-item item-1031 level-2 parent"><a href="/services/library-synthesis" >Library Synthesis</a></li><li class="metismenu-item item-279 level-2"><a href="/services/custom-synthesis" >Custom Synthesis</a></li><li class="metismenu-item item-1085 level-2"><a href="/services/fte-chemistry-support" >FTE Chemistry Support</a></li><li class="metismenu-item item-1398 level-2"><a href="/services/computer-aided-drug-design" >CADD</a></li><li class="metismenu-item item-378 level-2 parent"><a href="/services/biology-services" >Biology</a></li><li class="metismenu-item item-1272 level-2"><a href="/services/hit-follow-up-support" >Hit Follow up Support</a></li><li class="metismenu-item item-1365 level-2"><a href="/services/compound-library-management" >Compound Library Management</a></li><li class="metismenu-item item-1749 level-2 parent"><a href="/services/ufrag-library" >UFrag™ Library</a></li><li class="metismenu-item item-1842 level-2"><a href="/services/hamilton-verso" >Hamilton Verso</a></li></ul></li><li class="metismenu-item item-1277 level-1 deeper parent"><a href="/about-us" ><img src="/images/menu/about-us.svg" alt="About Us" width="30" height="32" loading="lazy"><span class="image-title">About Us</span></a><button class="mm-collapsed mm-toggler mm-toggler-link" aria-haspopup="true" aria-expanded="false" aria-label="About Us"></button><ul class="mm-collapse"><li class="metismenu-item item-1278 level-2"><a href="/publications" >Publications</a></li><li class="metismenu-item item-1282 level-2"><a href="/news-press-releases" >News &amp; Press Releases</a></li><li class="metismenu-item item-1355 level-2"><a href="/events" >Events</a></li><li class="metismenu-item item-1292 level-2"><a href="/blog" >Blog</a></li><li class="metismenu-item item-1782 level-2"><a href="/about-us-main/enamine-scientific-research-institute" >Enamine Scientific Research Institute</a></li><li class="metismenu-item item-1293 level-2"><a href="/contact" >Contact Us</a></li><li class="metismenu-item item-1374 level-2"><a href="https://enamine.atlassian.net/servicedesk/customer/portal/23" >Customer Support</a></li><li class="metismenu-item item-1462 level-2"><a href="/about-us/policy-management" >Policy Management</a></li><li class="metismenu-item item-1777 level-2"><a href="/molecule-of-the-week" >Molecule of the week</a></li></ul></li></ul>
+    </div>
+</nav>
+
+<div id="mod-custom695" class="mod-custom custom">
+    <a href="https://enaminestore.com?utm_source=enamine.net&utm_medium=header&utm_campaign=none" class="online-button yellow-button" target="_blank" rel="noopener noreferrer">Visit EnamineStore</a></div>
+
+<div id="mod-custom685" class="mod-custom custom">
+    <div class="container">
+  <div class="row">
+    <div class="col">
+      <a href="/search"><img   src="/images/search_icon.png" alt="search"></a>
+    </div>
+    <div class="col">
+      <a href="/login"><img   src="/images/images/profile_icon.svg" alt="Login Form" width="26" height="30" loading="lazy"></a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+                                </div>
+            </header>
+
+    <div class="site-grid">
+        
+        
+                
+        <div class="grid-child container-component">
+            <nav class="mod-breadcrumbs__wrapper" aria-label="Breadcrumbs">
+    <ol class="mod-breadcrumbs breadcrumb py-2">
+        
+        <li class="mod-breadcrumbs__item breadcrumb-item"><a href="/" class="pathway"><span>Home</span></a></li><li class="mod-breadcrumbs__item breadcrumb-item active"><span>Login</span></li>    </ol>
+    </nav>
+
+            
+            <div id="system-message-container" aria-live="polite"></div>
+
+            <main>
+                <div class="com-users-login login">
+    
+    
+                            
+        
+    
+    <form action="/login-page?task=user.login" method="post" class="com-users-login__form form-validate form-horizontal well" id="com-users-login__form">
+
+        <fieldset>
+            <div class="control-group com-users-login__input">
+            <div class="control-label"><label id="username-lbl" for="username" class="required">
+    Username<span class="star" aria-hidden="true">&#160;*</span></label>
+</div>
+        <div class="controls">
+        
+
+    
+    <input
+        type="text"
+        name="username"
+        id="username"
+        value=""
+                class="form-control validate-username required" size="25"         required autocomplete="username"  autofocus     >
+
+    
+
+            </div>
+</div>
+<div class="control-group com-users-login__input">
+            <div class="control-label"><label id="password-lbl" for="password" class="required">
+    Password<span class="star" aria-hidden="true">&#160;*</span></label>
+</div>
+        <div class="controls">
+        
+<div class="password-group">
+    <div class="input-group">
+        <input
+            type="password"
+            name="password"
+            id="password"
+            value=""
+             autocomplete="current-password" class="form-control required"    size="25" maxlength="99" required  data-min-length="8" data-min-integers="1" data-min-symbols="1" data-min-uppercase="1" data-min-lowercase="1"  >
+                <button type="button" class="btn btn-secondary input-password-toggle">
+            <span class="icon-eye icon-fw" aria-hidden="true"></span>
+            <span class="visually-hidden">Show Password</span>
+        </button>
+            </div>
+</div>            </div>
+</div>
+
+                            <div class="com-users-login__remember">
+                    <div class="form-check">
+                        <input class="form-check-input" id="remember" type="checkbox" name="remember" value="yes">
+                        <label class="form-check-label" for="remember">
+                            Remember me                        </label>
+                    </div>
+                </div>
+            
+            
+            <div class="com-users-login__submit control-group">
+                <div class="controls">
+                    <button type="submit" class="btn btn-primary">
+                        Log in                    </button>
+                </div>
+            </div>
+
+                        <input type="hidden" name="return" value="aHR0cHM6Ly9lbmFtaW5lLm5ldC9jb21wb25lbnQvZG93bmxvYWQvP3Rhc2s9ZmlsZS5kb3dubG9hZCZmPTExMDE=">
+            <input type="hidden" name="55e9593eab7eee4d4e52703bf46ce095" value="1">        </fieldset>
+    </form>
+    <div class="com-users-login__options list-group">
+        <a class="com-users-login__reset list-group-item" href="/reset-password">
+            Forgot your password?        </a>
+                    <a class="com-users-login__register list-group-item" href="/registration">
+                Don't have an account?            </a>
+            </div>
+</div>
+            </main>
+            
+        </div>
+
+        
+        
+        
+        
+        
+    </div>
+
+    <footer class="container-footer footer full-width">
+        <div class="row grid-child">
+            <div class="col-12 col-md-2 footer-copyright">
+                <a class="brand-logo" href="/">
+                    <img loading="eager" decoding="async" src="https://enamine.net/images/logo_35.svg" alt="Enamine">                </a>
+            </div>
+            <div class="col-12 col-md-7 footer-menu">
+                <ul class="mod-menu mod-list nav ">
+<li class="nav-item item-1086"><a href="/events" >Events</a></li><li class="nav-item item-1089"><a href="/news-press-releases" >News &amp; Press Releases</a></li><li class="nav-item item-1093"><a href="/posters" >Posters</a></li><li class="nav-item item-1092"><a href="/publications" >Publications</a></li><li class="nav-item item-1087"><a href="/press-kit" >Press Kit</a></li><li class="nav-item item-1295"><a href="/search" >Site Search</a></li><li class="nav-item item-1360"><a href="/contact" >Custom request</a></li><li class="nav-item item-1376"><a href="https://enamine.atlassian.net/servicedesk/customer/portal/23" >Customer Support</a></li></ul>
+
+            </div>
+            <div class="col-12 col-md-3 footer-social">
+                
+<div id="mod-custom226" class="mod-custom custom">
+    <style>
+    .gdpr {
+        margin-top: 20px;
+        font-size: 9px;
+    }
+
+    .gdpr a {
+        color: rgba(var(--white-rgb), var(--text-opacity)) !important;
+    }
+</style>
+<p><a href="/contact" class="text-white">Contact Us</a></p>
+<p style="margin-top: 20px;">Follow us in social media:</p>
+<ul>
+    <li><a href="https://linkedin.com/company/enamine-ltd-" target="_blank">
+            <img src="/images/social/linkedin.png" alt="LinkedIn" /></a>
+    </li>
+    <li><a href="https://facebook.com/enamineltd/" target="_blank">
+            <img src="/images/social/fb.png" alt="FaceBook" /></a>
+    </li>
+    <li><a href="https://twitter.com/enamineltd" target="_blank">
+            <img src="/images/social/twitter.png" alt="Twitter" /></a>
+    </li>
+    <li><a href="https://www.youtube.com/c/EnamineNet" target="_blank">
+            <img src="/images/social/youtube.png" alt="YouTube" /></a>
+    </li>
+    <li><a href="https://instagram.com/enamine_company" target="_blank">
+            <img src="/images/social/instagram.png" alt="Instagram" /></a>
+    </li>
+</ul>
+<p class="gdpr">
+    <a href="#" aria-label="Cookies setting" class="cc-link" data-cc="c-settings">Cookies setting</a> |
+    <!-- <a href="#" aria-label="Cookie Settings" class=" text-white">Cookies setting</a> | -->
+    <a href="/terms-of-use">Terms of use</a> |
+    <a href="/privacy-policy">Privacy policy</a>
+</p></div>
+
+            </div>
+        </div>
+    </footer>
+
+        <a href="#top" id="back-top" class="back-to-top-link" aria-label="Back to Top">
+        <span class="icon-arrow-up icon-fw" aria-hidden="true"></span>
+    </a>
+    
+    <div id="cf_2" class="convertforms cf cf-img-above cf-form-bottom cf-success-hideform  cf-hasLabels   cf-labelpos-top" data-id="2">
+	<form name="cf2" id="cf2" method="post" action="#">
+				<div class="cf-form-wrap cf-col-16 " style="background-color:none">
+			<div class="cf-response" aria-live="polite" id="cf_2_response"></div>
+			
+							<div class="cf-fields">
+					
+<div class="cf-control-group " data-key="9" data-name="html_9" data-type="html" >
+		<div class="cf-control-input">
+		<div>
+    <div class="pop-up-close"> </div></div>	</div>
+</div> 
+<div class="cf-control-group " data-key="4" data-name="heading_4" data-type="heading" >
+		<div class="cf-control-input">
+		<h2 class="cf-heading">Contact Us</h2>
+
+	</div>
+</div> 
+<div class="cf-control-group " data-key="1" data-name="name" data-type="text" data-required>
+		<div class="cf-control-input">
+		<input type="text" name="cf[name]" id="form2_name"
+	
+			aria-label="Full Name"
+	
+			required
+		aria-required="true"
+	
+			placeholder="Your name *"
+	
+		
+	
+	
+	
+	
+	
+	
+	class="cf-input cf-width-auto "
+>	</div>
+</div> 
+<div class="cf-control-group " data-key="0" data-name="email" data-type="email" data-required>
+		<div class="cf-control-input">
+		<input type="email" name="cf[email]" id="form2_email"
+	
+			aria-label="Email address"
+	
+			required
+		aria-required="true"
+	
+			placeholder="E-mail *"
+	
+		
+	
+	
+	
+	
+	
+	
+	class="cf-input cf-width-auto "
+>	</div>
+</div> 
+<div class="cf-control-group " data-key="3" data-name="message" data-type="textarea" >
+		<div class="cf-control-input">
+		<textarea name="cf[message]" id="form2_message"
+	
+			aria-label="Message"
+	
+	
+			placeholder="Message"
+	
+	
+	
+	
+	class="cf-input cf-width-auto "
+	rows="3"></textarea>	</div>
+</div> 
+<div class="cf-control-group " data-key="10" data-name="captcha_10" data-type="captcha" data-required>
+			<div class="cf-control-label">
+			<label class="cf-label" for="form2_captcha10">
+				Math Captcha									<span class="cf-required-label">*</span>
+							</label>
+		</div>
+		<div class="cf-control-input">
+		<div class="captcha-container">
+	<div class="captcha-equation">
+		3		+		1 =
+	</div>
+		<input type="text" name="captcha_10" id="form2_captcha10"
+		required
+		autocomplete="off"
+		placeholder=""
+		class="cf-input  "
+	/>
+	<input type="hidden" name="d3d9446802a44259755d38e6d163e820"
+		value="139104004cc5611fab0a6742681a07f7"
+	/>
+</div>	</div>
+</div> 
+<div class="cf-control-group cf-one-half" data-key="8" data-name="html_8" data-type="html" >
+		<div class="cf-control-input">
+		<div>
+    <p style="text-align: right;"> <br><a href="#">Cancel</a></p></div>	</div>
+</div> 
+<div class="cf-control-group cf-one-half" data-key="2" data-name="submit_2" data-type="submit" >
+		<div class="cf-control-input">
+		
+<div class="cf-text-right">
+    <button type="submit" class="cf-btn cf-width-auto ">
+        <span class="cf-btn-text">Send me details</span>
+        <span class="cf-spinner-container">
+            <span class="cf-spinner">
+                <span class="bounce1" role="presentation"></span>
+                <span class="bounce2" role="presentation"></span>
+                <span class="bounce3" role="presentation"></span>
+            </span>
+        </span>
+    </button>
+</div>
+
+	</div>
+</div> 
+<div class="cf-control-group cf-hide" data-key="6" data-name="page" data-type="hidden" >
+		<div class="cf-control-input">
+		<input type="hidden" name="cf[page]" class="cf-input" value="https://enamine.net/login-page?return=aHR0cHM6Ly9lbmFtaW5lLm5ldC9jb21wb25lbnQvZG93bmxvYWQvP3Rhc2s9ZmlsZS5kb3dubG9hZCZmPTExMDE="
+
+>
+	</div>
+</div>				</div>
+			
+					</div>
+
+		<input type="hidden" name="cf[form_id]" value="2">
+
+		<input type="hidden" name="55e9593eab7eee4d4e52703bf46ce095" value="1">
+					<div class="cf-field-hp">
+								<label for="cf-field-69b7f50887a39" class="cf-label">Website</label>
+				<input type="text" name="cf[hnpt]" id="cf-field-69b7f50887a39" autocomplete="off" class="cf-input"/>
+			</div>
+		
+	</form>
+	</div><div id="cf_6" class="convertforms cf cf-img-above cf-form-bottom cf-success-hideform  cf-hasLabels   cf-labelpos-top" data-id="6" data-cf-tts="">
+	<form name="cf6" id="cf6" method="post" action="#">
+				<div class="cf-form-wrap cf-col-16 " style="background-color:none">
+			<div class="cf-response" aria-live="polite" id="cf_6_response"></div>
+			
+							<div class="cf-fields">
+					
+<div class="cf-control-group " data-key="11" data-name="html_11" data-type="html" >
+		<div class="cf-control-input">
+		<div>
+    <div class="pop-up-close"> </div></div>	</div>
+</div> 
+<div class="cf-control-group " data-key="10" data-name="heading_10" data-type="heading" >
+		<div class="cf-control-input">
+		<h2 class="cf-heading">Request a quote</h2>
+
+	</div>
+</div> 
+<div class="cf-control-group " data-key="1" data-name="name" data-type="text" data-required>
+		<div class="cf-control-input">
+		<input type="text" name="cf[name]" id="form6_name"
+	
+			aria-label="Full Name"
+	
+			required
+		aria-required="true"
+	
+			placeholder="Full Name *"
+	
+		
+	
+	
+	
+	
+	
+	
+	class="cf-input  "
+>	</div>
+</div> 
+<div class="cf-control-group " data-key="0" data-name="email" data-type="email" data-required>
+		<div class="cf-control-input">
+		<input type="email" name="cf[email]" id="form6_email"
+	
+			aria-label="Email address"
+	
+			required
+		aria-required="true"
+	
+			placeholder="Email address *"
+	
+		
+	
+	
+	
+	
+	
+	
+	class="cf-input  "
+>	</div>
+</div> 
+<div class="cf-control-group " data-key="3" data-name="company" data-type="text" data-required>
+		<div class="cf-control-input">
+		<input type="text" name="cf[company]" id="form6_company"
+	
+			aria-label="Company"
+	
+			required
+		aria-required="true"
+	
+			placeholder="Company *"
+	
+		
+	
+	
+	
+	
+	
+	
+	class="cf-input  "
+>	</div>
+</div> 
+<div class="cf-control-group " data-key="4" data-name="country" data-type="country" data-required>
+		<div class="cf-control-input">
+		<div class="cf-select ">
+	<select name="cf[country]" id="form6_country" 
+
+							aria-label="Country"
+			
+							required
+				aria-required="true"
+			
+			class="cf-input  "
+		>
+					<option 
+				value="" 
+				data-calc-value=""
+				 selected 				 disabled >
+				Country *			</option>
+					<option 
+				value="AF" 
+				data-calc-value=""
+								>
+				Afghanistan			</option>
+					<option 
+				value="AX" 
+				data-calc-value=""
+								>
+				Aland Islands			</option>
+					<option 
+				value="AL" 
+				data-calc-value=""
+								>
+				Albania			</option>
+					<option 
+				value="DZ" 
+				data-calc-value=""
+								>
+				Algeria			</option>
+					<option 
+				value="AS" 
+				data-calc-value=""
+								>
+				American Samoa			</option>
+					<option 
+				value="AD" 
+				data-calc-value=""
+								>
+				Andorra			</option>
+					<option 
+				value="AO" 
+				data-calc-value=""
+								>
+				Angola			</option>
+					<option 
+				value="AI" 
+				data-calc-value=""
+								>
+				Anguilla			</option>
+					<option 
+				value="AQ" 
+				data-calc-value=""
+								>
+				Antarctica			</option>
+					<option 
+				value="AG" 
+				data-calc-value=""
+								>
+				Antigua and Barbuda			</option>
+					<option 
+				value="AR" 
+				data-calc-value=""
+								>
+				Argentina			</option>
+					<option 
+				value="AM" 
+				data-calc-value=""
+								>
+				Armenia			</option>
+					<option 
+				value="AW" 
+				data-calc-value=""
+								>
+				Aruba			</option>
+					<option 
+				value="AU" 
+				data-calc-value=""
+								>
+				Australia			</option>
+					<option 
+				value="AT" 
+				data-calc-value=""
+								>
+				Austria			</option>
+					<option 
+				value="AZ" 
+				data-calc-value=""
+								>
+				Azerbaijan			</option>
+					<option 
+				value="BS" 
+				data-calc-value=""
+								>
+				Bahamas			</option>
+					<option 
+				value="BH" 
+				data-calc-value=""
+								>
+				Bahrain			</option>
+					<option 
+				value="BD" 
+				data-calc-value=""
+								>
+				Bangladesh			</option>
+					<option 
+				value="BB" 
+				data-calc-value=""
+								>
+				Barbados			</option>
+					<option 
+				value="BY" 
+				data-calc-value=""
+								>
+				Belarus			</option>
+					<option 
+				value="BE" 
+				data-calc-value=""
+								>
+				Belgium			</option>
+					<option 
+				value="BZ" 
+				data-calc-value=""
+								>
+				Belize			</option>
+					<option 
+				value="BJ" 
+				data-calc-value=""
+								>
+				Benin			</option>
+					<option 
+				value="BM" 
+				data-calc-value=""
+								>
+				Bermuda			</option>
+					<option 
+				value="BT" 
+				data-calc-value=""
+								>
+				Bhutan			</option>
+					<option 
+				value="BO" 
+				data-calc-value=""
+								>
+				Bolivia			</option>
+					<option 
+				value="BQ-BO" 
+				data-calc-value=""
+								>
+				Bonaire			</option>
+					<option 
+				value="BA" 
+				data-calc-value=""
+								>
+				Bosnia and Herzegovina			</option>
+					<option 
+				value="BW" 
+				data-calc-value=""
+								>
+				Botswana			</option>
+					<option 
+				value="BV" 
+				data-calc-value=""
+								>
+				Bouvet Island			</option>
+					<option 
+				value="BR" 
+				data-calc-value=""
+								>
+				Brazil			</option>
+					<option 
+				value="IO" 
+				data-calc-value=""
+								>
+				British Indian Ocean Territory			</option>
+					<option 
+				value="BN" 
+				data-calc-value=""
+								>
+				Brunei Darussalam			</option>
+					<option 
+				value="BG" 
+				data-calc-value=""
+								>
+				Bulgaria			</option>
+					<option 
+				value="BF" 
+				data-calc-value=""
+								>
+				Burkina Faso			</option>
+					<option 
+				value="BI" 
+				data-calc-value=""
+								>
+				Burundi			</option>
+					<option 
+				value="KH" 
+				data-calc-value=""
+								>
+				Cambodia			</option>
+					<option 
+				value="CM" 
+				data-calc-value=""
+								>
+				Cameroon			</option>
+					<option 
+				value="CA" 
+				data-calc-value=""
+								>
+				Canada			</option>
+					<option 
+				value="CV" 
+				data-calc-value=""
+								>
+				Cape Verde			</option>
+					<option 
+				value="KY" 
+				data-calc-value=""
+								>
+				Cayman Islands			</option>
+					<option 
+				value="CF" 
+				data-calc-value=""
+								>
+				Central African Republic			</option>
+					<option 
+				value="TD" 
+				data-calc-value=""
+								>
+				Chad			</option>
+					<option 
+				value="CL" 
+				data-calc-value=""
+								>
+				Chile			</option>
+					<option 
+				value="CN" 
+				data-calc-value=""
+								>
+				China			</option>
+					<option 
+				value="CX" 
+				data-calc-value=""
+								>
+				Christmas Island			</option>
+					<option 
+				value="CC" 
+				data-calc-value=""
+								>
+				Cocos (Keeling) Islands			</option>
+					<option 
+				value="CO" 
+				data-calc-value=""
+								>
+				Colombia			</option>
+					<option 
+				value="KM" 
+				data-calc-value=""
+								>
+				Comoros			</option>
+					<option 
+				value="CG" 
+				data-calc-value=""
+								>
+				Congo			</option>
+					<option 
+				value="CK" 
+				data-calc-value=""
+								>
+				Cook Islands			</option>
+					<option 
+				value="CR" 
+				data-calc-value=""
+								>
+				Costa Rica			</option>
+					<option 
+				value="CI" 
+				data-calc-value=""
+								>
+				Cote d'Ivoire			</option>
+					<option 
+				value="HR" 
+				data-calc-value=""
+								>
+				Croatia			</option>
+					<option 
+				value="CU" 
+				data-calc-value=""
+								>
+				Cuba			</option>
+					<option 
+				value="CW" 
+				data-calc-value=""
+								>
+				Curaçao			</option>
+					<option 
+				value="CY" 
+				data-calc-value=""
+								>
+				Cyprus			</option>
+					<option 
+				value="CZ" 
+				data-calc-value=""
+								>
+				Czech Republic			</option>
+					<option 
+				value="CD" 
+				data-calc-value=""
+								>
+				Democratic Republic of the Congo			</option>
+					<option 
+				value="DK" 
+				data-calc-value=""
+								>
+				Denmark			</option>
+					<option 
+				value="DJ" 
+				data-calc-value=""
+								>
+				Djibouti			</option>
+					<option 
+				value="DM" 
+				data-calc-value=""
+								>
+				Dominica			</option>
+					<option 
+				value="DO" 
+				data-calc-value=""
+								>
+				Dominican Republic			</option>
+					<option 
+				value="EC" 
+				data-calc-value=""
+								>
+				Ecuador			</option>
+					<option 
+				value="EG" 
+				data-calc-value=""
+								>
+				Egypt			</option>
+					<option 
+				value="SV" 
+				data-calc-value=""
+								>
+				El Salvador			</option>
+					<option 
+				value="GQ" 
+				data-calc-value=""
+								>
+				Equatorial Guinea			</option>
+					<option 
+				value="ER" 
+				data-calc-value=""
+								>
+				Eritrea			</option>
+					<option 
+				value="EE" 
+				data-calc-value=""
+								>
+				Estonia			</option>
+					<option 
+				value="ET" 
+				data-calc-value=""
+								>
+				Ethiopia			</option>
+					<option 
+				value="FK" 
+				data-calc-value=""
+								>
+				Falkland Islands (Malvinas)			</option>
+					<option 
+				value="FO" 
+				data-calc-value=""
+								>
+				Faroe Islands			</option>
+					<option 
+				value="FJ" 
+				data-calc-value=""
+								>
+				Fiji			</option>
+					<option 
+				value="FI" 
+				data-calc-value=""
+								>
+				Finland			</option>
+					<option 
+				value="FR" 
+				data-calc-value=""
+								>
+				France			</option>
+					<option 
+				value="GF" 
+				data-calc-value=""
+								>
+				French Guiana			</option>
+					<option 
+				value="PF" 
+				data-calc-value=""
+								>
+				French Polynesia			</option>
+					<option 
+				value="TF" 
+				data-calc-value=""
+								>
+				French Southern Territories			</option>
+					<option 
+				value="GA" 
+				data-calc-value=""
+								>
+				Gabon			</option>
+					<option 
+				value="GM" 
+				data-calc-value=""
+								>
+				Gambia			</option>
+					<option 
+				value="GE" 
+				data-calc-value=""
+								>
+				Georgia			</option>
+					<option 
+				value="DE" 
+				data-calc-value=""
+								>
+				Germany			</option>
+					<option 
+				value="GH" 
+				data-calc-value=""
+								>
+				Ghana			</option>
+					<option 
+				value="GI" 
+				data-calc-value=""
+								>
+				Gibraltar			</option>
+					<option 
+				value="GR" 
+				data-calc-value=""
+								>
+				Greece			</option>
+					<option 
+				value="GL" 
+				data-calc-value=""
+								>
+				Greenland			</option>
+					<option 
+				value="GD" 
+				data-calc-value=""
+								>
+				Grenada			</option>
+					<option 
+				value="GP" 
+				data-calc-value=""
+								>
+				Guadeloupe			</option>
+					<option 
+				value="GU" 
+				data-calc-value=""
+								>
+				Guam			</option>
+					<option 
+				value="GT" 
+				data-calc-value=""
+								>
+				Guatemala			</option>
+					<option 
+				value="GN" 
+				data-calc-value=""
+								>
+				Guinea			</option>
+					<option 
+				value="GW" 
+				data-calc-value=""
+								>
+				Guinea-Bissau			</option>
+					<option 
+				value="GY" 
+				data-calc-value=""
+								>
+				Guyana			</option>
+					<option 
+				value="HT" 
+				data-calc-value=""
+								>
+				Haiti			</option>
+					<option 
+				value="HM" 
+				data-calc-value=""
+								>
+				Heard Island and McDonald Islands			</option>
+					<option 
+				value="VA" 
+				data-calc-value=""
+								>
+				Holy See (Vatican City State)			</option>
+					<option 
+				value="HN" 
+				data-calc-value=""
+								>
+				Honduras			</option>
+					<option 
+				value="HK" 
+				data-calc-value=""
+								>
+				Hong Kong			</option>
+					<option 
+				value="HU" 
+				data-calc-value=""
+								>
+				Hungary			</option>
+					<option 
+				value="IS" 
+				data-calc-value=""
+								>
+				Iceland			</option>
+					<option 
+				value="IN" 
+				data-calc-value=""
+								>
+				India			</option>
+					<option 
+				value="ID" 
+				data-calc-value=""
+								>
+				Indonesia			</option>
+					<option 
+				value="IR" 
+				data-calc-value=""
+								>
+				Iran, Islamic Republic of			</option>
+					<option 
+				value="IQ" 
+				data-calc-value=""
+								>
+				Iraq			</option>
+					<option 
+				value="IE" 
+				data-calc-value=""
+								>
+				Ireland			</option>
+					<option 
+				value="IM" 
+				data-calc-value=""
+								>
+				Isle of Man			</option>
+					<option 
+				value="IL" 
+				data-calc-value=""
+								>
+				Israel			</option>
+					<option 
+				value="IT" 
+				data-calc-value=""
+								>
+				Italy			</option>
+					<option 
+				value="JM" 
+				data-calc-value=""
+								>
+				Jamaica			</option>
+					<option 
+				value="JP" 
+				data-calc-value=""
+								>
+				Japan			</option>
+					<option 
+				value="JO" 
+				data-calc-value=""
+								>
+				Jordan			</option>
+					<option 
+				value="KZ" 
+				data-calc-value=""
+								>
+				Kazakhstan			</option>
+					<option 
+				value="KE" 
+				data-calc-value=""
+								>
+				Kenya			</option>
+					<option 
+				value="KI" 
+				data-calc-value=""
+								>
+				Kiribati			</option>
+					<option 
+				value="KP" 
+				data-calc-value=""
+								>
+				Korea, Democratic People's Republic of			</option>
+					<option 
+				value="KR" 
+				data-calc-value=""
+								>
+				Korea, Republic of			</option>
+					<option 
+				value="KW" 
+				data-calc-value=""
+								>
+				Kuwait			</option>
+					<option 
+				value="KG" 
+				data-calc-value=""
+								>
+				Kyrgyzstan			</option>
+					<option 
+				value="LA" 
+				data-calc-value=""
+								>
+				Lao People's Democratic Republic			</option>
+					<option 
+				value="LV" 
+				data-calc-value=""
+								>
+				Latvia			</option>
+					<option 
+				value="LB" 
+				data-calc-value=""
+								>
+				Lebanon			</option>
+					<option 
+				value="LS" 
+				data-calc-value=""
+								>
+				Lesotho			</option>
+					<option 
+				value="LR" 
+				data-calc-value=""
+								>
+				Liberia			</option>
+					<option 
+				value="LY" 
+				data-calc-value=""
+								>
+				Libyan Arab Jamahiriya			</option>
+					<option 
+				value="LI" 
+				data-calc-value=""
+								>
+				Liechtenstein			</option>
+					<option 
+				value="LT" 
+				data-calc-value=""
+								>
+				Lithuania			</option>
+					<option 
+				value="LU" 
+				data-calc-value=""
+								>
+				Luxembourg			</option>
+					<option 
+				value="MO" 
+				data-calc-value=""
+								>
+				Macao			</option>
+					<option 
+				value="MK" 
+				data-calc-value=""
+								>
+				Macedonia			</option>
+					<option 
+				value="MG" 
+				data-calc-value=""
+								>
+				Madagascar			</option>
+					<option 
+				value="MW" 
+				data-calc-value=""
+								>
+				Malawi			</option>
+					<option 
+				value="MY" 
+				data-calc-value=""
+								>
+				Malaysia			</option>
+					<option 
+				value="MV" 
+				data-calc-value=""
+								>
+				Maldives			</option>
+					<option 
+				value="ML" 
+				data-calc-value=""
+								>
+				Mali			</option>
+					<option 
+				value="MT" 
+				data-calc-value=""
+								>
+				Malta			</option>
+					<option 
+				value="MH" 
+				data-calc-value=""
+								>
+				Marshall Islands			</option>
+					<option 
+				value="MQ" 
+				data-calc-value=""
+								>
+				Martinique			</option>
+					<option 
+				value="MR" 
+				data-calc-value=""
+								>
+				Mauritania			</option>
+					<option 
+				value="MU" 
+				data-calc-value=""
+								>
+				Mauritius			</option>
+					<option 
+				value="YT" 
+				data-calc-value=""
+								>
+				Mayotte			</option>
+					<option 
+				value="MX" 
+				data-calc-value=""
+								>
+				Mexico			</option>
+					<option 
+				value="FM" 
+				data-calc-value=""
+								>
+				Micronesia, Federated States of			</option>
+					<option 
+				value="MD" 
+				data-calc-value=""
+								>
+				Moldova, Republic of			</option>
+					<option 
+				value="MC" 
+				data-calc-value=""
+								>
+				Monaco			</option>
+					<option 
+				value="MN" 
+				data-calc-value=""
+								>
+				Mongolia			</option>
+					<option 
+				value="ME" 
+				data-calc-value=""
+								>
+				Montenegro			</option>
+					<option 
+				value="MS" 
+				data-calc-value=""
+								>
+				Montserrat			</option>
+					<option 
+				value="MA" 
+				data-calc-value=""
+								>
+				Morocco			</option>
+					<option 
+				value="MZ" 
+				data-calc-value=""
+								>
+				Mozambique			</option>
+					<option 
+				value="MM" 
+				data-calc-value=""
+								>
+				Myanmar			</option>
+					<option 
+				value="NA" 
+				data-calc-value=""
+								>
+				Namibia			</option>
+					<option 
+				value="NR" 
+				data-calc-value=""
+								>
+				Nauru			</option>
+					<option 
+				value="NP" 
+				data-calc-value=""
+								>
+				Nepal			</option>
+					<option 
+				value="NL" 
+				data-calc-value=""
+								>
+				Netherlands			</option>
+					<option 
+				value="NC" 
+				data-calc-value=""
+								>
+				New Caledonia			</option>
+					<option 
+				value="NZ" 
+				data-calc-value=""
+								>
+				New Zealand			</option>
+					<option 
+				value="NI" 
+				data-calc-value=""
+								>
+				Nicaragua			</option>
+					<option 
+				value="NE" 
+				data-calc-value=""
+								>
+				Niger			</option>
+					<option 
+				value="NG" 
+				data-calc-value=""
+								>
+				Nigeria			</option>
+					<option 
+				value="NU" 
+				data-calc-value=""
+								>
+				Niue			</option>
+					<option 
+				value="NF" 
+				data-calc-value=""
+								>
+				Norfolk Island			</option>
+					<option 
+				value="MP" 
+				data-calc-value=""
+								>
+				Northern Mariana Islands			</option>
+					<option 
+				value="NO" 
+				data-calc-value=""
+								>
+				Norway			</option>
+					<option 
+				value="OM" 
+				data-calc-value=""
+								>
+				Oman			</option>
+					<option 
+				value="PK" 
+				data-calc-value=""
+								>
+				Pakistan			</option>
+					<option 
+				value="PW" 
+				data-calc-value=""
+								>
+				Palau			</option>
+					<option 
+				value="PS" 
+				data-calc-value=""
+								>
+				Palestinian Territory			</option>
+					<option 
+				value="PA" 
+				data-calc-value=""
+								>
+				Panama			</option>
+					<option 
+				value="PG" 
+				data-calc-value=""
+								>
+				Papua New Guinea			</option>
+					<option 
+				value="PY" 
+				data-calc-value=""
+								>
+				Paraguay			</option>
+					<option 
+				value="PE" 
+				data-calc-value=""
+								>
+				Peru			</option>
+					<option 
+				value="PH" 
+				data-calc-value=""
+								>
+				Philippines			</option>
+					<option 
+				value="PN" 
+				data-calc-value=""
+								>
+				Pitcairn			</option>
+					<option 
+				value="PL" 
+				data-calc-value=""
+								>
+				Poland			</option>
+					<option 
+				value="PT" 
+				data-calc-value=""
+								>
+				Portugal			</option>
+					<option 
+				value="PR" 
+				data-calc-value=""
+								>
+				Puerto Rico			</option>
+					<option 
+				value="QA" 
+				data-calc-value=""
+								>
+				Qatar			</option>
+					<option 
+				value="RE" 
+				data-calc-value=""
+								>
+				Reunion			</option>
+					<option 
+				value="RO" 
+				data-calc-value=""
+								>
+				Romania			</option>
+					<option 
+				value="RW" 
+				data-calc-value=""
+								>
+				Rwanda			</option>
+					<option 
+				value="BQ-SA" 
+				data-calc-value=""
+								>
+				Saba			</option>
+					<option 
+				value="SH" 
+				data-calc-value=""
+								>
+				Saint Helena			</option>
+					<option 
+				value="KN" 
+				data-calc-value=""
+								>
+				Saint Kitts and Nevis			</option>
+					<option 
+				value="LC" 
+				data-calc-value=""
+								>
+				Saint Lucia			</option>
+					<option 
+				value="PM" 
+				data-calc-value=""
+								>
+				Saint Pierre and Miquelon			</option>
+					<option 
+				value="VC" 
+				data-calc-value=""
+								>
+				Saint Vincent and the Grenadines			</option>
+					<option 
+				value="WS" 
+				data-calc-value=""
+								>
+				Samoa			</option>
+					<option 
+				value="SM" 
+				data-calc-value=""
+								>
+				San Marino			</option>
+					<option 
+				value="ST" 
+				data-calc-value=""
+								>
+				Sao Tome and Principe			</option>
+					<option 
+				value="SA" 
+				data-calc-value=""
+								>
+				Saudi Arabia			</option>
+					<option 
+				value="SN" 
+				data-calc-value=""
+								>
+				Senegal			</option>
+					<option 
+				value="RS" 
+				data-calc-value=""
+								>
+				Serbia			</option>
+					<option 
+				value="SC" 
+				data-calc-value=""
+								>
+				Seychelles			</option>
+					<option 
+				value="SL" 
+				data-calc-value=""
+								>
+				Sierra Leone			</option>
+					<option 
+				value="SG" 
+				data-calc-value=""
+								>
+				Singapore			</option>
+					<option 
+				value="BQ-SE" 
+				data-calc-value=""
+								>
+				Sint Eustatius			</option>
+					<option 
+				value="SK" 
+				data-calc-value=""
+								>
+				Slovakia			</option>
+					<option 
+				value="SI" 
+				data-calc-value=""
+								>
+				Slovenia			</option>
+					<option 
+				value="SB" 
+				data-calc-value=""
+								>
+				Solomon Islands			</option>
+					<option 
+				value="SO" 
+				data-calc-value=""
+								>
+				Somalia			</option>
+					<option 
+				value="ZA" 
+				data-calc-value=""
+								>
+				South Africa			</option>
+					<option 
+				value="GS" 
+				data-calc-value=""
+								>
+				South Georgia and the South Sandwich Islands			</option>
+					<option 
+				value="SS" 
+				data-calc-value=""
+								>
+				South Sudan			</option>
+					<option 
+				value="ES" 
+				data-calc-value=""
+								>
+				Spain			</option>
+					<option 
+				value="LK" 
+				data-calc-value=""
+								>
+				Sri Lanka			</option>
+					<option 
+				value="SD" 
+				data-calc-value=""
+								>
+				Sudan			</option>
+					<option 
+				value="SR" 
+				data-calc-value=""
+								>
+				Suriname			</option>
+					<option 
+				value="SJ" 
+				data-calc-value=""
+								>
+				Svalbard and Jan Mayen			</option>
+					<option 
+				value="SZ" 
+				data-calc-value=""
+								>
+				Swaziland			</option>
+					<option 
+				value="SE" 
+				data-calc-value=""
+								>
+				Sweden			</option>
+					<option 
+				value="CH" 
+				data-calc-value=""
+								>
+				Switzerland			</option>
+					<option 
+				value="SY" 
+				data-calc-value=""
+								>
+				Syrian Arab Republic			</option>
+					<option 
+				value="TW" 
+				data-calc-value=""
+								>
+				Taiwan			</option>
+					<option 
+				value="TJ" 
+				data-calc-value=""
+								>
+				Tajikistan			</option>
+					<option 
+				value="TZ" 
+				data-calc-value=""
+								>
+				Tanzania, United Republic of			</option>
+					<option 
+				value="TH" 
+				data-calc-value=""
+								>
+				Thailand			</option>
+					<option 
+				value="TL" 
+				data-calc-value=""
+								>
+				Timor-Leste			</option>
+					<option 
+				value="TG" 
+				data-calc-value=""
+								>
+				Togo			</option>
+					<option 
+				value="TK" 
+				data-calc-value=""
+								>
+				Tokelau			</option>
+					<option 
+				value="TO" 
+				data-calc-value=""
+								>
+				Tonga			</option>
+					<option 
+				value="TT" 
+				data-calc-value=""
+								>
+				Trinidad and Tobago			</option>
+					<option 
+				value="TN" 
+				data-calc-value=""
+								>
+				Tunisia			</option>
+					<option 
+				value="TR" 
+				data-calc-value=""
+								>
+				Turkey			</option>
+					<option 
+				value="TM" 
+				data-calc-value=""
+								>
+				Turkmenistan			</option>
+					<option 
+				value="TC" 
+				data-calc-value=""
+								>
+				Turks and Caicos Islands			</option>
+					<option 
+				value="TV" 
+				data-calc-value=""
+								>
+				Tuvalu			</option>
+					<option 
+				value="UG" 
+				data-calc-value=""
+								>
+				Uganda			</option>
+					<option 
+				value="UA" 
+				data-calc-value=""
+								>
+				Ukraine			</option>
+					<option 
+				value="AE" 
+				data-calc-value=""
+								>
+				United Arab Emirates			</option>
+					<option 
+				value="GB" 
+				data-calc-value=""
+								>
+				United Kingdom			</option>
+					<option 
+				value="US" 
+				data-calc-value=""
+								>
+				United States			</option>
+					<option 
+				value="UM" 
+				data-calc-value=""
+								>
+				United States Minor Outlying Islands			</option>
+					<option 
+				value="UY" 
+				data-calc-value=""
+								>
+				Uruguay			</option>
+					<option 
+				value="UZ" 
+				data-calc-value=""
+								>
+				Uzbekistan			</option>
+					<option 
+				value="VU" 
+				data-calc-value=""
+								>
+				Vanuatu			</option>
+					<option 
+				value="VE" 
+				data-calc-value=""
+								>
+				Venezuela			</option>
+					<option 
+				value="VN" 
+				data-calc-value=""
+								>
+				Vietnam			</option>
+					<option 
+				value="VG" 
+				data-calc-value=""
+								>
+				Virgin Islands, British			</option>
+					<option 
+				value="VI" 
+				data-calc-value=""
+								>
+				Virgin Islands, U.S.			</option>
+					<option 
+				value="WF" 
+				data-calc-value=""
+								>
+				Wallis and Futuna			</option>
+					<option 
+				value="EH" 
+				data-calc-value=""
+								>
+				Western Sahara			</option>
+					<option 
+				value="YE" 
+				data-calc-value=""
+								>
+				Yemen			</option>
+					<option 
+				value="ZM" 
+				data-calc-value=""
+								>
+				Zambia			</option>
+					<option 
+				value="ZW" 
+				data-calc-value=""
+								>
+				Zimbabwe			</option>
+			</select>
+</div>	</div>
+</div> 
+<div class="cf-control-group " data-key="7" data-name="message" data-type="textarea" >
+		<div class="cf-control-input">
+		<textarea name="cf[message]" id="form6_message"
+	
+			aria-label="Message"
+	
+	
+			placeholder="Input here the catalog numbers or description of your request"
+	
+	
+	
+	
+	class="cf-input  "
+	rows="4"></textarea>	</div>
+</div> 
+<div class="cf-control-group " data-key="8" data-name="captcha_8" data-type="captcha" data-required>
+		<div class="cf-control-input">
+		<div class="captcha-container">
+	<div class="captcha-equation">
+		7		+		9 =
+	</div>
+		<input type="text" name="captcha_8" id="form6_captcha8"
+		required
+		autocomplete="off"
+		placeholder="Type the result of the equation"
+		class="cf-input  "
+	/>
+	<input type="hidden" name="c9f0f895fb98ab9159f51fd0297e236d"
+		value="deb950829ce92a32fd84c2d5717544cb"
+	/>
+</div>	</div>
+</div> 
+<div class="cf-control-group " data-key="2" data-name="submit_2" data-type="submit" >
+		<div class="cf-control-input">
+		
+<div class="cf-text-right">
+    <button type="submit" class="cf-btn cf-width-auto ">
+        <span class="cf-btn-text">Request a quote</span>
+        <span class="cf-spinner-container">
+            <span class="cf-spinner">
+                <span class="bounce1" role="presentation"></span>
+                <span class="bounce2" role="presentation"></span>
+                <span class="bounce3" role="presentation"></span>
+            </span>
+        </span>
+    </button>
+</div>
+
+	</div>
+</div> 
+<div class="cf-control-group cf-hide" data-key="5" data-name="region" data-type="hidden" >
+		<div class="cf-control-input">
+		<input type="hidden" name="cf[region]" class="cf-input" value=""
+
+>
+	</div>
+</div> 
+<div class="cf-control-group cf-hide" data-key="6" data-name="manager" data-type="hidden" >
+		<div class="cf-control-input">
+		<input type="hidden" name="cf[manager]" class="cf-input" value=""
+
+>
+	</div>
+</div> 
+<div class="cf-control-group cf-hide" data-key="9" data-name="page" data-type="hidden" >
+		<div class="cf-control-input">
+		<input type="hidden" name="cf[page]" class="cf-input" value="https://enamine.net/login-page?return=aHR0cHM6Ly9lbmFtaW5lLm5ldC9jb21wb25lbnQvZG93bmxvYWQvP3Rhc2s9ZmlsZS5kb3dubG9hZCZmPTExMDE="
+
+>
+	</div>
+</div>				</div>
+			
+					</div>
+
+		<input type="hidden" name="cf[form_id]" value="6">
+
+		<input type="hidden" name="55e9593eab7eee4d4e52703bf46ce095" value="1">
+					<div class="cf-field-hp">
+								<label for="cf-field-69b7f5088b71d" class="cf-label">Last Name</label>
+				<input type="text" name="cf[hnpt]" id="cf-field-69b7f5088b71d" autocomplete="off" class="cf-input"/>
+			</div>
+		
+	</form>
+	</div>
+  <script>
+  (function () {
+    var email = "";
+    if (!email) return;
+
+    // Deduplicate: only identify once per session per email.
+    // (Avoids repeated identify on each page view for logged-in users.)
+    var KEY = 'hs_identified_email';
+    try {
+      var already = sessionStorage.getItem(KEY);
+      if (already === email) return;
+    } catch(e) {}
+
+    window._hsq = window._hsq || [];
+    _hsq.push(['identify', {
+      email: email,
+      firstname: '',
+      // get company of user: $user_fields = FieldsHelper::getFields('com_users.user', $user, true); $user_fields['company']
+    }]);
+
+    try { sessionStorage.setItem(KEY, email); } catch(e) {}
+  })();
+</script>
+</body>
+</html>
