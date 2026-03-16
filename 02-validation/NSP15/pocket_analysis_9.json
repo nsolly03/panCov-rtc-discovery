@@ -1,0 +1,68 @@
+{
+  "complex": "NSP15-homodimer",
+  "suffix": "_9",
+  "docking_box": {
+    "center": [
+      -70.407,
+      44.044,
+      -15.772
+    ],
+    "size": [
+      46.783,
+      52.852,
+      30.153
+    ],
+    "volume": 74556.0,
+    "padding": 8.0,
+    "anchored_on": "Primary SB residues ASP40+ARG62+ARG91+GLU267 (PDB numbering)",
+    "strategy": "Large box spanning distributed interface for fragment screening"
+  },
+  "per_structure": {
+    "6VWW_apo": {
+      "label": "apo 1.90A PRIMARY",
+      "n_pockets": 61,
+      "best_pocket_id": 2,
+      "best_druggability": 0.9,
+      "best_volume": 512.921,
+      "hotspot_overlap": [
+        292,
+        346
+      ],
+      "primary_overlap": [],
+      "ground_truth": null,
+      "correct_analysis": {
+        "finding": "Primary SB residues distributed across 4 separate pockets",
+        "pocket_per_primary": {
+          "ARG91_PDB91": "Pocket 1  (dist=0.0A) \u2014 deepest",
+          "GLU267_PDB267": "Pocket 3  (dist=1.5A)",
+          "ARG62_PDB62": "Pocket 36 (dist=2.4A)",
+          "ASP40_PDB40": "Pocket 45 (dist=2.8A)"
+        },
+        "best_druggability_pocket": "Pocket 2 (score=0.9, vol=513A3) \u2014 active site",
+        "interface_druggability": "Distributed \u2014 fragment-based approach required",
+        "implication": "Dimer interface too flat for single SM covering all 4 SBs. Fragment strategy: target individual pockets near each SB anchor. Consistent with Raj et al. 2021 Rule-of-Three fragment approach for NSP15."
+      }
+    },
+    "6WXC_tipiracil": {
+      "label": "tipiracil-bound 1.80A",
+      "n_pockets": 47,
+      "best_pocket_id": 6,
+      "best_druggability": 0.584,
+      "best_volume": 500.091,
+      "hotspot_overlap": [],
+      "primary_overlap": [],
+      "ground_truth": "tipiracil active site"
+    },
+    "9HH5_YM155": {
+      "label": "YM-155 inhibitor 2.08A",
+      "n_pockets": 48,
+      "best_pocket_id": 13,
+      "best_druggability": 0.774,
+      "best_volume": 910.406,
+      "hotspot_overlap": [],
+      "primary_overlap": [],
+      "ground_truth": "YM-155 binding site"
+    }
+  },
+  "ground_truth_note": "6WXC contains tipiracil (known NendoU inhibitor). 9HH5 contains YM-155 (Sepantronium, 2.08A). fpocket must rediscover these sites as top pockets."
+}

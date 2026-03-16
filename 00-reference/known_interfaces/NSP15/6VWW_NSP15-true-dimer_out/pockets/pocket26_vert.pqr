@@ -1,0 +1,62 @@
+HEADER
+HEADER This is a pqr format file writen by the programm fpocket.                 
+HEADER It represent the voronoi vertices of a single pocket found by the         
+HEADER algorithm.                                                                
+HEADER                                                                           
+HEADER Information about the pocket    26:
+HEADER 0  - Pocket Score                      : 0.0081
+HEADER 1  - Drug Score                        : 0.0404
+HEADER 2  - Number of V. Vertices             :    40
+HEADER 3  - Mean alpha-sphere radius          : 3.9249
+HEADER 4  - Mean alpha-sphere SA              : 0.4526
+HEADER 5  - Mean B-factor                     : 0.3672
+HEADER 6  - Hydrophobicity Score              : 38.6667
+HEADER 7  - Polarity Score                    :     4
+HEADER 8  - Volume Score                      : 4.8889
+HEADER 9  - Real volume (approximation)       : 441.3812
+HEADER 10 - Charge Score                      :     1
+HEADER 11 - Local hydrophobic density Score   : 14.8421
+HEADER 12 - Number of apolar alpha sphere     :    19
+HEADER 13 - Proportion of apolar alpha sphere : 0.4750
+ATOM      1    O STP    26     -61.147  42.358 -45.344    0.00     3.93
+ATOM      2    C STP    26     -62.349  47.903 -40.872    0.00     3.74
+ATOM      3    O STP    26     -63.488  46.998 -39.690    0.00     3.65
+ATOM      4    O STP    26     -63.186  47.298 -40.535    0.00     3.91
+ATOM      5    O STP    26     -63.864  47.070 -40.119    0.00     3.98
+ATOM      6    C STP    26     -61.173  44.609 -44.086    0.00     3.69
+ATOM      7    O STP    26     -65.108  44.810 -39.005    0.00     3.74
+ATOM      8    O STP    26     -65.104  44.794 -39.007    0.00     3.74
+ATOM      9    O STP    26     -66.210  44.997 -38.966    0.00     3.93
+ATOM     10    C STP    26     -65.580  44.221 -39.081    0.00     3.48
+ATOM     11    O STP    26     -67.820  44.330 -39.039    0.00     4.29
+ATOM     12    C STP    26     -62.345  47.896 -40.895    0.00     3.76
+ATOM     13    O STP    26     -62.748  47.422 -41.157    0.00     4.08
+ATOM     14    C STP    26     -62.576  47.358 -41.181    0.00     3.98
+ATOM     15    C STP    26     -68.482  43.254 -39.180    0.00     4.48
+ATOM     16    C STP    26     -68.393  42.615 -39.199    0.00     4.37
+ATOM     17    C STP    26     -68.453  42.790 -39.244    0.00     4.45
+ATOM     18    O STP    26     -61.076  42.344 -45.375    0.00     3.89
+ATOM     19    O STP    26     -65.201  47.006 -40.326    0.00     4.19
+ATOM     20    O STP    26     -65.245  46.902 -40.283    0.00     4.16
+ATOM     21    O STP    26     -64.287  46.897 -40.344    0.00     4.17
+ATOM     22    O STP    26     -64.444  46.640 -40.232    0.00     4.08
+ATOM     23    O STP    26     -63.577  47.908 -42.362    0.00     4.03
+ATOM     24    O STP    26     -63.002  47.311 -41.407    0.00     4.18
+ATOM     25    C STP    26     -62.819  47.136 -41.580    0.00     4.07
+ATOM     26    C STP    26     -61.872  45.407 -42.545    0.00     3.47
+ATOM     27    C STP    26     -61.309  44.625 -44.082    0.00     3.76
+ATOM     28    O STP    26     -61.815  42.372 -45.476    0.00     4.22
+ATOM     29    C STP    26     -61.847  42.353 -45.430    0.00     4.18
+ATOM     30    C STP    26     -61.311  44.435 -44.136    0.00     3.75
+ATOM     31    O STP    26     -61.428  43.665 -44.524    0.00     3.78
+ATOM     32    C STP    26     -61.384  44.040 -44.091    0.00     3.69
+ATOM     33    C STP    26     -61.593  44.042 -43.611    0.00     3.44
+ATOM     34    C STP    26     -61.472  45.005 -44.236    0.00     3.68
+ATOM     35    O STP    26     -62.302  45.842 -45.314    0.00     3.58
+ATOM     36    C STP    26     -62.597  46.992 -43.894    0.00     3.62
+ATOM     37    C STP    26     -62.400  46.790 -43.644    0.00     3.59
+ATOM     38    O STP    26     -63.919  47.873 -42.216    0.00     3.94
+ATOM     39    O STP    26     -65.215  47.014 -40.336    0.00     4.19
+ATOM     40    C STP    26     -65.307  46.900 -40.307    0.00     4.14
+TER
+END

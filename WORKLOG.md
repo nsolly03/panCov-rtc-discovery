@@ -3153,3 +3153,44 @@ Generate manuscript-ready 3D figures showing key interactions.
 **Status:** ✅ Done — proceed to Script 07_9 (pocket detection)
 
 ---
+
+## Entry 101 — Script 07_9: Pocket Detection NSP15 COMPLETE
+**Date:** 2026-03-16
+**Script:** scripts/07_pocket_NSP15_9.py
+
+**fpocket results:**
+  6VWW apo     : 61 pockets | best druggability=0.900 vol=513 A3
+  6WXC tipiracil: 47 pockets | best druggability=0.584
+  9HH5 YM-155  : 48 pockets | best druggability=0.774
+
+**CRITICAL FINDING — distributed interface:**
+  Primary SB residues each in SEPARATE pockets (dimer interface too flat):
+    ARG91  (PDB91)  -> Pocket 1  dist=0.0A  deepest contact
+    GLU267 (PDB267) -> Pocket 3  dist=1.5A
+    ARG62  (PDB62)  -> Pocket 36 dist=2.4A
+    ASP40  (PDB40)  -> Pocket 45 dist=2.8A
+  Best druggability pocket (#2, score=0.9) = active site, NOT dimer interface
+  Dimer interface is flat PPI — no single pocket spans all 4 primary SBs
+
+**Drug design implication:**
+  Classic PPI interface challenge — flat, distributed
+  Fragment-based approach required (Rule of Three, Raj et al. 2021)
+  Target individual pockets near each SB anchor with fragments
+  Consistent with NSP13-Helicase (druggability=0.001) pattern
+
+**Docking box (centered on 4 primary SB residue Ca coords):**
+  Center : [fill from python output]
+  Size   : [fill from python output]
+  Volume : [fill from python output]
+  Padding: 8.0 A (larger to span distributed interface)
+
+**Active site note:**
+  Best pocket (0.9 druggability) = NendoU active site
+  Contains His235/His250/Lys290 catalytic triad
+  Script 16_9 will verify tipiracil/YM-155 rediscovery in this pocket
+  -> Active site IS druggable — but not our dimer interface target
+
+**Output:** 02-validation/NSP15/pocket_analysis_9.json
+**Status:** ✅ Done — proceed to Script 08_9 (docking preparation)
+
+---
