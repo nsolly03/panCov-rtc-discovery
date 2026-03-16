@@ -3060,3 +3060,44 @@ Generate manuscript-ready 3D figures showing key interactions.
 **Status:** ✅ Scan complete — awaiting 9HH5 detail output
 
 ---
+
+## Entry 099 — Script 05_9: Interface Analysis NSP15 COMPLETE
+**Date:** 2026-03-16
+**Script:** scripts/05_interface_NSP15_9.py
+
+**Key fix applied:**
+  6W01, 6WLC, 6WXC were using asymmetric unit (7 contacts)
+  Re-extracted biological assembly A+A-2 for all three structures
+  6W01: 75 contacts | 6WLC: 79 contacts | 6WXC: 74 contacts ✅
+
+**Contact summary:**
+  6VWW  SB=2  HB=6  HY=67  total=75  A:31  B:32
+  6W01  SB=3  HB=6  HY=66  total=75  A:30  B:30
+  6WLC  SB=2  HB=6  HY=71  total=79  A:31  B:32
+  6WXC  SB=2  HB=7  HY=65  total=74  A:30  B:29
+  Interface character: HY-dominated (269 HY / 25 HB / 9 SB)
+
+**Salt bridge analysis — homodimer symmetry key insight:**
+  Homodimer = each SB appears TWICE (once from each chain direction)
+  ASP40(A)--ARG91(B): 6VWW(2.65A) + 6WLC(3.00A)
+  ARG91(A)--ASP40(B): 6W01(3.00A) + 6WXC(3.02A)
+  -> ASP40--ARG91 SAME pair seen from both sides = ALL 4 STRUCTURES ★ PRIMARY
+  ARG62(A)--GLU267(B): 6VWW(3.73A) + 6W01(3.54A) + 6WXC(3.49A) reversed
+  GLU267(A)--ARG62(B): 6W01 + 6WXC
+  -> ARG62--GLU267 SAME pair = ALL 4 STRUCTURES ★ PRIMARY
+  LYS47--GLU42: 6W01 + 6WLC only — secondary
+
+**PRIMARY salt bridges (all 4 structures):**
+  ASP40 -- ARG91 : 2.65-3.02 A ★ pan-structure anchor
+  ARG62 -- GLU267: 3.49-3.73 A ★ pan-structure anchor
+
+**Consensus hotspots:**
+  Chain A: 59 residues (>=2 structures)
+  Chain B: 60 residues (>=2 structures)
+  NOTE: high count expected for homodimer — both chains have identical
+  sequence so positions overlap between A and B lists
+
+**Output:** 02-validation/NSP15/interface_analysis_9.json
+**Status:** ✅ Done — proceed to Script 06_9 (conservation)
+
+---

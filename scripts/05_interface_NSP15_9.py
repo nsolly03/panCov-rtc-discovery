@@ -28,17 +28,17 @@ STRUCTURES = {
         "chains": ("A","B"),
     },
     "6W01": {
-        "path"  : "00-reference/known_interfaces/NSP15/6W01_NSP15-dimer.pdb",
+        "path"  : "00-reference/known_interfaces/NSP15/6W01_NSP15-true-dimer.pdb",
         "label" : "SARS-CoV-2 apo 2.20A",
         "chains": ("A","B"),
     },
     "6WLC": {
-        "path"  : "00-reference/known_interfaces/NSP15/6WLC_NSP15-dimer-UMP.pdb",
+        "path"  : "00-reference/known_interfaces/NSP15/6WLC_NSP15-true-dimer-UMP.pdb",
         "label" : "SARS-CoV-2 +UMP 1.70A",
         "chains": ("A","B"),
     },
     "6WXC": {
-        "path"  : "00-reference/known_interfaces/NSP15/6WXC_NSP15-dimer-tipiracil.pdb",
+        "path"  : "00-reference/known_interfaces/NSP15/6WXC_NSP15-true-dimer-tipiracil.pdb",
         "label" : "SARS-CoV-2 +tipiracil 1.80A",
         "chains": ("A","B"),
     },
