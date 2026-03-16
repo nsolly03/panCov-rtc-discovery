@@ -1,0 +1,13 @@
+receptor = receptor_NSP15_9.pdbqt
+
+center_x = -70.407
+center_y = 44.044
+center_z = -15.772
+
+size_x = 46.783
+size_y = 52.852
+size_z = 30.153
+
+exhaustiveness = 16
+num_modes = 9
+energy_range = 3
