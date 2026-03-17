@@ -78,3 +78,31 @@ Coronaviruses continue to pose pandemic threats. SARS-CoV-2 variants evade exist
 
 **Status:** ✅ Complete
 **Next:** Phase 0.2 — MDM2/p53 positive control
+
+## Entry 004 — Phase 0.2 Complete: MDM2/p53 Contact Mapping Passed
+
+**Date:** 2026-03-17
+**Phase:** 0 — Ground Truth Calibration
+**Step:** 0.2 — MDM2/p53 positive control
+
+**What:** Ran contact mapping on MDM2/p53 complex (1YCR). All known hotspots detected.
+
+**Structure:** 1YCR — MDM2 chain A (85 res) + p53 peptide chain B (13 res)
+
+**Results:**
+- Total contacts: 48
+- Unique MDM2 residues at interface: 24
+- Unique p53 residues at interface: 11
+- PHE19: 7 contacts (GLN72, MET62, ILE61) ✓
+- TRP23: 10 contacts (LEU54, GLY58, VAL93) ✓ — dominant anchor
+- LEU26: 4 contacts (HIS96, VAL93, LEU54) ✓
+
+**Validation:** PASSED
+
+**Phase 0 summary:** Both positive controls passed. Pipeline calibrated.
+- 5.0A distance cutoff: confirmed correct
+- Chain assignment: verified manually before running
+- Hotspot detection: reliable across two independent systems
+
+**Status:** ✅ Complete
+**Next:** Phase 0.3 — Negative control
