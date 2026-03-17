@@ -1,13 +1,10 @@
 {
   "interface": "NSP12-NSP7",
   "date": "2026-03-18",
-  "method": "BSA + contact score from BioPython (02-validation pipeline)",
-  "cutoff_A": 5.0,
   "n_total": 29,
   "n_nsp12": 16,
   "n_nsp7": 13,
   "top_anchor": "PHE440",
-  "anchor_composite": 1.0,
   "salt_bridges": {
     "LYS2\u2014GLU431": [
       [
@@ -59,7 +56,7 @@
   ],
   "contacts": [
     {
-      "residue": "NSP12-PHE440440",
+      "residue": "NSP12-PHE440",
       "chain": "NSP12",
       "position": 440,
       "aa": "PHE",
@@ -72,7 +69,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP12-PRO412412",
+      "residue": "NSP12-PRO412",
       "chain": "NSP12",
       "position": 412,
       "aa": "PRO",
@@ -85,7 +82,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP12-PHE442442",
+      "residue": "NSP12-PHE442",
       "chain": "NSP12",
       "position": 442,
       "aa": "PHE",
@@ -98,7 +95,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP7-LYS11",
+      "residue": "NSP7-LYS1",
       "chain": "NSP7",
       "position": 1,
       "aa": "LYS",
@@ -111,7 +108,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP12-GLU431431",
+      "residue": "NSP12-GLU431",
       "chain": "NSP12",
       "position": 431,
       "aa": "GLU",
@@ -124,7 +121,7 @@
       "is_hotspot": false
     },
     {
-      "residue": "NSP12-TYR420420",
+      "residue": "NSP12-TYR420",
       "chain": "NSP12",
       "position": 420,
       "aa": "TYR",
@@ -137,7 +134,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP12-ALA443443",
+      "residue": "NSP12-ALA443",
       "chain": "NSP12",
       "position": 443,
       "aa": "ALA",
@@ -150,7 +147,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP12-PHE415415",
+      "residue": "NSP12-PHE415",
       "chain": "NSP12",
       "position": 415,
       "aa": "PHE",
@@ -163,7 +160,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP12-PHE843843",
+      "residue": "NSP12-PHE843",
       "chain": "NSP12",
       "position": 843,
       "aa": "PHE",
@@ -176,7 +173,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP12-GLY413413",
+      "residue": "NSP12-GLY413",
       "chain": "NSP12",
       "position": 413,
       "aa": "GLY",
@@ -189,7 +186,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP7-LEU4040",
+      "residue": "NSP7-LEU40",
       "chain": "NSP7",
       "position": 40,
       "aa": "LEU",
@@ -202,7 +199,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP7-SER1414",
+      "residue": "NSP7-SER14",
       "chain": "NSP7",
       "position": 14,
       "aa": "SER",
@@ -215,7 +212,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP12-THR409409",
+      "residue": "NSP12-THR409",
       "chain": "NSP12",
       "position": 409,
       "aa": "THR",
@@ -228,7 +225,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP7-ASP44",
+      "residue": "NSP7-ASP4",
       "chain": "NSP7",
       "position": 4,
       "aa": "ASP",
@@ -241,7 +238,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP7-VAL1111",
+      "residue": "NSP7-VAL11",
       "chain": "NSP7",
       "position": 11,
       "aa": "VAL",
@@ -254,7 +251,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP7-VAL55",
+      "residue": "NSP7-VAL5",
       "chain": "NSP7",
       "position": 5,
       "aa": "VAL",
@@ -267,7 +264,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP12-ARG3333",
+      "residue": "NSP12-ARG33",
       "chain": "NSP12",
       "position": 33,
       "aa": "ARG",
@@ -280,7 +277,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP7-ALA2929",
+      "residue": "NSP7-ALA29",
       "chain": "NSP7",
       "position": 29,
       "aa": "ALA",
@@ -293,7 +290,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP7-ASP3737",
+      "residue": "NSP7-ASP37",
       "chain": "NSP7",
       "position": 37,
       "aa": "ASP",
@@ -306,7 +303,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP7-GLN3333",
+      "residue": "NSP7-GLN33",
       "chain": "NSP7",
       "position": 33,
       "aa": "GLN",
@@ -319,7 +316,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP12-ILE3737",
+      "residue": "NSP12-ILE37",
       "chain": "NSP12",
       "position": 37,
       "aa": "ILE",
@@ -332,7 +329,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP12-LYS4141",
+      "residue": "NSP12-LYS41",
       "chain": "NSP12",
       "position": 41,
       "aa": "LYS",
@@ -345,7 +342,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP7-VAL1515",
+      "residue": "NSP7-VAL15",
       "chain": "NSP7",
       "position": 15,
       "aa": "VAL",
@@ -358,7 +355,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP7-LEU1212",
+      "residue": "NSP7-LEU12",
       "chain": "NSP7",
       "position": 12,
       "aa": "LEU",
@@ -371,7 +368,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP12-???1414",
+      "residue": "NSP12-???14",
       "chain": "NSP12",
       "position": 14,
       "aa": "???",
@@ -384,7 +381,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP7-ALA4141",
+      "residue": "NSP7-ALA41",
       "chain": "NSP7",
       "position": 41,
       "aa": "ALA",
@@ -397,7 +394,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP7-SER2323",
+      "residue": "NSP7-SER23",
       "chain": "NSP7",
       "position": 23,
       "aa": "SER",
@@ -410,7 +407,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP12-???2323",
+      "residue": "NSP12-???23",
       "chain": "NSP12",
       "position": 23,
       "aa": "???",
@@ -423,7 +420,7 @@
       "is_hotspot": true
     },
     {
-      "residue": "NSP12-ASP4040",
+      "residue": "NSP12-ASP40",
       "chain": "NSP12",
       "position": 40,
       "aa": "ASP",
