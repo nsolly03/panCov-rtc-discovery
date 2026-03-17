@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "pdb_file": "/home/nseku/projects/rtc-pan-coronavirus/03-virtual-screening/NSP12-NSP7_3/receptor_NSP12-NSP7_3.pdb",
+    "chain_a": "A",
+    "chain_c": "C",
+    "n_res_a": 834,
+    "n_res_c": 63,
+    "anchor": "PHE440",
+    "pos_ctrl_dist": 3.690000057220459,
+    "neg_ctrl_dist": 66.97000122070312,
+    "n_pass": 7,
+    "n_warn": 0,
+    "n_fail": 0,
+    "overall": "PASS"
+  },
+  "checks": [
+    {
+      "name": "C1: Both chains present",
+      "status": "PASS",
+      "detail": "Chains found: ['A', 'C']",
+      "value": 1
+    },
+    {
+      "name": "C2: Chain sizes correct",
+      "status": "PASS",
+      "detail": "Chain A: 834 res (expected ~834)  Chain C: 63 res (expected ~63)",
+      "value": 1
+    },
+    {
+      "name": "C3: Chains adjacent (<10 \u00c5)",
+      "status": "PASS",
+      "detail": "Min inter-chain distance (sample): 3.00 \u00c5",
+      "value": 3.0
+    },
+    {
+      "name": "C4: Backbone complete",
+      "status": "PASS",
+      "detail": "Chain A missing: 0 residues  Chain C missing: 0 residues",
+      "value": 0
+    },
+    {
+      "name": "C5: PHE440 present and correct",
+      "status": "PASS",
+      "detail": "Present: True  Identity: PHE (expected PHE)",
+      "value": 1
+    },
+    {
+      "name": "C6 [+ctrl]: PHE440 near NSP7 (<15.0 \u00c5)",
+      "status": "PASS",
+      "detail": "PHE440 to NSP7 min dist: 3.69 \u00c5",
+      "value": 3.690000057220459
+    },
+    {
+      "name": "C7 [-ctrl]: GLY200 far from NSP7 (>25.0 \u00c5)",
+      "status": "PASS",
+      "detail": "GLY200 to NSP7 min dist: 66.97 \u00c5",
+      "value": 66.97000122070312
+    }
+  ]
+}

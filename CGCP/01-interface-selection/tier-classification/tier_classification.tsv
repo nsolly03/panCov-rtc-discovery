@@ -1,0 +1,10 @@
+interface	tier	total_score	c1_af3_f1	c2_pdb_count	c3_druggability	c4_conservation	c5_hotspots	c6_anchor_cons1	af3_f1_value	druggability_value	mean_cons_value	n_hotspots	n_conserved	anchor	anchor_cons	salt_bridges	selectivity	pharmacophore	druggability_note	notes
+NSP12-NSP7	S	6	1	1	1	1	1	1	0.951	0.961	0.85	18	9	PHE440	1.0	1	pan-coronavirus	PHE440 aromatic hydrophobic core	Highest druggability in project	RdRp cofactor binding — thumb subdomain
+NSP15	S	5	1	1	1	0	1	1	0.9	0.9	0.593	60	23	ASP39	1.0	2	pan-coronavirus	ASP39-ARG61 salt bridge (dimer)	Active site druggable; dimer interface flat	NendoU homodimer — IFN evasion
+NSP9-NSP12	S	5	1	0	1	1	1	1	0.837	0.895	0.68	13	6	ARG733	1.0	2	pan-coronavirus	ARG733 NiRAN domain	Novel NiRAN interface — single PDB	NiRAN domain — novel interface
+NSP12-NSP8	S	6	1	1	1	1	1	1	0.934	0.874	0.72	23	13	LYS332	1.0	3	pan-coronavirus	LYS332-ASP99 salt bridge network	Rich SB network — multi-anchor	RdRp processivity — fingers/palm
+NSP10-NSP16	S	6	1	1	1	1	1	1	0.878	0.546	0.91	14	12	LYS93	1.0	3	pan-coronavirus	LYS93-ASP106 SB + Zn1 finger	Highest druggability for non-Tier1	Methyltransferase activation + Zn1 finger
+NSP7-NSP8	S	6	1	1	1	1	1	1	0.87	0.531	0.71	21	11	PHE92	1.0	1	pan-coronavirus	PHE92 hydrophobic core (Mode B)	Mode B (AF3) druggable; Mode A (crystal) not	Cofactor assembly — dual Mode A/B
+NSP10-NSP14	S	5	1	1	0	1	1	1	0.952	0.001	0.72	17	9	HIS80	1.0	1	pan-coronavirus	HIS80-ASP126 salt bridge	PPI interface — flat, no pocket	Exoribonuclease regulation
+NSP13-Helicase	T	3	1	1	0	0	1	0	0.91	0.001	0.45	17	4	ILE480	0.689	2	SARS-selective	ILE480 + LYS414 dual salt bridge	Flat PPI — SARS-CoV-1/2 only	Helicase homodimer — SARS-selective
+NSP12-NSP13	T	3	0	1	0	1	1	0	0.2	0.0	0.68	12	7	MET902	0.582	1	dual	TYR93-MET902 + ASP901-LYS94	Transient — AF3 FAIL, crystal only	Polymerase-helicase junction — transient

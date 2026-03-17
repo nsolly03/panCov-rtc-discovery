@@ -300,3 +300,107 @@ Updated (literature-validated thresholds from Zhou et al.):
 
 **Status:** ✅ Documented. WORKFLOW.md updated accordingly.
 **Next:** Phase 1 — Interface selection
+
+## Entry 010 — Enamine REAL Library Characterized and Moved to Correct Location
+
+**Date:** 2026-03-17
+**Phase:** 4 — Ligand Discovery (preparation)
+**Step:** Library characterization
+
+**File:** 2025.02_Enamine_REAL_HAC_22_23_1.1B_CXSMILES.cxsmiles.bz2
+**Location:** CGCP/04-ligand-discovery/library/enamine-real/
+**Compressed size:** 24 GB
+
+### File Structure
+
+Format: Tab-separated CXSMILES with header line
+
+| Column | Description | Notes |
+|--------|-------------|-------|
+| smiles | CXSMILES string | Input for docking |
+| id | Enamine compound ID | Unique identifier |
+| MW | Molecular weight | Pre-computed |
+| HAC | Heavy atom count | 22-23 (this subset) |
+| sLogP | Calculated LogP | Pre-computed |
+| HBA | H-bond acceptors | Pre-computed |
+| HBD | H-bond donors | Pre-computed |
+| RotBonds | Rotatable bonds | Pre-computed |
+| FSP3 | Fraction sp3 carbons | Pre-computed |
+| TPSA | Topological polar surface area | Pre-computed |
+| QED | Quantitative drug-likeness | Pre-computed |
+| lead-like | Lead-likeness flag | Pre-computed |
+| PPI_modulators | PPI modulator flag | CRITICAL — see below |
+| natural_product-like | NP-likeness flag | Pre-computed |
+| Type | Compound type | S = standard |
+| InChIKey | Standard InChI key | For deduplication |
+
+### Critical Finding: PPI_modulators Column
+
+Enamine has pre-flagged compounds in this library as PPI modulators.
+This is our primary filter — use PPI_modulators flag BEFORE any other filter.
+
+Impact on Phase 4 pipeline:
+- Previous plan: filter 1.1B by Lipinski + pharmacophore then dock
+- Updated plan: filter PPI_modulators first, then apply property filters
+- Expected reduction: 1.1B → tens of millions before any docking
+
+### Additional Finding: All Properties Pre-Computed
+
+MW, sLogP, HBA, HBD, RotBonds, QED, TPSA are all pre-calculated by Enamine.
+No RDKit recalculation needed for basic property filters.
+This significantly speeds up Step 9 library preparation.
+
+### Updated Step 9 Filter Order (Phase 4)
+
+| Step | Filter | Column | Threshold |
+|------|--------|--------|-----------|
+| 1 | PPI modulator flag | PPI_modulators | = flagged |
+| 2 | LogP | sLogP | <= 3.5 |
+| 3 | H-bond donors | HBD | <= 3 |
+| 4 | H-bond acceptors | HBA | <= 7 |
+| 5 | Rotatable bonds | RotBonds | <= 8 |
+| 6 | Drug-likeness | QED | >= 0.5 |
+| 7 | PAINS filter | RDKit | Remove flagged |
+| 8 | Pharmacophore pre-filter | RDKit | Must match anchor feature |
+| 9 | Tanimoto diversity | RDKit | >= 0.4 cutoff |
+
+### Next Step for This Library
+
+Before Phase 4 begins, run a characterization script to answer:
+- How many compounds are flagged as PPI_modulators?
+- What fraction pass all property filters?
+- What is the sLogP distribution?
+This determines feasibility of active learning vs direct screening.
+
+**Status:** ✅ File characterized and moved to correct location
+**Next:** Phase 1 — Interface selection (library ready for Phase 4 when needed)
+
+## Entry 012 — Phase 2 Step 1: NSP12-NSP7 Structural Verification
+
+**Date:** 2026-03-17
+**Phase:** 2 — Deep Dive
+**Step:** 1 — Structural verification
+**Interface:** NSP12-NSP7
+**Script:** CGCP/scripts/phase-2/step01_structural_verification_NSP12-NSP7.py
+
+**Structure:** receptor_NSP12-NSP7_3.pdb
+**Chains:** A = NSP12 (834 res) | C = NSP7 (63 res)
+
+**Checklist:** 7 PASS | 0 WARN | 0 FAIL
+
+| Check | Result |
+|-------|--------|
+| C1: Both chains present | PASS |
+| C2: Chain sizes correct (A=834, C=63) | PASS |
+| C3: Chains adjacent (3.00 A near interface) | PASS |
+| C4: Backbone complete (0 missing) | PASS |
+| C5: PHE440 present and correct | PASS |
+| C6: +ctrl PHE440 to NSP7 = 3.69 A (<15 A) | PASS |
+| C7: -ctrl GLY200 to NSP7 = 66.97 A (>25 A) | PASS |
+
+**Key finding:** PHE440 is 3.69 A from NSP7 confirming it sits
+directly at the interface. GLY200 is 66.97 A away confirming
+clean separation between interface and surface residues.
+
+**Status:** ✅ Complete
+**Next:** Phase 2 Step 2 — raw contact mapping
