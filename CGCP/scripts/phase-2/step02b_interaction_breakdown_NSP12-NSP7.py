@@ -213,7 +213,7 @@ def panel_a(ax, rows):
                        rotation=90, ha='center', va='top')
     ax.tick_params(axis='x', pad=2, length=3, width=0.75)
     ax.set_xlim(-0.6, len(nsp12) - 0.4)
-    ax.set_ylabel('Number of contacts', fontsize=9)
+    ax.set_ylabel('Atom-atom contacts (within 5.0 A)', fontsize=9)
 
     ymax = max([h+b+s for h,b,s in
                 zip(hy_vals,hb_vals,sb_vals)]) + 2
@@ -224,8 +224,8 @@ def panel_a(ax, rows):
     ax.set_yticks(range(0, int(ymax)+2, 2))
 
     ax.set_title(
-        'A   Interaction type breakdown — NSP12 residues\n'
-        '(hydrophobic / H-bond / salt bridge contacts at 5.0 A)',
+        'A   Atom-level breakdown — NSP12\n'
+        '(unit = one atom-atom contact pair, 5.0 A cutoff)',
         loc='left', fontsize=8.5, pad=6, linespacing=1.5)
 
     return ax
@@ -307,8 +307,8 @@ def panel_b(ax, rows, partners, aa_lookup):
     ax.spines['bottom'].set_position(('outward', 5))
 
     ax.set_title(
-        'B   Contact partner map — NSP12 vs NSP7\n'
-        '(bubble size = proximity; label = min dist A)',
+        'B   Residue-level contact partners — NSP12 vs NSP7\n'
+        '(bubble = NSP12-NSP7 residue pair; label = min atom dist A)',
         loc='left', fontsize=8.5, pad=6, linespacing=1.5)
 
     return ax
