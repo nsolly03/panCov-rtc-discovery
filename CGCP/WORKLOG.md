@@ -404,3 +404,62 @@ clean separation between interface and surface residues.
 
 **Status:** ✅ Complete
 **Next:** Phase 2 Step 2 — raw contact mapping
+
+## Entry 013 — Phase 2 Step 1: 3D Visualization and Prism Distance Chart
+
+**Date:** 2026-03-17
+**Phase:** 2 — Deep Dive
+**Step:** 1 — Structural verification (3D visuals)
+**Interface:** NSP12-NSP7
+
+**What:** Generated 3D PyMOL visualization and Prism distance chart
+to confirm spatial separation between interface cluster and catalytic triad.
+
+**Scientific rationale for negative control update:**
+GLY200 was replaced as negative control with the RdRp catalytic triad
+(ASP618, SER759, ASP760) — verified present in receptor by grep.
+These are biologically meaningful: if PHE440 is the interface anchor,
+it should be far from the polymerase active site on the opposite face.
+This is a real scientific statement, not just a geometry check.
+
+**Coordinates verified from receptor_NSP12-NSP7_3.pdb:**
+
+| Residue | Role | x | y | z |
+|---------|------|---|---|---|
+| PHE440(A) | Primary anchor | 95.961 | 79.936 | 117.219 |
+| PRO412(A) | Cluster member | 96.494 | 85.414 | 124.025 |
+| PHE415(A) | Cluster member | 90.946 | 77.963 | 125.821 |
+| TYR420(A) | Cluster member | 88.977 | 69.828 | 123.848 |
+| PHE442(A) | Cluster member | 99.246 | 84.670 | 118.641 |
+| ASP618(A) | Catalytic triad | 98.728 | 85.587 | 95.303 |
+| SER759(A) | Catalytic triad | 89.032 | 91.496 | 96.029 |
+| ASP760(A) | Catalytic triad | 92.669 | 90.269 | 95.657 |
+
+**Distance analysis (PHE440 Ca to residue Ca):**
+
+| Residue | Distance | Interpretation |
+|---------|----------|----------------|
+| ASP618 (triad) | 22.8 A | Far — non-interface confirmed |
+| SER759 (triad) | 25.1 A | Far — non-interface confirmed |
+| ASP760 (triad) | 24.1 A | Far — non-interface confirmed |
+| LYS2 (NSP7) | 17.1 A | Near — interface confirmed |
+| MET3 (NSP7) | 14.0 A | Near — interface confirmed |
+| SER4 (NSP7) | 11.7 A | Near — interface confirmed |
+
+**Key finding:** PHE440 is 11-17 A from NSP7 (interface) and
+23-25 A from catalytic triad (opposite face). The two regions
+are spatially distinct — this validates the interface specificity
+of PHE440 and confirms the catalytic triad as legitimate negative control.
+
+**Scripts:**
+- pymol_step01_spatial_map_NSP12-NSP7.pml — 3D visualization
+- plot_step01_distances_NSP12-NSP7.py — Prism distance chart
+
+**Outputs:**
+- visuals/Fig_Step01_3D_overview.png
+- visuals/Fig_Step01_3D_anchor_zoom.png
+- visuals/Fig_Step01_Distances_Prism.png
+- pymol-sessions/step01_spatial_map.pse
+
+**Status:** ✅ Complete
+**Next:** Phase 2 Step 2 — raw contact mapping
