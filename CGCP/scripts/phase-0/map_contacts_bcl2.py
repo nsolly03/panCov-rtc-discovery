@@ -85,7 +85,7 @@ def check_known_hotspots(contacts, chain_id='A'):
 
 
 def main():
-    pdb_file = '2YXJ.pdb'
+    pdb_file = '3FDL.pdb'
     chain_a, chain_b = 'A', 'B'
     
     print("=" * 60)

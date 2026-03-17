@@ -52,3 +52,29 @@ Coronaviruses continue to pose pandemic threats. SARS-CoV-2 variants evade exist
 **Status:** Complete
 
 **Next:** Phase 0.1 — BCL-2/BAX positive control setup
+
+## Entry 003 — Phase 0.1 Complete: BCL-2/BAX Contact Mapping Passed
+
+**Date:** 2026-03-17
+**Phase:** 0 — Ground Truth Calibration
+**Step:** 0.1 — BCL-2/BAX contact mapping validation
+
+**What:** Ran contact mapping pipeline on BCL-XL/BIM complex. All known hotspots detected.
+
+**Issue encountered and resolved:**
+- 2YXJ was incorrectly a BCL-XL homodimer — no BIM peptide present
+- Replaced with 3FDL (BCL-XL chain A, 158 res + BIM chain B, 26 res)
+- Diagnostic worked correctly: pipeline detected symmetric contacts as warning
+
+**Results:**
+- Total contacts: 65
+- Unique chain A residues at interface: 27
+- Unique chain B residues at interface: 20
+- PHE105: 2 contacts (LEU94, ILE97) ✓
+- VAL126: 4 contacts (ALA91, GLU87, LEU94) ✓
+- PHE146: 2 contacts (LEU94, ILE90) ✓
+
+**Validation:** PASSED — pipeline correctly identifies known hotspots at 5.0A cutoff
+
+**Status:** ✅ Complete
+**Next:** Phase 0.2 — MDM2/p53 positive control
