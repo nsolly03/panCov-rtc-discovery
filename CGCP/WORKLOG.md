@@ -473,3 +473,26 @@ of PHE440 and confirms the catalytic triad as legitimate negative control.
 cluster residues (blue spheres), catalytic triad (orange spheres), chain labels
 **Status:** Complete
 **Next:** Phase 2 Step 2 — raw contact mapping
+
+## Entry 015 — Phase 2 Step 2: NSP12-NSP7 Contact Mapping
+
+**Date:** 2026-03-18
+**Phase:** 2 — Deep Dive | **Step:** 2 — Raw contact mapping
+**Method:** Read from existing 02-validation outputs (no recomputation)
+
+**Results:**
+- Total interface residues: 29 (NSP12=16, NSP7=13)
+- Top anchor: PHE440 (composite=1.000, cons=1.000, contacts=15)
+- Salt bridges: LYS2-GLU431, LYS411-GLU23
+
+**Top 5:**
+| Residue | BSA | Contacts | Conservation | Composite |
+|---------|-----|----------|-------------|-----------|
+| PHE440 | 62.8 | 15 | 1.000 | 1.0000 |
+| PRO412 | 73.5 | 9 | 1.000 | 0.8953 |
+| PHE442 | 51.9 | 9 | 1.000 | 0.7741 |
+| LYS1(NSP7) | 35.2 | 12 | 1.000 | 0.7655 SB |
+| GLU431 | 31.5 | 12 | 1.000 | 0.7476 SB |
+
+**Status:** ✅ Complete
+**Next:** Phase 2 Step 3 — feature classification
