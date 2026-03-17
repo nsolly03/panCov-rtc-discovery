@@ -463,3 +463,13 @@ of PHE440 and confirms the catalytic triad as legitimate negative control.
 
 **Status:** ✅ Complete
 **Next:** Phase 2 Step 2 — raw contact mapping
+
+## Entry 014 — Step 1 visualization finalized in ChimeraX
+
+**Date:** 2026-03-18
+**Decision:** ChimeraX adopted as standard 3D visualization tool for all Phase 2 figures
+**Rationale:** Cleaner rendering, better surface representation, easier label control
+**Figure contents:** NSP12 surface (blue), NSP7 ball+stick (green), PHE440 anchor (red sphere),
+cluster residues (blue spheres), catalytic triad (orange spheres), chain labels
+**Status:** Complete
+**Next:** Phase 2 Step 2 — raw contact mapping
