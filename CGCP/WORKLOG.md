@@ -224,3 +224,79 @@ showing 80% of binding energy concentrated in few residues for druggable PPIs.
 
 **Status:** ✅ Complete
 **Next:** Phase 0 complete — proceed to Phase 1 interface selection
+
+## Entry 009 — Key Reference: AI-Accelerated Virtual Screening (Zhou et al. 2024)
+
+**Date:** 2026-03-17
+**Type:** Reference + Workflow Update
+
+### Reference
+
+| Field | Detail |
+|-------|--------|
+| Citation | Zhou G, et al. An artificial intelligence accelerated virtual screening platform for drug discovery. Nature Communications (2024) 15:7761 |
+| DOI | https://doi.org/10.1038/s41467-024-52061-7 |
+| Code | https://github.com/gfzhou/OpenVS |
+
+### Why This Paper Is Relevant to CGCP
+
+- RosettaVS outperforms AutoDock Vina and Glide on polar, shallow, small pockets
+- PPI interfaces are exactly polar, shallow, small — direct relevance to our targets
+- Active learning screened 5.5B compounds using only 0.11% actual docking
+- Two-stage VSX/VSH protocol separates fast triage from accurate re-scoring
+- Hit rates: 14 percent (KLHDC2) and 44 percent (NaV1.7) — validated filter pipeline
+- X-ray crystallography validated predicted docking pose — gold standard we adopt
+
+### Enamine REAL Library — Already Available
+
+File: 2025.02_Enamine_REAL_HAC_22_23_1.1B_CXSMILES.cxsmiles.bz2
+Size: 1.1 billion compounds (HAC 22-23 subset)
+Format: CXSMILES compressed
+Status: Available locally — no download needed for Phase 4
+
+This is the same Enamine REAL library used by Zhou et al. (their version was 5.5B,
+ours is the HAC 22-23 filtered subset at 1.1B — appropriate for drug-like MW range).
+
+### Three Workflow Updates Applied to WORKFLOW.md
+
+#### Update 1: Two-Stage Docking (Phase 4 Step 10)
+
+Previous: single-stage AutoDock Vina docking
+Updated:
+- Stage 1 VSX (express): full filtered library, rigid receptor, fast triage
+- Stage 2 VSH (high precision): top 1000 from Stage 1, flexible receptor sidechains
+  within 4.5A of cluster, pharmacophore constraints enforced
+Rationale: receptor flexibility critical for polar shallow PPI interfaces.
+
+#### Update 2: Active Learning for HPC Screening (Phase 4 Step 12)
+
+Previous: dock all filtered compounds on NIC5
+Updated three-phase protocol:
+- Phase 12a: Seed docking of 500K diverse compounds, train fingerprint FFN classifier
+- Phase 12b: Active learning iterations — model predicts full library, top 250K docked,
+  retrain, repeat until convergence (5-10 iterations, AUC target >0.85)
+- Phase 12c: VSH re-docking of top 50K with flexible receptor
+Rationale: 1.1B compounds cannot all be docked — active learning makes it feasible.
+
+#### Update 3: Validated Filter Pipeline (Phase 4 Step 9)
+
+Previous: general Lipinski filters
+Updated (literature-validated thresholds from Zhou et al.):
+| Filter | Threshold | Rationale |
+|--------|-----------|-----------|
+| cLogP | <= 3.5 | Remove excessively hydrophobic |
+| Unsatisfied H-bonds | <= 1 | Remove poor binding geometry |
+| Torsion outliers | <= 1 | Remove strained conformations |
+| PAINS | Remove flagged | Eliminate frequent hitters |
+| Pharmacophore pre-filter | Must match anchor | Reduce search space |
+| Tanimoto diversity | >= 0.4 | Cluster and pick representatives |
+
+### What Does NOT Change
+
+- Phases 0-3 unchanged — ground truth, interface selection, deep dive, validation
+- CGCP pharmacophore concept unchanged — Zhou et al. never address PPI interfaces
+- Phase 5 hit analysis unchanged
+- Scientific innovation of CGCP stands — this paper validates our tooling choices only
+
+**Status:** ✅ Documented. WORKFLOW.md updated accordingly.
+**Next:** Phase 1 — Interface selection
