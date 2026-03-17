@@ -48,3 +48,17 @@ data/zinc20/admet_filter_summary.json
 
 # CGCP library directory
 CGCP/04-ligand-discovery/library/enamine-real/
+
+# Enamine REAL library — large compressed files
+*.bz2
+*.cxsmiles
+*.cxsmiles.bz2
+
+# Large docking files
+*.pdbqt
+*.pdbqt.gz
+*.sdf.gz
+*.mol2.gz
+
+# CGCP library directory
+CGCP/04-ligand-discovery/library/enamine-real/
