@@ -518,3 +518,25 @@ GLU431-LYS1 salt bridge pair confirmed as electrostatic anchor.
 
 **Status:** Complete
 **Next:** Phase 2 Step 4 — DBSCAN spatial clustering
+
+## Entry 017 — Phase 2 Step 4: NSP12-NSP7 DBSCAN Clustering
+
+**Date:** 2026-03-18
+**Phase:** 2 | **Step:** 4 — DBSCAN spatial clustering
+**Parameters:** eps=8.0 A, min_samples=2
+
+**Results: 3 clusters + 4 noise points**
+
+| Cluster | Residues | Centroid | Mean cons | Decision |
+|---------|----------|---------|-----------|---------|
+| 0 | 18 | (99.1, 83.4, 123.7) | 0.758 | PRIMARY PHARMACOPHORE |
+| 1 | 2 | (98.7, 69.3, 123.1) | 1.000 | Secondary polar patch |
+| 2 | 2 | (103.7, 94.4, 58.6) | 0.297 | Deprioritize — SARS-selective |
+
+**Key finding:** Cluster 0 contains PHE440 anchor + all 4 aromatic
+residues (PHE442, PHE415, PHE843, GLY413) — confirms aromatic
+hydrophobic core as pharmacophore. Cluster 2 deprioritized —
+low conservation (0.297) and 65A from primary cluster.
+
+**Status:** Complete
+**Next:** Phase 2 Step 5 — conservation overlay
