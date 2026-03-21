@@ -582,3 +582,23 @@ spatial isolation but promoted based on cons=1.000 and comp>=0.60
 
 **Status:** Complete
 **Next:** Phase 2 Step 7 — pharmacophore hypothesis
+
+## Entry 020 — Phase 2 Step 7: Pharmacophore Hypothesis
+
+**Date:** 2026-03-18
+**Phase:** 2 | **Step:** 7 — Pharmacophore hypothesis
+
+**Pharmacophore: CGCP-NSP12-NSP7-v1**
+
+| Element | Name | Residues | Centroid | Radius |
+|---------|------|----------|---------|--------|
+| E1 | Aromatic hydrophobic core | PHE440,PRO412,PHE442,TYR420,PHE415,GLY413 | (94.15,80.23,122.15) | 11.74 A |
+| E2 | Electrostatic anchor | GLU431 | (99.83,61.00,116.86) | 0.00 A |
+| E3 | Distal aromatic patch | PHE843 | (90.05,78.88,121.23) | 0.00 A |
+
+**Docking box center:** E1 centroid (94.15, 80.23, 122.15)
+**Search radius:** 11.74 A (E1 radius)
+**Note:** PHE843 (E3) is close to E1 XZ plane — may merge in v2
+
+**Status:** Complete
+**Next:** Phase 2 Step 8 — controls + ChimeraX figures
