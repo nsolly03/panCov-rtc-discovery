@@ -540,3 +540,18 @@ low conservation (0.297) and 65A from primary cluster.
 
 **Status:** Complete
 **Next:** Phase 2 Step 5 — conservation overlay
+
+## Entry 018 — Phase 2 Step 5: Conservation Overlay
+
+**Date:** 2026-03-18
+**Phase:** 2 | **Step:** 5 — Conservation overlay
+
+**Key finding:** Cluster 0 splits into two subgroups:
+- NSP12 core (6 residues): PHE440, PRO412, PHE442, PHE415, PHE843, GLY413 — ALL cons=1.000
+- NSP7 contacts (moderate/variable): 12 residues cons=0.25-0.689
+
+**Pharmacophore core decision:** 6 NSP12 residues with cons=1.000
+**Cluster 2 confirmed excluded:** cons=0.297, 0% pan-cov fraction
+
+**Status:** Complete
+**Next:** Phase 2 Step 6 — integrated assessment
