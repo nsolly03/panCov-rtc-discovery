@@ -555,3 +555,30 @@ low conservation (0.297) and 65A from primary cluster.
 
 **Status:** Complete
 **Next:** Phase 2 Step 6 — integrated assessment
+
+## Entry 019 — Phase 2 Step 6: Integrated Assessment
+
+**Date:** 2026-03-18
+**Phase:** 2 | **Step:** 6 — Integrated assessment
+
+**PHARMACOPHORE CANDIDATES (8 residues):**
+| Residue | Feature | Cons | Composite | Decision |
+|---------|---------|------|-----------|---------|
+| PHE440 | anchor | 1.000 | 1.000 | ANCHOR |
+| PRO412 | hydrophobic | 1.000 | 0.895 | INCLUDE |
+| PHE442 | aromatic | 1.000 | 0.774 | INCLUDE |
+| GLU431 | charged_neg | 1.000 | 0.748 | INCLUDE |
+| TYR420 | aromatic | 1.000 | 0.616 | INCLUDE |
+| PHE415 | aromatic | 1.000 | 0.527 | INCLUDE |
+| PHE843 | aromatic | 1.000 | 0.488 | INCLUDE |
+| GLY413 | hydrophobic | 1.000 | 0.454 | INCLUDE |
+
+**Two pharmacophoric elements identified:**
+1. Aromatic hydrophobic core: PHE440/PHE442/PHE415/TYR420/PRO412/GLY413
+2. Electrostatic anchor: GLU431 (salt bridge with LYS1 NSP7)
+
+**Note:** TYR420 and GLU431 were in noise cluster (-1) due to
+spatial isolation but promoted based on cons=1.000 and comp>=0.60
+
+**Status:** Complete
+**Next:** Phase 2 Step 7 — pharmacophore hypothesis
