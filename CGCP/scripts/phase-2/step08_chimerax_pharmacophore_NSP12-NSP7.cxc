@@ -1,0 +1,81 @@
+# CGCP Phase 2 Step 8 - ChimeraX Publication Figure
+# Pharmacophore visualization: NSP12-NSP7
+# CGCP-NSP12-NSP7-v1
+#
+# Run from ChimeraX command line:
+# open \\wsl.localhost\Ubuntu\home\nseku\projects\rtc-pan-coronavirus\CGCP\scripts\phase-2\step08_chimerax_pharmacophore_NSP12-NSP7.cxc
+
+# ── Setup ──────────────────────────────────────────────────
+set bgColor white
+lighting soft
+graphics silhouettes true silhouetteWidth 1.5
+
+# ── Load structure ──────────────────────────────────────────
+open \\wsl.lotus\Ubuntu\home\nseku\projects\rtc-pan-coronavirus\03-virtual-screening\NSP12-NSP7_3\receptor_NSP12-NSP7_3.pdb
+
+# ── Base representation ─────────────────────────────────────
+hide all atoms
+show all cartoons
+color all #C8C8C8
+transparency all 60 target c
+
+# ── NSP7 — green cartoon opaque ────────────────────────────
+color /C #2ECC71
+transparency /C 0 target c
+
+# ── NSP12 surface at interface ─────────────────────────────
+show /A surface
+color /A #B8C8E8 target s
+transparency /A 45 target s
+
+# ── E1: Aromatic hydrophobic core — RED ────────────────────
+# PHE440 anchor
+show /A:440 atoms
+style /A:440 sphere
+color /A:440 #D7191C atoms
+size /A:440 atomRadius 1.8
+label /A:440 residues text "PHE440\n(anchor)" size 18 color #D7191C
+
+# E1 cluster members
+show /A:442,420,415,412,413 atoms
+style /A:442,420,415,412,413 sphere
+color /A:442,420,415,412,413 #F07B26 atoms
+size /A:442,420,415,412,413 atomRadius 1.2
+label /A:442,420,415,412,413 residues text "{0.name}{0.number}" size 14 color #F07B26
+
+# ── E2: Electrostatic anchor — GREEN ───────────────────────
+show /A:431 atoms
+style /A:431 sphere
+color /A:431 #4DAC26 atoms
+size /A:431 atomRadius 1.4
+label /A:431 residues text "GLU431\n(SB anchor)" size 16 color #4DAC26
+
+# ── E3: Distal aromatic — BLUE ─────────────────────────────
+show /A:843 atoms
+style /A:843 sphere
+color /A:843 #2166AC atoms
+size /A:843 atomRadius 1.2
+label /A:843 residues text "PHE843\n(E3)" size 14 color #2166AC
+
+# ── Negative control — catalytic triad — gray ──────────────
+show /A:618,759,760 atoms
+style /A:618,759,760 stick
+color /A:618,759,760 #888888 atoms
+label /A:618,759,760 residues text "{0.name}{0.number}" size 12 color #888888
+
+# ── NSP7 interface residues within 5A ─────────────────────
+select zone /A:440,442,420,415,412,413,431,843 5 /C residues true
+show sel atoms
+style sel stick
+color sel #F1C40F atoms
+~select
+
+# ── Orient to interface ─────────────────────────────────────
+view /A:440,442,420,415,412,413,431,843
+zoom 0.85
+
+# ── Save session ────────────────────────────────────────────
+save \\wsl.localhost\Ubuntu\home\nseku\projects\rtc-pan-coronavirus\CGCP\02-deep-dive\NSP12-NSP7\step-08-controls\step08_pharmacophore.cxs
+
+# ── Save figure ─────────────────────────────────────────────
+save \\wsl.localhost\Ubuntu\home\nseku\projects\rtc-pan-coronavirus\CGCP\02-deep-dive\NSP12-NSP7\step-08-controls\Fig_Step08_Pharmacophore_ChimeraX.png width 2400 height 1800 supersample 3

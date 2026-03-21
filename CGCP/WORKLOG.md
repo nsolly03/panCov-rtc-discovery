@@ -602,3 +602,28 @@ spatial isolation but promoted based on cons=1.000 and comp>=0.60
 
 **Status:** Complete
 **Next:** Phase 2 Step 8 — controls + ChimeraX figures
+
+## Entry 021 — Screening Pipeline: Model Decision
+
+**Date:** 2026-03-21
+**Phase:** 4 — Virtual Screening (setup)
+
+**IMPORTANT DECISION — VirtualFlow:**
+VirtualFlow is the recommended screening workflow manager for this project.
+Recommended based on Zhou et al. 2024 Nature Comms (RosettaVS + active learning).
+Current interim approach uses direct AutoDock Vina on NIC5 for NSP12-NSP7 validation.
+Full pan-coronavirus screen (all 8 interfaces) must use VirtualFlow.
+
+**Current NIC5 status:**
+- Enamine HAC 22-23 (1.1B compounds) downloaded to scratch
+- Two-tier pharmacophore filter script ready (01_pharmacophore_filter.py)
+- SLURM filter job ready (01_run_filter.sh)
+- Direct Vina screening script ready (02_cgcp_screen_NSP12-NSP7.sh)
+
+**TODO before full screen:**
+- Check VirtualFlow on NIC5
+- Migrate to VirtualFlow for full 1.1B run
+- Run HAC 24-25 downloads after HAC 22-23 filtered
+
+**Status:** In progress
+**Next:** Submit filter job → dock → migrate to VirtualFlow
