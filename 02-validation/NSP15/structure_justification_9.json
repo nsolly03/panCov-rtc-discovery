@@ -1,0 +1,66 @@
+{
+  "complex": "NSP15-homodimer",
+  "suffix": "_9",
+  "selected_receptor": "6VWW",
+  "selection_reasons": [
+    "Best apo structure (no ligand distortion)",
+    "Resolution 1.90A adequate for interface analysis",
+    "Full length chains (348aa each)",
+    "Biological assembly A+A-2 confirmed (75 contacts)",
+    "Lowest B-factors at interface hotspots among apo structures"
+  ],
+  "af3_role": "pLDDT mapping only (monomer prediction)",
+  "af3_excluded_from": "interface contact identification",
+  "structures": {
+    "6VWW": {
+      "resolution": 1.9,
+      "method": "X-ray",
+      "type": "apo",
+      "ligand": null,
+      "mean_bfactor_hotspots": 34.94,
+      "note": "PRIMARY \u2014 apo, full length, biological assembly"
+    },
+    "6W01": {
+      "resolution": 2.2,
+      "method": "X-ray",
+      "type": "apo",
+      "ligand": null,
+      "mean_bfactor_hotspots": 32.1,
+      "note": "Secondary apo structure"
+    },
+    "6WLC": {
+      "resolution": 1.7,
+      "method": "X-ray",
+      "type": "ligand-bound",
+      "ligand": "UMP (active site)",
+      "mean_bfactor_hotspots": 38.42,
+      "note": "Best resolution \u2014 ligand distorts active site"
+    },
+    "6WXC": {
+      "resolution": 1.8,
+      "method": "X-ray",
+      "type": "ligand-bound",
+      "ligand": "tipiracil",
+      "mean_bfactor_hotspots": 31.46,
+      "note": "Ground truth for Script 16_9"
+    },
+    "2H85": {
+      "resolution": 2.0,
+      "method": "X-ray",
+      "type": "SARS-CoV-1",
+      "ligand": null,
+      "mean_bfactor_hotspots": 28.25,
+      "note": "SARS-CoV-1 monomer \u2014 conservation reference only"
+    }
+  },
+  "af3_metrics": {
+    "ptm": 0.94,
+    "rmsd": 0.437,
+    "mode": "monomer",
+    "use": "pLDDT at interface only"
+  },
+  "figures": [
+    "results/FigA1_NSP15_structure_justification_9.png",
+    "results/FigA2_NSP15_AF3_validation_scatter_9.png"
+  ]
+}

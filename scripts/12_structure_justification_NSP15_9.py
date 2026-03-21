@@ -155,10 +155,10 @@ print("    Same treatment as NSP13-Helicase in this pipeline")
 print("\nLoading AF3 validation results for scatter plot...")
 
 with open(f"{OUT_DIR}/validation_result_9.json") as f:
-    val = json.load(f)
+    val_json = json.load(f)
 
-iface_A = set(val["interface_A"])
-iface_B = set(val["interface_B"])
+iface_A = set(val_json["interface_A"])
+iface_B = set(val_json["interface_B"])
 all_iface = iface_A | iface_B
 
 # Load pLDDT from AF3 at interface positions
@@ -296,8 +296,8 @@ ax.axhline(y=90, color='green', linestyle='--', alpha=0.5,
 ax.set_xlabel("Residue position (PDB numbering)", fontsize=11)
 ax.set_ylabel("AF3 pLDDT score", fontsize=11)
 ax.set_title("NSP15 — AF3 Validation: pLDDT at Interface Residues\n"
-             f"(RMSD={val['rmsd_vs_6VWW_chainA']}Å vs 6VWW, "
-             f"ptm={val['af3_confidence']['ptm']})",
+             "(RMSD=" + str(val_json.get('rmsd_vs_6VWW_chainA','?')) + "A vs 6VWW, "
+             "ptm=" + str(val_json.get('af3_confidence',{}).get('ptm','?')) + ")",
              fontsize=11, fontweight='bold')
 ax.set_ylim(0, 105)
 ax.legend(fontsize=9, loc='lower right')
@@ -308,8 +308,8 @@ ax.text(0.02, 0.95,
     "Interface pLDDT: mean={:.1f}, min={:.1f}\nRMSD: {:.3f}Å  ptm: {}".format(
         mean_if,
         min(y_iface) if y_iface else 0,
-        val['rmsd_vs_6VWW_chainA'],
-        val['af3_confidence']['ptm']),
+        val_json['rmsd_vs_6VWW_chainA'],
+        val_json['af3_confidence']['ptm']),
     transform=ax.transAxes, fontsize=9, va='top',
     bbox=dict(boxstyle='round', facecolor='lightyellow', alpha=0.8))
 
@@ -346,8 +346,8 @@ output = {
         if s != "AF3"
     },
     "af3_metrics"        : {
-        "ptm"   : val["af3_confidence"]["ptm"],
-        "rmsd"  : val["rmsd_vs_6VWW_chainA"],
+        "ptm"   : val_json["af3_confidence"]["ptm"],
+        "rmsd"  : val_json["rmsd_vs_6VWW_chainA"],
         "mode"  : "monomer",
         "use"   : "pLDDT at interface only",
     },
