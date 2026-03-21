@@ -496,3 +496,25 @@ cluster residues (blue spheres), catalytic triad (orange spheres), chain labels
 
 **Status:** ✅ Complete
 **Next:** Phase 2 Step 3 — feature classification
+
+## Entry 016 — Phase 2 Step 3: NSP12-NSP7 Feature Classification
+
+**Date:** 2026-03-18
+**Phase:** 2 | **Step:** 3 — Feature classification
+
+**Results (27 residues — 2 missing from PDB, residues 14+23 NSP12):**
+| Feature | Count | Key residues |
+|---------|-------|-------------|
+| Anchor | 1 | PHE440 |
+| Aromatic | 4 | PHE442, TYR420, PHE415, PHE843 |
+| Hydrophobic | 11 | PRO412, ALA443, GLY413, ILE37... |
+| Charged- | 4 | GLU431, ASP40 (NSP12), ASP4, ASP37 (NSP7) |
+| Charged+ | 3 | ARG33, LYS41 (NSP12), LYS1 (NSP7) |
+| H-bond donor | 4 | THR409 (NSP12), SER14, GLN33, SER23 (NSP7) |
+
+**Key finding:** 5 aromatic/anchor residues (PHE440, PHE442, TYR420,
+PHE415, PHE843) all conservation=1.000 — pan-coronavirus aromatic core.
+GLU431-LYS1 salt bridge pair confirmed as electrostatic anchor.
+
+**Status:** Complete
+**Next:** Phase 2 Step 4 — DBSCAN spatial clustering
