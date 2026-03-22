@@ -627,3 +627,57 @@ Full pan-coronavirus screen (all 8 interfaces) must use VirtualFlow.
 
 **Status:** In progress
 **Next:** Submit filter job → dock → migrate to VirtualFlow
+
+## Entry 022 — NIC5 Screening Pipeline: Filter + VirtualFlow Setup
+
+**Date:** 2026-03-22
+
+### Pharmacophore filter (direct Vina pipeline)
+**Script:** rtc-screening/scripts/01_pharmacophore_filter.py
+**Input:** enamine_HAC22-23.cxsmiles.bz2 (1.1B compounds, 24G)
+**Jobs:** 10517215 (32 chunks) + 10517216 (merge) — RUNNING on NIC5
+
+**Filter settings (updated after test):**
+| Filter | Threshold | Reason |
+|--------|-----------|--------|
+| E1 aromatic | required | NSP12-NSP7 hydrophobic core |
+| MW | 250-500 | PPI inhibitor range |
+| sLogP | <= 3.5 | Solubility for PPI (tightened from 5.0) |
+| HBD | <= 3 | Cell permeability |
+| RotBonds | <= 10 | Binding entropy |
+| QED | >= 0.4 | Drug-likeness |
+
+**Test results (chunk 0 — 32.7M compounds):**
+- Tier 1 passed: 26.3M (80%) — E1 + ADMET
+- Tier 2 passed: 9.6M (29%) — E1 + E2 + E3
+
+**After tightening logP to 3.5 + QED >= 0.4:**
+- Expected Tier 1: ~30% of 1.1B = ~330M
+- Expected Tier 2: ~10% of 1.1B = ~110M
+
+### VirtualFlow setup
+**Location:** /scratch/ulg/gigambd/onsekuye/virtualflow/
+**Version:** VFVS (cloned from GitHub)
+**Status:** Configured and folders prepared
+
+**Control file settings:**
+- partition: batch
+- timelimit: 2-00:00:00
+- docking_scenario_names: CGCP_NSP12-NSP7
+- docking_scenario_programs: vina
+- Pharmacophore box: center=(94.15, 80.23, 122.15) size=34x34x34A
+
+**Ligand library:**
+- tranches.sh: downloading overnight from Harvard (16 MB/s)
+- collections.txt: 983,092 collections transferred as todo.all
+- Pre-prepared PDBQT format — no conversion needed
+
+### Tomorrow morning checklist:
+- [ ] Check filter results: wc -l filtered_tier1_ALL.smi
+- [ ] Check tranches download: du -sh virtualflow/input-files/ligand-library/
+- [ ] Submit docking job array (direct Vina)
+- [ ] Start VirtualFlow job (vf_start_jobline.sh)
+- [ ] Begin HAC 24 download
+
+**Status:** In progress
+**Next:** Docking + VirtualFlow comparison run
