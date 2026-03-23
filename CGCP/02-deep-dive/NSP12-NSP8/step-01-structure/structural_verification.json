@@ -1,0 +1,44 @@
+{
+  "interface": "NSP12-NSP8",
+  "pdb": "/home/nseku/projects/rtc-pan-coronavirus/03-virtual-screening/NSP12-NSP8_4/receptor_NSP12-NSP8_4.pdb",
+  "anchor": "LYS332",
+  "n_pass": 7,
+  "n_total": 7,
+  "checks": {
+    "C1": {
+      "name": "Chains A+B present",
+      "pass": true,
+      "detail": "Chains found: ['A', 'B']"
+    },
+    "C2": {
+      "name": "Chain sizes reasonable",
+      "pass": true,
+      "detail": "NSP12=834 res, NSP8=114 res"
+    },
+    "C3": {
+      "name": "Anchor adjacent to NSP8",
+      "pass": true,
+      "detail": "LYS332 min dist to NSP8: 7.83A"
+    },
+    "C4": {
+      "name": "Backbone complete (Chain A)",
+      "pass": true,
+      "detail": "0 missing backbone atoms"
+    },
+    "C5": {
+      "name": "LYS332 present and correct",
+      "pass": true,
+      "detail": "Res 332 = LYS at (95.339, 131.523, 109.793)"
+    },
+    "C6": {
+      "name": "Positive ctrl: LYS332 near NSP8",
+      "pass": true,
+      "detail": "29 NSP8 residues within 15A of LYS332"
+    },
+    "C7": {
+      "name": "Neg ctrl: LYS332 far from catalytic triad",
+      "pass": true,
+      "detail": "res618=48.3A | res759=42.8A | res760=43.7A"
+    }
+  }
+}

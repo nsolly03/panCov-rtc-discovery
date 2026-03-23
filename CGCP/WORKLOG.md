@@ -710,3 +710,32 @@ Full pan-coronavirus screen (all 8 interfaces) must use VirtualFlow.
 
 **Status:** Running
 **Next:** Collect results, analyze top hits, ChimeraX visualization
+
+## Entry 024 — Phase 2 NSP12-NSP8: Step 1 Structural Verification
+
+**Date:** 2026-03-23
+**Phase:** 2 | **Interface:** NSP12-NSP8 | **Step:** 1
+
+**Structure:** NSP12-NSP8_4/receptor_NSP12-NSP8_4.pdb
+**Anchor:** LYS332 (NSP12 Chain A, cons=1.000)
+
+**Audit results (7/7 PASS):**
+| Check | Result | Detail |
+|-------|--------|--------|
+| C1: Chains A+B | ✅ PASS | Chains A (NSP12) + B (NSP8) present |
+| C2: Chain sizes | ✅ PASS | NSP12=834 res, NSP8=114 res |
+| C3: Anchor adjacency | ✅ PASS | LYS332 min dist to NSP8: 7.83A |
+| C4: Backbone complete | ✅ PASS | 0 missing backbone atoms |
+| C5: LYS332 correct | ✅ PASS | LYS at (95.339, 131.523, 109.793) |
+| C6: Positive control | ✅ PASS | 29 NSP8 residues within 15A |
+| C7: Negative control | ✅ PASS | Catalytic triad 42-48A away |
+
+**Key coordinates:**
+- LYS332 Cα: (95.339, 131.523, 109.793)
+- ASP618: 48.3A | SER759: 42.8A | ASP760: 43.7A
+
+**Note:** NSP12-NSP8 interface is larger than NSP12-NSP7
+(29 vs ~15 NSP7 residues within 15A of anchor)
+
+**Status:** Complete ✅
+**Next:** Phase 2 Step 2 — Contact mapping
