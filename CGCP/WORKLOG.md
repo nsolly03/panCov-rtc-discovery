@@ -807,3 +807,26 @@ Classic PPI druggable architecture — more complex than NSP12-NSP7
 
 **Status:** Complete ✅
 **Next:** Phase 2 Step 4 — DBSCAN clustering
+
+## Entry 028 — Phase 2 NSP12-NSP8: Step 4 DBSCAN Clustering
+
+**Date:** 2026-03-23
+**Phase:** 2 | **Interface:** NSP12-NSP8 | **Step:** 4
+
+**Results:**
+- Clusters: 1 (all 118 residues in one cluster)
+- Radius: 29.88Å — very large, entire interface contiguous
+- MeanCons: 0.829 | MeanComp: 0.447
+- Both anchors in Cluster 0 — PRIMARY PHARMACOPHORE
+
+**Note:** Unlike NSP12-NSP7 (3 clusters), NSP12-NSP8 forms
+one large contiguous pharmacophore zone. Spatial clustering
+cannot sub-divide it. Pharmacophore core will be defined by
+conservation + composite thresholds in Steps 5-6.
+
+**Threshold for Step 6:**
+- INCLUDE: cons >= 0.800 AND composite >= 0.600
+- SECONDARY: cons >= 0.600
+
+**Status:** Complete ✅
+**Next:** Phase 2 Step 5 — Conservation overlay
