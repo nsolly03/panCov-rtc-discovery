@@ -681,3 +681,32 @@ Full pan-coronavirus screen (all 8 interfaces) must use VirtualFlow.
 
 **Status:** In progress
 **Next:** Docking + VirtualFlow comparison run
+
+## Entry 023 — Three Parallel Screening Runs Submitted
+
+**Date:** 2026-03-23
+
+**Filter results (completed overnight):**
+- Tier 1: 657,357,899 compounds (60% of 1.1B)
+- Tier 2: 225,014,734 compounds (20% of 1.1B)
+
+**Three parallel runs submitted:**
+
+| Job | Run | Library | Method | Compounds |
+|-----|-----|---------|--------|-----------|
+| 10521154 | Run 1 | Enamine 2018 | VirtualFlow + Vina | Full library |
+| 10521155 | Run 2 | Enamine 2025 Tier 2 | Direct Vina | 10M |
+| 10521156 | Run 3 | Enamine 2025 Tier 1 | Direct Vina | 10M |
+
+**Pharmacophore box (all runs):**
+- Center: (94.15, 80.23, 122.15) — E1 centroid
+- Size: 34x34x34 A
+- exhaustiveness=8, n_poses=5
+
+**Scientific comparison:**
+- 2018 vs 2025 library hit rates
+- Tier 1 vs Tier 2 hit quality
+- VirtualFlow vs Direct Vina results
+
+**Status:** Running
+**Next:** Collect results, analyze top hits, ChimeraX visualization
