@@ -1016,3 +1016,25 @@ ARG733+ARG735 electrostatic anchors on NSP12 side.
 
 **Status:** Complete ✅
 **Next:** Steps 6+7 — Integrated assessment + Pharmacophore hypothesis
+
+## Entry 037 — Phase 2 NSP9-NSP12: Steps 6+7
+
+**Date:** 2026-03-23
+**Phase:** 2 | **Interface:** NSP9-NSP12 | **Steps:** 6+7
+
+**Step 6:** 20 pharmacophore candidates
+- ANCHOR: ARG733
+- INCLUDE: 19 residues (NSP12=6, NSP9=13)
+
+**Step 7: CGCP-NSP9-NSP12-v1**
+| Element | Residues | Centroid | Radius |
+|---------|----------|---------|--------|
+| E1 NSP9 core | 8 | (134.22,168.35,175.83) | 16.74Å |
+| E2 electrostatic | 3 | (133.78,163.89,167.50) | 7.41Å |
+| E3 supporting | 4 | (134.55,165.95,175.23) | 12.08Å |
+
+**Unique feature:** 4 asparagines in E1 (ASN1/ASN2/ASN95/ASN96)
+Highly selective for coronaviruses — unusual H-bond cluster.
+
+**Status:** Complete ✅
+**Next:** Step 8 — ChimeraX + commit
