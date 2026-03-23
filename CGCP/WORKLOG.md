@@ -766,3 +766,22 @@ provide electrostatic anchoring.
 
 **Status:** Complete ✅
 **Next:** Phase 2 Step 3 — Feature classification
+
+## Entry 026 — NSP12-NSP8 Anchor Decision
+
+**Date:** 2026-03-23
+**Decision:** Dual anchor approach for NSP12-NSP8
+
+| Anchor | Residue | Type | Conservation | Rationale |
+|--------|---------|------|-------------|-----------|
+| Primary | LEU387 | Hydrophobic core | 1.000 | Highest composite, fully conserved |
+| Secondary | LYS332 | Electrostatic | 0.600 | Salt bridge LYS332-ASP99, interface defining |
+
+**Scientific note:**
+NSP12-NSP8 has different character from NSP12-NSP7.
+NSP12-NSP7 = single aromatic anchor (PHE440).
+NSP12-NSP8 = dual anchor (hydrophobic core + electrostatic).
+Compounds must engage both elements for pan-coronavirus activity.
+
+**Status:** Decision recorded ✅
+**Next:** Phase 2 Step 3 — Feature classification
