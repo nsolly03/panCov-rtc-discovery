@@ -1038,3 +1038,16 @@ Highly selective for coronaviruses — unusual H-bond cluster.
 
 **Status:** Complete ✅
 **Next:** Step 8 — ChimeraX + commit
+
+## Entry 038 — Phase 2 NSP9-NSP12: Step 8 ChimeraX
+
+**Date:** 2026-03-23
+**Phase:** 2 | **Interface:** NSP9-NSP12 | **Step:** 8
+
+**ChimeraX files:**
+- Session: CGCP/02-deep-dive/NSP9-NSP12/step-08-controls/step08_pharmacophore_NSP9-NSP12.cxs
+- Figure: Fig_Step08_ChimeraX_NSP9-NSP12.png
+
+**Phase 2 NSP9-NSP12 COMPLETE ✅**
+
+**Next interface:** NSP10-NSP16 (score 6/6, cons=0.91, anchor LYS93)
