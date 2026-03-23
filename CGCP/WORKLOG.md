@@ -953,3 +953,28 @@ All steps completed:
 
 **Status:** Complete ✅
 **Next:** Step 2 — Contact mapping
+
+## Entry 034 — Phase 2 NSP9-NSP12: Step 2 Contact Mapping
+
+**Date:** 2026-03-23
+**Phase:** 2 | **Interface:** NSP9-NSP12 | **Step:** 2
+
+**Results:**
+- Total interface residues: 51 (NSP12=30, NSP9=21)
+- Compact interface vs NSP12-NSP8 (118 residues)
+
+**Top 5 by composite:**
+| Residue | Chain | Contacts | Conservation | Composite |
+|---------|-------|----------|-------------|-----------|
+| ASN2 | NSP9 | 337 | 1.000 | 1.000 |
+| LEU4 | NSP9 | 271 | 1.000 | 0.922 |
+| ARG733★ | NSP12 | 223 | 1.000 | 0.865 |
+| ASN96 | NSP9 | 209 | 1.000 | 0.848 |
+| LEU97 | NSP9 | 175 | 1.000 | 0.808 |
+
+**Note:** NSP9 side dominates top contacts.
+ARG733 is anchor but NSP9 N-terminus drives the interface.
+Compound must engage NSP9 surface heavily.
+
+**Status:** Complete ✅
+**Next:** Step 3 — Feature classification
