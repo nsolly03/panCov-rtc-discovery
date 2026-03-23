@@ -978,3 +978,25 @@ Compound must engage NSP9 surface heavily.
 
 **Status:** Complete ✅
 **Next:** Step 3 — Feature classification
+
+## Entry 035 — Phase 2 NSP9-NSP12: Step 3 Feature Classification
+
+**Date:** 2026-03-23
+**Phase:** 2 | **Interface:** NSP9-NSP12 | **Step:** 3
+
+**Feature distribution (51 residues):**
+| Feature | Count | Key residues (cons=1.000) |
+|---------|-------|--------------------------|
+| Hydrophobic | 21 | LEU4, LEU97, VAL233 |
+| H-bond donor | 13 | ASN2(top), ASN96, ASN1 |
+| Aromatic | 8 | PHE75(NSP9), TYR728 |
+| Charged- | 5 | ASP221, ASP291 |
+| Charged+ | 3 | ARG735, ARG99 |
+| Anchor | 1 | ARG733 |
+
+**Interface character:** H-bond donor dominated
+NSP9 N-terminus (ASN1/ASN2/LEU4) drives binding.
+ARG733+ARG735 electrostatic anchors on NSP12 side.
+
+**Status:** Complete ✅
+**Next:** Step 4 — DBSCAN clustering
