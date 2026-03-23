@@ -935,3 +935,21 @@ All steps completed:
 - Step 8: ChimeraX visualization
 
 **Next interface:** NSP9-NSP12 (score 5/6, druggability 0.895, anchor ARG733)
+
+## Entry 033 — Phase 2 NSP9-NSP12: Step 1 Structural Verification
+
+**Date:** 2026-03-23
+**Phase:** 2 | **Interface:** NSP9-NSP12 | **Step:** 1
+
+**Structure:** NSP9-NSP12_5/receptor_NSP9-NSP12_5.pdb
+**Chains:** A=NSP12 (929 res), G=NSP9 (113 res)
+**Anchor:** ARG733 (NSP12, cons=1.000)
+
+**Audit: 7/7 PASS**
+- ARG733 Cα: (136.513, 165.248, 165.871)
+- Min dist to NSP9: 7.57Å
+- NSP9 residues within 15Å: 15
+- Catalytic triad: 32-34Å away
+
+**Status:** Complete ✅
+**Next:** Step 2 — Contact mapping
