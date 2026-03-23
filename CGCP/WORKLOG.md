@@ -879,3 +879,27 @@ NSP8:  ARG80, LYS127, LEU91, ILE119, TYR149, PRO116, MET87, VAL115, ASN118
 
 **Status:** Complete ✅
 **Next:** Phase 2 Step 7 — Pharmacophore hypothesis
+
+## Entry 031 — Phase 2 NSP12-NSP8: Step 7 Pharmacophore Hypothesis
+
+**Date:** 2026-03-23
+**Phase:** 2 | **Interface:** NSP12-NSP8 | **Step:** 7
+
+**Pharmacophore: CGCP-NSP12-NSP8-v1**
+
+| Element | Name | Residues | Centroid | Radius |
+|---------|------|----------|---------|--------|
+| E1 | Hydrophobic/aromatic core | 13 | (98.66, 121.71, 110.81) | 21.03 Å |
+| E2 | Electrostatic cluster | 4 | (97.35, 118.04, 116.80) | 24.20 Å |
+| E3 | H-bond zone | 4 | (97.50, 117.70, 111.83) | 25.19 Å |
+
+**Key difference vs NSP12-NSP7:**
+NSP12-NSP7 = single aromatic pocket (PHE440)
+NSP12-NSP8 = multi-pharmacophore (hydrophobic + electrostatic + H-bond)
+Compounds must satisfy all three elements for pan-coronavirus activity.
+
+**Docking box center:** E1 centroid (98.66, 121.71, 110.81)
+**Search radius:** 21.03 Å
+
+**Status:** Complete ✅
+**Next:** Phase 2 Step 8 — controls + ChimeraX figures
