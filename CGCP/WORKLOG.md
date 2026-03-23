@@ -1051,3 +1051,37 @@ Highly selective for coronaviruses — unusual H-bond cluster.
 **Phase 2 NSP9-NSP12 COMPLETE ✅**
 
 **Next interface:** NSP10-NSP16 (score 6/6, cons=0.91, anchor LYS93)
+
+## Entry 039 — Session Summary 2026-03-23
+
+**Completed today:**
+
+### CGCP Pipeline Progress:
+- ✅ NSP12-NSP7: Steps 6-8 complete (CGCP-NSP12-NSP7-v1)
+- ✅ NSP12-NSP8: Steps 1-8 complete (CGCP-NSP12-NSP8-v1)
+- ✅ NSP9-NSP12: Steps 1-8 complete (CGCP-NSP9-NSP12-v1)
+
+### NIC5 Screening (running):
+- Job 10521154 (VirtualFlow 2018) — resubmitted with $GLOBALSCRATCH/vf_tmp fix
+- Job 10521155 (Direct Vina Tier2 2025) — running
+- Job 10521156 (Direct Vina Tier1 2025) — pending
+- Filter complete: Tier1=657M, Tier2=225M from 1.1B HAC22-23
+
+### Infrastructure:
+- prism_style.py module created — shared Prism aesthetics
+- Steps 4+5 and 6+7 combined for efficiency going forward
+- NpEncoder JSON fix applied to all new scripts
+- VirtualFlow /tmp issue fixed — now uses /scratch/ulg/gigambd/onsekuye/vf_tmp
+
+**Tomorrow:**
+- Check NIC5 job results
+- Continue with NSP10-NSP16 (anchor LYS93, score 6/6)
+- Then NSP7-NSP8, NSP10-NSP14, NSP15
+- Write formal Methods section
+
+**Pharmacophore summary so far:**
+| Interface | Pharmacophore | Anchor | E1 | E2 | E3 |
+|-----------|--------------|--------|----|----|-----|
+| NSP12-NSP7 | CGCP-NSP12-NSP7-v1 | PHE440 | aromatic | electrostatic | distal |
+| NSP12-NSP8 | CGCP-NSP12-NSP8-v1 | LEU387 | hydrophobic | electrostatic | H-bond |
+| NSP9-NSP12 | CGCP-NSP9-NSP12-v1 | ARG733 | NSP9 Asn cluster | electrostatic | supporting |
