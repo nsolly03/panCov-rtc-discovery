@@ -785,3 +785,25 @@ Compounds must engage both elements for pan-coronavirus activity.
 
 **Status:** Decision recorded ✅
 **Next:** Phase 2 Step 3 — Feature classification
+
+## Entry 027 — Phase 2 NSP12-NSP8: Step 3 Feature Classification
+
+**Date:** 2026-03-23
+**Phase:** 2 | **Interface:** NSP12-NSP8 | **Step:** 3
+
+**Feature distribution (118 residues):**
+| Feature | Count | Key residues (cons=1.000) |
+|---------|-------|--------------------------|
+| Hydrophobic | 62 | LEU387(anchor), VAL330, LEU389 |
+| H-bond donor | 21 | ASN386, ASN118 |
+| Aromatic | 15 | PHE368, TYR273 |
+| Charged+ | 11 | ARG80, LYS127, ARG392 |
+| Charged- | 7 | ASP390, ASP112 |
+| Anchor primary | 1 | LEU387 |
+| Anchor secondary | 1 | LYS332 |
+
+**Architecture:** Hydrophobic/aromatic core surrounded by charged ring
+Classic PPI druggable architecture — more complex than NSP12-NSP7
+
+**Status:** Complete ✅
+**Next:** Phase 2 Step 4 — DBSCAN clustering
