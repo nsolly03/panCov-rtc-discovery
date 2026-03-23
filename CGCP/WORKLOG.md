@@ -855,3 +855,27 @@ conservation + composite thresholds in Steps 5-6.
 
 **Status:** Complete ✅
 **Next:** Phase 2 Step 6 — Integrated assessment
+
+## Entry 030 — Phase 2 NSP12-NSP8: Step 6 Integrated Assessment
+
+**Date:** 2026-03-23
+**Phase:** 2 | **Interface:** NSP12-NSP8 | **Step:** 6
+
+**Results:**
+- ANCHOR_PRIMARY: 1 (LEU387)
+- ANCHOR_SECONDARY: 1 (LYS332)
+- INCLUDE: 19
+- SECONDARY: 30
+- EXCLUDE: 67
+
+**Pharmacophore candidates (21 total):**
+NSP12: LEU387, LYS332, PHE368, VAL330, TYR273, ARG392, LEU329, LEU389, ASN386, LEU371, SER518, THR324
+NSP8:  ARG80, LYS127, LEU91, ILE119, TYR149, PRO116, MET87, VAL115, ASN118
+
+**Three pharmacophoric elements:**
+- E1: Hydrophobic/aromatic core (LEU387, PHE368, TYR273, VAL330)
+- E2: Electrostatic cluster (ARG80, LYS127, ARG392, LYS332)
+- E3: H-bond zone (ASN386, SER518, THR324, ASN118)
+
+**Status:** Complete ✅
+**Next:** Phase 2 Step 7 — Pharmacophore hypothesis
