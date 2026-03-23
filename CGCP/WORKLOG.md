@@ -903,3 +903,35 @@ Compounds must satisfy all three elements for pan-coronavirus activity.
 
 **Status:** Complete ✅
 **Next:** Phase 2 Step 8 — controls + ChimeraX figures
+
+## Entry 032 — Phase 2 NSP12-NSP8: Step 8 Controls + ChimeraX
+
+**Date:** 2026-03-23
+**Phase:** 2 | **Interface:** NSP12-NSP8 | **Step:** 8
+
+**ChimeraX visualization:**
+- Session: CGCP/02-deep-dive/NSP12-NSP8/step-08-controls/step08_pharmacophore_NSP12-NSP8.cxs
+- Figure: Fig_Step08_ChimeraX_NSP12-NSP8.png
+
+**Color scheme:**
+- NSP12 cartoon: gray transparent + blue surface
+- NSP8 cartoon: green
+- E1 LEU387 anchor: black sphere (size 1.8)
+- E1 NSP12 members: red spheres
+- E1 NSP8 members: orange spheres
+- E2 electrostatic: blue spheres (LYS332, ARG392, ARG80, LYS127)
+- E3 H-bond zone: green spheres (ASN386, SER518, THR324, ASN118)
+
+**Phase 2 NSP12-NSP8 COMPLETE ✅**
+
+All steps completed:
+- Step 1: Structural verification (7/7 PASS)
+- Step 2: Contact mapping (118 residues)
+- Step 3: Feature classification (dual anchor decision)
+- Step 4: DBSCAN clustering (1 cluster — contiguous interface)
+- Step 5: Conservation overlay (64 identical residues)
+- Step 6: Integrated assessment (21 candidates)
+- Step 7: Pharmacophore hypothesis (CGCP-NSP12-NSP8-v1)
+- Step 8: ChimeraX visualization
+
+**Next interface:** NSP9-NSP12 (score 5/6, druggability 0.895, anchor ARG733)
