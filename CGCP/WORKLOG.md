@@ -1000,3 +1000,19 @@ ARG733+ARG735 electrostatic anchors on NSP12 side.
 
 **Status:** Complete ✅
 **Next:** Step 4 — DBSCAN clustering
+
+## Entry 036 — Phase 2 NSP9-NSP12: Steps 4+5
+
+**Date:** 2026-03-23
+**Phase:** 2 | **Interface:** NSP9-NSP12 | **Steps:** 4+5
+
+**DBSCAN:** 1 cluster (51 residues) — contiguous interface
+**Conservation:** identical=31, high=4, moderate=7, variable=9
+
+**Pharmacophore preview (21 candidates):**
+- NSP9 N-terminus: ASN2, LEU4, ASN96, LEU97, ASN1 (all cons=1.000)
+- NSP12: ARG733★, VAL233, ARG735 (all cons=1.000)
+- Strong pan-coronavirus interface
+
+**Status:** Complete ✅
+**Next:** Steps 6+7 — Integrated assessment + Pharmacophore hypothesis
