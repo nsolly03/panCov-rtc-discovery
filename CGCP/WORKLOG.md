@@ -830,3 +830,28 @@ conservation + composite thresholds in Steps 5-6.
 
 **Status:** Complete ✅
 **Next:** Phase 2 Step 5 — Conservation overlay
+
+## Entry 029 — Phase 2 NSP12-NSP8: Step 5 Conservation Overlay
+
+**Date:** 2026-03-23
+**Phase:** 2 | **Interface:** NSP12-NSP8 | **Step:** 5
+
+**Conservation tiers:**
+| Tier | n | Mean composite |
+|------|---|----------------|
+| Identical (1.000) | 64 | 0.465 |
+| High (≥0.800) | 18 | 0.529 |
+| Moderate (≥0.600) | 25 | 0.372 |
+| Variable (<0.600) | 11 | 0.383 |
+
+**Top pharmacophore candidates (cons≥0.800, comp≥0.600):**
+20 residues identified
+
+**Key findings:**
+- LEU387 (primary anchor) cons=1.000, comp=1.000 — top candidate
+- ARG80/LYS127 (NSP8) cons=1.000 — electrostatic partners
+- PHE368/TYR273 cons=1.000 — aromatic druggable features
+- LYS332 (secondary anchor) cons=0.600 — MODERATE tier confirmed
+
+**Status:** Complete ✅
+**Next:** Phase 2 Step 6 — Integrated assessment
