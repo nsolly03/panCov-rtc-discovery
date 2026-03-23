@@ -739,3 +739,30 @@ Full pan-coronavirus screen (all 8 interfaces) must use VirtualFlow.
 
 **Status:** Complete ✅
 **Next:** Phase 2 Step 2 — Contact mapping
+
+## Entry 025 — Phase 2 NSP12-NSP8: Step 2 Contact Mapping
+
+**Date:** 2026-03-23
+**Phase:** 2 | **Interface:** NSP12-NSP8 | **Step:** 2
+
+**Results:**
+- Total interface residues: 118 (NSP12=64, NSP8=54)
+- Much larger interface than NSP12-NSP7 (29 residues)
+- Conservation: computed from real aligned FASTA (5 coronaviruses)
+
+**Top 5 by composite score:**
+| Residue | Chain | Contacts | Conservation | Composite |
+|---------|-------|----------|-------------|-----------|
+| LEU387 | NSP12 | 81 | 1.000 | 1.000 |
+| ARG80 | NSP8 | 67 | 1.000 | 0.931 |
+| PHE368 | NSP12 | 57 | 1.000 | 0.881 |
+| LEU389 | NSP12 | 69 | 0.800 | 0.881 |
+| VAL330 | NSP12 | 54 | 1.000 | 0.867 |
+
+**Note:** LYS332 anchor has cons=0.600 at residue level
+(Phase 1 cons=1.000 was interface-level, not per-residue)
+Salt bridge network still intact — ARG80(NSP8) and LYS127(NSP8)
+provide electrostatic anchoring.
+
+**Status:** Complete ✅
+**Next:** Phase 2 Step 3 — Feature classification
