@@ -1325,3 +1325,22 @@ All other interfaces: No metals.
 - Coordinating residues CYS74/CYS77/HIS83/CYS90 shown
 - Distance label: Zn1-LYS76 = 5.47Å
 - Updated session + new figure: Fig_Step08_ChimeraX_NSP10-NSP16_Zn.png
+
+## Entry 054 — Pre-screening quality audit: ALL 9 interfaces
+
+**Date:** 2026-03-24
+
+**Audit results:**
+| Interface | Metals | Ligands | MissBB | AltConf | Status |
+|-----------|--------|---------|--------|---------|--------|
+| NSP12-NSP7 | none | none | 0 | 0 | ✅ |
+| NSP12-NSP8 | none | none | 0 | 0 | ✅ |
+| NSP9-NSP12 | none | none | 0 | 0 | ✅ |
+| NSP10-NSP16 | Zn1+Zn2 | none | 0 | 0 | ✅ Zn noted |
+| NSP7-NSP8 | none | none | 0 | 0 | ✅ |
+| NSP10-NSP14 | none | none | 0 | 0 | ✅ |
+| NSP13-Helicase | none | none | 0 | 0 | ✅ |
+| NSP12-NSP13 | none | none | 0 | 0 | ✅ |
+| NSP15 | none | none | 0 | 2 | ✅ ARG136 >31A from pharmacophore |
+
+**All 9 interfaces CLEARED for VirtualFlow.**
