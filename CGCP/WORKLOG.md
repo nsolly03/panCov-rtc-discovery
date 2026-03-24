@@ -1127,3 +1127,24 @@ Highly selective for coronaviruses — unusual H-bond cluster.
 
 **Status:** Complete ✅
 **Next:** Steps 6+7 — assessment + pharmacophore
+
+## Entry 042 — Phase 2 NSP10-NSP16: Steps 6+7
+
+**Date:** 2026-03-24
+**Phase:** 2 | **Interface:** NSP10-NSP16 | **Steps:** 6+7
+
+**Step 6:** 10 pharmacophore candidates
+- ANCHOR: LYS76/LYS93 (NSP10)
+- INCLUDE: 9 residues (NSP16=6, NSP10=3)
+
+**Step 7: CGCP-NSP10-NSP16-v1**
+| Element | Residues | Centroid | Radius |
+|---------|----------|---------|--------|
+| E1 salt bridge | 3 | (77.61,17.38,10.88) | 7.43Å |
+| E2 hydrophobic | 7 | (72.53,22.57,18.63) | 15.18Å |
+
+**Most selective interface** — cons=0.902, 10 candidates only.
+Core salt bridge LYS93(NSP10)-ASP107(NSP16) must be mimicked.
+
+**Status:** Complete ✅
+**Next:** Step 8 — ChimeraX

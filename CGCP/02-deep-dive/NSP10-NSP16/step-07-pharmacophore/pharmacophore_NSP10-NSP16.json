@@ -1,0 +1,202 @@
+{
+  "name": "CGCP-NSP10-NSP16-v1",
+  "interface": "NSP10-NSP16",
+  "date": "2026-03-24",
+  "method": "CGCP pipeline v1.0",
+  "n_features": 10,
+  "elements": {
+    "E1": {
+      "name": "E1 \u2014 Salt bridge core",
+      "n_residues": 3,
+      "centroid": {
+        "x": 77.609,
+        "y": 17.384,
+        "z": 10.879,
+        "radius": 7.43
+      },
+      "members": [
+        "NSP10-LYS76",
+        "NSP16-ASP107",
+        "NSP16-GLN88"
+      ]
+    },
+    "E2": {
+      "name": "E2 \u2014 Hydrophobic/polar interface",
+      "n_residues": 7,
+      "centroid": {
+        "x": 72.535,
+        "y": 22.572,
+        "z": 18.634,
+        "radius": 15.18
+      },
+      "members": [
+        "NSP10-ASN23",
+        "NSP10-LYS26",
+        "NSP16-MET248",
+        "NSP16-VAL105",
+        "NSP10-MET27",
+        "NSP16-ILE41",
+        "NSP16-LYS77"
+      ]
+    },
+    "E3": {
+      "name": "E3 \u2014 Extended contacts",
+      "n_residues": 0,
+      "centroid": {},
+      "members": []
+    }
+  },
+  "features": [
+    {
+      "id": "NSP10-LYS76",
+      "chain": "NSP10",
+      "position": 4346,
+      "aa": "LYS",
+      "element": "E1",
+      "role": "ANCHOR",
+      "pharm_type": "ANCHOR",
+      "tolerance_A": 1.0,
+      "conservation": 1.0,
+      "composite": 0.6374,
+      "x": 74.536,
+      "y": 12.89,
+      "z": 9.624
+    },
+    {
+      "id": "NSP16-ASP107",
+      "chain": "NSP16",
+      "position": 6904,
+      "aa": "ASP",
+      "element": "E1",
+      "role": "INCLUDE",
+      "pharm_type": "CHARGED_NEG",
+      "tolerance_A": 1.0,
+      "conservation": 1.0,
+      "composite": 1.0,
+      "x": 78.186,
+      "y": 14.903,
+      "z": 12.641
+    },
+    {
+      "id": "NSP16-GLN88",
+      "chain": "NSP16",
+      "position": 6885,
+      "aa": "GLN",
+      "element": "E1",
+      "role": "INCLUDE",
+      "pharm_type": "HBOND",
+      "tolerance_A": 2.0,
+      "conservation": 1.0,
+      "composite": 0.8584,
+      "x": 80.106,
+      "y": 24.36,
+      "z": 10.372
+    },
+    {
+      "id": "NSP10-ASN23",
+      "chain": "NSP10",
+      "position": 4293,
+      "aa": "ASN",
+      "element": "E2",
+      "role": "INCLUDE",
+      "pharm_type": "HBOND",
+      "tolerance_A": 2.0,
+      "conservation": 0.8,
+      "composite": 0.6821,
+      "x": 68.221,
+      "y": 18.372,
+      "z": 22.162
+    },
+    {
+      "id": "NSP10-LYS26",
+      "chain": "NSP10",
+      "position": 4296,
+      "aa": "LYS",
+      "element": "E2",
+      "role": "INCLUDE",
+      "pharm_type": "CHARGED_POS",
+      "tolerance_A": 1.0,
+      "conservation": 0.8,
+      "composite": 0.6821,
+      "x": 70.234,
+      "y": 24.443,
+      "z": 16.569
+    },
+    {
+      "id": "NSP16-MET248",
+      "chain": "NSP16",
+      "position": 7045,
+      "aa": "MET",
+      "element": "E2",
+      "role": "INCLUDE",
+      "pharm_type": "HYDROPHOBIC",
+      "tolerance_A": 2.0,
+      "conservation": 1.0,
+      "composite": 0.6723,
+      "x": 77.97,
+      "y": 34.901,
+      "z": 11.65
+    },
+    {
+      "id": "NSP16-VAL105",
+      "chain": "NSP16",
+      "position": 6902,
+      "aa": "VAL",
+      "element": "E2",
+      "role": "INCLUDE",
+      "pharm_type": "HYDROPHOBIC",
+      "tolerance_A": 2.0,
+      "conservation": 1.0,
+      "composite": 0.649,
+      "x": 75.421,
+      "y": 10.774,
+      "z": 17.995
+    },
+    {
+      "id": "NSP10-MET27",
+      "chain": "NSP10",
+      "position": 4297,
+      "aa": "MET",
+      "element": "E2",
+      "role": "INCLUDE",
+      "pharm_type": "HYDROPHOBIC",
+      "tolerance_A": 2.0,
+      "conservation": 1.0,
+      "composite": 0.649,
+      "x": 73.094,
+      "y": 26.335,
+      "z": 14.858
+    },
+    {
+      "id": "NSP16-ILE41",
+      "chain": "NSP16",
+      "position": 6838,
+      "aa": "ILE",
+      "element": "E2",
+      "role": "INCLUDE",
+      "pharm_type": "HYDROPHOBIC",
+      "tolerance_A": 2.0,
+      "conservation": 1.0,
+      "composite": 0.6257,
+      "x": 70.604,
+      "y": 28.082,
+      "z": 21.319
+    },
+    {
+      "id": "NSP16-LYS77",
+      "chain": "NSP16",
+      "position": 6874,
+      "aa": "LYS",
+      "element": "E2",
+      "role": "INCLUDE",
+      "pharm_type": "CHARGED_POS",
+      "tolerance_A": 1.0,
+      "conservation": 1.0,
+      "composite": 0.6025,
+      "x": 72.203,
+      "y": 15.095,
+      "z": 25.888
+    }
+  ],
+  "screening_notes": "Compounds targeting CGCP-NSP10-NSP16-v1 should: (1) engage E1 salt bridge core (LYS93/ASP107 \u2014 positively charged + acidic groups); (2) present hydrophobic/polar groups for E2 (GLN88/MET248/VAL105/MET27/LEU28); (3) optionally engage E3 extended contacts. This interface has the highest pan-coronavirus conservation (mean=0.902) \u2014 highest selectivity expected."
+}
