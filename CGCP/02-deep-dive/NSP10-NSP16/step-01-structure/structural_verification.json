@@ -1,0 +1,44 @@
+{
+  "interface": "NSP10-NSP16",
+  "pdb": "/home/nseku/projects/rtc-pan-coronavirus/03-virtual-screening/NSP10-NSP16_2/receptor_NSP10-NSP16_2.pdb",
+  "anchor": "LYS93(B4346)",
+  "n_pass": 7,
+  "n_total": 7,
+  "checks": {
+    "C1": {
+      "name": "Chains A (NSP16) + B (NSP10) present",
+      "pass": true,
+      "detail": "Chains: ['A', 'B']"
+    },
+    "C2": {
+      "name": "Chain sizes reasonable",
+      "pass": true,
+      "detail": "NSP16=299 res, NSP10=116 res"
+    },
+    "C3": {
+      "name": "Anchor adjacent to NSP16",
+      "pass": true,
+      "detail": "LYS93(B4346) min dist to NSP16: 5.15\u00c5"
+    },
+    "C4": {
+      "name": "Backbone complete (Chain A/NSP16)",
+      "pass": true,
+      "detail": "0 missing backbone atoms"
+    },
+    "C5": {
+      "name": "LYS93 (B4346) present and correct",
+      "pass": true,
+      "detail": "B4346=LYS at (74.536,12.890,9.624)"
+    },
+    "C6": {
+      "name": "Positive ctrl: LYS93 near NSP16",
+      "pass": true,
+      "detail": "24 NSP16 residues within 15\u00c5"
+    },
+    "C7": {
+      "name": "Neg ctrl: LYS93 not at Zn site",
+      "pass": true,
+      "detail": "LYS93 to Zn: 22.53\u00c5"
+    }
+  }
+}

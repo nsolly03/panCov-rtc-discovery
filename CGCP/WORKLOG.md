@@ -1085,3 +1085,28 @@ Highly selective for coronaviruses — unusual H-bond cluster.
 | NSP12-NSP7 | CGCP-NSP12-NSP7-v1 | PHE440 | aromatic | electrostatic | distal |
 | NSP12-NSP8 | CGCP-NSP12-NSP8-v1 | LEU387 | hydrophobic | electrostatic | H-bond |
 | NSP9-NSP12 | CGCP-NSP9-NSP12-v1 | ARG733 | NSP9 Asn cluster | electrostatic | supporting |
+
+## Entry 040 — Phase 2 NSP10-NSP16: Steps 1-3
+
+**Date:** 2026-03-24
+**Phase:** 2 | **Interface:** NSP10-NSP16 | **Steps:** 1-3
+
+**Structure note:** Polyprotein absolute numbering
+- Chain A = NSP16 (residues 6798-7096, 299 AA)
+- Chain B = NSP10 (residues 4271-4402, 116 AA)
+- Anchor: B4346=LYS (protein pos 76 = canonical LYS93)
+
+**Step 1: 7/7 PASS**
+- LYS93(B4346) at (74.536, 12.890, 9.624)
+- 24 NSP16 residues within 15Å
+- Zn site 22.53Å from anchor
+
+**Step 2: 51 interface residues (NSP16=27, NSP10=24)**
+- Top: NSP16-ASP107(1.000), NSP10-LEU28(0.863)
+- Anchor LYS93 comp=0.637
+
+**Step 3: Feature distribution:**
+- Hydrophobic=25, H-bond=14, Charged+=6, Charged-=3, Aromatic=2
+
+**Status:** Steps 1-3 Complete ✅
+**Next:** Steps 4+5 — DBSCAN + conservation
