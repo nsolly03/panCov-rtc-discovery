@@ -1250,3 +1250,21 @@ Low conservation (0.660) — SARS-CoV-2 selective compound likely.
 
 **Status:** Complete ✅
 **Next:** Steps 4+5 for all four interfaces
+
+## Entry 049 — Steps 4+5: remaining 4 interfaces
+
+**Date:** 2026-03-24
+**Phase:** 2 | **Steps:** 4+5
+
+| Interface | Clusters | Cons | Candidates | Note |
+|-----------|----------|------|-----------|------|
+| NSP10-NSP14 | 1 | 0.739 | 25 | Rich interface |
+| NSP13-Helicase | 4 | 0.750 | 0 | Lower threshold needed |
+| NSP12-NSP13 | 1 | 0.933 | 6 | Best conservation |
+| NSP15 | 1 | 0.750 | 0 | Lower threshold needed |
+
+**Decision:** NSP13-Helicase + NSP15 use cons>=0.600 threshold in Step 6
+(all residues at moderate conservation — biology of homodimer interfaces)
+
+**Status:** Complete ✅
+**Next:** Steps 6+7

@@ -1,0 +1,217 @@
+{
+  "interface": "NSP12-NSP13",
+  "tier_stats": {
+    "identical": {
+      "n": 10,
+      "mean_comp": 0.572,
+      "members": [
+        "NSP12-TYR903",
+        "NSP12-MET902",
+        "NSP13-TYR93",
+        "NSP12-ASP901",
+        "NSP13-LEU92",
+        "NSP12-SER904",
+        "NSP13-LYS94",
+        "NSP12-LEU900",
+        "NSP13-PHE90",
+        "NSP13-GLY91"
+      ]
+    },
+    "high": {
+      "n": 1,
+      "mean_comp": 0.577,
+      "members": [
+        "NSP13-ASN95"
+      ]
+    },
+    "variable": {
+      "n": 1,
+      "mean_comp": 0.238,
+      "members": [
+        "NSP13-THR96"
+      ]
+    }
+  },
+  "records": [
+    {
+      "residue": "NSP12-TYR903",
+      "chain": "NSP12",
+      "position": 903,
+      "aa": "TYR",
+      "primary_feature": "anchor",
+      "contact_score": 11,
+      "conservation": 1.0,
+      "composite": 0.4633,
+      "is_anchor": 1,
+      "x": 196.85,
+      "y": 194.944,
+      "z": 157.632,
+      "cluster": 0
+    },
+    {
+      "residue": "NSP12-MET902",
+      "chain": "NSP12",
+      "position": 902,
+      "aa": "MET",
+      "primary_feature": "hydrophobic",
+      "contact_score": 48,
+      "conservation": 1.0,
+      "composite": 1.0,
+      "is_anchor": 0,
+      "x": 197.429,
+      "y": 191.348,
+      "z": 158.727,
+      "cluster": 0
+    },
+    {
+      "residue": "NSP13-TYR93",
+      "chain": "NSP13",
+      "position": 93,
+      "aa": "TYR",
+      "primary_feature": "aromatic",
+      "contact_score": 44,
+      "conservation": 1.0,
+      "composite": 0.942,
+      "is_anchor": 0,
+      "x": 199.707,
+      "y": 190.53,
+      "z": 155.014,
+      "cluster": 0
+    },
+    {
+      "residue": "NSP12-ASP901",
+      "chain": "NSP12",
+      "position": 901,
+      "aa": "ASP",
+      "primary_feature": "charged_neg",
+      "contact_score": 29,
+      "conservation": 1.0,
+      "composite": 0.7244,
+      "is_anchor": 0,
+      "x": 200.946,
+      "y": 192.356,
+      "z": 159.828,
+      "cluster": 0
+    },
+    {
+      "residue": "NSP13-LEU92",
+      "chain": "NSP13",
+      "position": 92,
+      "aa": "LEU",
+      "primary_feature": "hydrophobic",
+      "contact_score": 21,
+      "conservation": 1.0,
+      "composite": 0.6083,
+      "is_anchor": 0,
+      "x": 196.138,
+      "y": 191.236,
+      "z": 153.847,
+      "cluster": 0
+    },
+    {
+      "residue": "NSP12-SER904",
+      "chain": "NSP12",
+      "position": 904,
+      "aa": "SER",
+      "primary_feature": "hbond_donor",
+      "contact_score": 16,
+      "conservation": 1.0,
+      "composite": 0.5357,
+      "is_anchor": 0,
+      "x": 199.244,
+      "y": 197.773,
+      "z": 157.614,
+      "cluster": 0
+    },
+    {
+      "residue": "NSP13-LYS94",
+      "chain": "NSP13",
+      "position": 94,
+      "aa": "LYS",
+      "primary_feature": "charged_pos",
+      "contact_score": 10,
+      "conservation": 1.0,
+      "composite": 0.4487,
+      "is_anchor": 0,
+      "x": 200.938,
+      "y": 193.25,
+      "z": 152.706,
+      "cluster": 0
+    },
+    {
+      "residue": "NSP12-LEU900",
+      "chain": "NSP12",
+      "position": 900,
+      "aa": "LEU",
+      "primary_feature": "hydrophobic",
+      "contact_score": 4,
+      "conservation": 1.0,
+      "composite": 0.3616,
+      "is_anchor": 0,
+      "x": 199.733,
+      "y": 195.179,
+      "z": 162.043,
+      "cluster": 0
+    },
+    {
+      "residue": "NSP13-PHE90",
+      "chain": "NSP13",
+      "position": 90,
+      "aa": "PHE",
+      "primary_feature": "aromatic",
+      "contact_score": 1,
+      "conservation": 1.0,
+      "composite": 0.3181,
+      "is_anchor": 0,
+      "x": 196.85,
+      "y": 195.944,
+      "z": 148.729,
+      "cluster": 0
+    },
+    {
+      "residue": "NSP13-GLY91",
+      "chain": "NSP13",
+      "position": 91,
+      "aa": "GLY",
+      "primary_feature": "hydrophobic",
+      "contact_score": 1,
+      "conservation": 1.0,
+      "composite": 0.3181,
+      "is_anchor": 0,
+      "x": 195.665,
+      "y": 192.796,
+      "z": 150.464,
+      "cluster": 0
+    },
+    {
+      "residue": "NSP13-ASN95",
+      "chain": "NSP13",
+      "position": 95,
+      "aa": "ASN",
+      "primary_feature": "hbond_donor",
+      "contact_score": 23,
+      "conservation": 0.8,
+      "composite": 0.5766,
+      "is_anchor": 0,
+      "x": 204.37,
+      "y": 193.883,
+      "z": 154.163,
+      "cluster": 0
+    },
+    {
+      "residue": "NSP13-THR96",
+      "chain": "NSP13",
+      "position": 96,
+      "aa": "THR",
+      "primary_feature": "hbond_donor",
+      "contact_score": 8,
+      "conservation": 0.4,
+      "composite": 0.2376,
+      "is_anchor": 0,
+      "x": 205.244,
+      "y": 190.249,
+      "z": 154.935,
+      "cluster": 0
+    }
+  ]
+}
