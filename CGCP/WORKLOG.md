@@ -1224,3 +1224,14 @@ Low conservation (0.660) — SARS-CoV-2 selective compound likely.
 
 **Status:** Complete ✅
 **Next:** Step 8 — ChimeraX
+
+## Entry 047 — Phase 2 NSP7-NSP8: Step 8 ChimeraX
+
+**Date:** 2026-03-24
+**Phase:** 2 | **Interface:** NSP7-NSP8 | **Step:** 8
+
+**ChimeraX files:**
+- Session: CGCP/02-deep-dive/NSP7-NSP8/step-08-controls/step08_pharmacophore_NSP7-NSP8.cxs
+- Figure: Fig_Step08_ChimeraX_NSP7-NSP8.png
+
+**Phase 2 NSP7-NSP8 COMPLETE ✅**
