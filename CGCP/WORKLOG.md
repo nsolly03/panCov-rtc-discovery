@@ -1148,3 +1148,16 @@ Core salt bridge LYS93(NSP10)-ASP107(NSP16) must be mimicked.
 
 **Status:** Complete ✅
 **Next:** Step 8 — ChimeraX
+
+## Entry 043 — Phase 2 NSP10-NSP16: Step 8 ChimeraX
+
+**Date:** 2026-03-24
+**Phase:** 2 | **Interface:** NSP10-NSP16 | **Step:** 8
+
+**ChimeraX files:**
+- Session: CGCP/02-deep-dive/NSP10-NSP16/step-08-controls/step08_pharmacophore_NSP10-NSP16.cxs
+- Figure: Fig_Step08_ChimeraX_NSP10-NSP16.png
+
+**Phase 2 NSP10-NSP16 COMPLETE ✅**
+
+**Next interface:** NSP7-NSP8 (score 6/6, druggability 0.531, anchor PHE92)
