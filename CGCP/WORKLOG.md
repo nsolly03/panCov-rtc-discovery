@@ -1296,3 +1296,24 @@ All 9 CGCP pharmacophores defined and visualized:
 | NSP15-v1 | ASP40 | ASP40+GLU171+ALA172 | NSP15b | NSP15a ext |
 
 **Next:** VirtualFlow multi-interface setup + manuscript
+
+## Entry 052 — NSP10-NSP16: Zn2+ analysis
+
+**Date:** 2026-03-24
+
+**Finding:** NSP10 has 2 Zn2+ ions (zinc finger domain)
+- Zn1 (B4401): 5.47Å from LYS76 anchor — RELEVANT
+- Zn2 (B4402): 22.55Å from anchor — not relevant
+
+**Implication:**
+Zn1 finger (CYS74-CYS77-HIS83-CYS90) stabilizes LYS76 pocket.
+Screening hits must be filtered for Zn-chelating PAINS:
+- Thiosemicarbazones
+- Hydroxamic acids
+- 8-hydroxyquinolines
+- Catechols
+
+NSP12-NSP8: No metals confirmed — pharmacophore clean.
+All other interfaces: No metals.
+
+**Updated:** pharmacophore_NSP10-NSP16.json with zn_note

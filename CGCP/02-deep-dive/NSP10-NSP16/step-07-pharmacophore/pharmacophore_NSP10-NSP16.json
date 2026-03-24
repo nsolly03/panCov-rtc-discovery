@@ -198,5 +198,37 @@
       "z": 25.888
     }
   ],
-  "screening_notes": "Compounds targeting CGCP-NSP10-NSP16-v1 should: (1) engage E1 salt bridge core (LYS93/ASP107 \u2014 positively charged + acidic groups); (2) present hydrophobic/polar groups for E2 (GLN88/MET248/VAL105/MET27/LEU28); (3) optionally engage E3 extended contacts. This interface has the highest pan-coronavirus conservation (mean=0.902) \u2014 highest selectivity expected."
+  "screening_notes": "Compounds targeting CGCP-NSP10-NSP16-v1 should: (1) engage E1 salt bridge core (LYS93/ASP107 \u2014 positively charged + acidic groups); (2) present hydrophobic/polar groups for E2 (GLN88/MET248/VAL105/MET27/LEU28); (3) optionally engage E3 extended contacts. This interface has the highest pan-coronavirus conservation (mean=0.902) \u2014 highest selectivity expected.",
+  "zn_note": {
+    "present": true,
+    "Zn1": {
+      "chain": "B",
+      "pos": 4401,
+      "coord": [
+        70.8,
+        9.1,
+        10.9
+      ],
+      "dist_to_anchor_A": 5.47,
+      "coordinated_by": [
+        "CYS74",
+        "CYS77",
+        "HIS83",
+        "CYS90"
+      ],
+      "relevance": "STRUCTURAL \u2014 stabilizes LYS76 pocket geometry"
+    },
+    "Zn2": {
+      "chain": "B",
+      "pos": 4402,
+      "coord": [
+        61.4,
+        21.6,
+        -6.5
+      ],
+      "dist_to_anchor_A": 22.55,
+      "relevance": "DISTAL \u2014 not relevant to pharmacophore"
+    },
+    "implication": "Zn1 is 5.47A from anchor LYS76. The Zn1 finger (CYS74-CYS77-HIS83-CYS90) shapes the binding pocket. Compounds must not chelate Zn1 or displace CYS/HIS coordinating residues. Pan-assay interference (PAINS) filter should exclude Zn-chelating scaffolds (thiosemicarbazones, hydroxamic acids, 8-hydroxyquinolines) from screening hits."
+  }
 }
