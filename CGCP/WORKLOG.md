@@ -1110,3 +1110,20 @@ Highly selective for coronaviruses — unusual H-bond cluster.
 
 **Status:** Steps 1-3 Complete ✅
 **Next:** Steps 4+5 — DBSCAN + conservation
+
+## Entry 041 — Phase 2 NSP10-NSP16: Steps 4+5
+
+**Date:** 2026-03-24
+**Phase:** 2 | **Interface:** NSP10-NSP16 | **Steps:** 4+5
+
+**DBSCAN:** 1 cluster (51 residues) — contiguous
+**Conservation:** mean=0.902 — HIGHEST of all interfaces so far
+- Identical=36, High=7, Moderate=6, Variable=2
+
+**Top candidates (cons>=0.800, comp>=0.500):** 17
+- NSP16-ASP107 (1.000/1.000) — salt bridge core
+- NSP16-GLN88 (1.000/0.858)
+- NSP10-LYS76 anchor (1.000/0.637)
+
+**Status:** Complete ✅
+**Next:** Steps 6+7 — assessment + pharmacophore
