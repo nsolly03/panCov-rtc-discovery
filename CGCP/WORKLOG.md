@@ -1268,3 +1268,31 @@ Low conservation (0.660) — SARS-CoV-2 selective compound likely.
 
 **Status:** Complete ✅
 **Next:** Steps 6+7
+
+## Entry 051 — Step 8 ChimeraX: All remaining interfaces complete
+
+**Date:** 2026-03-24
+**Phase:** 2 | **Step:** 8 — ALL 9 INTERFACES
+
+**ChimeraX sessions saved:**
+- NSP10-NSP14: step-08-controls/step08_pharmacophore_NSP10-NSP14.cxs
+- NSP13-Helicase: step-08-controls/step08_pharmacophore_NSP13-Helicase.cxs
+- NSP12-NSP13: step-08-controls/step08_pharmacophore_NSP12-NSP13.cxs
+- NSP15: step-08-controls/step08_pharmacophore_NSP15.cxs
+
+**PHASE 2 FULLY COMPLETE ✅**
+
+All 9 CGCP pharmacophores defined and visualized:
+| Pharmacophore | Anchor | E1 | E2 | E3 |
+|--------------|--------|----|----|-----|
+| NSP12-NSP7-v1 | PHE440 | aromatic core | electrostatic | distal |
+| NSP12-NSP8-v1 | LEU387 | hydrophobic | electrostatic | H-bond |
+| NSP9-NSP12-v1 | ARG733 | NSP9 Asn cluster | electrostatic | supporting |
+| NSP10-NSP16-v1 | LYS93 | salt bridge | hydrophobic/polar | — |
+| NSP7-NSP8-v1 | PHE92 | hydrophobic core | NSP7 contact | extended |
+| NSP10-NSP14-v1 | HIS80 | aromatic/HIS core | NSP14 zone | — |
+| NSP13-Helicase-v1 | LYS414 | LYS414+ILE480+HIS482 | NSP13b | NSP13a ext |
+| NSP12-NSP13-v1 | TYR903 | TYR903/MET902 | NSP13 zone | — |
+| NSP15-v1 | ASP40 | ASP40+GLU171+ALA172 | NSP15b | NSP15a ext |
+
+**Next:** VirtualFlow multi-interface setup + manuscript
