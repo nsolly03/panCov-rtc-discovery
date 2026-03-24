@@ -1317,3 +1317,11 @@ NSP12-NSP8: No metals confirmed — pharmacophore clean.
 All other interfaces: No metals.
 
 **Updated:** pharmacophore_NSP10-NSP16.json with zn_note
+
+## Entry 053 — NSP10-NSP16: ChimeraX updated with Zn1
+
+**Date:** 2026-03-24
+- Added Zn1 (B4401) gold sphere to ChimeraX session
+- Coordinating residues CYS74/CYS77/HIS83/CYS90 shown
+- Distance label: Zn1-LYS76 = 5.47Å
+- Updated session + new figure: Fig_Step08_ChimeraX_NSP10-NSP16_Zn.png
