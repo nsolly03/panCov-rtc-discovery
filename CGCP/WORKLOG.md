@@ -1235,3 +1235,18 @@ Low conservation (0.660) — SARS-CoV-2 selective compound likely.
 - Figure: Fig_Step08_ChimeraX_NSP7-NSP8.png
 
 **Phase 2 NSP7-NSP8 COMPLETE ✅**
+
+## Entry 048 — Steps 1-3: NSP10-NSP14, NSP13-Helicase, NSP12-NSP13, NSP15
+
+**Date:** 2026-03-24
+**Phase:** 2 | **Steps:** 1-3 | **All 4: 7/7 PASS**
+
+| Interface | Residues | Anchor | Top composite | Character |
+|-----------|----------|--------|--------------|-----------|
+| NSP10-NSP14 | 114 | HIS80 (1.000) | PHE19 (1.000) | Largest, aromatic+hydrophobic |
+| NSP13-Helicase | 33 | LYS414 (0.750) | ILE480 (0.750) | Compact homodimer |
+| NSP12-NSP13 | 12 | TYR903 (1.000) | MET902 (1.000) | Smallest interface (12 res) |
+| NSP15 | 63 | ASP40 (0.750) | THR286 (0.750) | Homodimer, H-bond rich |
+
+**Status:** Complete ✅
+**Next:** Steps 4+5 for all four interfaces

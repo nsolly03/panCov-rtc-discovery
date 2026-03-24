@@ -1,0 +1,42 @@
+{
+  "interface": "NSP15",
+  "n_pass": 7,
+  "n_total": 7,
+  "checks": {
+    "C1": {
+      "name": "Chains A+B present",
+      "pass": true,
+      "detail": "Chains: ['A', 'B']"
+    },
+    "C2": {
+      "name": "Chain sizes reasonable",
+      "pass": true,
+      "detail": "NSP15a=348, NSP15b=348"
+    },
+    "C3": {
+      "name": "Anchor adjacent to partner",
+      "pass": true,
+      "detail": "ASP40 min dist to partner: 7.29\u00c5"
+    },
+    "C4": {
+      "name": "Backbone complete (Chain1)",
+      "pass": true,
+      "detail": "0 missing backbone atoms"
+    },
+    "C5": {
+      "name": "ASP40 present",
+      "pass": true,
+      "detail": "=ASP at (-59.76,51.40,-8.95)"
+    },
+    "C6": {
+      "name": "Positive ctrl: anchor near partner",
+      "pass": true,
+      "detail": "76 partner residues within 20\u00c5"
+    },
+    "C7": {
+      "name": "Neg ctrl: anchor distant",
+      "pass": true,
+      "detail": "res1=22.7\u00c5 | res200=35.7\u00c5"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "interface": "NSP10-NSP14",
+  "n_pass": 7,
+  "n_total": 7,
+  "checks": {
+    "C1": {
+      "name": "Chains A+B present",
+      "pass": true,
+      "detail": "Chains: ['A', 'B']"
+    },
+    "C2": {
+      "name": "Chain sizes reasonable",
+      "pass": true,
+      "detail": "NSP10=131, NSP14=286"
+    },
+    "C3": {
+      "name": "Anchor adjacent to partner",
+      "pass": true,
+      "detail": "HIS80 min dist to partner: 5.52\u00c5"
+    },
+    "C4": {
+      "name": "Backbone complete (Chain1)",
+      "pass": true,
+      "detail": "0 missing backbone atoms"
+    },
+    "C5": {
+      "name": "HIS80 present",
+      "pass": true,
+      "detail": "=HIS at (-6.13,11.24,-19.34)"
+    },
+    "C6": {
+      "name": "Positive ctrl: anchor near partner",
+      "pass": true,
+      "detail": "94 partner residues within 20\u00c5"
+    },
+    "C7": {
+      "name": "Neg ctrl: anchor distant",
+      "pass": true,
+      "detail": "res126=28.1\u00c5"
+    }
+  }
+}

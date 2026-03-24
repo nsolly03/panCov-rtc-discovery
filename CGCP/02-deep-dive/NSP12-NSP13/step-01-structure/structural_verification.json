@@ -1,0 +1,42 @@
+{
+  "interface": "NSP12-NSP13",
+  "n_pass": 7,
+  "n_total": 7,
+  "checks": {
+    "C1": {
+      "name": "Chains A+E present",
+      "pass": true,
+      "detail": "Chains: ['A', 'E']"
+    },
+    "C2": {
+      "name": "Chain sizes reasonable",
+      "pass": true,
+      "detail": "NSP12=927, NSP13=590"
+    },
+    "C3": {
+      "name": "Anchor adjacent to partner",
+      "pass": true,
+      "detail": "TYR903 min dist to partner: 5.35\u00c5"
+    },
+    "C4": {
+      "name": "Backbone complete (Chain1)",
+      "pass": true,
+      "detail": "0 missing backbone atoms"
+    },
+    "C5": {
+      "name": "TYR903 present",
+      "pass": true,
+      "detail": "=TYR at (196.85,194.94,157.63)"
+    },
+    "C6": {
+      "name": "Positive ctrl: anchor near partner",
+      "pass": true,
+      "detail": "62 partner residues within 20\u00c5"
+    },
+    "C7": {
+      "name": "Neg ctrl: anchor distant",
+      "pass": true,
+      "detail": "res618=56.3\u00c5 | res759=51.6\u00c5"
+    }
+  }
+}
