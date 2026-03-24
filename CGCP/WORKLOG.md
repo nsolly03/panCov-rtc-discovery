@@ -1202,3 +1202,25 @@ Core pharmacophore (7 candidates) has strong conservation.
 
 **Status:** Complete ✅
 **Next:** Steps 6+7
+
+## Entry 046 — Phase 2 NSP7-NSP8: Steps 6+7
+
+**Date:** 2026-03-24
+**Phase:** 2 | **Interface:** NSP7-NSP8 | **Steps:** 6+7
+
+**Step 6:** 6 pharmacophore candidates (most focused)
+- ANCHOR: PHE92 (0.800/0.900)
+- INCLUDE: LEU98, MET94, ARG111 (NSP8) + SER57 (NSP7) + PRO116
+
+**Step 7: CGCP-NSP7-NSP8-v1**
+| Element | Residues | Centroid | Radius |
+|---------|----------|---------|--------|
+| E1 hydrophobic core | 4 | (-5.78,-13.64,-14.66) | 11.49Å |
+| E2 NSP7 contact | 1 | (-13.68,-6.02,-8.89) | 0.00Å |
+| E3 extended | 1 | (-15.40,-0.39,-11.71) | 0.00Å |
+
+**Most focused pharmacophore** — drug must fit PHE92/LEU98/MET94/ARG111 pocket.
+Low conservation (0.660) — SARS-CoV-2 selective compound likely.
+
+**Status:** Complete ✅
+**Next:** Step 8 — ChimeraX
