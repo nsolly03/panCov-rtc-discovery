@@ -1161,3 +1161,25 @@ Core salt bridge LYS93(NSP10)-ASP107(NSP16) must be mimicked.
 **Phase 2 NSP10-NSP16 COMPLETE ✅**
 
 **Next interface:** NSP7-NSP8 (score 6/6, druggability 0.531, anchor PHE92)
+
+## Entry 044 — Phase 2 NSP7-NSP8: Steps 1-3
+
+**Date:** 2026-03-24
+**Phase:** 2 | **Interface:** NSP7-NSP8 | **Steps:** 1-3
+
+**Structure:** ModeB_AF3 (Mode A not druggable)
+**Chains:** A=NSP8 (198 res), B=NSP7 (83 res)
+**Anchor:** PHE92 at (-3.107, -13.031, -12.646)
+
+**Step 1: 7/7 PASS**
+- PHE92 min dist to NSP7: 6.78Å
+- 36 NSP7 residues within 15Å
+
+**Step 2: 75 interface residues (NSP8=35, NSP7=40) — largest interface**
+- PHE92 anchor comp=0.900
+- NSP8-ARG96 top (1.000), NSP7-MET75 (0.926)
+
+**Step 3:** hydrophobic=40, hbond=20, charged+=8, charged-=5
+
+**Status:** Complete ✅
+**Next:** Steps 4+5 — DBSCAN + conservation

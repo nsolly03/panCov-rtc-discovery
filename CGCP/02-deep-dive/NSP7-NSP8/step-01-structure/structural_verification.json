@@ -1,0 +1,45 @@
+{
+  "interface": "NSP7-NSP8",
+  "pdb": "/home/nseku/projects/rtc-pan-coronavirus/03-virtual-screening/NSP7-NSP8_6/receptor_NSP7-NSP8_ModeB_AF3_6.pdb",
+  "mode": "ModeB_AF3",
+  "anchor": "PHE92",
+  "n_pass": 7,
+  "n_total": 7,
+  "checks": {
+    "C1": {
+      "name": "Chains A (NSP8) + B (NSP7) present",
+      "pass": true,
+      "detail": "Chains: ['A', 'B']"
+    },
+    "C2": {
+      "name": "Chain sizes reasonable",
+      "pass": true,
+      "detail": "NSP8=198 res, NSP7=83 res"
+    },
+    "C3": {
+      "name": "PHE92 adjacent to NSP7",
+      "pass": true,
+      "detail": "PHE92 min dist to NSP7: 6.78\u00c5"
+    },
+    "C4": {
+      "name": "Backbone complete (Chain A/NSP8)",
+      "pass": true,
+      "detail": "0 missing backbone atoms"
+    },
+    "C5": {
+      "name": "PHE92 present and correct",
+      "pass": true,
+      "detail": "Res 92=PHE at (-3.107,-13.031,-12.646)"
+    },
+    "C6": {
+      "name": "Positive ctrl: PHE92 near NSP7",
+      "pass": true,
+      "detail": "36 NSP7 residues within 15\u00c5"
+    },
+    "C7": {
+      "name": "Neg ctrl: PHE92 far from NSP8 C-term",
+      "pass": true,
+      "detail": "PHE92 to NSP8-191: 28.65\u00c5"
+    }
+  }
+}
