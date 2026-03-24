@@ -1183,3 +1183,22 @@ Core salt bridge LYS93(NSP10)-ASP107(NSP16) must be mimicked.
 
 **Status:** Complete ✅
 **Next:** Steps 4+5 — DBSCAN + conservation
+
+## Entry 045 — Phase 2 NSP7-NSP8: Steps 4+5
+
+**Date:** 2026-03-24
+**Phase:** 2 | **Interface:** NSP7-NSP8 | **Steps:** 4+5
+
+**DBSCAN:** 1 cluster (75 residues) — largest interface
+**Conservation:** mean=0.660 — lowest of all interfaces
+- Identical=13, High=8, Moderate=33, Variable=21
+
+**Note:** Low mean conservation driven by NSP7 variable periphery.
+Core pharmacophore (7 candidates) has strong conservation.
+
+**Pharmacophore preview (cons>=0.800, comp>=0.500):** 7
+- NSP8-LEU98 (1.000/0.917), PHE92★ (0.800/0.900)
+- NSP7-SER57 (1.000/0.814), NSP8-MET94 (1.000/0.750)
+
+**Status:** Complete ✅
+**Next:** Steps 6+7
