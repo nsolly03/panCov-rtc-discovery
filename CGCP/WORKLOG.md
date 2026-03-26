@@ -1376,3 +1376,24 @@ All other interfaces: No metals.
 2. Investigate file count quota — clean up if needed
 3. Complete VirtualFlow multi-interface setup
 4. Start manuscript writing (Methods section)
+
+## Entry 056 — Structure provenance documentation
+
+**Date:** 2026-03-26
+
+| Interface | PDB ID | Method | Resolution | Chains |
+|-----------|--------|--------|-----------|--------|
+| NSP12-NSP7 | 7C2K | Cryo-EM | 2.93 Å | A+C |
+| NSP12-NSP8 | 7C2K | Cryo-EM | 2.93 Å | A+B |
+| NSP9-NSP12 | 8SQK | Cryo-EM | 3.01 Å | A+G |
+| NSP10-NSP16 | 6W4H | X-ray | 1.80 Å | A+B |
+| NSP7-NSP8 | AlphaFold3 | Computational | — | A+B |
+| NSP10-NSP14 | 7DIY | X-ray | 2.69 Å | A+B |
+| NSP13-Helicase | 7NIO | X-ray | 2.20 Å | A+E |
+| NSP12-NSP13 | 7RDY | Cryo-EM | 3.10 Å | A+E |
+| NSP15 | 9HH5 | X-ray | 2.08 Å | A+B |
+
+**NSP7-NSP8 AF3 rationale:**
+Crystal structures 6NUR and 7BV2 (ModeA) have PHE92 35Å from NSP7 partner — 
+not at the interface. AF3 ModeB (iPTM=0.85 for local interface) places PHE92 
+at 6.78Å — confirmed druggable. Only AF3 structure in the pipeline.
