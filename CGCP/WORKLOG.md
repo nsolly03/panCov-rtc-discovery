@@ -1397,3 +1397,255 @@ All other interfaces: No metals.
 Crystal structures 6NUR and 7BV2 (ModeA) have PHE92 35Å from NSP7 partner — 
 not at the interface. AF3 ModeB (iPTM=0.85 for local interface) places PHE92 
 at 6.78Å — confirmed druggable. Only AF3 structure in the pipeline.
+
+---
+
+## SCRIPT INDEX — Full Pipeline Reference
+## Added: 2026-04-04
+## Purpose: Quick reference for anyone reading the WORKLOG
+
+=======================================================================
+ENVIRONMENT OVERVIEW
+=======================================================================
+
+  WSL2 (Laptop)  : Ubuntu 24.04 | conda env: rtc-discovery (Python 3.10)
+                   ~/projects/rtc-pan-coronavirus/
+  NIC5 (HPC)     : CECI cluster | conda env: rtc-screening
+                   /scratch/ulg/gigambd/onsekuye/rtc-screening/
+  GitHub         : github.com/nsolly03/panCov-rtc-discovery
+
+=======================================================================
+SECTION A — PHASE 0: INFRASTRUCTURE & STRUCTURE PREPARATION (WSL2)
+=======================================================================
+
+  setup_rtc_project.sh
+    Purpose : Creates full project directory tree
+    Run     : bash setup_rtc_project.sh
+    Output  : ~/projects/rtc-pan-coronavirus/ scaffold
+
+  download_pdb.py  (ad hoc inline scripts)
+    Purpose : Download PDB files from RCSB for all 9 interfaces
+    Run     : python3 download_pdb.py
+    Output  : 00-reference/pdb_structures/*.pdb
+
+=======================================================================
+SECTION B — PHASE 1: AF3 VALIDATION (WSL2)
+=======================================================================
+
+  Scripts: CGCP/scripts/phase-1/
+  Naming : 04_validate_[INTERFACE]_[N].py  (N = interface index 1–9)
+
+  04_validate_NSP12-NSP7_3.py    — AF3 iPTM=0.81, F1=0.951 PASS
+  04_validate_NSP12-NSP8_4.py    — AF3 iPTM=0.85, F1=0.934 PASS
+  04_validate_NSP9-NSP12_5.py    — AF3 iPTM=0.77, F1=0.837 PASS
+  04_validate_NSP10-NSP16_2.py   — AF3 iPTM=0.79, F1=0.878 PASS
+  04_validate_NSP7-NSP8_6.py     — AF3 iPTM=0.87, F1=0.0 FAIL (geometry)
+  04_validate_NSP10-NSP14_2.py   — AF3 iPTM=0.89, fold only
+  04_validate_NSP13-Helicase_7.py — AF3 monomer (homodimer, no iPTM)
+  04_validate_NSP12-NSP13_8.py   — AF3 iPTM=0.20 FAIL (PAE=24.95 Å)
+  04_validate_NSP15_9.py         — AF3 monomer, RMSD=0.437 Å PASS
+
+  Each script runs:
+    Step 1: AF3 confidence scores (iPTM, pTM, chain_pair_iptm, PAE)
+    Step 2: Parse crystal + AF3 structures
+    Step 3: Interface residue identification (5.0 Å cutoff)
+    Step 4: Consensus hotspots across crystal structures
+    Step 5: RMSD per chain (AF3 fold quality)
+    Step 6: Overall assessment (gate PASS/FAIL)
+  Output: 02-validation/[INTERFACE]/validation_result_[N].json
+
+=======================================================================
+SECTION C — PHASE 2: CGCP PIPELINE — STEPS 1–8 (WSL2)
+=======================================================================
+
+  Location: CGCP/scripts/phase-2/
+  Shared module: CGCP/scripts/prism_style.py
+    Purpose: GraphPad Prism publication style for all matplotlib figures
+             (white bg, no grid, outward ticks, Arial font, flat colors)
+
+  ── STEP 1–3 COMBINED SCRIPTS ──────────────────────────────────────
+
+  step01_structural_verification_NSP12-NSP7.py  [early dev, replaced]
+  step01_structural_verification_NSP9-NSP12.py  [early dev, replaced]
+  step02_contact_mapping_NSP9-NSP12.py          [early dev, replaced]
+  step03_feature_classification_NSP9-NSP12.py   [early dev, replaced]
+
+  → Consolidated into combined scripts (preferred):
+
+  step01_02_03_NSP12-NSP7.py     — Steps 1-3: NSP12-NSP7 (+ NSP12-NSP8)
+  step01_02_03_NSP10-NSP16.py    — Steps 1-3: NSP10-NSP16
+  step01_02_03_NSP7-NSP8.py      — Steps 1-3: NSP7-NSP8 (ModeB AF3)
+  step01_02_03_remaining_interfaces.py  — Steps 1-3: NSP10-NSP14,
+                                           NSP13-Helicase, NSP12-NSP13,
+                                           NSP15 (4 interfaces in one run)
+  Each runs:
+    Step 1: 7-point structural audit (C1–C7, all must PASS)
+    Step 2: Contact mapping (5.0 Å Cα cutoff) + composite scoring
+            Composite = 0.40×contacts + 0.30×BSA + 0.30×conservation
+    Step 3: Feature classification (anchor/aromatic/hydrophobic/
+            charged_pos/charged_neg/hbond_donor)
+  Output: step-03-features/feature_classification_[INTERFACE].tsv
+          step-03-features/Fig_Steps01-03_[INTERFACE].png
+
+  ── STEP 4–5 COMBINED SCRIPTS ──────────────────────────────────────
+
+  step04_dbscan_clustering_NSP12-NSP8.py   [early dev, interface-specific]
+  step05_conservation_overlay_NSP12-NSP8.py [early dev, interface-specific]
+
+  → Consolidated into combined scripts (preferred):
+
+  step04_05_dbscan_conservation_NSP9-NSP12.py
+  step04_05_dbscan_conservation_NSP10-NSP16.py
+  step04_05_dbscan_conservation_NSP7-NSP8.py
+  step04_05_remaining_interfaces.py   — NSP10-NSP14, NSP13-Helicase,
+                                         NSP12-NSP13, NSP15
+
+  Each runs:
+    Step 4: DBSCAN clustering (eps=8.0 Å, min_samples=2)
+            → PRIMARY/SECONDARY/SUPPORTING/DEPRIORITIZE per cluster
+    Step 5: Conservation overlay (5 coronavirus species)
+            → identical/high/moderate/variable tiers
+  Output: step-04-clusters/clusters_[INTERFACE].tsv/.json
+          step-05-conservation/conservation_overlay_[INTERFACE].tsv/.json
+          step-04-clusters/Fig_Steps04-05_[INTERFACE].png
+
+  ── STEP 6–7 COMBINED SCRIPTS ──────────────────────────────────────
+
+  step06_integrated_assessment_NSP12-NSP8.py  [early dev]
+  step07_pharmacophore_hypothesis_NSP12-NSP8.py [early dev]
+
+  → Consolidated into combined scripts (preferred):
+
+  step06_07_assessment_pharmacophore_NSP9-NSP12.py
+  step06_07_assessment_pharmacophore_NSP10-NSP16.py
+  step06_07_assessment_pharmacophore_NSP7-NSP8.py
+  step06_07_remaining_interfaces.py  — NSP10-NSP14, NSP13-Helicase,
+                                        NSP12-NSP13, NSP15
+
+  Each runs:
+    Step 6: Evidence scoring (E1–E6 binary criteria, max score=6)
+            Decision: ANCHOR / INCLUDE / SECONDARY / EXCLUDE
+            Threshold: cons≥0.800 + comp≥0.600 (standard)
+                       cons≥0.600 + comp≥0.500 (homodimers: NSP13, NSP15)
+    Step 7: Pharmacophore hypothesis
+            Elements: E1=anchor+top chain1, E2=partner chain, E3=rest
+            Tolerance: 1.0Å (charged/anchor), 1.5Å (aromatic), 2.0Å (rest)
+  Output: step-06-assessment/integrated_assessment_[INTERFACE].tsv/.json
+          step-07-pharmacophore/pharmacophore_[INTERFACE].tsv/.json
+          step-06-assessment/Fig_Step06_Assessment_[INTERFACE].png
+          step-07-pharmacophore/Fig_Step07_Pharmacophore_[INTERFACE].png
+
+  ── STEP 7 HOMODIMER FIX ───────────────────────────────────────────
+
+  step07_fix_homodimer_elements.py
+    Purpose : Fixes E1/E2/E3 element assignment for NSP13-Helicase
+              and NSP15 where all residues have uniform conservation
+    Applies : NSP13-Helicase (E1: LYS414+ILE480+HIS482+ASP580+LYS477)
+              NSP15 (E1: ASP40+ALA172+GLU171+VAL41+GLY14+LEU168)
+    Run     : python3 step07_fix_homodimer_elements.py
+
+  ── STEP 8: ChimeraX VISUALIZATION (manual, WSL2) ──────────────────
+
+  Sessions saved as .cxs files:
+    CGCP/02-deep-dive/[INTERFACE]/step-08-controls/
+      step08_pharmacophore_[INTERFACE].cxs   — ChimeraX session
+      Fig_Step08_ChimeraX_[INTERFACE].png    — publication figure
+
+  Color scheme: grey cartoon | green partner | light blue surface
+                black anchor sphere | red E1 | blue E2 | green E3
+  Special: NSP10-NSP16 has Zn1 gold sphere (B4401, 5.47 Å from LYS76)
+
+=======================================================================
+SECTION D — ANALYSIS & DOCUMENTATION SCRIPTS (WSL2)
+=======================================================================
+
+  structure_selection_per_interface.py
+    Purpose : Publication figure per interface — PDB vs AF3 side by side
+              Left panel: resolution bars + R-free diamonds
+              Right panel: AF3 iPTM/pTM/F1 + outcome badge
+    Output  : CGCP/02-deep-dive/structure_selection/
+              Fig_StructureSelection_[INTERFACE].png/.pdf
+
+  structure_selection_figure.py  [earlier combined version, superseded]
+    Purpose : 3×3 combined figure (all 9 interfaces, resolution only)
+
+  structure_provenance_audit.py  [inline script]
+    Purpose : Reads REMARK headers from all PDB files to extract
+              experimental method and resolution for manuscript
+
+  metal_audit.py  [inline script]
+    Purpose : Checks all 9 receptor PDBs for Zn/metal ions
+              → Found Zn1+Zn2 in NSP10-NSP16 only
+              → Zn1 (B4401) 5.47 Å from LYS76 anchor
+
+  cgcp_methodology.js  (Node.js / docx library)
+    Purpose : Generates CGCP_Methodology.docx — full methodology document
+              with step-by-step pipeline description, per-interface
+              results, pre-screening audit, AF3 assessment table
+    Run     : node cgcp_methodology.js
+    Output  : CGCP_Methodology.docx
+
+=======================================================================
+SECTION E — HPC SCREENING SCRIPTS (NIC5)
+=======================================================================
+
+  Location: /scratch/ulg/gigambd/onsekuye/rtc-screening/scripts/
+
+  02_dock_vina.sh
+    Purpose : SLURM array job — direct AutoDock Vina screening
+    Submit  : sbatch --array=1-100 02_dock_vina.sh
+    Config  : reads from rtc-screening/receptors/config_[INTERFACE].txt
+    Output  : rtc-screening/results/scores_task*.tsv
+    Library : 2025 Enamine HAC22-23 Tier2 10M + Tier1 10M
+
+  setup_vf_all.sh  [PENDING — inode limit issue]
+    Purpose : Prepares all 9 interfaces for VirtualFlow multi-scenario
+              - Converts PDB → PDBQT (obabel --partialcharge gasteiger -xr)
+              - Writes vina config for each interface
+              - Copies to VirtualFlow input-files/receptors/
+              - Updates all.ctrl docking_scenario_names
+    Status  : Script written; blocked by BeeGFS inode limit on scratch
+    Fix     : Clean VirtualFlow output files → rerun
+
+  VirtualFlow configuration:
+    Dir     : /scratch/ulg/gigambd/onsekuye/virtualflow/
+    Control : workflow/control/all.ctrl
+    Current : docking_scenario_names=CGCP_NSP12-NSP7 (single interface)
+    Target  : All 9 interfaces as colon-separated scenarios
+
+  Receptor PDBQT files (prepared):
+    rtc-screening/receptors/receptor_NSP12-NSP7.pdbqt  ✅
+    rtc-screening/receptors/receptor_NSP12-NSP8.pdbqt  ✅
+    rtc-screening/receptors/receptor_NSP9-NSP12.pdbqt  ✅
+    [6 remaining: pending VF setup completion]
+
+=======================================================================
+SECTION F — DOCKING BOX COORDINATES (all 9 interfaces)
+=======================================================================
+
+  Interface         Center (X, Y, Z)              Size (X, Y, Z)
+  ─────────────────────────────────────────────────────────────────
+  NSP12-NSP7        100.015, 89.131, 106.015      32.235×58.39×54.642
+  NSP12-NSP8         98.660,121.710, 110.810      52.0×52.0×52.0
+  NSP9-NSP12        134.000,166.120, 171.670      44.0×44.0×44.0
+  NSP10-NSP16        75.618, 10.689,  15.511      28.363×32.885×42.778
+  NSP7-NSP8          -5.780,-13.640, -14.660      34.0×34.0×34.0
+  NSP10-NSP14        -4.776,  7.298, -25.886      50.0×50.0×50.0
+  NSP13-Helicase    -30.151, 14.648,  -9.240      46.0×46.0×36.0
+  NSP12-NSP13       198.500,194.000, 159.260      24.0×24.0×24.0  ← CORRECTED
+  NSP15             -70.407, 44.044, -15.772      52.0×52.0×50.0
+  exhaustiveness=16, num_modes=9, energy_range=3
+
+=======================================================================
+CURRENT STATUS (2026-04-04)
+=======================================================================
+
+  CGCP Phase 2    : COMPLETE ✅ — all 9 interfaces, all 8 steps
+  NIC5 Run 2      : Tier1 10M — 2 tasks remaining (91, 93)
+  Top hit         : -9.240 kcal/mol (NSP12-NSP7)
+  VirtualFlow     : PENDING — inode quota resolution needed
+  Next actions    :
+    1. Wait for Run 2 completion → consolidate hits
+    2. Fix inode limit → complete VF multi-interface setup
+    3. Analyse hits: PAINS filter, Lipinski, cluster top 50
+    4. Write manuscript Methods section
