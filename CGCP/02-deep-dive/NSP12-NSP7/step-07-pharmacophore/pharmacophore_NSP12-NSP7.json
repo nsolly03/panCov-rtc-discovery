@@ -1,159 +1,30 @@
 {
-  "name": "CGCP-NSP12-NSP7-v1",
   "interface": "NSP12-NSP7",
-  "date": "2026-03-18",
-  "method": "CGCP pipeline v1.0",
-  "reference_pdb": "7BV2",
-  "chain": "A (NSP12)",
-  "n_features": 8,
-  "elements": {
-    "E1": {
-      "name": "Aromatic hydrophobic core",
-      "description": "pi-stacking cluster around PHE440 anchor",
-      "n_residues": 6,
-      "centroid": {
-        "x": 94.149,
-        "y": 80.234,
-        "z": 122.147,
-        "radius": 11.74
-      }
-    },
-    "E2": {
-      "name": "Electrostatic anchor",
-      "description": "GLU431 salt bridge with LYS1(NSP7)",
-      "n_residues": 1,
-      "centroid": {
-        "x": 99.825,
-        "y": 61.004,
-        "z": 116.86,
-        "radius": 0.0
-      }
-    },
-    "E3": {
-      "name": "Distal aromatic patch",
-      "description": "PHE843 hydrophobic contact",
-      "n_residues": 1,
-      "centroid": {
-        "x": 90.051,
-        "y": 78.879,
-        "z": 121.227,
-        "radius": 0.0
-      }
-    }
+  "version": "v2",
+  "date": "2026-04-04",
+  "rationale": "Confirmed clean at audit \u2014 no missed hotspots",
+  "thresholds": {
+    "conservation": 0.8,
+    "composite": 0.6
   },
-  "features": [
-    {
-      "id": "PHE440",
-      "residue": "NSP12-PHE440",
-      "element": "E1",
-      "role": "ANCHOR",
-      "pharm_type": "AROMATIC",
-      "tolerance_A": 1.5,
-      "interaction": "pi-stacking + vdW core",
-      "conservation": 1.0,
-      "composite": 1.0,
-      "x": 95.961,
-      "y": 79.936,
-      "z": 117.219
-    },
-    {
-      "id": "PRO412",
-      "residue": "NSP12-PRO412",
-      "element": "E1",
-      "role": "INCLUDE",
-      "pharm_type": "HYDROPHOBIC",
-      "tolerance_A": 2.0,
-      "interaction": "vdW hydrophobic",
-      "conservation": 1.0,
-      "composite": 0.895,
-      "x": 96.494,
-      "y": 85.414,
-      "z": 124.025
-    },
-    {
-      "id": "PHE442",
-      "residue": "NSP12-PHE442",
-      "element": "E1",
-      "role": "INCLUDE",
-      "pharm_type": "AROMATIC",
-      "tolerance_A": 1.5,
-      "interaction": "pi-stacking",
-      "conservation": 1.0,
-      "composite": 0.774,
-      "x": 99.246,
-      "y": 84.67,
-      "z": 118.641
-    },
-    {
-      "id": "TYR420",
-      "residue": "NSP12-TYR420",
-      "element": "E1",
-      "role": "INCLUDE",
-      "pharm_type": "AROMATIC",
-      "tolerance_A": 1.5,
-      "interaction": "pi-stacking + H-bond donor",
-      "conservation": 1.0,
-      "composite": 0.616,
-      "x": 88.977,
-      "y": 69.828,
-      "z": 123.848
-    },
-    {
-      "id": "PHE415",
-      "residue": "NSP12-PHE415",
-      "element": "E1",
-      "role": "INCLUDE",
-      "pharm_type": "AROMATIC",
-      "tolerance_A": 1.5,
-      "interaction": "pi-stacking",
-      "conservation": 1.0,
-      "composite": 0.527,
-      "x": 90.946,
-      "y": 77.963,
-      "z": 125.821
-    },
-    {
-      "id": "GLY413",
-      "residue": "NSP12-GLY413",
-      "element": "E1",
-      "role": "INCLUDE",
-      "pharm_type": "HYDROPHOBIC",
-      "tolerance_A": 2.0,
-      "interaction": "vdW backbone",
-      "conservation": 1.0,
-      "composite": 0.454,
-      "x": 93.269,
-      "y": 83.596,
-      "z": 123.331
-    },
-    {
-      "id": "GLU431",
-      "residue": "NSP12-GLU431",
-      "element": "E2",
-      "role": "INCLUDE",
-      "pharm_type": "NEG_CHARGE",
-      "tolerance_A": 1.0,
-      "interaction": "salt bridge with LYS1(NSP7)",
-      "conservation": 1.0,
-      "composite": 0.748,
-      "x": 99.825,
-      "y": 61.004,
-      "z": 116.86
-    },
-    {
-      "id": "PHE843",
-      "residue": "NSP12-PHE843",
-      "element": "E3",
-      "role": "INCLUDE",
-      "pharm_type": "AROMATIC",
-      "tolerance_A": 2.0,
-      "interaction": "vdW hydrophobic distal",
-      "conservation": 1.0,
-      "composite": 0.488,
-      "x": 90.051,
-      "y": 78.879,
-      "z": 121.227
-    }
+  "n_candidates": 8,
+  "anchor": "PHE440",
+  "all_anchors": [
+    "PHE440"
   ],
-  "screening_notes": "Compounds targeting this pharmacophore should: (1) present aromatic/hydrophobic groups to engage E1 core (PHE440/PHE442/TYR420/PHE415); (2) optionally carry a negative charge or H-bond acceptor to mimic GLU431 interaction with NSP7; (3) fit within 8-12A radius of E1 centroid."
+  "elements": {
+    "E1": 6,
+    "E2": 1,
+    "E3": 1
+  },
+  "e1_centroid": [
+    94.14883333333334,
+    80.23450000000001,
+    122.1475
+  ],
+  "e2_centroid": [
+    99.825,
+    61.004,
+    116.86
+  ]
 }

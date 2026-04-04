@@ -1,153 +1,30 @@
 {
-  "name": "CGCP-NSP12-NSP13-v1",
   "interface": "NSP12-NSP13",
-  "date": "2026-03-24",
-  "method": "CGCP pipeline v1.0",
-  "n_features": 7,
-  "elements": {
-    "E1": {
-      "name": "E1 \u2014 TYR903/MET902 aromatic core",
-      "n_residues": 4,
-      "centroid": {
-        "x": 198.617,
-        "y": 194.105,
-        "z": 158.45,
-        "radius": 3.81
-      },
-      "members": [
-        "NSP12-TYR903",
-        "NSP12-MET902",
-        "NSP12-ASP901",
-        "NSP12-SER904"
-      ]
-    },
-    "E2": {
-      "name": "E2 \u2014 NSP13 contact zone",
-      "n_residues": 3,
-      "centroid": {
-        "x": 200.072,
-        "y": 191.883,
-        "z": 154.341,
-        "radius": 4.74
-      },
-      "members": [
-        "NSP13-TYR93",
-        "NSP13-LEU92",
-        "NSP13-ASN95"
-      ]
-    },
-    "E3": {
-      "name": "E3 \u2014 Supporting contacts",
-      "n_residues": 0,
-      "centroid": {},
-      "members": []
-    }
+  "version": "v2",
+  "date": "2026-04-04",
+  "rationale": "Transient interface \u2014 crystal-only, confirmed clean",
+  "thresholds": {
+    "conservation": 0.8,
+    "composite": 0.6
   },
-  "features": [
-    {
-      "id": "NSP12-TYR903",
-      "chain": "NSP12",
-      "position": 903,
-      "aa": "TYR",
-      "element": "E1",
-      "role": "ANCHOR",
-      "pharm_type": "ANCHOR",
-      "tolerance_A": 1.0,
-      "conservation": 1.0,
-      "composite": 0.4633,
-      "x": 196.85,
-      "y": 194.944,
-      "z": 157.632
-    },
-    {
-      "id": "NSP12-MET902",
-      "chain": "NSP12",
-      "position": 902,
-      "aa": "MET",
-      "element": "E1",
-      "role": "INCLUDE",
-      "pharm_type": "HYDROPHOBIC",
-      "tolerance_A": 2.0,
-      "conservation": 1.0,
-      "composite": 1.0,
-      "x": 197.429,
-      "y": 191.348,
-      "z": 158.727
-    },
-    {
-      "id": "NSP12-ASP901",
-      "chain": "NSP12",
-      "position": 901,
-      "aa": "ASP",
-      "element": "E1",
-      "role": "INCLUDE",
-      "pharm_type": "CHARGED_NEG",
-      "tolerance_A": 1.0,
-      "conservation": 1.0,
-      "composite": 0.7244,
-      "x": 200.946,
-      "y": 192.356,
-      "z": 159.828
-    },
-    {
-      "id": "NSP12-SER904",
-      "chain": "NSP12",
-      "position": 904,
-      "aa": "SER",
-      "element": "E1",
-      "role": "INCLUDE",
-      "pharm_type": "HBOND",
-      "tolerance_A": 2.0,
-      "conservation": 1.0,
-      "composite": 0.5357,
-      "x": 199.244,
-      "y": 197.773,
-      "z": 157.614
-    },
-    {
-      "id": "NSP13-TYR93",
-      "chain": "NSP13",
-      "position": 93,
-      "aa": "TYR",
-      "element": "E2",
-      "role": "INCLUDE",
-      "pharm_type": "AROMATIC",
-      "tolerance_A": 1.5,
-      "conservation": 1.0,
-      "composite": 0.942,
-      "x": 199.707,
-      "y": 190.53,
-      "z": 155.014
-    },
-    {
-      "id": "NSP13-LEU92",
-      "chain": "NSP13",
-      "position": 92,
-      "aa": "LEU",
-      "element": "E2",
-      "role": "INCLUDE",
-      "pharm_type": "HYDROPHOBIC",
-      "tolerance_A": 2.0,
-      "conservation": 1.0,
-      "composite": 0.6083,
-      "x": 196.138,
-      "y": 191.236,
-      "z": 153.847
-    },
-    {
-      "id": "NSP13-ASN95",
-      "chain": "NSP13",
-      "position": 95,
-      "aa": "ASN",
-      "element": "E2",
-      "role": "INCLUDE",
-      "pharm_type": "HBOND",
-      "tolerance_A": 2.0,
-      "conservation": 0.8,
-      "composite": 0.5766,
-      "x": 204.37,
-      "y": 193.883,
-      "z": 154.163
-    }
+  "n_candidates": 7,
+  "anchor": "NSP12-TYR903",
+  "all_anchors": [
+    "NSP12-TYR903"
+  ],
+  "elements": {
+    "E1": 4,
+    "E2": 3,
+    "E3": 0
+  },
+  "e1_centroid": [
+    198.61725,
+    194.10525,
+    158.45025
+  ],
+  "e2_centroid": [
+    200.0716666666667,
+    191.883,
+    154.34133333333332
   ]
 }
