@@ -1,0 +1,24 @@
+{
+  "interface": "NSP7-NSP8",
+  "version": "v2",
+  "date": "2026-04-04",
+  "rationale": "Threshold lowered to cons>=0.600 \u2014 NSP7-NSP8 is SARS-selective interface (same as NSP13-Helicase, NSP15). ChimeraX analysis confirmed 3 genuine hotspots (ARG96, PHE92, ASN100/LEU103) missed at cons>=0.800.",
+  "thresholds": {
+    "conservation": 0.6,
+    "composite": 0.6
+  },
+  "n_candidates": 16,
+  "anchor": "PHE92/NSP8",
+  "hotspots_confirmed": [
+    "HOTSPOT1_ARG96-MET75/LEU76",
+    "HOTSPOT2_PHE92-MET75",
+    "HOTSPOT3_ASN100/LEU103-PHE49"
+  ],
+  "elements": {
+    "E1": 6,
+    "E2": 8,
+    "E3": 2
+  },
+  "e1_centroid": null,
+  "e2_centroid": null
+}

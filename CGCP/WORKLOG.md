@@ -1649,3 +1649,58 @@ CURRENT STATUS (2026-04-04)
     2. Fix inode limit → complete VF multi-interface setup
     3. Analyse hits: PAINS filter, Lipinski, cluster top 50
     4. Write manuscript Methods section
+
+---
+
+## Entry 057 — Pharmacophore threshold correction (all interfaces)
+## Date: 2026-04-04
+
+### Trigger
+ChimeraX interface analysis of NSP7-NSP8 revealed 3 genuine hotspots
+(ARG96-MET75/LEU76, PHE92-MET75, ASN100/LEU103-PHE49) absent from
+CGCP-NSP7-NSP8-v1. Root cause investigation identified two pipeline bugs.
+
+### Bugs fixed
+
+**Bug 1 — Conservation threshold too strict (cons>=0.800)**
+Original threshold excluded residues with cons=0.600 (moderate) even
+when composite score was high (>0.600). PPI interfaces do not require
+identical conservation across all 5 coronavirus species — structural
+conservation at moderate sequence identity is biologically expected.
+Fix: lowered to cons>=0.600, comp>=0.600 for 5 interfaces.
+
+**Bug 2 — Anchor decision field not written**
+Step 6 identified anchor residues correctly but wrote 'INCLUDE' instead
+of 'ANCHOR' to the decision field for NSP12-NSP8 (anchor_primary/
+anchor_secondary feature names not caught by 'anchor' string check).
+Fix: is_anchor() now catches all anchor feature variants.
+
+**Bug 3 — Salt bridge anchor underscored by composite**
+NSP12-LYS332 (primary salt bridge vs ASP99, ChimeraX HOTSPOT #1)
+comp=0.508 — just below threshold. Composite formula
+(0.40×contacts + 0.30×BSA + 0.30×conservation) does not weight
+ionic interactions appropriately. Fix: manual INCLUDE with documented
+rationale. Future pipeline improvement: add salt bridge bonus term.
+
+### Interfaces corrected
+
+| Interface      | Old candidates | New candidates | Key recovery |
+|----------------|---------------|----------------|--------------|
+| NSP7-NSP8      | 6             | 16             | ARG96 (HOTSPOT#1) |
+| NSP12-NSP8     | 19            | 24             | LYS332 anchor fix |
+| NSP9-NSP12     | 20            | 22             | VAL231, THR225 |
+| NSP10-NSP16    | 10            | 12             | LEU28, TYR79 |
+| NSP10-NSP14    | 19            | 21             | THR21, THR5 |
+
+### Interfaces confirmed clean (no missed hotspots)
+NSP12-NSP7 (8), NSP13-Helicase (19), NSP12-NSP13 (7), NSP15 (20)
+
+### Impact on screening
+Receptor PDBQT and docking box coordinates: UNCHANGED
+Post-docking pharmacophore filter: UPDATED (broader contact set)
+Manuscript Methods: threshold rationale updated to cons>=0.600
+
+### Lesson learned
+Always cross-validate CGCP pharmacophore output against ChimeraX
+heavy-atom contact analysis before proceeding to virtual screening.
+Add this as a mandatory Step 8.5 in future pipeline runs.
