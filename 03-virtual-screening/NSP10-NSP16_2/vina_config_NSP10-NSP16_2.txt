@@ -16,3 +16,6 @@ size_z   = 42.778
 exhaustiveness = 16
 num_modes      = 9
 energy_range   = 3
+# Zn WARNING: Zn1 (B4401) is 5.47A from anchor LYS76
+# Exclude Zn-chelating PAINS: thiosemicarbazones,
+# hydroxamic acids, 8-hydroxyquinolines from hits
