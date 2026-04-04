@@ -1704,3 +1704,30 @@ Manuscript Methods: threshold rationale updated to cons>=0.600
 Always cross-validate CGCP pharmacophore output against ChimeraX
 heavy-atom contact analysis before proceeding to virtual screening.
 Add this as a mandatory Step 8.5 in future pipeline runs.
+
+---
+
+## Entry 058 — Final pharmacophore summary (all 9 interfaces)
+## Date: 2026-04-04
+
+All 9 pharmacophore JSONs normalised to v2 structure.
+ChimeraX cross-validation complete. Pipeline ready for screening.
+
+| Interface       | Anchor           | PDB   |  N  | E1 | E2 | E3 | cons≥ |
+|-----------------|------------------|-------|-----|----|----|----|----|
+| NSP12-NSP7      | PHE440/NSP12     | 7C2K  |   8 |  6 |  1 |  1 | 0.800 |
+| NSP12-NSP8      | LEU387+LYS332    | 7C2K  |  24 |  6 | 11 |  7 | 0.600 |
+| NSP9-NSP12      | ARG733/NSP12     | 8SQK  |  22 |  5 | 12 |  5 | 0.600 |
+| NSP10-NSP16     | LYS76/NSP10      | 6W4H  |  12 |  5 |  6 |  1 | 0.600 |
+| NSP7-NSP8       | PHE92/NSP8       | AF3   |  16 |  6 |  8 |  2 | 0.600 |
+| NSP10-NSP14     | HIS80/NSP10      | 7DIY  |  21 |  5 | 11 |  5 | 0.600 |
+| NSP13-Helicase  | LYS414/NSP13a    | 7NIO  |  19 |  5 |  9 |  5 | 0.600 |
+| NSP12-NSP13     | TYR903/NSP12     | 7RDY  |   7 |  4 |  3 |  0 | 0.800 |
+| NSP15           | ASP40/NSP15a     | 9HH5  |  20 |  6 | 10 |  4 | 0.600 |
+| **TOTAL**       |                  |       | **149** | | | | |
+
+Notes:
+- NSP12-NSP8: dual anchor (LEU387 hydrophobic + LYS332 salt bridge)
+- NSP7-NSP8: AF3 ModeB receptor; ARG96 hotspot restored (was missing in v1)
+- NSP12-NSP7, NSP12-NSP13: cons>=0.800 retained (pan-coronavirus interfaces)
+- All others: cons>=0.600 (moderate conservation biologically justified for PPIs)
