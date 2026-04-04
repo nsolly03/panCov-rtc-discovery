@@ -1,0 +1,21 @@
+receptor = receptor_NSP7-NSP8_ModeB_AF3_6.pdbqt
+
+center_x = -7.980
+center_y = -11.619
+center_z = -11.870
+
+size_x = 47.3
+size_y = 39.9
+size_z = 37.0
+
+exhaustiveness = 16
+num_modes = 9
+energy_range = 3
+
+# CGCP-NSP7-NSP8-v2 pharmacophore box
+# Anchor: PHE92/NSP8 (S-pi, HOTSPOT#2)
+# Hotspot1: ARG96/NSP8 (H-bond+hydrophobic vs MET75/LEU76) — restored v2
+# Hotspot3: PHE49/NSP7 (aromatic packing vs ASN100/LEU103)
+# 16 candidates: 8 NSP8 + 8 NSP7
+# Box expanded from 34x34x34 (v1, 6 candidates) to 47x40x37 (v2, 16 candidates)
+# AF3 ModeB receptor — PHE92=6.78A from NSP7 partner
