@@ -1731,3 +1731,45 @@ Notes:
 - NSP7-NSP8: AF3 ModeB receptor; ARG96 hotspot restored (was missing in v1)
 - NSP12-NSP7, NSP12-NSP13: cons>=0.800 retained (pan-coronavirus interfaces)
 - All others: cons>=0.600 (moderate conservation biologically justified for PPIs)
+
+Entry 060 — Docking Box Verification: All 9 Interfaces Corrected
+Date: 2026-04-12
+Phase: 4 — Virtual Screening (pre-setup)
+Script: CGCP/scripts/phase-2/verify_docking_boxes.py
+
+## What
+Ran systematic docking box verification across all 9 interfaces before
+VFUparr setup. Script reads step-06 assessment TSVs (ANCHOR+INCLUDE residues),
+extracts Cα coordinates from 03-virtual-screening receptor PDB files, computes
+true bounding box + 10Å buffer, and compares to v2 box coordinates.
+
+## Key finding
+All 9 v2 boxes failed coverage check. Root causes:
+- NSP12-NSP7, NSP12-NSP8: v2 boxes calculated from E1 centroid only, not all residues
+- NSP10-NSP14: v2 box severely undersized (93k vs 227k ų — 2.4× too small)
+- NSP15, NSP12-NSP7: large center displacement (13.0Å and 22.8Å respectively)
+- NSP9-NSP12, NSP10-NSP16, NSP7-NSP8: sub-2Å gaps (within Vina grid spacing but corrected)
+
+## E2 coverage confirmed
+NSP12-NSP7 E2 centroid (GLU431 salt bridge): 10.5Å margin inside corrected box ✅
+
+## v3 Docking Boxes (use for VFUparr)
+| Interface      | CENTER-X   | CENTER-Y   | CENTER-Z   | SIZE-X | SIZE-Y | SIZE-Z |
+|----------------|------------|------------|------------|--------|--------|--------|
+| NSP12-NSP7     |  94.401    |  73.209    | 121.340    |  32.0  |  46.0  |  30.0  |
+| NSP12-NSP8     |  95.325    | 117.201    | 110.709    |  66.0  |  50.0  |  46.0  |
+| NSP9-NSP12     | 134.504    | 168.078    | 175.149    |  46.0  |  40.0  |  48.0  |
+| NSP10-NSP16    |  74.163    |  22.930    |  17.098    |  32.0  |  44.0  |  38.0  |
+| NSP7-NSP8      |  -9.252    | -10.325    | -13.930    |  34.0  |  40.0  |  32.0  |
+| NSP10-NSP14    |  -7.499    |   4.093    | -19.631    |  58.0  |  56.0  |  72.0  |
+| NSP13-Helicase | -32.205    |  12.718    |  -6.774    |  42.0  |  42.0  |  42.0  |
+| NSP12-NSP13    | 200.254    | 194.151    | 156.838    |  30.0  |  28.0  |  26.0  |
+| NSP15          | -59.490    |  39.441    | -21.127    |  34.0  |  52.0  |  52.0  |
+
+## Outputs
+- CGCP/02-deep-dive/box-verification/verify_docking_boxes_report.tsv
+- CGCP/02-deep-dive/box-verification/corrected_boxes_vfuparr.txt
+- CGCP/02-deep-dive/box-verification/Fig_BoxVerification.png
+
+Status: ✅ Complete — v3 boxes validated, ready for VFUparr 9-interface setup
+Next: Clone VFUparr, set up 9 interface directories, configure all.ctrl per interface
