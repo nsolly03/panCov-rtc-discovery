@@ -1773,3 +1773,86 @@ NSP12-NSP7 E2 centroid (GLU431 salt bridge): 10.5Å margin inside corrected box 
 
 Status: ✅ Complete — v3 boxes validated, ready for VFUparr 9-interface setup
 Next: Clone VFUparr, set up 9 interface directories, configure all.ctrl per interface
+
+Entry 061 — Filtering Strategy: ADMET and Toxicity Considerations
+Date: 2026-04-12
+Type: Scientific decision / pipeline note
+
+## Filtering roles in the CGCP pipeline
+
+Three distinct filtering stages:
+
+1. **Pre-docking filter** (current): reduces 1.6B → ~225M Tier2 compounds
+   - Criteria: PPI_modulators flag, logP ≤3.5, Lipinski, QED ≥0.4, PAINS
+   - Purpose: computational efficiency + PPI chemotype enrichment
+
+2. **Post-docking pharmacophore filter** (CGCP-specific): keeps only compounds
+   engaging E1+E2+E3 simultaneously
+   - Purpose: ensures binding at the interface, not elsewhere on receptor
+
+3. **ADMET/toxicity filter** (Stage 2 — post-docking, NOT yet implemented):
+   Apply to top 50-100 hits per interface before experimental validation
+   - hERG cardiotoxicity
+   - Hepatotoxicity / reactive metabolites
+   - Mutagenicity / genotoxicity (Ames predictors)
+   - Structural alerts beyond PAINS
+   
+## Recommended tools for Stage 2 ADMET
+| Tool       | What it predicts                  | Access        |
+|------------|-----------------------------------|---------------|
+| SwissADME  | ADMET, BBB, CYP, bioavailability  | Free web      |
+| pkCSM      | hERG, hepatotox, mutagenicity     | Free web      |
+| Toxtree    | Structural alerts, Cramer class   | Free desktop  |
+| ProTox-3   | Oral toxicity endpoints           | Free web      |
+
+## Decision
+- Current screening proceeds with PAINS + Lipinski only
+- Full ADMET profiling deferred to post-docking hit analysis (top 50/interface)
+- DDT manuscript Methods section must explicitly mention ADMET profiling
+
+Status: ✅ Documented — to be implemented in Phase 5 hit analysis
+
+---
+
+Entry 062 — Current Pipeline Progress (Session: 2026-04-12)
+Type: Progress update
+
+## Receptor PDBQT Status — ALL 9 READY ✅
+
+| Interface         | File                          | Size  | Status                          |
+|-------------------|-------------------------------|-------|---------------------------------|
+| NSP12-NSP7        | receptor_NSP12-NSP7.pdbqt     | 564K  | ✅ Ready (Mar 10)               |
+| NSP12-NSP8        | receptor_NSP12-NSP8.pdbqt     | 594K  | ✅ Ready (Mar 10)               |
+| NSP9-NSP12        | receptor_NSP9-NSP12.pdbqt     | 795K  | ✅ Ready (Mar 10)               |
+| NSP10-NSP16       | receptor_NSP10-NSP16.pdbqt    | 344K  | ✅ Fixed today (stripped 2 HETATM aromatic records causing kekulization failure) |
+| NSP7-NSP8         | receptor_NSP7-NSP8.pdbqt      | 171K  | ✅ Ready (AF3 ModeB)            |
+| NSP10-NSP14       | receptor_NSP10-NSP14.pdbqt    | 252K  | ✅ Ready                        |
+| NSP13-Helicase    | receptor_NSP13-Helicase.pdbqt | 707K  | ✅ Ready                        |
+| NSP12-NSP13       | receptor_NSP12-NSP13.pdbqt    | 942K  | ✅ Ready                        |
+| NSP15             | receptor_NSP15.pdbqt          | 453K  | ✅ Ready (kekulization warning harmless) |
+
+All receptors at: $GLOBALSCRATCH/rtc-screening/receptors/
+
+## Docking Boxes — v3 FINAL ✅
+All 9 interfaces corrected from E1-centroid-only (v2) to full pharmacophore 
+residue bounding box + 10Å buffer. Verified in previous session (Entry 060).
+
+## NIC5 Quota Status ✅
+- Chunk files: 101,220/500,000 (20%) — within limits
+- Run2 NSP12-NSP7 scores preserved: 825,892 compounds
+- Top 241 poses saved
+
+## VFUparr Setup — PENDING ⏳
+- setup_cgcp_vfuparr.sh ready at:
+  ~/projects/rtc-pan-coronavirus/CGCP/scripts/phase-2/setup_cgcp_vfuparr.sh
+- Needs transfer to NIC5 and execution:
+  scp ~/projects/rtc-pan-coronavirus/CGCP/scripts/phase-2/setup_cgcp_vfuparr.sh nic5:/scratch/ulg/gigambd/onsekuye/
+  bash $GLOBALSCRATCH/setup_cgcp_vfuparr.sh
+
+## Immediate Next Steps
+1. [ ] Transfer and run setup_cgcp_vfuparr.sh on NIC5
+2. [ ] Pilot test: NSP12-NSP7, 10 tasks (sbatch --array=1-10 submit.sh)
+3. [ ] If pilot OK: submit all 9 interfaces full run (225M × 9)
+4. [ ] Stage 2 ADMET on top hits after docking completes (Entry 061)
+
+Status: ✅ All receptors ready — VFUparr setup is the immediate blocker
