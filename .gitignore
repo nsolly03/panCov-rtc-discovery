@@ -69,3 +69,5 @@ CGCP/id_rsa_twizere.ceci
 CGCP/id_rsa_twizere.ceci:Zone.Identifier
 04-hits/Fig_ScreeningDistribution.pdf
 04-hits/Fig_ScreeningDistribution.png
+*.Zone.Identifier
+*:Zone.Identifier
